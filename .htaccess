@@ -1,1 +1,1 @@
-ErrorDocument 401 "/coming-soon.html"
+ErrorDocument 404 /coming-soon.html
