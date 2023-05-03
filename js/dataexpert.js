@@ -284,4 +284,101 @@ urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
             console.log("3"));
  (window);
 
+ new Typed('.typed', {
+  strings: ["Analytics Specialists", "Tag Management Experts", "Data Engineering Pros", "Data Insights Gurus", "Analytics Consultants", "Data Analytics Strategists", "Data Science Professionals"],
+  stringsElement: null,
+		// typing speed
+		typeSpeed: 80,
+		// time before typing starts
+		startDelay: 0,
+    smartBackspace: true,
+
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		// show cursor
+		showCursor: true,
+});
+ var firstvisit = document.getElementById('firstvisit');
+ var sourcefirstvisit = document.getElementById('sourcefirstvisit');
+ var sourcelastvisit = document.getElementById('sourcelastvisit');
+  var device = document.getElementById('device');
+ // var profile = document.getElementById('profile');
+ // var geocity = document.getElementById('geocity');
+ // var geoip = document.getElementById('geoip');
+ var totalpageviews2 = document.getElementById('totalpageviews');
+
+
+ // Get the data from localStorage
+ var data = localStorage.getItem('dspaceexpert_visitor');
+ data = JSON.parse(data);
+ var visits = data.visits;
+ var lastvisit = visits[visits.length - 1];
+
+ // Date format
+ var date = new Date(data.first_website_visit);
+ var year = date.getFullYear();
+ var month = date.getMonth(); // returns 0 for January
+ var day = date.getDate();
+ var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+ var monthName = monthNames[month];
+ var formattedDate = day + " " + monthName + " " + year;
+
+ // Geolocation data
+ try {
+   var IPlocation = JSON.parse(sessionStorage.getItem('_ipgeolocation_geolocation')).ip;
+   var IPcity = JSON.parse(sessionStorage.getItem('_ipgeolocation_geolocation')).city;
+ } catch (e) { };
+
+ var datasourcefirstvisit = JSON.stringify(data.visits[0]);
+ if (datasourcefirstvisit.indexOf('utm_source') > -1) {
+   datasourcefirstvisit = data.visits[0].utm_source;
+ } else if (datasourcefirstvisit.indexOf('gclid') > -1) {
+   datasourcefirstvisit = 'google / cpc';
+ } else {
+   if (JSON.stringify(data.visits[0].referrer).indexOf(document.location.hostname) > -1) {
+     datasourcefirstvisit = 'direct'
+   } else {
+     datasourcefirstvisit = data.visits[0].referrer;
+   }
+ }
+
+ var datasourcelastvisit = JSON.stringify(lastvisit);
+ if (datasourcelastvisit.indexOf('utm_source') > -1) {
+   datasourcelastvisit = lastvisit.utm_source;
+ } else if (datasourcefirstvisit.indexOf('gclid') > -1) {
+   datasourceflastvisit = 'google / cpc';
+ } else {
+   if (JSON.stringify(lastvisit.referrer).indexOf(document.location.hostname) > -1) {
+     datasourcelastvisit = 'direct'
+   } else {
+     datasourcelastvisit = lastvisit.referrer;
+   }
+ }
  
+ var devicecategory = lastvisit.deviceType != "desktop/laptop" ? `<div class="row  row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/iphone-x.svg" alt="" class="icon"></div></div>`:`<div class="row row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/desktop.svg" alt="" class="icon "></div></div>`;
+ // profile
+ // var profiling = '';
+ // if (data.pageviews > 8) {
+ //   profiling = 'prospect chaud';
+ // } else {
+ //   profiling = 'prospect';
+ // }
+
+ // Set the contents of the span element
+ firstvisit.innerHTML += formattedDate;
+ sourcefirstvisit.innerHTML += datasourcefirstvisit;
+ sourcelastvisit.innerHTML += datasourcelastvisit;
+ device.innerHTML +=  devicecategory;
+ // geocity.innerHTML += IPcity;
+ // geoip.innerHTML += IPlocation
+ totalpageviews2.innerHTML += data.pageviews;
+ 
+ function deleteAll() {
+   localStorage.clear('dspaceexpert_visitor');
+   sessionStorage.clear('_ipgeolocation_geolocation');
+ }

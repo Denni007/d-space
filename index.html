@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>D-SPACE Analytics</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
   <meta content="D-SPACE Analytics" property="og:title">
   <meta content="D-SPACE Analytics" property="twitter:title">
@@ -74,7 +75,7 @@
   </div>
 
 
-
+<!-- hero section -->
   <div class="wf-section">
     <div class="container">
       <div class="panel section hero-panel">
@@ -85,13 +86,17 @@
         </div>
         <div class="panel-body align-content-center">
           <div class="content-width-extra-large">
-            <h3 class="display-inline text-gray-4 text-primary-3">Unlock New Frontiers with the Power of Data<span
-                class="text-span-5"></span></h3>
+            <h3 class="display-inline text-gray-4 text-primary-3">Unlock New Frontiers with the Power of Data</h3>
+            
+            <h2 class="display-heading-6">
+              <span class="typed">
 
-            <h2 class="display-heading-2">Analytics <br>Specialists</h2>
+              </span>
+              <!-- Analytics <br>Specialists -->
+              </h2>
             <div class="space-bottom">
-              <h3 class="display-inline">Web & App Analytics</h3>
-              <h3 class="display-inline text-gray-4"> Your business is a universe waiting to be explored. Let D-space
+              <!-- <h3 class="display-inline">Web & App Analytics</h3> -->
+              <h3 class="display-inline text-gray-4">Your business is a universe waiting to be explored. Let D-space
                 Analytics be your guide, unlocking new horizons with the power of your data.</h3>
             </div>
             <div>
@@ -146,7 +151,7 @@
   <div class="container grid-container">
     <div data-w-id="18919143-6ddf-b884-383c-cf3ef9209df5"   class="w-layout-grid grid-two-thirds panel-height-large">
       <div class="panel">
-        <div class="panel-body  align-content-center">
+        <div class="panel-body align-content-center">
           <div class="center-content justify-content-center">
             <div class="space-bottom-large ">
               <img src="images/web-analytics.svg" alt="" class="circle-extra-data space-bottom">
@@ -179,7 +184,7 @@
                 <div>Source of your first visit</div>
               </li>
               <li class="bordered-list-item bordered-list-item-small">
-                <div id="totalpageviews" class="display-heading-4 space-bottom-extra-small text-primary-3"></div>
+                <div id="totalpageviews" class="display-heading-4 space-bottom-extra-small text-primary-5"></div>
                 <div>Total number of page views</div>
               </li>
               <li class="bordered-list-item bordered-list-item-small">
@@ -194,6 +199,7 @@
           </div>
         </div>
       </div>
+      
 
     </div>
   </div>
@@ -589,86 +595,9 @@
 
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="js/dataexpert.js" type="text/javascript"></script>
+
   <script>
-    var firstvisit = document.getElementById('firstvisit');
-    var sourcefirstvisit = document.getElementById('sourcefirstvisit');
-    var sourcelastvisit = document.getElementById('sourcelastvisit');
-     var device = document.getElementById('device');
-    // var profile = document.getElementById('profile');
-    // var geocity = document.getElementById('geocity');
-    // var geoip = document.getElementById('geoip');
-    var totalpageviews2 = document.getElementById('totalpageviews');
-  
-  
-    // Get the data from localStorage
-    var data = localStorage.getItem('dspaceexpert_visitor');
-    data = JSON.parse(data);
-    var visits = data.visits;
-    var lastvisit = visits[visits.length - 1];
-  
-    // Date format
-    var date = new Date(data.first_website_visit);
-    var year = date.getFullYear();
-    var month = date.getMonth(); // returns 0 for January
-    var day = date.getDate();
-    var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var monthName = monthNames[month];
-    var formattedDate = day + " " + monthName + " " + year;
-  
-    // Geolocation data
-    try {
-      var IPlocation = JSON.parse(sessionStorage.getItem('_ipgeolocation_geolocation')).ip;
-      var IPcity = JSON.parse(sessionStorage.getItem('_ipgeolocation_geolocation')).city;
-    } catch (e) { };
-  
-    var datasourcefirstvisit = JSON.stringify(data.visits[0]);
-    if (datasourcefirstvisit.indexOf('utm_source') > -1) {
-      datasourcefirstvisit = data.visits[0].utm_source;
-    } else if (datasourcefirstvisit.indexOf('gclid') > -1) {
-      datasourcefirstvisit = 'google / cpc';
-    } else {
-      if (JSON.stringify(data.visits[0].referrer).indexOf(document.location.hostname) > -1) {
-        datasourcefirstvisit = 'direct'
-      } else {
-        datasourcefirstvisit = data.visits[0].referrer;
-      }
-    }
-  
-    var datasourcelastvisit = JSON.stringify(lastvisit);
-    if (datasourcelastvisit.indexOf('utm_source') > -1) {
-      datasourcelastvisit = lastvisit.utm_source;
-    } else if (datasourcefirstvisit.indexOf('gclid') > -1) {
-      datasourceflastvisit = 'google / cpc';
-    } else {
-      if (JSON.stringify(lastvisit.referrer).indexOf(document.location.hostname) > -1) {
-        datasourcelastvisit = 'direct'
-      } else {
-        datasourcelastvisit = lastvisit.referrer;
-      }
-    }
-    
-    var devicecategory = lastvisit.deviceType != "desktop/laptop" ? `<div class="row row-align-center row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/iphone-x.svg" alt="" class="icon"></div></div>`:`<div class="row row-align-center row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/desktop.svg" alt="" class="icon "></div></div>`;
-    // profile
-    // var profiling = '';
-    // if (data.pageviews > 8) {
-    //   profiling = 'prospect chaud';
-    // } else {
-    //   profiling = 'prospect';
-    // }
-  
-    // Set the contents of the span element
-    firstvisit.innerHTML += formattedDate;
-    sourcefirstvisit.innerHTML += datasourcefirstvisit;
-    sourcelastvisit.innerHTML += datasourcelastvisit;
-    device.innerHTML +=  devicecategory;
-    // geocity.innerHTML += IPcity;
-    // geoip.innerHTML += IPlocation
-    totalpageviews2.innerHTML += data.pageviews;
-    
-    function deleteAll() {
-      localStorage.clear('dspaceexpert_visitor');
-      sessionStorage.clear('_ipgeolocation_geolocation');
-    }
+   
   </script>
 
 </body>

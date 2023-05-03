@@ -936,7 +936,7 @@ figcaption {
 .display-heading-2 {
   margin-bottom: 36px;
   font-family: Inter, sans-serif;
-  color: #fff;
+  color: #FF934F;
   font-size: 88px;
   line-height: 88px;
   font-weight: 700;
@@ -963,7 +963,15 @@ figcaption {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-
+.display-heading-6 {
+  margin-bottom: 26px;
+  font-family: Inter, sans-serif;
+  color: #FF934F;
+  font-size: 50px;
+  line-height: 72px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 .display-heading-3.content-width-small {
   padding-right: 0px;
   direction: ltr;
@@ -2557,6 +2565,9 @@ figcaption {
 .text-primary-4 {
   color: #3c5ccf;
 }
+.text-primary-5 {
+  color: #cf3c3c;
+}
 .text-primary-6 {
   color: #8f2df0;
 }
@@ -3427,7 +3438,7 @@ figcaption {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .panel-image-link {
