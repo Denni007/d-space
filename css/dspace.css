@@ -2563,7 +2563,7 @@ figcaption {
 }
 
 .text-primary-4 {
-  color: #3c5ccf;
+  color: #4d74ff;
 }
 .text-primary-5 {
   color: #cf3c3c;
@@ -6226,10 +6226,10 @@ figcaption {
     height: 48px;
     padding-left: 20px;
   }
-
+/* 
   .panel-body {
     height: 100%;
-  }
+  } */
 
   .panel-body.panel-body-large {
     padding: 36px;
