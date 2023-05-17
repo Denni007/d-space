@@ -894,7 +894,7 @@ figcaption {
 }
 
 .bg-primary-4 {
-  background-color: #3c5ccf;
+  background-color: #8179e4;
 }
 
 .bg-primary-5 {
@@ -4251,6 +4251,23 @@ figcaption {
   grid-template-rows: auto;
 }
 
+
+
+.section-title2 {
+  display: block;
+}
+
+.section-title3 {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  
+}
+
 .job-listing-grid {
   grid-column-gap: 96px;
   grid-row-gap: 24px;
@@ -6206,6 +6223,12 @@ figcaption {
     text-align: center;
   }
 
+  .section-title2 {
+    display: none;
+   }
+   .section-title3 {
+    display: contents; 
+   }
   .button-large {
     height: 48px;
   }
