@@ -33,31 +33,52 @@ body{
         </a>
       </div>
     </div>
-      <div class="navbar-wrapper sticky-top">
-        <div class="container">
-          <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-            <div class="navbar-row">
-              <div class="div-block-6">
-                <a href="#" class="navbar-1-brand w-nav-brand">
-                  <img src="images/logo-dspace-icon2.png" size="89" alt="">
-                </a>
-                <nav role="navigation" class="nav-menu w-nav-menu">
-                  <a href="products.html" class="nav-link w-nav-link">Products</a>
-                  <a href="/#service" class="nav-link w-nav-link">Services</a>
-                  <a href="contact-us.html" class="nav-link w-nav-link">contact us</a>
-                </nav>
-              </div>
-              <div class="navbar-controls ">
-                <div class="navbar-buttons ">
-                  <a href="meet-with-us.html" target="_blank" class="button w-button"> Meet With US</a>
+    <div class="navbar-wrapper sticky-top">
+      <div class="container">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+          role="banner" class="navbar w-nav">
+          <div class="navbar-row">
+            <div class="div-block-6">
+              <a href="/" class="navbar-1-brand w-nav-brand">
+                <img src="images/logo-dspace-icon2.png" size="89" alt="">
+              </a>
+              <nav role="navigation" class="nav-menu w-nav-menu">
+                <a href="products.html" class="nav-link w-nav-link">Products</a>
+                <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+  
+                <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                  <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
+                    aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                    <div class="row row-align-center">
+                      <div>Services</div><img
+                        src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                        alt="" class="dropdown-link-icon">
+                    </div>
+                  </div>
+                  <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                    <div class="dropdown-list-wrapper">
+                      <a href="ga4-migration.html" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
+                      <a href="tracking.html" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
+                      <a href="gdpr.html" class="dropdown-item w-dropdown-link" tabindex="0">GDPR Consent Service</a>
+                      <a href="s2s-gtm.html" class="dropdown-item w-dropdown-link" tabindex="0">Server Side
+                        Tracking</a>
+                      <div class="dropdown-bg"></div>
+                    </div>
+                  </nav>
                 </div>
-                <div class="menu-button w-nav-button"><img src="../images/icon-menu.svg" alt=""></div>
+                <a href="contact-us.html" class="nav-link w-nav-link">contact us</a>
+              </nav>
+            </div>
+            <div class="navbar-controls ">
+              <div class="navbar-buttons ">
+                <a href="meet-with-us.html" target="_blank" class="button w-button"> Meet With US</a>
               </div>
+              <div class="menu-button w-nav-button"><img src="../images/icon-menu.svg" alt=""></div>
             </div>
           </div>
         </div>
-        
       </div>
+    </div>
     </div>
   </div>
   <div class="fullscreen-section-content">
@@ -72,16 +93,7 @@ body{
             <div class="space-bottom-large">
               <h3 class="card-heading display-inline">We&#x27;re still building out the full site, but feel free to reach out with any questions</h3>
             </div>
-            <div class="form contact-form-hide w-form">
-              <form id="wf-form-Coming-Soon-Subscribe-Form" name="wf-form-Coming-Soon-Subscribe-Form" data-name="Coming Soon Subscribe Form" method="get" class="form-thirds"><input type="text" class="form-input form-input-large w-input" maxlength="256" name="Name" data-name="Name" placeholder="Your Name" id="Name" required=""><input type="email" class="form-input form-input-large w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Email Address" id="email-2" required=""><input type="submit" value="Notify Me" data-wait="Please wait..." class="button-large-outline w-button"></form>
-              <div class="form-success w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div class="form-error w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
-            </div>
-            <div class="text-small form-subtext form-subtext-hide">By signing up you agree to our <a href="utility/legal.html">Terms &amp; Conditions</a>
+            
             </div>
           </div>
         </div>
@@ -101,7 +113,6 @@ body{
 
                 </a>
             
-
               <div class="center-content">
               <div class="social-list">
                 <a href="https://twitter.com" target="_blank" class="social-link-item w-inline-block"><img  src="../images/twitter.svg" alt=""></a>
