@@ -37,7 +37,7 @@
           trackingData[param] = decodeURIComponent(value.replace(/\+/g, " "));
         }
       });
-      console.log(trackingData)
+      //  console.log(trackingData)
       // Store tracking data in cookie
       setCookie("_ds", JSON.stringify(trackingData));
     }
@@ -213,7 +213,7 @@
             return visitor;
           },
         create: function () {
-            const visitor = this.createInstance();
+        const visitor = this.createInstance();
         visitor.last_visit = parseInt(new Date().getTime() / 1000);
         visitor.pageviews = 1;
         visitor.first_website_visit = new Date().toISOString();
@@ -259,6 +259,7 @@
         pageviews: {
             add: function () {
                 var e = dspaceexpert.fetch();
+                console.log(e);
                 return e.pageviews = e.pageviews + 1 || 1,
                 dspaceexpert.update(e)
             }
@@ -276,7 +277,7 @@ var urlcheck = /utm|gclid|fbp|fbc/;
 try {
     var allvisits = dspaceexpert.visits.all().length
 } catch (e) {
-    console.log(e);
+   // console.log(e);
 }
 urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
     console.log("1")) : -1 == document.referrer.indexOf("/127.0.0.1:5500") ? (dspaceexpert.visits.create(),
