@@ -115,17 +115,22 @@
                     <div class="form w-form">
                         <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form"
                             method="get" class="form-vertical">
-                            <div class="w-layout-grid form-grid-halves"><input type="text"
+                            <div class="w-layout-grid form-grid-halves">
+                              <input type="text"
                                     class="form-input form-input-large w-input" maxlength="256" name="name"
-                                    data-name="Name" placeholder="Your Name" id="contact-name" required=""><input
+                                    data-name="Name" placeholder="Your Name" id="contact-name" required="">
+                              <input
                                     type="email" class="form-input form-input-large w-input" maxlength="256"
                                     name="email" data-name="Email" placeholder="Email Address" id="contact-email"
-                                    required=""></div><textarea placeholder="Your Message" maxlength="5000"
+                                    required="">
+                            </div>
+                            <textarea placeholder="Your Message" maxlength="5000"
                                 id="Message" name="Message" data-name="Message"
-                                class="form-input textarea w-input"></textarea><input type="submit"
+                                class="form-input textarea w-input"></textarea>
+                              <input type="submit"
                                 value="Send Message" data-wait="Please wait..."
                                 id="w-node-d3363dee-b8dc-ea49-7f77-40950b18e8bd-8aea83c2"
-                                class="button-large bg-primary-4 w-button">
+                                class="button-large bg-primary-4 w-button" onclick="dspaceexpert.convert()">
                         </form>
                         <div class="form-success w-form-done">
                             <div>Thank you! Your submission has been received!</div>

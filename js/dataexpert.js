@@ -202,16 +202,20 @@
             }
             localStorage.setItem('dspaceexpert_visitor', JSON.stringify(visitor));
             return visitor;
-          },
-          convert: function (properties) {
-            const visitor = this.update(properties);
-            visitor.converted_at = new Date().toISOString();
-            visitor.conversion_page = location.origin + location.pathname;
-            visitor.visits_at_conversion = (visitor.visits || []).length;
-            visitor.pageviews_before_conversion = visitor.pageviews || 0;
-            localStorage.setItem('dspaceexpert_visitor', JSON.stringify(visitor));
-            return visitor;
-          },
+        },
+        convert: function (properties) {
+          const visitor = this.update(properties);
+          visitor.converted_at = new Date().toISOString();
+          var data = JSON.stringify(Object.fromEntries(new FormData(document.querySelector('.form-vertical'))));
+          visitor.convertion_data = data;
+
+          visitor.conversion_page = location.origin + location.pathname;
+          visitor.visits_at_conversion = (visitor.visits || []).length;
+          visitor.pageviews_before_conversion = visitor.pageviews || 0;
+          console.log('convert')
+          localStorage.setItem('dspaceexpert_visitor', JSON.stringify(visitor));
+          return visitor;
+        },
         create: function () {
         const visitor = this.createInstance();
         visitor.last_visit = parseInt(new Date().getTime() / 1000);
@@ -280,7 +284,7 @@ try {
    // console.log(e);
 }
 urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
-    console.log("1")) : -1 == document.referrer.indexOf("/127.0.0.1:5500") ? (dspaceexpert.visits.create(),
+    console.log("1")) : -1 == document.referrer.indexOf("/127.0.0.1:5500/") ? (dspaceexpert.visits.create(),
         console.log("2")) : 0 == allvisits && (dspaceexpert.visits.create(),
             console.log("3"));
  (window);
