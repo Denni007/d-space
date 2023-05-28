@@ -283,35 +283,7 @@ urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
         console.log("2")) : 0 == allvisits && (dspaceexpert.visits.create(),
             console.log("3"));
  (window);
- var mwidth = window.matchMedia("(max-width: 700px)").matches;
- var type = [];
- if(!mwidth){
-  type = ["Analytics Specialists", "Tag Management Experts", "Data Engineering Pros", "Data Insights Gurus", "Analytics Consultants", "Data Analytics Strategists", "Data Science Professionals"]
-  
- }
- else{
-  type = ["Analytics Experts", "Tag Experts", "Data Engineer"]
- }
- new Typed('.typed', {
-  
-  strings: type,
-  stringsElement: null,
-		// typing speed
-		typeSpeed: 80,
-		// time before typing starts
-		startDelay: 0,
-    smartBackspace: true,
-
-		// backspacing speed
-		backSpeed: 20,
-		// time before backspacing
-		backDelay: 500,
-		// loop
-		loop: true,
-		// false = infinite
-		// show cursor
-		showCursor: true,
-});
+ 
  var firstvisit = document.getElementById('firstvisit');
  var sourcefirstvisit = document.getElementById('sourcefirstvisit');
  var sourcelastvisit = document.getElementById('sourcelastvisit');
