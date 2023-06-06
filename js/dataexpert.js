@@ -363,7 +363,16 @@ urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
  // geocity.innerHTML += IPcity;
  // geoip.innerHTML += IPlocation
  totalpageviews2.innerHTML += data.pageviews;
- 
+
+ //gtm
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVWQ985');
+
+//anytrack
+!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,a.src="https://assets.anytrack.io/XvXYxAtClcL4.js",(t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}(window,document,"script","AnyTrack");
  function deleteAll() {
    localStorage.clear('dspaceexpert_visitor');
    sessionStorage.clear('_ipgeolocation_geolocation');
