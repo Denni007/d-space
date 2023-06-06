@@ -356,13 +356,16 @@ urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
  // }
 
  // Set the contents of the span element
- firstvisit.innerHTML += formattedDate;
- sourcefirstvisit.innerHTML += datasourcefirstvisit;
- sourcelastvisit.innerHTML += datasourcelastvisit;
- device.innerHTML +=  devicecategory;
- // geocity.innerHTML += IPcity;
- // geoip.innerHTML += IPlocation
- totalpageviews2.innerHTML += data.pageviews;
+ if(window.location.pathname == "/"){
+  firstvisit.innerHTML += formattedDate;
+  sourcefirstvisit.innerHTML += datasourcefirstvisit;
+  sourcelastvisit.innerHTML += datasourcelastvisit;
+  device.innerHTML +=  devicecategory;
+  // geocity.innerHTML += IPcity;
+  // geoip.innerHTML += IPlocation
+  totalpageviews2.innerHTML += data.pageviews;
+ }
+ 
 
  //gtm
  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
