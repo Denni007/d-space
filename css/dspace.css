@@ -9,7 +9,27 @@
   grid-row-gap: 16px;
   grid-column-gap: 16px;
 }
+<<<<<<< HEAD
 
+=======
+.clietesvideo .videoIcon {
+  width: 3.75rem;
+  height: 3.75rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top,#f16028,#f58324);
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+  font-size: 2.438rem;
+  color: #fff;
+  z-index: 1;
+}
+>>>>>>> 102f4f9 (video)
 .w-checkbox {
   display: block;
   margin-bottom: 5px;
