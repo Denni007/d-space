@@ -744,7 +744,6 @@ figcaption {
   padding: 0px;
   background-color: hsla(0, 0%, 100%, 0.05);
 }
-
 .card-heading {
   color: #fff;
   font-size: 32px;
@@ -753,18 +752,21 @@ figcaption {
   letter-spacing: -0.02em;
 }
 
+
 .card-heading.display-inline {
-  display: block;
+  /* display: block; */
   margin-bottom: 10px;
   padding-top: 15px;
   direction: ltr;
-  font-size: 27px;
+  font-size: 32px;
 }
-
+/* 
 .card-heading.display-inline.text-gray-4 {
-  font-size: 18px;
-}
+ 
+  font-size: 22px;
+} */
 
+/* 
 .card-heading.display-inline.text-gray-4.tg4 {
   padding-right: 120px;
   padding-left: 120px;
@@ -830,7 +832,7 @@ figcaption {
 
 .card-heading.text-gray-4.card-text-size.alighment {
   text-align: left;
-}
+} */
 
 .text-white {
   color: #fff;
