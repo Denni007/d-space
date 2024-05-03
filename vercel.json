@@ -10,7 +10,6 @@
     { "src": "/sitemap.xml", "dest": "/sitmap.xml" },
     { "src": "/blogs", "dest": "/blogs.html" },
     { "src": "/blogs/memecoin-solona", "dest": "/blog-1.html" },
-     { "src": "./blog/js/dataexpert.js", "dest": "./js/dataexpert.js" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
