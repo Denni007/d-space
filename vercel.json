@@ -8,6 +8,9 @@
     { "src": "/tracking", "dest": "/tracking.html" },
     { "src": "/s2s-gtm", "dest": "/s2s-gtm.html" },
     { "src": "/sitemap.xml", "dest": "/sitmap.xml" },
+    { "src": "/blogs", "dest": "/blogs.html" },
+    { "src": "/blogs/memecoin-solona", "dest": "/blog-1.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
+    
   ]
 }
