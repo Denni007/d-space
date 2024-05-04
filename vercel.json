@@ -12,6 +12,9 @@
     { "src": "/meet-with-us", "dest": "/contact-us.html" },
     { "src": "/team", "dest": "/our-team.html" },
     { "src": "/(.*)/js/(.*)", "dest": "/js/$2" },
+    { "src": "/(.*)/css/(.*)", "dest": "/css/$2" },
+    { "src": "/(.*)/images/(.*)", "dest": "/css/$2" },
+
     { "src": "/blog/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
 
     { "src": "/memecoin-solona", "dest": "/blog-1.html" },
