@@ -9,7 +9,7 @@
     { "src": "/s2s-gtm", "dest": "/s2s-gtm.html" },
     { "src": "/sitemap.xml", "dest": "/sitmap.xml" },
     { "src": "/blogs", "dest": "/blog-2.html" },
-    { "src": "/meet-with-us", "dest": "/contact-us.html" },
+    { "src": "/meet-with-us.html", "dest": "/contact-us.html" },
     { "src": "/team", "dest": "/our-team.html" },
     { "src": "/(.*)/js/(.*)", "dest": "/js/$2" },
     { "src": "/(.*)/css/(.*)", "dest": "/css/$2" },
