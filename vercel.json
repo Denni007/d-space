@@ -17,7 +17,7 @@
 
     { "src": "/blog/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
 
-    { "src": "/memecoin-solona", "dest": "/blog-1.html" },
+    { "src": "/blogs/memecoin-solona", "dest": "/blog-1.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
