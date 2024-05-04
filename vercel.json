@@ -11,8 +11,9 @@
     { "src": "/blogs", "dest": "/blog-2.html" },
     { "src": "/meet-with-us", "dest": "/contact-us.html" },
     { "src": "/team", "dest": "/our-team.html" },
-    { "src": "/js/(.*)", "dest": "/js/$1" },
-    { "src": "/blog/(.*)", "dest": "/blog/$1" },
+    { "src": "/(.*)/js/(.*)", "dest": "/js/$2" },
+    { "src": "/blog/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
+
     { "src": "/memecoin-solona", "dest": "/blog-1.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
