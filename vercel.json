@@ -14,10 +14,8 @@
     { "src": "/(.*)/css/(.*)", "dest": "/css/$2" },
     { "src": "/(.*)/images/(.*)", "dest": "/css/$2" },
     { "src": "/blogs", "dest": "/blogslist.html" },
-
     { "src": "/blogs/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
-
-    { "src": "/blogs/Understanding-Meme-Coin-Development", "dest": "/blog-1.html" },
+    { "src": "/blog/Understanding-Meme-Coin-Development", "dest": "/blog-1.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
