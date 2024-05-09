@@ -23,7 +23,7 @@ __p+='`),p}),re+=`';
 /*!
  * tram.js v0.8.2-global
  * Cross-browser CSS3 transitions in JavaScript
- * https://github.com/bkwld/tram
+ * https://behance.net/starluxetech-/bkwld/tram
  * MIT License
  */
 /*!
