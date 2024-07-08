@@ -2,6 +2,8 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/", "dest": "/index.html" },
+    { "src": "/3d", "dest": "/new-ar.html" },
+
     { "src": "/contact-us", "dest": "/contact-us.html" },
     { "src": "/GDPR", "dest": "/gdpr.html" },
     { "src": "/ga4-migration", "dest": "/ga4-migration.html" },
