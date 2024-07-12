@@ -54,6 +54,12 @@
       padding-bottom: 0px;
       scroll-behavior: smooth !important
     }
+
+   
+        
+  
+
+
   </style>
 </head>
 
@@ -68,13 +74,13 @@
   </div>
 
   <div class="navbar-wrapper sticky-top">
-    <div class="container">
-      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+    <div class="container  bg-gradient-17 ">
+      <div data-collapse="medium" data-animation="default" data-duration="400" 
         role="banner" class="navbar w-nav">
         <div class="navbar-row">
           <div class="div-block-6">
-            <a href="#Top" class="navbar-1-brand w-nav-brand">
-              <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="">
+            <a href="#Top" class="navbar-1-brand w-nav-brand" id="animated-logo">
+              <img id="logo" src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="">
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                               <a href="products.html" class="nav-link w-nav-link">Products</a>
@@ -115,9 +121,8 @@
     </div>
   </div>
 
-
   <!-- hero section -->
-  <div class="wf-section ">
+  <div class="wf-section">
     <div class="container bg-gradient-17">
       <div class="panel section hero-panel ">
         <div class="background-image-wrapper">
@@ -1032,7 +1037,13 @@
       </div>
     </div>
   </section>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        document.getElementById('animated-logo').classList.add('logo-move');
+      }, 1000); // Delay before the animation starts
+    });
+  </script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="/js/dataexpert.js" type="text/javascript"></script>
 
@@ -1066,8 +1077,12 @@
       // show cursor
       showCursor: true,
     });
-  </script>
 
+// Wait for logo animation to complete (adjust timeout as needed)
+
+
+  </script>
+  
 </body>
 
 </html>
