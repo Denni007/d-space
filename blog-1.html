@@ -22,9 +22,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
   <meta name="author" content="Ravi Patel">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/blogs.css" rel="stylesheet" type="text/css">
+  <link href="/css/dspace.css" rel="stylesheet" type="text/css">
   <script src="https://player.vimeo.com/api/player.js"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -63,9 +64,19 @@
       scroll-behavior: smooth !important
     }
   </style>
+
+  <script src="/js/dataexpert.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <div id="Top" class="back-to-top-container">
+    <div class="back-to-top-button-wrapper">
+      <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
+        <img src="/images/icon-arrow-up.svg" alt="" class="button-circle-icon">
+      </a>
+
+    </div>
+  </div>
 
   <div class="navbar-wrapper sticky-top">
     <div class="container">
@@ -90,7 +101,7 @@
                       alt="" class="dropdown-link-icon">
                   </div>
                 </div>
-                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                <div class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
                   <div class="dropdown-list-wrapper">
                     <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
                     <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
@@ -101,7 +112,7 @@
                       Tracking</a>
                     <div class="dropdown-bg"></div>
                   </div>
-                </nav>
+                </div>
               </div>
               <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
                 class="nav-link w-nav-link">Team</a>
@@ -118,113 +129,6 @@
     </div>
   </div>
 
-  <div id="Top" class="back-to-top-container">
-    <div class="back-to-top-button-wrapper"
-      style="opacity: 0; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-      <a href="#Top" class="button-circle bg-gray-3 w-inline-block"><img
-          src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeedfe6ae0b672ad8b_icon-arrow-up.svg"
-          alt="" class="button-circle-icon"></a>
-    </div>
-  </div>
-  <!-- <div class="navbar-wrapper sticky-top">
-    <div class="container">
-      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-        <div class="navbar-row">
-          <div><a href="/" class="navbar-1-brand w-nav-brand" aria-label="home"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dfa98be165f4e1b50909848_Panels-new.svg" alt=""></a>
-            <nav role="navigation" class="nav-menu w-nav-menu"><a href="/" class="nav-link w-nav-link">Tour</a>
-              <div data-delay="0" data-hover="true" class="w-dropdown">
-                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-                  <div class="row row-align-center">
-                    <div>Demos</div><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg" alt="" class="dropdown-link-icon">
-                  </div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
-                  <div class="dropdown-list-wrapper"><a href="/demos/landing-1" class="dropdown-item w-dropdown-link" tabindex="0">Landing 1</a><a href="/demos/landing-2" class="dropdown-item w-dropdown-link" tabindex="0">Landing 2</a><a href="/demos/landing-3" class="dropdown-item w-dropdown-link" tabindex="0">Landing 3</a><a href="/demos/landing-4" class="dropdown-item w-dropdown-link" tabindex="0">Landing 4</a><a href="/demos/landing-5" class="dropdown-item w-dropdown-link" tabindex="0">Landing 5</a>
-                    <div class="dropdown-bg"></div>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="true" class="w-dropdown">
-                <div class="nav-link row w-dropdown-toggle" id="w-dropdown-toggle-1" aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-                  <div class="row row-align-center">
-                    <div>Pages</div><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg" alt="" class="dropdown-link-icon">
-                  </div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-1" aria-labelledby="w-dropdown-toggle-1">
-                  <div class="dropdown-list-wrapper">
-                    <div class="dropdown-bg"></div>
-                    <div class="dropdown-grid-halves"><a href="https://panels-template.webflow.io/#company" class="dropdown-item dropdown-item-large w-inline-block" tabindex="0">
-                        <h6 class="dropdown-item-heading">Company Pages</h6>
-                        <div class="text-small">Build a detailed and informative online presence</div>
-                      </a><a href="https://panels-template.webflow.io/#pricing" class="dropdown-item dropdown-item-large w-inline-block" tabindex="0">
-                        <h6 class="dropdown-item-heading">Pricing Pages</h6>
-                        <div class="text-small">Articulate your product's pricing options</div>
-                      </a><a href="https://panels-template.webflow.io/#blog" class="dropdown-item dropdown-item-large w-inline-block" tabindex="0">
-                        <h6 class="dropdown-item-heading">Blog Pages</h6>
-                        <div class="text-small">Engage your audience with multiple layotus.</div>
-                      </a><a href="https://panels-template.webflow.io/#account" class="dropdown-item dropdown-item-large w-inline-block" tabindex="0">
-                        <h6 class="dropdown-item-heading">Account Pages</h6>
-                        <div class="text-small">Stylish forms and utilities for your users.</div>
-                      </a></div>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="true" class="w-dropdown">
-                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-                  <div class="row row-align-center">
-                    <div>Panels</div><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg" alt="" class="dropdown-link-icon">
-                  </div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2">
-                  <div class="dropdown-list-wrapper">
-                    <div class="dropdown-bg"></div>
-                    <div class="w-layout-grid grid">
-                      <div class="dropdown-grid-column"><a href="/panels/cta" class="dropdown-item w-dropdown-link" tabindex="0">CTA</a><a href="/panels/footers" class="dropdown-item w-dropdown-link" tabindex="0">Footers</a><a href="/panels/forms" class="dropdown-item w-dropdown-link" tabindex="0">Forms</a><a href="/panels/gallery" class="dropdown-item w-dropdown-link" tabindex="0">Gallery</a><a href="/panels/heros" class="dropdown-item w-dropdown-link" tabindex="0">Heros</a><a href="/panels/icons" class="dropdown-item w-dropdown-link" tabindex="0">Icons</a><a href="/panels/lists" class="dropdown-item w-dropdown-link" tabindex="0">Lists</a><a href="/panels/metrics" class="dropdown-item w-dropdown-link" tabindex="0">Metrics</a></div>
-                      <div class="dropdown-grid-column"><a href="/panels/pricing" class="dropdown-item w-dropdown-link" tabindex="0">Pricing</a><a href="/panels/quotes" class="dropdown-item w-dropdown-link" tabindex="0">Quotes</a><a href="/panels/tabs" class="dropdown-item w-dropdown-link" tabindex="0">Tabs</a><a href="/panels/team" class="dropdown-item w-dropdown-link" tabindex="0">Team</a><a href="/panels/text" class="dropdown-item w-dropdown-link" tabindex="0">Text</a><a href="/panels/titles" class="dropdown-item w-dropdown-link" tabindex="0">Titles</a><a href="/panels/videos" class="dropdown-item w-dropdown-link" tabindex="0">Videos</a></div>
-                    </div>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="true" class="w-dropdown">
-                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-3" aria-controls="w-dropdown-list-3" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-                  <div class="row row-align-center">
-                    <div>Template</div><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg" alt="" class="dropdown-link-icon">
-                  </div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-3" aria-labelledby="w-dropdown-toggle-3">
-                  <div class="dropdown-list-wrapper"><a href="/template/style-guide" class="dropdown-item w-dropdown-link" tabindex="0">Style Guide</a><a href="/template/getting-started" class="dropdown-item w-dropdown-link" tabindex="0">Getting
-                      Started</a><a href="/template/licensing" class="dropdown-item w-dropdown-link" tabindex="0">Licenses</a><a href="/template/changelog" class="dropdown-item w-dropdown-link" tabindex="0">Changelog</a><a href="https://disqus.com/home/discussion/templatemarketplace/panels_ui_kit_html5_responsive_website_template/" target="_blank" class="dropdown-item w-dropdown-link" tabindex="0">Support</a>
-                    <div class="dropdown-bg"></div>
-                  </div>
-                </nav>
-              </div>
-            </nav>
-          </div>
-          <div class="navbar-controls">
-            <div class="navbar-buttons">
-              <div class="modal-button-container"><a href="#" class="button icon-button bg-gray-1 w-inline-block"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224ef033682ccadf9e7b4_icon-search.svg" alt="" class="icon-button-icon">
-                  <div class="icon-button-text">Search</div>
-                </a></div>
-              <div class="modal-container" style="opacity: 0;">
-                <div class="modal-background"></div>
-                <div class="content-width-medium modal-content">
-                  <div class="panel modal-panel">
-                    <div class="modal-panel-bg"></div>
-                    <div class="panel-body modal-panel-body">
-                      <form action="/search" class="search-form w-form"><input class="form-input form-input-large search-modal-input w-input" autofocus="true" maxlength="256" name="query" placeholder="Type your search" type="search" id="search" required=""><input type="submit" class="button search-form-button w-button" value="Search">
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div><a href="https://webflow.com/templates/html/panels-ui-kit-website-template" target="_blank" class="button w-button">View on Webflow</a>
-            </div>
-            <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7edbe9260a75d_icon-menu.svg" alt=""></div>
-          </div>
-        </div>
-        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
-      <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div></div>
-    </div>
-  </div>-->
   <div class="section section-small">
     <div class="container">
       <div class="content-width-medium article-title-wrapper"><a style="background-color:#3ccf91"
@@ -491,10 +395,10 @@
                 </div>
                 <div class="w-dyn-list">
                   <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item"><a href="/post/how-inside-weather-launched-their-brand"
+                    <div role="listitem" class="w-dyn-item"><a href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
                         class="blog-small-link w-inline-block">
-                        <h5 class="blog-small-heading">How Inside Weather launched their brand</h5>
-                        <div>November 30, 2019</div>
+                        <h5 class="blog-small-heading">How to Use Machine Learning and AI in Ecommerce</h5>
+                          <div>October 01, 2024</div>
                       </a></div>
                   </div>
                 </div>
@@ -510,7 +414,7 @@
                   src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
                   alt=""></a><a href="https://behance.net/starluxetech-" class="social-link-item w-inline-block"><img
                   src="/images/behance-svgrepo-com.svg"
-                  alt=""></a><a href="https://www.linkedin.com/company/starluxetech/?viewAsMember=true" class="social-link-item w-inline-block"><img
+                  alt=""></a><a href="https://www.linkedin.com/company/starluxetech/" class="social-link-item w-inline-block"><img
                   src="/images/linkedin.svg"
                   alt=""></a></div>
           </div>
