@@ -389,31 +389,31 @@ if(location.hostname.includes("starluxetech")){
    sessionStorage.clear('_ipgeolocation_geolocation');
  }
 
- window.addEventListener('DOMContentLoaded', (event) => {
-  const navbar = document.querySelector('.navbar');
-  const navbar2 = document.querySelector('.navbar-wrapper .container');
+//  window.addEventListener('DOMContentLoaded', (event) => {
+//   const navbar = document.querySelector('.navbar');
+//   const navbar2 = document.querySelector('.navbar-wrapper .container');
 
-  const logo = document.querySelector('.navbar-logo-center');
-  const navMenu = document.querySelector('.nav-menu');
-  const navButton = document.querySelector('.navbar-controls');
+//   const logo = document.querySelector('.navbar-logo-center');
+//   const navMenu = document.querySelector('.nav-menu');
+//   const navButton = document.querySelector('.navbar-controls');
 
-  const adjustHeight = () => {
-    navbar.style.height = 'auto';
-    navbar.style.transition = 'height 4s ease';
-  };
+//   const adjustHeight = () => {
+//     navbar.style.height = 'auto';
+//     navbar.style.transition = 'height 4s ease';
+//   };
 
 
-  // Change navbar height and logo position after 6 seconds
-  setTimeout(() => {
-    navbar.classList.add('navbar-compact');
-    navButton.classList.add('navbar-compact');
-    navbar2.classList.remove("bg-gradient-17")
-    adjustHeight();
+//   // Change navbar height and logo position after 6 seconds
+//   setTimeout(() => {
+//     navbar.classList.add('navbar-compact');
+//     navButton.classList.add('navbar-compact');
+//     navbar2.classList.remove("bg-gradient-17")
+//     adjustHeight();
 
-    setTimeout(() => {
-      navMenu.classList.add('fade-in');
-      navButton.classList.add('fade-in');
+//     setTimeout(() => {
+//       navMenu.classList.add('fade-in');
+//       navButton.classList.add('fade-in');
 
-    }, 500); // Delay to ensure height change is completed
-  }, 3000); // Change this to the desired delay time
-});
+//     }, 500); // Delay to ensure height change is completed
+//   }, 3000); // Change this to the desired delay time
+// });
