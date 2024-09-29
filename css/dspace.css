@@ -346,6 +346,7 @@ figcaption {
   padding-left: 24px;
   -webkit-perspective: 500px;
   perspective: 500px;
+  padding-bottom: 90px;
 }
 
 .container.align-content-center {
