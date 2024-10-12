@@ -3202,6 +3202,7 @@ figcaption {
   background-color: #3ccf91;
   color: #fff;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .form-error {
@@ -3210,6 +3211,7 @@ figcaption {
   background-color: #ff715b;
   color: #fff;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .left-content {
@@ -7158,7 +7160,7 @@ figcaption {
     align-items: stretch;
     margin-left: auto;
     margin-right: auto;
-    padding: 36px;
+    padding: 23px;
     display: flex;
     position: relative
 }
@@ -7816,4 +7818,197 @@ figcaption {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.framer-3hJEI .framer-aesxrb, .framer-3hJEI .framer-16qzr6z, .framer-3hJEI .framer-4sxkw8 {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.framer-3hJEI .framer-1gxkija {
+  --border-bottom-width: 1px;
+  --border-color: var(--token-16cecdcd-c5a5-4884-abaa-e0abd93e3514, rgba(255, 255, 255, .1));
+  --border-left-width: 1px;
+  --border-right-width: 1px;
+  --border-style: solid;
+  --border-top-width: 1px;
+  align-content: center;
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 98px;
+  justify-content: center;
+  max-width: 1440px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  will-change: var(--framer-will-change-override, transform);
+}
+
+.framer-3hJEI .framer-1o63r6a-container {
+  flex: 1 0 0px;
+  height: 98px;
+  position: relative;
+  width: 1px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+.framer-3hJEI .framer-8lyhk0-container, .framer-3hJEI .framer-1ru4dsk-container, .framer-3hJEI .framer-1nj0387-container, .framer-3hJEI .framer-190d2ut-container, .framer-3hJEI .framer-1sogepy-container, .framer-3hJEI .framer-14g34h7-container {
+  height: 98px;
+  position: relative;
+  width: auto;
+}
+li {
+  text-align: -webkit-match-parent;
+}
+
+.framer-BmD7Z.framer-d0tu39 {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 3px;
+  height: 98px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 14px 28px;
+  position: relative;
+  width: min-content;
+  will-change: var(--framer-will-change-override, transform);
+}
+.framer-BmD7Z .framer-1cv6lkm {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: 71px;
+  justify-content: center;
+  min-width: 130px;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  width: min-content;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+/* Container for the logos */
+.logo-container {
+  width: 100%;
+  overflow: hidden; /* Hide the overflow of logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* The logo list that will scroll */
+.logo-list {
+  display: flex;
+  gap: 20px; /* Space between logos */
+  animation: scroll 10s linear infinite; /* Continuous scroll */
+  white-space: nowrap; /* Prevents wrapping of logos */
+}
+
+/* Each logo item */
+.logo-item {
+  width: 186px;
+  height: 98px;
+  flex-shrink: 0;
+}
+
+/* Styling for the logos */
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+/* Keyframe for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at the beginning */
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll to the middle of the combined list */
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .logo-item {
+    width: 140px; /* Adjust width for tablets */
+    height: 74px; /* Adjust height for tablets */
+  }
+  .logo-list {
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+  .logo-item {
+    width: 100px; /* Reduce size for smaller mobile screens */
+    height: 60px; /* Adjust height for better fit */
+  }
+  .logo-list {
+    gap: 10px; /* Reduce gap for mobile screens */
+  }
 }

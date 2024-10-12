@@ -134,38 +134,81 @@
                             back to you.</h3>
                     </div>
                     <div class="form w-form">
-                        <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form"
-                            method="get" class="form-vertical">
-                            <div class="w-layout-grid form-grid-halves">
-                              <input type="text"
-                                    class="form-input form-input-large w-input" maxlength="256" name="name"
-                                    data-name="Name" placeholder="Your Name" id="contact-name" required="">
-                              <input
-                                    type="email" class="form-input form-input-large w-input" maxlength="256"
-                                    name="email" data-name="Email" placeholder="Email Address" id="contact-email"
-                                    required="">
-                            </div>
-                            <textarea placeholder="Your Message" maxlength="5000"
-                                id="Message" name="Message" data-name="Message"
-                                class="form-input textarea w-input"></textarea>
-                              <input type="submit"
-                                value="Send Message" data-wait="Please wait..."
-                                id="w-node-d3363dee-b8dc-ea49-7f77-40950b18e8bd-8aea83c2"
-                                class="button-large bg-primary-4 w-button" onclick="dspaceexpert.convert()">
-                        </form>
-                        <div class="form-success w-form-done">
-                            <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="form-error w-form-fail">
-                            <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
+                      <div class="form-success w1-form-done" style="display:none;">
+                        <div>Thank you! Your submission has been received!</div>
                     </div>
+                    <div class="form-error w1-form-fail" style="display:none;">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>  
+
+                      <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form" method="get" class="form-vertical">
+                          <div class="w-layout-grid form-grid-halves">
+                              <input type="text" class="form-input form-input-large w-input" maxlength="256" name="name" data-name="Name" placeholder="Your Name" id="contact-name" required="">
+                              <input type="text" class="form-input form-input-large w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address" id="contact-email" required="">
+                          </div>
+                          <textarea placeholder="Your Message" maxlength="5000" id="Message" name="Message" data-name="Message" class="form-input textarea w-input"></textarea>
+                          <input type="submit" value="Send Message" data-wait="Please wait..." id="w-node-d3363dee-b8dc-ea49-7f77-40950b18e8bd-8aea83c2" class="button-large bg-primary-4 w-button">
+                      </form>
+                     
+                  </div>
+                  
                 </div>
             </div>
             
            
         </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var form = document.getElementById('wf-form-Contact-Form');
+      
+          // Bind form submission to the dspaceexpert.convert() function
+          form.addEventListener('submit', function(e) {
+              e.preventDefault(); // Prevent form submission from reloading the page
+      
+              // Prepare the properties object with the form data
+              var properties = {
+                  name: document.getElementById('contact-name').value.trim(),
+                  email: document.getElementById('contact-email').value.trim(),
+                  message: document.getElementById('Message').value.trim()
+              };
+      
+              // Validation for name (allow only letters and spaces)
+              var namePattern = /^[a-zA-Z\s]+$/;
+              // Validation for email (basic email format check)
+              var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+              // Check if form is valid (you can add your own validation logic here)
+              if (properties.name === '' || !namePattern.test(properties.name)) {
+                  // Show the error message if name is empty or contains invalid characters
+                  document.querySelector('.w1-form-done').style.display = 'none';
+                  document.querySelector('.w1-form-fail').style.display = 'block';
+                  document.querySelector('.w1-form-fail').innerText = 'Please enter a valid name (letters and spaces only).';
+              } else if (properties.email === '' || !emailPattern.test(properties.email)) {
+                  // Show the error message if the email is invalid
+                  document.querySelector('.w1-form-done').style.display = 'none';
+                  document.querySelector('.w1-form-fail').style.display = 'block';
+                  document.querySelector('.w1-form-fail').innerText = 'Please enter a valid email address.';
+              } else if (properties.message === '') {
+                  // Show the error message if message is empty
+                  document.querySelector('.w1-form-done').style.display = 'none';
+                  document.querySelector('.w1-form-fail').style.display = 'block';
+                  document.querySelector('.w1-form-fail').innerText = 'All fields are required.';
+              } else {
+                  // Call the dspaceexpert.convert() function with the form data
+                  var visitor = dspaceexpert.convert(properties);
+      
+                  // Show the success message after form submission
+                  document.querySelector('.w1-form-done').style.display = 'block';
+                  document.querySelector('.w1-form-fail').style.display = 'none';
+      
+                  console.log('Visitor:', visitor);
+              }
+          });
+      });
+    </script>
+    
+      
 <!--   
     
     <div class="wf-section">
@@ -198,6 +241,8 @@
                             <div class="form-success w-form-done">
                                 <div>Thank you! Your submission has been received!</div>
                             </div>
+
+                            
                             <div class="form-error w-form-fail">
                                 <div>Oops! Something went wrong while submitting the form.</div>
                             </div>
