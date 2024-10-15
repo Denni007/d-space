@@ -21,6 +21,8 @@
     { "src": "/blogs/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
     { "src": "/blog/Understanding-Meme-Coin-Development", "dest": "/blog-1.html" },
     { "src": "/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story", "dest": "/blog-2.html" },
+    { "src": "/blogs/gtm-form-interact-event", "dest": "/blog-3.html" },
+
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
