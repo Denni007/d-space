@@ -6834,7 +6834,7 @@ figcaption {
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 991px) {
   body {
     padding-bottom: 12px;
   }
@@ -6844,7 +6844,7 @@ figcaption {
   h1 {
     font-size: 32px;
     line-height: 40px;
-  }
+  } 
 
   h2 {
     font-size: 28px;
@@ -8105,5 +8105,190 @@ ul {
   }
   .logo-list {
     gap: 50px; /* Reduce gap for mobile screens */
+  }
+}
+
+
+
+
+
+
+
+.cw-key {
+  background-color: hsla(0, 0%, 100%, .25);
+  font-weight: 700;
+  margin-left: .125rem;
+  margin-right: .125rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .cw-key {
+      padding-bottom: .3rem;
+      padding-top: .3rem;
+  }
+}
+
+.cw-press-b-btn {
+  font-weight: 600 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 3.5rem !important;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: #fff;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.cw-btn--sm {
+  display: block;
+  font-weight: 600;
+  padding-left: 2.25rem;
+  position: relative;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  --tw-text-opacity: 1;
+  color: #fff;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  --tw-gradient-from: #04a9ec var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(4, 169, 236, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #ff1f5e var(--tw-gradient-to-position);
+}
+
+.cw-accent-btn {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 50px 1rem 1rem;
+  position: relative;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  --tw-text-opacity: 1;
+  color: #fff;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  --tw-gradient-from: #04a9ec var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(4, 169, 236, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #ff1f5e var(--tw-gradient-to-position);
+}
+.cw-press-b-btn {
+  background: linear-gradient(90deg, #29baf8, #fe205f);
+  background: linear-gradient(to right, var(--theme-blue-light), var(--theme-red-light));
+  background-position: 50%;
+  background-size: 125%;
+  border-radius: 5rem;
+  box-shadow: 0 6px 35px 0 rgba(0, 48, 255, .2);
+}
+@media (min-width: 768px) {
+  .cw-press-b-btn {
+      padding-bottom: 1rem !important;
+      padding-top: 1rem !important;
+  }
+}
+
+.cw-press-b-btn {
+  font-weight: 600 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 3.5rem !important;
+}
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io-button {
+  background:#FF934F;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #f16202;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #FF934F;;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #FF934F;;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+.btndesk {
+  display: flex !important;
+}
+.btnmobile {
+  display: none !important;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .btndesk {
+      display: none !important; /* Hide the desktop button on mobile */
+  }
+  .btnmobile {
+      display: flex !important; /* Show the mobile button */
+  }
+}
+
+/* Media query for larger screens (desktop) */
+@media screen and (min-width: 769px) {
+  .btndesk {
+      display: flex !important; /* Show the desktop button */
+  }
+  .btnmobile {
+      display: none !important; /* Hide the mobile button */
   }
 }
