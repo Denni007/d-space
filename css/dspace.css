@@ -7823,7 +7823,9 @@ figcaption {
 
 
 
-
+.framer-section{
+  display: flex; width: 100%; height: 100%; max-width: 100%; max-height: 100%; place-items: center; margin: 0px; padding: 10px; list-style-type: none; opacity: 1; overflow: hidden;
+}
 
 
 
@@ -7961,24 +7963,117 @@ ul {
 /* The logo list that will scroll */
 .logo-list {
   display: flex;
-  gap: 20px; /* Space between logos */
-  animation: scroll 10s linear infinite; /* Continuous scroll */
-  white-space: nowrap; /* Prevents wrapping of logos */
+  gap: 20px;
+  /* Space between logos */
+  animation: scroll 10s linear infinite;
+  /* Continuous scroll */
+  white-space: nowrap;
+  /* Prevents wrapping of logos */
+  height: 100%;
+  max-height: 100%;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-indent: none;
+  position: relative;
+  flex-direction: row;
+  background-image: linear-gradient(to right, var(
+), rgba(14, 12, 21, 0));
+
+
+
+
+
+
+  will-change: transform;
+  transform: translateX(-0px)
 }
 
 /* Each logo item */
 .logo-item {
-  width: 186px;
-  height: 98px;
+  width: 186px !important;
+  height: 98px !important ;
   flex-shrink: 0;
+  
+  
 }
 
 /* Styling for the logos */
 .logo-item img {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
   border-radius: inherit;
+}
+.framer-section {
+  position: relative; /* Required for positioning the overlay */
+  overflow: hidden; /* Optional, to hide overflow */
+  background: #12141d; /* Example background color */
+
+  overflow: hidden;
+  position: relative;
+
+}
+
+
+
+/* .marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: #12141d;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+} */
+.framer-section:before, .framer-section:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.framer-section:before {
+  left: 0;
+  background: linear-gradient(to right, #1e2029  0%, transparent 100%);
+}
+.framer-section:after {
+  right: 0;
+  background: linear-gradient(to left, #1e2029  0%, transparent 100%);
+}
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+}
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+@media (max-width: 600px) {
+  
+  .marquee:before, .marquee:after { width: 5rem; }
 }
 
 /* Keyframe for infinite scrolling */
@@ -8005,10 +8100,10 @@ ul {
 /* Media query for mobile screens */
 @media (max-width: 600px) {
   .logo-item {
-    width: 100px; /* Reduce size for smaller mobile screens */
-    height: 60px; /* Adjust height for better fit */
+    width: 100px !important; /* Reduce size for smaller mobile screens */
+    height: 60px !important; /* Adjust height for better fit */
   }
   .logo-list {
-    gap: 10px; /* Reduce gap for mobile screens */
+    gap: 50px; /* Reduce gap for mobile screens */
   }
 }
