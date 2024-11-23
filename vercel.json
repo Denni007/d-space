@@ -23,6 +23,7 @@
     { "src": "/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story", "dest": "/blog-2.html" },
     { "src": "/blogs/gtm-form-interact-event", "dest": "/blog-3.html" },
     { "src": "/blogs/iFrame-Tracking-GTM", "dest": "/blog-4.html" },
+    { "src": "/blogs/Top-Pages-Using-Google-Analytics", "dest": "/blog-5.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]

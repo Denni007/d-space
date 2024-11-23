@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>StarLuxe Tech - Blogs - iFrame Tracking with Google Tag Manager (GTM)</title>
+  <title>StarLuxe Tech - Blogs - How To Find Your Top Pages Using Google Analytics</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233022559905658"
@@ -13,17 +13,17 @@
   <meta content="StarLuxe Analytics" property="twitter:title">
   <meta property="og:image" content="https://framerusercontent.com/images/yt5kwKpyZtvbYsgvmnBr6D2Zqjc.png" />
   <meta property="og:title" content="Mastering iFrame Tracking with Google Tag Manager" />
-<meta property="og:description"
-  content="Learn how to use Google Tag Manager to track user interactions within iFrames, including clicks, form submissions, and multi-step progress." />
+  <meta property="og:description"
+  content="Learn step-by-step how to identify your top-performing pages using Google Analytics. Optimize your strategy by analyzing page views, bounce rates, and user engagement." />
 <meta name="description"
-  content="Discover the techniques for implementing iFrame tracking with Google Tag Manager. Enhance your analytics by capturing detailed user interactions within embedded content." />
+  content="Discover how to use Google Analytics to find your most-visited pages and analyze their performance. Boost your website's success with actionable insights." />
 <meta name="keywords"
-  content="Google Tag Manager, GTM, iFrame tracking, user behavior, embedded content, postMessage API, data analytics, multi-step forms, GA4" />
+  content="Google Analytics, top pages, website performance, page views, bounce rate, user engagement, content analysis, GA4, website optimization" />
 <meta name="robots" content="index, follow" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
-  <meta name="author" content="Ravi Patel">
+  <meta name="author" content="Hevin Dhokariya">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="canonical" href="https://www.starluxetech.com/blogs/gtm-form-interact-event">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
@@ -139,7 +139,7 @@
         <a style="background-color:#cf523c" href="/blog-categories/marketing" class="badge space-bottom w-inline-block">
           <div>Data Analytics</div>
         </a>
-        <h1 class="display-heading-3">iFrame Tracking with Google Tag Manager (GTM)
+        <h1 class="display-heading-3">How To Find Your Top Pages Using Google Analytics
         </h1>
         <div class="post-meta-wrapper">
           <a href="/our-team" class="w-inline-block">
@@ -148,7 +148,7 @@
               class="avatar">
           </a>
           <div class="space-left">
-            <div>November 19, 2024</div>
+            <div>November 23, 2024</div>
             <div class="row">
               <div>By </div><a href="/our-team" class="blog-post-panel-author">&nbsp; Hevin Dhokariya</a>
             </div>
@@ -156,7 +156,9 @@
         </div>
       </div>
       <div class="content-width-extra-large">
-        <img alt="" src="https://framerusercontent.com/images/mpizRMiriP8y7KOt6KO5lGUmhiI.png" class="rounded-image">
+        <img alt="" src="https://framerusercontent.com/images/kXim6hWb90okDBuSYgq6btYE.png?scale-down-to=512" class="rounded-image" style="
+        width: 100%;
+    ">
       </div>
     </div>
   </div>
@@ -164,147 +166,24 @@
   <div>
     <div class="container">
       <div class="article-container">
-        <div class="text-lead blog-post-summary">
-          If you’ve ever faced the challenge of tracking interactions within an iFrame, you know how tricky it can be.
-          But thanks to the evolving capabilities of Google Tag Manager (GTM), it’s now easier to gain insights into
-          user behavior inside embedded content. Here’s a quick dive into how you can leverage GTM for seamless iFrame
-          tracking and why it’s a game-changer for marketers. </div>
+        
         <div class="article w-richtext">
-          <h3>What is iFrame Tracking with GTM?</h3>
-          <p>iFrames are HTML elements used to embed external content within a webpage. While they’re great for
-            embedding forms, surveys, and third-party tools, their isolated environment makes traditional tracking
-            methods ineffective. GTM, however, allows you to bridge this gap using tools like the postMessage API and
-            custom events.</p>
-
-          <h3>By setting up iFrame tracking with GTM, you can capture:</h3>
-          <!-- <p>An e-commerce business selling premium home furniture used iBQML to tackle two challenges:</p> -->
-          <ul>
-            <li><strong>User interactions inside the iFrame (e.g., clicks, form submissions).</li>
-            <li><strong>Field-specific interactions, similar to the gtm.formInteract event.</li>
-            <li><strong>Completion rates for multi-step forms or embedded tools.</li>
-
-          </ul>
-          <h3>How to Track Iframes with Google Tag Manager</h3>
-          <p>Step 1: Confirm the Presence of an iFrame</p>
-          <p>Before setting up tracking, confirm if the content you want to monitor is inside an iFrame. Here’s how:</p>
-          <ol>
-            <li><strong>Right-Click Clues:</li>
-            <p>When you right-click on the content, look for options like “View Frame Source” or “Reload Frame.” These
-              indicate you’re working within an iFrame.</p>
-
-            <li><strong>Inspect the HTML Code:</li>
-            <p>Open Developer Tools in your browser (right-click > Inspect). Navigate through the DOM tree and search
-              for an iframe element. If you see it, you’re dealing with embedded content.</p>
-
-
-          </ol>
-
-          <p>Step 2: Set Up a Separate GTM Container for the iFrame</p>
-          <p>To properly track interactions inside an iFrame, create a dedicated GTM container for it.</p>
-          <ol>
-            <li><strong>Create a New GTM Container:</li>
-            <p>Log in to your GTM account and create a new container specifically for the iFrame.</p>
-
-            <li><strong>Install the GTM Snippet in the iFrame:</li>
-            <p>Copy the first part of the GTM code snippet and place it in the head section of the iFrame’s HTML.</p>
-            <p>Copy the second part and paste it immediately after the opening body tag.</p>
-            <p>Save and publish the changes.</p>
-
-
-          </ol>
-
-          <p>Step 3: Test the GTM Container in Preview Mode</p>
-
-          <ol>
-            <li><strong>Open your iFrame GTM container and select Preview Mode.</li>
-
-            <li><strong>Enter the iFrame URL in the Tag Assistant preview window.</li>
-            <li><strong>Click "Connect" to confirm that GTM is correctly installed in the iFrame. Any interactions
-                within the iFrame will now be accessible for tracking.</li>
-
-
-          </ol>
-
-          <p>Step 4: Add a PostMessage Sender Tag in the iFrame</p>
-
-          <p>To send interaction data from the iFrame to the parent frame, use the postMessage API.</p>
-          <ol>
-            <li><strong>Create a Custom HTML Tag in the iFrame Container:</li>
-            <p>Add the following script to detect clicks on the "BOOK NOW" button and send a message to the parent
-              frame:</p>
-
-            <li><strong>Configure a Trigger for the Tag:</li>
-            <p>Set the tag to fire on clicks for the "BOOK NOW" button.</p>
-            <p>Copy the second part and paste it immediately after the opening body tag.</p>
-            <p>Save and publish the tag.</p>
-          </ol>
-          <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-            <div><img src="https://framerusercontent.com/images/HGFnIfMWj46iap8hxItlr1DESLw.png" loading="lazy" alt="">
+          <h3>If your website uses GA 4, please follow the steps below</h3>
+          <ol><li><strong>First, login to your Google Analytics account, then click on ‘Reports’ in the left hand side menu.</li>
+            <div class="content-width-extra-large">
+              <img alt="" src="https://framerusercontent.com/images/EIFyw7sNzhU881g7WfoMV4kBOdo.jpeg" class="rounded-image" >
             </div>
-          </figure>
-
-          <p>Step 5: Add a PostMessage Listener in the Parent Container</p>
-
-          <p>Now that the iFrame sends data, configure the parent frame to listen for these messages. </p>
-          <ol>
-            <li><strong>Create a Custom HTML Tag in the Parent GTM Container:</li>
-            <p>Add the following code to listen for messages from the iFrame and push them to the Data Layer:</p>
-
-            <li><strong>Configure the Trigger:</li>
-            <p>Set the tag to fire on All Page Views or specific conditions (e.g., URL contains "iframe").</p>
-            <li><strong>Save and publish the tag.</li>
-          </ol>
-          <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-            <div><img src="https://framerusercontent.com/images/9fa8BcxgzAWbo5lJrWEJWxAHGm4.png" loading="lazy" alt="">
-            </div>
-          </figure>
-
-          <p>Step 6: Verify the Setup </p>
-          <ol>
-            <li><strong>Test the PostMessage Sender Tag:</li>
-            <p>Open Preview Mode in the iFrame GTM container.</p>
-            <p>Click the "BOOK NOW" button and confirm the postMessage sender tag fires successfully.</p>
-
-            <li><strong>Test the PostMessage Listener Tag:</li>
-            <p>Open Preview Mode in the parent GTM container.</p>
-            <p>Navigate to the parent frame and click the "BOOK NOW" button again.</p>
-            <p>Check the Data Layer in the Tag Assistant to confirm the event and message data are captured.</p>
-
-          </ol>
-
-          
-          <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-            <div><img src="https://framerusercontent.com/images/mpizRMiriP8y7KOt6KO5lGUmhiI.png" loading="lazy" alt="">
-            </div>
-          </figure>
-
-          <blockquote>“iFrame tracking with Google Tag Manager (GTM) is a game changer for embedded content. It enables
-            precise monitoring of user interactions within iFrames, helping marketers uncover hidden insights, identify
-            drop-off points, and optimize user experiences to drive higher engagement and conversions.”</blockquote>
-          <h3>Why Is iFrame Tracking Important?</h3>
-          <ol>
-            <li><strong>Understand Drop-Off Points: Identify where users abandon embedded forms or tools.</li>
-            <li><strong>Optimize Multi-Step Forms: Track user behavior across steps to improve conversion.</li>
-            <li><strong>Enable Granular Analytics: Monitor clicks, field interactions, and submissions within iFrames.
-            </li>
-            <li><strong>Seamless Integration: Send iFrame data to analytics tools for actionable insights.</li>
-            <li><strong>Overcome Limitations: Bridge the communication gap between iFrames and parent pages using GTM.
-            </li>
-
-          </ol>
-
-          <h3>Conclusion</h3>
-          <p>The implementation of iFrame tracking with Google Tag Manager (GTM) represents a significant advancement in
-            understanding user interactions within embedded content. By leveraging techniques like the postMessage API,
-            you can capture granular data on user behavior, including clicks, form interactions, and step completions.
-            This enables marketers to make informed decisions to enhance the user experience, optimize embedded tools,
-            and ultimately boost conversions.
-
-            If you haven’t yet implemented iFrame tracking, now is the perfect time to dive in and unlock the potential
-            insights it offers. With GTM, seamless integration and actionable data are within your reach!</p>
-          <!-- <p>If you’re ready to explore the potential of iBQML, now is the time to get started. It’s a small investment
-            that can lead to significant returns.</p> -->
-        </div>
+            
+            <li><strong>Then select “Engagement” and then “Pages and screens”.</li>
+              <div class="content-width-extra-large">
+                <img alt="" src="https://framerusercontent.com/images/xFPE0opp6UG0YcnCXs3hOeABs.jpeg" class="rounded-image" >
+              </div>
+              <li><strong>Here you should be able to see your top 10 pages by number of views. Please make sure you have the last 30 days selected in the date range. </li></ol>
+                <p>Please take a screenshot of the list of 10 pages and send through to us</p>
+                <div class="content-width-extra-large">
+                  <img alt="" src="https://framerusercontent.com/images/JBY06IxSbYu6DIj9PCZRhJILspA.png?scale-down-to=1024" class="rounded-image" >
+                </div>
+               </div>
       </div>
     </div>
   </div>
