@@ -25,6 +25,7 @@
     { "src": "/blog/iFrame-Tracking-GTM", "dest": "/blog-4.html" },
     { "src": "/blog/top-Pages-Using-Google-Analytics", "dest": "/blog-5.html" },
     { "src": "/blog/Hide-UTM-Parameters", "dest": "/blog-6.html" },
+    { "src": "/blog/Successful-CRO-Audits-and-A/B-Testing", "dest": "/blog-7.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
