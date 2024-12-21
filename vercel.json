@@ -26,6 +26,7 @@
     { "src": "/blog/top-Pages-Using-Google-Analytics", "dest": "/blog-5.html" },
     { "src": "/blog/Hide-UTM-Parameters", "dest": "/blog-6.html" },
     { "src": "/blog/Successful-CRO-Audits-and-A/B-Testing", "dest": "/blog-7.html" },
+    { "src": "/blog/AI-Powered-Google-Analytics-4-Insights", "dest": "/blog-8.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
