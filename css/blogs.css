@@ -1981,11 +1981,15 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
+    background-image: linear-gradient(#1e2b2780, #1e2a27 98%);
+    position: absolute;
+    inset: 0%;
   }
+ 
   
   .hero-bg-1 {
-    opacity: .5;
-    background-image: url('../images/rectangle-6.jpg');
+    opacity: .1;
+    background-image: url('https://www.learningroots.com/cdn/shop/files/kiitab-bundle-sof-save-modV2025.png?v=1734942321');
     background-position: 0 0;
     background-size: cover;
     border-radius: 12px;
@@ -2588,7 +2592,7 @@
   }
   
   .case-study-panel-logo {
-    opacity: .5;
+    opacity: .9;
     margin-bottom: 36px;
   }
   
