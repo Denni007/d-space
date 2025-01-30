@@ -30,8 +30,7 @@
     { "src": "/blog/Fix-Google-Analytics-4-DebugView", "dest": "/blog-9.html" },
     { "src": "/blog/Understanding-Acquisition-Reports", "dest": "/blog-10.html" },
     { "src": "/case-studies", "dest": "/casestudylist.html"},
-
-    { "src": "/case-study/learningroots", "dest": "/casestudy.html" },
+    { "src": "/case-study/learning-roots", "dest": "/casestudy.html"},
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
