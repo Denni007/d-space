@@ -22,6 +22,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.starluxetech.com/case-studies</loc>
+  <lastmod>2024-09-29T22:24:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.starluxetech.com/service/conversion-rate-optimization</loc>
   <lastmod>2024-09-29T22:24:59+00:00</lastmod>
   <priority>0.80</priority>
@@ -95,5 +100,10 @@
 <loc>https://www.starluxetech.com/blog/Understanding-Acquisition-Reports</loc>
 <lastmod>2025-01-29T08:45:35+00:00</lastmod>
 <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.starluxetech.com/case-study/learningroots</loc>
+  <lastmod>2025-01-29T22:24:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 </urlset>

@@ -29,8 +29,9 @@
     { "src": "/blog/AI-Powered-Google-Analytics-4-Insights", "dest": "/blog-8.html" },
     { "src": "/blog/Fix-Google-Analytics-4-DebugView", "dest": "/blog-9.html" },
     { "src": "/blog/Understanding-Acquisition-Reports", "dest": "/blog-10.html" },
+    { "src": "/case-studies", "dest": "/CaseStudieslist.html" },
 
-    { "src": "/CaseStudieslist", "dest": "/CaseStudieslist.html" },
+    { "src": "/case-study/learningroots", "dest": "/casestudy.html" },
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]

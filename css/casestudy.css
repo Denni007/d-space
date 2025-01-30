@@ -6813,7 +6813,7 @@ figcaption {
   }
 
   .panel.bg-gradient-6-reverse {
-    max-width: 91%;
+    /* max-width: 91%; */
   }
 
   .panel.section {
@@ -6860,11 +6860,11 @@ figcaption {
   }
 
   .panel.bg-gradient-3 {
-    max-width: 91%;
+    /* max-width: 91%; */
   }
 
   .panel.bg-gradient-9 {
-    max-width: 91%;
+    /* max-width: 91%; */
   }
 
   .panel.panel-bg.size {
