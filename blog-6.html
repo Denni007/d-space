@@ -1,5 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Sep 13 2023 19:36:12 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html>
 <html data-wf-page="64d531d8b3d556ea8480e6be" data-wf-site="64d531d8b3d556ea8480e670">
 
 <head>
@@ -11,8 +10,8 @@
     crossorigin="anonymous"></script>
   <meta content="StarLuxe Analytics" property="og:title">
   <meta content="StarLuxe Analytics" property="twitter:title">
-  <meta property="og:image" content="https://framerusercontent.com/images/yt5kwKpyZtvbYsgvmnBr6D2Zqjc.png" />
-  <meta property="og:title" content="Mastering iFrame Tracking with Google Tag Manager" />
+  <meta property="og:image" content="https://framerusercontent.com/images/eA4TM5ljUdKeRn6I79jTOsjC6c0.png" />
+  <meta property="og:title" content="Hiding UTM Tracking Params: A Guide with Google Tag Manager" />
   <meta property="og:description" 
     content="Learn step-by-step how to hide UTM parameters in your URLs using Google Tag Manager and GA4. Keep your URLs clean while preserving critical analytics data." />
 <meta name="description" 
@@ -26,6 +25,39 @@
   <meta name="language" content="English">
   <meta name="author" content="Hevin Dhokariya">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Hiding UTM Tracking Params: A Guide with Google Tag Manager",
+      "description": "Learn how to hide UTM parameters in your URLs using Google Tag Manager while maintaining accurate campaign tracking in Google Analytics 4 (GA4). This step-by-step guide enhances user experience by keeping URLs clean and professional.",
+      "articleBody": "Google Analytics 4 (GA4) is a powerful tool for tracking user behavior and campaign performance. UTM parameters are essential for understanding traffic sources, mediums, and campaigns, but their long and unattractive URLs can sometimes discourage users from clicking. In this blog, we’ll show you how to hide UTM parameters in GA4 using Google Tag Manager (GTM) while maintaining accurate campaign tracking.\\n\\n**Why Hide UTM Parameters in GA4?**\\n\\nHere are some scenarios where hiding UTM parameters can improve user experience:\\n\\n1. **Social Media Profiles**\\n\\n   Long URLs like `https://www.starluxetech.com/?utm_source=linkedin&utm_medium=social&utm_campaign=profile` might look unprofessional. A cleaner alternative such as `https://www.starluxetech.com/#agency` is more inviting.\\n\\n2. **Email Campaigns**\\n\\n   While UTM parameters provide valuable insights, URLs like `https://example.com/?utm_source=email&utm_medium=email&utm_campaign=newsletter` might seem untrustworthy in emails. Clean URLs look more polished and reliable.\\n\\n3. **Sales Funnels**\\n\\n   Tracking campaign data is vital, but exposing UTM parameters can clutter URLs and disrupt the user journey. Clean URLs allow a seamless experience without sacrificing data.\\n\\n**Step-by-Step Guide to Hide UTM Parameters for GA4**\\n\\n**Step 1: Install Google Tag Manager**\\n\\n   - Ensure Google Tag Manager is installed on your website. If it’s not, collaborate with your developer or refer to GTM setup tutorials to get started.\\n\\n**Step 2: Create a URL Fragment Variable**\\n\\n   - In GTM, navigate to the Variables section.\\n   - Create a new User-Defined Variable and select the URL type.\\n   - Under Component Type, select Fragment.\\n   - Name this variable, e.g., `SL - fragment URL`.\\n\\n**Step 3: Set Up Lookup Table Variables**\\n\\n   **Lookup Table for Source**\\n\\n   - Variable Name: `SL - Lookup - URL - Fragment - Source`.\\n   - Input: Fragments like `#email`, `#linkedin`.\\n   - Output: Campaign sources like `email`, `linkedin`.\\n\\n   **Lookup Table for Medium**\\n\\n   - Variable Name: `SL - Lookup - URL - Fragment - Medium`.\\n   - Input: Same fragments.\\n   - Output: Mediums like `email`, `social`.\\n\\n   **Lookup Table for Campaign**\\n\\n   - Variable Name: `SL - Lookup - URL - Fragment - Campaign Name`.\\n   - Input: Same fragments.\\n   - Output: Campaign names like `newsletter`, `profile`.\\n\\n**Step 4: Send Parameters as GA4 Events**\\n\\n   In GTM, create a GA4 Event Tag:\\n\\n   - Go to Tags > New > GA4 Event.\\n   - Configure the tag to send campaign data to GA4.\\n\\n   Map the Lookup Variables to GA4 Parameters:\\n\\n   - Event Name: Use something descriptive like `custom_campaign`.\\n   - Parameters:\\n     - `source`: `{{SL - Lookup - URL - Fragment - Source}}`\\n     - `medium`: `{{SL - Lookup - URL - Fragment - Medium}}`\\n     - `campaign`: `{{SL - Lookup - URL - Fragment - Campaign Name}}`\\n\\n   This setup ensures GA4 receives the hidden UTM parameter values as custom event data.\\n\\n**Step 5: Test Your Setup**\\n\\n   - Enable GTM’s Preview Mode.\\n   - Visit a URL like `https://example.com/#linkedin`.\\n   - Open the Variables tab in the Preview Mode to verify that your lookup variables (`source`, `medium`, and `campaign`) populate correctly.\\n   - Check GA4’s DebugView to confirm the event is sent with the correct parameter values.\\n\\n**Examples of Clean URLs with Tracking in GA4**\\n\\n- **LinkedIn Profile**\\n  - URL: `https://example.com/#agency`\\n  - Parameters Sent: `source=linkedin`, `medium=social`, `campaign=profile`.\\n\\n- **Email Campaign**\\n  - URL: `https://example.com/#1`\\n  - Parameters Sent: `source=email`, `medium=email`, `campaign=newsletter`.\\n\\n- **Facebook Page**\\n  - URL: `https://example.com/#facebook`\\n  - Parameters Sent: `source=facebook`, `medium=social`, `campaign=profile`.\\n\\n**Conclusion**\\n\\nHiding UTM parameters with Google Tag Manager in GA4 keeps URLs clean and professional while retaining accurate tracking. It’s a simple way to enhance user experience and maintain campaign insights.",
+      "author": {
+        "@type": "Person",
+        "name": "Hevin Dhokariya"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "StarLuxe Tech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png"
+        }
+      },
+      "datePublished": "2024-12-09",
+      "dateModified": "2024-12-09",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.starluxetech.com/blog/Hide-UTM-Parameters"
+      },
+      "image": "https://framerusercontent.com/images/eA4TM5ljUdKeRn6I79jTOsjC6c0.png",
+      "keywords": ["UTM Parameters", "Google Tag Manager", "GA4", "URL Optimization", "Campaign Tracking"],
+      "url": "https://www.starluxetech.com/blog/Hide-UTM-Parameters"
+    }
+    </script>
+    
+
+
   <link rel="canonical" href="https://www.starluxetech.com/blogs/gtm-form-interact-event">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
