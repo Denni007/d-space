@@ -3011,7 +3011,7 @@ figcaption {
   z-index: 1;
   width: 100%;
   min-width: 192px;
-  padding: 6px 12px;
+  padding: 6px 24px;
   border-radius: 6px;
   -webkit-transition: color 200ms ease, background-color 200ms ease;
   transition: color 200ms ease, background-color 200ms ease;
