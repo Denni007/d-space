@@ -321,7 +321,9 @@
 
               <h5>Daily Event Export</h5>
               <p>Your GA4 event data is stored in tables named <strong>events_YYYYMMDD</strong>, where <code>YYYYMMDD</code> represents the date of the recorded data.</p>
-              
+              <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                <div><img src="https://framerusercontent.com/images/qL5BmGygCLvyBZjV40U45ewJajA.png" loading="lazy" alt="GA4 Event Tables"></div>
+            </figure>
               <p><strong>Example:</strong> If you linked GA4 to BigQuery on March 1, 2025, your first table will be <code>events_20250301</code>.</p>
 
               <p> <strong>Key Features:</strong></p>
@@ -332,9 +334,7 @@
 
               <h5>(Almost) Real-Time Event Export</h5>
               <p>The <strong>events_intraday_YYYYMMDD</strong> table stores real-time event data for the current day.</p>
-              <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                <div><img src="https://framerusercontent.com/images/qL5BmGygCLvyBZjV40U45ewJajA.png" loading="lazy" alt="GA4 Event Tables"></div>
-            </figure>
+            
               <p><strong>Note:</strong> This table is only available if <strong>Streaming Export</strong> was enabled when linking GA4 to BigQuery.</p>
 
               <h5>How Event Data is Structured in BigQuery</h5>
