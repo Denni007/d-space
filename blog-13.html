@@ -240,55 +240,131 @@
     </div>
   </div>
 
-  <div>
+  <!-- <div>
     <div class="container">
         <div class="article-container">
             <div class="article w-richtext">
                 <h3>Understanding GA4 BigQuery Schema in 2025</h3>
-                <p>Google Analytics 4 (GA4) provides a powerful integration with BigQuery, allowing businesses to analyze their website and app data at a granular level. Understanding the GA4 BigQuery export schema is essential for making data-driven decisions.</p>
+                <p>Google Analytics 4 (GA4) seamlessly integrates with BigQuery, enabling businesses to analyze website and app data with precision. Understanding the GA4 BigQuery export schema is key to making data-driven decisions.</p>
 
                 <h4>Overview of GA4 BigQuery Export Schema</h4>
-                <p>GA4 exports raw event data to BigQuery, where each event is recorded as a row in a table. The schema is structured to support event-driven analytics and provides detailed insights into user interactions.</p>
+                <p>GA4 exports raw event data to BigQuery, storing each event as a row in a table. The schema is designed to facilitate event-based analytics, providing deep insights into user interactions.</p>
 
                 <h4>Key Components of GA4 BigQuery Schema</h4>
 
                 <h5>1. Event Tables</h5>
                 <ul>
-                    <li><strong>events_YYYYMMDD</strong>: Daily tables where each row represents an event (e.g., page_view, purchase) that occurred on your site or app.</li>
-                    <li><strong>events_intraday_YYYYMMDD</strong>: Real-time event data for the current day, allowing up-to-the-minute analysis.</li>
+                    <li><strong>events_YYYYMMDD</strong>: Stores daily event data, where each row represents an interaction (e.g., page_view, purchase).</li>
+                    <li><strong>events_intraday_YYYYMMDD</strong>: Captures real-time event data for the current day, allowing near-instant analysis.</li>
                 </ul>
-                <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                  <div><img src="https://framerusercontent.com/images/qL5BmGygCLvyBZjV40U45ewJajA.png" loading="lazy" alt="">
-                  </div>
+                <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                    <div><img src="https://framerusercontent.com/images/qL5BmGygCLvyBZjV40U45ewJajA.png" loading="lazy" alt="GA4 Event Tables"></div>
                 </figure>
+
                 <h5>2. User Tables</h5>
                 <ul>
-                    <li><strong>pseudonymous_users_YYYYMMDD</strong>: Stores data for users identified by pseudonymous identifiers, such as device IDs.</li>
-                    <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                      <div><img src="https://framerusercontent.com/images/0jLkmzQsQkduZHU3ZkqG5rI8Ylo.png" loading="lazy" alt="">
-                      </div>
+                    <li><strong>pseudonymous_users_YYYYMMDD</strong>: Stores anonymous user data based on device identifiers.</li>
+                    <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                        <div><img src="https://framerusercontent.com/images/0jLkmzQsQkduZHU3ZkqG5rI8Ylo.png" loading="lazy" alt="GA4 Pseudonymous Users"></div>
                     </figure>
-                    <li><strong>users_YYYYMMDD</strong>: Contains information on users with assigned user IDs, used when authentication is implemented.</li>
-                    <figure style="max-width:1280pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                      <div><img src="https://framerusercontent.com/images/yALGc2EeXb2LaQXZ88wsktJ6z8E.png" loading="lazy" alt="">
-                      </div>
+                    <li><strong>users_YYYYMMDD</strong>: Contains data for authenticated users with assigned user IDs.</li>
+                    <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                        <div><img src="https://framerusercontent.com/images/yALGc2EeXb2LaQXZ88wsktJ6z8E.png" loading="lazy" alt="GA4 Users"></div>
                     </figure>
-                  </ul>
-
-                <h5>3. Nested Fields</h5>
-                <p>GA4 uses a nested and repeated schema, which means some fields contain arrays. Key nested fields include:</p>
-                <ul>
-                    <li><strong>event_params</strong>: An array of key-value pairs providing additional context to events, such as page titles or button labels.</li>
-                    <li><strong>user_properties</strong>: Custom attributes assigned to users, such as language preferences or membership status.</li>
                 </ul>
 
-                <h4>Conclusion</h4>
-                <p>GA4’s BigQuery integration provides businesses with detailed and flexible analytics capabilities. By understanding the GA4 BigQuery schema, businesses can effectively analyze user behavior, optimize marketing campaigns, and improve decision-making. Leveraging BigQuery’s powerful querying capabilities ensures efficient data handling and actionable insights.</p>
+                <h5>3. Nested Fields</h5>
+                <p>GA4 utilizes a nested and repeated schema, meaning some fields contain structured arrays. Key nested fields include:</p>
+                <ul>
+                    <li><strong>event_params</strong>: Stores key-value pairs related to events, such as page titles and button clicks.</li>
+                    <li><strong>user_properties</strong>: Holds attributes associated with users, including language preferences and membership status.</li>
+                </ul>
+
+                <h5>4. Latest Updates in 2025</h5>
+                <p>GA4 BigQuery schema has introduced several new features to enhance tracking and data analysis:</p>
+                <ul>
+                    <li>**New Cross-Channel Fields**: Additional fields like `cross_channel_campaign`, `sa360_campaign`, `cm360_campaign`, and `dv360_campaign` for improved ad tracking.</li>
+                    <li>**Expanded Session Tracking**: The addition of `session_traffic_source_last_click` for more accurate session attribution.</li>
+                    <li>**Batch Processing Enhancements**: Introduction of `batch_event_index`, `batch_page_id`, and `batch_ordering_id` for improved event organization.</li>
+                    <li>**Updated User Data Handling**: Refinements to `collected_traffic_source` with fields such as `manual_source_platform`, `manual_creative_format`, and `manual_marketing_tactic` for better traffic tracking.</li>
+                </ul>
+
+                <h4>Final Thoughts</h4>
+                <p>GA4’s BigQuery integration allows businesses to analyze user behavior in greater depth, optimize marketing strategies, and improve decision-making. Leveraging BigQuery’s query capabilities ensures efficient data handling and actionable insights.</p>
 
                 <p>For expert guidance on GA4 BigQuery schema analysis, feel free to reach out to us!</p>
             </div>
         </div>
     </div>
+</div> -->
+
+<div>
+  <div class="container">
+      <div class="article-container">
+          <div class="article w-richtext">
+              <h3>Understanding GA4 BigQuery Schema in 2025</h3>
+              <p>Google Analytics 4 (GA4) works seamlessly with BigQuery, allowing businesses to analyze website and app data in depth. Understanding the GA4 BigQuery export schema helps businesses track user interactions and improve data-driven decision-making.</p>
+
+              <h4>How BigQuery Imports Your GA4 Data</h4>
+              <p>When you link GA4 to BigQuery, your analytics data is stored in your BigQuery project, which holds datasets that contain raw analytics data. The dataset follows this structure:</p>
+
+              <p> <strong>analytics_<your_project_ID></strong> → Contains multiple tables categorized into event and user data.</p>
+
+              <h4>Projects, Datasets, and Tables</h4>
+              <ul>
+                  <li><strong>Projects:</strong> The top-level container where GA4 data is stored.</li>
+                  <li><strong>Datasets:</strong> A collection of tables related to your GA4 property.</li>
+                  <li><strong>Tables:</strong> Store event, user, and session data.</li>
+              </ul>
+
+              <h4>Category 1: Event Tables</h4>
+
+              <h5>Daily Event Export</h5>
+              <p>Your GA4 event data is stored in tables named <strong>events_YYYYMMDD</strong>, where <code>YYYYMMDD</code> represents the date of the recorded data.</p>
+              
+              <p><strong>Example:</strong> If you linked GA4 to BigQuery on March 1, 2025, your first table will be <code>events_20250301</code>.</p>
+
+              <p> <strong>Key Features:</strong></p>
+              <ul>
+                  <li>Each row represents a user interaction (event) on your site or app.</li>
+                  <li>Only events recorded after linking GA4 to BigQuery are available.</li>
+              </ul>
+
+              <h5>(Almost) Real-Time Event Export</h5>
+              <p>The <strong>events_intraday_YYYYMMDD</strong> table stores real-time event data for the current day.</p>
+              <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                <div><img src="https://framerusercontent.com/images/qL5BmGygCLvyBZjV40U45ewJajA.png" loading="lazy" alt="GA4 Event Tables"></div>
+            </figure>
+              <p><strong>Note:</strong> This table is only available if <strong>Streaming Export</strong> was enabled when linking GA4 to BigQuery.</p>
+
+              <h5>How Event Data is Structured in BigQuery</h5>
+              <p>GA4 tracks every interaction as an <strong>event</strong>, which contains multiple details:</p>
+              <ul>
+                  <li><strong>event_name:</strong> The type of event (e.g., <code>page_view</code>, <code>purchase</code>).</li>
+                  <li><strong>event_timestamp:</strong> The time the event occurred.</li>
+                  <li><strong>event_params:</strong> Extra data related to the event (e.g., page title, button clicked).</li>
+                  <li><strong>traffic_source:</strong> Identifies the source of the traffic (e.g., Google, Facebook).</li>
+              </ul>
+              <p>Each event is stored as a <strong>record</strong> with nested fields for better data organization.</p>
+
+              <h4>Category 2: User Tables</h4>
+              <p>Unlike event tables, user tables store data about individual users rather than their interactions.</p>
+
+              <p><strong>Types of User Tables:</strong></p>
+              <ul>
+                  <li><strong>users_YYYYMMDD:</strong> Stores data for logged-in users with User IDs.</li>
+                  <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                    <div><img src="https://framerusercontent.com/images/yALGc2EeXb2LaQXZ88wsktJ6z8E.png" loading="lazy" alt="GA4 Users"></div>
+                </figure>
+                  <li><strong>pseudonymous_users_YYYYMMDD:</strong> Stores data of users identified by Device IDs (anonymous users).</li>
+                  <figure class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                    <div><img src="https://framerusercontent.com/images/0jLkmzQsQkduZHU3ZkqG5rI8Ylo.png" loading="lazy" alt="GA4 Pseudonymous Users"></div>
+                </figure>
+              </ul>
+              <p>These tables allow businesses to analyze returning users, customer journeys, and behavior trends more effectively.</p>
+          </div>
+      </div>
+  </div>
 </div>
 
 
