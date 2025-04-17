@@ -68,17 +68,15 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <style>
+       <style>
         body {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
         }
-
         .body {
             padding-bottom: 0px;
             scroll-behavior: smooth !important
         }
-
         /* Main content */
         main {
             padding: 30px 0;
@@ -188,7 +186,6 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 20px;
-            padding-top: 0;
         }
 
         /* Scope of work */
@@ -352,7 +349,7 @@
         .tech-icon {
             width: 40px;
             height: 40px;
-            margin: 0 auto;
+            margin: 0 auto 10px;
         }
 
         .tech-name {
@@ -376,13 +373,13 @@
         }
 
         .pricing-info h3 {
-            font-size: 17px;
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 5px;
         }
 
         .pricing-info p {
-            font-size: 15px;
+            font-size: 16px;
             color: #ffffff80;
             margin-bottom: 0px;
         }
@@ -403,7 +400,7 @@
 
         .pricing-total-amount {
             font-size: 20px;
-            color: #3CCE90;
+            color:#3CCE90;
         }
 
         /* Testimonials */
@@ -641,56 +638,410 @@
         <div class="container">
             <div class="proposal-header">
                 <div class="proposal-title">
-                    <h1 id="proposal-title">Proposal Title</h1>
-                    <p id="client-name">Client: Client Name</p>
+                    <h1>E-Commerce Website Redesign</h1>
+                    <p>Client: Techstyle Fashion Group</p>
                 </div>
 
                 <div class="proposal-actions">
-                    <button class="btn btn-outline">Download PDF</button>
-                    <button class="btn btn-primary">Share</button>
+                    <button class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 6V14H2V6M8 10V2M8 2L5 5M8 2L11 5" stroke="#333" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Download PDF
+                    </button>
+                    <button class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 8H12M8 4V12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Share
+                    </button>
                 </div>
             </div>
 
-            <!-- Project Details -->
-            <div class="project-details" id="project-details"></div>
+            <div class="project-details">
+                <div class="detail-card">
+                    <h3>Submission Date</h3>
+                    <p>March 15, 2025</p>
+                </div>
 
-            <!-- Scope of Work -->
-            <section class="section" id="scope-of-work">
+                <div class="detail-card">
+                    <h3>Status</h3>
+                    <p class="status">
+                        <span class="status-dot"></span>
+                        In Review
+                    </p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Project Type</h3>
+                    <p>Web Development</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Duration</h3>
+                    <p>12 Weeks</p>
+                </div>
+            </div>
+
+            <section class="section">
                 <h2 class="section-title">Scope of Work</h2>
-                <!-- Scope items will be injected dynamically here -->
+
+                <!-- Planning & Strategy Accordion -->
+                <div class="scope-item active">
+                    <div class="scope-header" onclick="toggleAccordion(event)">
+                        <h3>
+                            <span class="scope-icon icon-planning">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                            Planning & Strategy
+                        </h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="scope-content">
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Requirement Analysis
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                User Research & Personas
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Information Architecture
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Design Accordion -->
+                <div class="scope-item">
+                    <div class="scope-header" onclick="toggleAccordion(event)">
+                        <h3>
+                            <span class="scope-icon icon-design">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 1.5L10.5 2.5M1.5 9.5L6 5L7 6L2.5 10.5H1.5V9.5Z" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            Design
+                        </h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="scope-content">
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Requirement Analysis
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                User Research & Personas
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Information Architecture
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Development Accordion -->
+                <div class="scope-item">
+                    <div class="scope-header" onclick="toggleAccordion(event)">
+                        <h3>
+                            <span class="scope-icon icon-development">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9L1 6L4 3M8 3L11 6L8 9" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            Development
+                        </h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="scope-content">
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Requirement Analysis
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                User Research & Personas
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                    <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Information Architecture
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </section>
 
-            <!-- Project Timeline -->
-            <section class="section" >
+
+            <section class="section">
                 <h2 class="section-title">Project Timeline</h2>
-                <div class="timeline" id="timeline"></div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-week">Week 1-2</div>
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
+                                    <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                                Discovery Phase
+                            </h3>
+                            <p>Requirements gathering and project planning</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-week">Week 3-6</div>
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 2.5L13.5 3.5M2.5 12.5L8 7L9 8L3.5 13.5H2.5V12.5Z" stroke="#5e43f3"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Design Phase
+                            </h3>
+                            <p>UI/UX design and prototyping</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-week">Week 7-11</div>
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 11L2 8L5 5M11 5L14 8L11 11" stroke="#5e43f3" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Development Phase
+                            </h3>
+                            <p>Frontend and backend implementation</p>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
 
-            <!-- Technology Stack -->
-            <section class="section" >
+            <section class="section">
                 <h2 class="section-title">Technology Stack</h2>
-                <div class="tech-grid" id="technology-stack"></div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#61DAFB" />
+                                <circle cx="12" cy="12" r="2.5" fill="#61DAFB" stroke="#1a2b34" stroke-width="1" />
+                                <ellipse cx="12" cy="12" rx="6" ry="2.5" stroke="#1a2b34" stroke-width="1"
+                                    transform="rotate(30 12 12)" />
+                                <ellipse cx="12" cy="12" rx="6" ry="2.5" stroke="#1a2b34" stroke-width="1"
+                                    transform="rotate(60 12 12)" />
+                                <ellipse cx="12" cy="12" rx="6" ry="2.5" stroke="#1a2b34" stroke-width="1"
+                                    transform="rotate(90 12 12)" />
+                            </svg>
+                        </div>
+                        <h3 class="tech-name">React.js</h3>
+                        <p class="tech-role">Frontend Framework</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5Z"
+                                    fill="#539E43" />
+                                <path d="M6.5 12.5L12 16.5L17.5 12.5V7.5L12 3.5L6.5 7.5V12.5Z" fill="#539E43"
+                                    stroke="white" stroke-width="0.5" />
+                            </svg>
+                        </div>
+                        <h3 class="tech-name">Node.js</h3>
+                        <p class="tech-role">Backend Runtime</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3L3 8.5V15.5L12 21L21 15.5V8.5L12 3Z" fill="#13AA52" />
+                                <path d="M12 3V8.5L17 12L21 8.5L12 3Z" fill="#B8C4C2" />
+                                <path d="M12 8.5V21L17 17.5V12L12 8.5Z" fill="#A1A1A1" />
+                            </svg>
+                        </div>
+                        <h3 class="tech-name">MongoDB</h3>
+                        <p class="tech-role">Database</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.5 4.5L12 2L10.5 4.5L8 5L10 7.5L9.5 10.5L12 9L14.5 10.5L14 7.5L16 5L13.5 4.5Z"
+                                    fill="#FF9900" />
+                                <path
+                                    d="M18.5 8.5L17.5 7L16.5 8.5L15 9L16.5 10.5L16 12.5L17.5 11.5L19 12.5L18.5 10.5L20 9L18.5 8.5Z"
+                                    fill="#FF9900" />
+                                <path
+                                    d="M8.5 8.5L7.5 7L6.5 8.5L5 9L6.5 10.5L6 12.5L7.5 11.5L9 12.5L8.5 10.5L10 9L8.5 8.5Z"
+                                    fill="#FF9900" />
+                                <path
+                                    d="M13.5 19.5L12 17L10.5 19.5L8 20L10 22.5L9.5 25.5L12 24L14.5 25.5L14 22.5L16 20L13.5 19.5Z"
+                                    fill="#FF9900" />
+                                <path d="M12 2L12 24" stroke="#FF9900" stroke-width="0.5" stroke-dasharray="1 1" />
+                                <path d="M2 13L22 13" stroke="#FF9900" stroke-width="0.5" stroke-dasharray="1 1" />
+                            </svg>
+                        </div>
+                        <h3 class="tech-name">AWS</h3>
+                        <p class="tech-role">Cloud Infrastructure</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- Pricing Breakdown -->
-            <section class="section" id="pricing-breakdown">
+            <section class="section">
                 <h2 class="section-title">Pricing Breakdown</h2>
-                <!-- Pricing items will be injected dynamically -->
+
+                <div class="pricing-item">
+                    <div class="pricing-info">
+                        <h3>Planning & Strategy</h3>
+                        <p>40 hours @ $150/hr</p>
+                    </div>
+                    <div class="pricing-amount">$6,000</div>
+                </div>
+
+                <div class="pricing-item">
+                    <div class="pricing-info">
+                        <h3>Design</h3>
+                        <p>80 hours @ $175/hr</p>
+                    </div>
+                    <div class="pricing-amount">$14,000</div>
+                </div>
+
+                <div class="pricing-item">
+                    <div class="pricing-info">
+                        <h3>Development</h3>
+                        <p>160 hours @ $200/hr</p>
+                    </div>
+                    <div class="pricing-amount">$32,000</div>
+                </div>
+
+                <div class="pricing-total">
+                    <div>Total</div>
+                    <div class="pricing-total-amount">$52,000</div>
+                </div>
             </section>
 
-            <!-- Client Testimonials -->
             <section class="section">
                 <h2 class="section-title">Client Testimonials</h2>
-                <div class="testimonials-grid" id="testimonials"></div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+                        <p class="testimonial-text">"Outstanding work on our e-commerce platform. The team delivered
+                            beyond our expectations."</p>
+                        <div class="testimonial-author">
+                            <img src="./images/person.png" alt="Michael Chen"
+                                class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>Michael Chen</h4>
+                                <p>CTO, Fashion Retail Co.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+                        <p class="testimonial-text">"Professional team with excellent communication and technical
+                            expertise."</p>
+                        <div class="testimonial-author">
+                            <img src="./images/person.png" alt="Sarah Johnson"
+                                class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Product Manager, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- CTA Section -->
             <section class="cta-section">
                 <div class="cta-content">
                     <div class="cta-text">
                         <h2>Ready to Get Started?</h2>
                         <p>Schedule a call to discuss your project in detail</p>
                     </div>
+
                     <div class="cta-buttons">
                         <button class="btn btn-white">Schedule Call</button>
                         <button class="btn btn-outline-white">Accept Proposal</button>
@@ -779,183 +1130,18 @@
     </div>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const proposalId = urlParams.get('id');  // Grabs the proposal ID from the URL (e.g., proposal1, proposal2)
-
-        fetch('proposal.json')
-            .then(response => response.json())
-            .then(data => {
-                const proposal = data.proposals.find(p => p.id === proposalId);
-
-                // Set Title and Client Name
-                document.getElementById('proposal-title').textContent = proposal.title;
-                document.getElementById('client-name').textContent = `Client: ${proposal.client_name}`;
-
-                // Populate project details
-                const projectDetails = document.getElementById('project-details');
-                const details = [
-                    { title: "Submission Date", content: proposal.submission_date },
-                    { title: "Status", content: `<span class="status-dot"></span>${proposal.status}` },
-                    { title: "Project Type", content: proposal.project_type },
-                    { title: "Duration", content: proposal.duration }
-                ];
-                details.forEach(detail => {
-                    const detailCard = document.createElement('div');
-                    detailCard.classList.add('detail-card');
-                    detailCard.innerHTML = `<h3>${detail.title}</h3><p>${detail.content}</p>`;
-                    projectDetails.appendChild(detailCard);
-                });
-
-                // Populate Scope of Work
-                const scopeContainer = document.getElementById('scope-of-work');
-                proposal.scope_of_work.forEach((scope, index) => {
-                    const scopeItem = document.createElement('div');
-                    scopeItem.classList.add('scope-item');
-                    
-                    // If this is the first item, set it as active
-                    if (index === 0) {
-                        scopeItem.classList.add('active');
-                    }
-                    
-                    scopeItem.innerHTML = `
-                        <div class="scope-header" onclick="toggleAccordion(event)">
-                            <!-- First Icon: Same for all -->
-                            <h3>
-                                <span class="scope-icon icon-planning">
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                ${scope.title}
-                            </h3>
-                            <!-- Last Icon: Same for all -->
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="scope-content">
-                            <ul>
-                                ${scope.tasks.map(task => `
-                                    <li>
-                                        <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        ${task}
-                                    </li>`).join('')}
-                            </ul>
-                        </div>
-                    `;
-                    scopeContainer.appendChild(scopeItem);
-                });
-
-
-                // Populate Timeline
-                const timelineContainer = document.getElementById('timeline');
-                proposal.timeline.forEach((item, index) => {
-                    const timelineItem = document.createElement('div');
-                    timelineItem.classList.add('timeline-item');
-                    timelineItem.innerHTML = `
-                        <div class="timeline-week">${item.week}</div>
-                        <div class="timeline-marker">${index + 1}</div>  <!-- Dynamic marker starting from 1 -->
-                        <div class="timeline-content">
-                            <h3>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Same SVG for all markers -->
-                                    <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
-                                    <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                                ${item.phase}
-                            </h3>
-                            <p>${item.description}</p>
-                        </div>
-                    `;
-                    timelineContainer.appendChild(timelineItem);
-                });
-
-
-                // Populate Technology Stack
-                const techGrid = document.getElementById('technology-stack');
-                proposal.technology_stack.forEach(tech => {
-                    const techCard = document.createElement('div');
-                    techCard.classList.add('tech-card');
-                    techCard.innerHTML = `
-                        <div class="tech-icon">
-                            <img width="40" height="40" src="https://img.icons8.com/clouds/100/technology.png" alt="technology"/>
-                        </div>
-                        <h3 class="tech-name">${tech.name}</h3>
-                        <p class="tech-role">${tech.role}</p>
-                    `;
-                    techGrid.appendChild(techCard);
-                });
-
-
-                // Populate Pricing Breakdown
-                const pricingContainer = document.getElementById('pricing-breakdown');
-                let totalAmount = 0; // Initialize a variable to store the total amount
-
-                proposal.pricing.forEach(pricing => {
-                    // Extract numeric value from the rate string
-                    const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
-
-                    // Calculate the amount by multiplying rate and hours
-                    const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
-                    
-                    // Add the calculated amount to the total amount
-                    totalAmount += parseFloat(amount);
-
-                    const pricingItem = document.createElement('div');
-                    pricingItem.classList.add('pricing-item');
-                    pricingItem.innerHTML = `
-                        <div class="pricing-info">
-                            <h3>${pricing.title}</h3>
-                            <p>${pricing.hours} @ ${pricing.rate}/hr</p>
-                        </div>
-                        <div class="pricing-amount">$${amount}</div>
-                    `;
-                    pricingContainer.appendChild(pricingItem);
-                });
-                // Add the total amount section at the bottom
-                const pricingTotal = document.createElement('div');
-                pricingTotal.classList.add('pricing-total');
-                pricingTotal.innerHTML = `
-                    <div>Total</div>
-                    <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
-                `;
-                pricingContainer.appendChild(pricingTotal);
-
-
-                // Populate Client Testimonials
-                const testimonialsGrid = document.getElementById('testimonials');
-                proposal.testimonials.forEach(testimonial => {
-                    const testimonialCard = document.createElement('div');
-                    testimonialCard.classList.add('testimonial-card');
-                    testimonialCard.innerHTML = `
-                        <div class="testimonial-stars">${'★'.repeat(testimonial.stars)}</div>
-                        <p class="testimonial-text">"${testimonial.text}"</p>
-                        <div class="testimonial-author">
-                            <img src="./images/person.png" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>${testimonial.author}</h4>
-                                <p>${testimonial.role}</p>
-                            </div>
-                        </div>
-                    `;
-                    testimonialsGrid.appendChild(testimonialCard);
-                });
-            });
-
-        // Accordion functionality for scope of work
+        // JavaScript function to toggle the accordion
         function toggleAccordion(event) {
+            // Get the clicked scope item
             const scopeItem = event.currentTarget.closest('.scope-item');
 
-            // Toggle active class to show or hide content
+            // Toggle the 'active' class
             scopeItem.classList.toggle('active');
 
-            // Close other items if they are open
+            // Close other scope-items if they are open
             const allScopeItems = document.querySelectorAll('.scope-item');
             allScopeItems.forEach(item => {
+                // Close the other items if they are open
                 if (item !== scopeItem && item.classList.contains('active')) {
                     item.classList.remove('active');
                 }

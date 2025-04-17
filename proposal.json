@@ -1,0 +1,70 @@
+{
+    "proposals": [
+      {
+        "id": "proposal1",
+        "title": "E-Commerce Website Redesign",
+        "client_name": "Techstyle Fashion Group",
+        "submission_date": "March 15, 2025",
+        "status": "In Review",
+        "project_type": "Web Development",
+        "duration": "12 Weeks",
+        "scope_of_work": [
+          { "title": "Planning & Strategy", "tasks": ["Requirement Analysis", "User Research & Personas", "Information Architecture"] },
+          { "title": "Design", "tasks": ["UI/UX Design", "Prototyping", "Design Handoff"] },
+          { "title": "Development", "tasks": ["Frontend Development", "Backend Development", "Integration"] }
+        ],
+        "timeline": [
+          { "week": "Week 1-2", "phase": "Discovery Phase", "description": "Requirements gathering and project planning" },
+          { "week": "Week 3-6", "phase": "Design Phase", "description": "UI/UX design and prototyping" },
+          { "week": "Week 7-11", "phase": "Development Phase", "description": "Frontend and backend implementation" }
+        ],
+        "technology_stack": [
+          { "name": "React.js", "role": "Frontend Framework", "icon": "<svg>...</svg>" },
+          { "name": "Node.js", "role": "Backend Runtime", "icon": "<svg>...</svg>" },
+          { "name": "MongoDB", "role": "Database", "icon": "<svg>...</svg>" },
+          { "name": "AWS", "role": "Cloud Infrastructure", "icon": "<svg>...</svg>" }
+        ],
+        "pricing": [
+          { "title": "Planning & Strategy", "hours": "40 hours", "rate": "$150", "amount": "$6,000" },
+          { "title": "Design", "hours": "80 hours", "rate": "$175", "amount": "$14,000" },
+          { "title": "Development", "hours": "160 hours", "rate": "$200", "amount": "$32,000" }
+        ],
+        "testimonials": [
+          { "stars": 5, "text": "Outstanding work on our e-commerce platform.", "author": "Michael Chen", "role": "CTO", "avatar": "path_to_image.jpg" },
+          { "stars": 5, "text": "Professional team with excellent communication.", "author": "Sarah Johnson", "role": "Product Manager", "avatar": "path_to_image.jpg" }
+        ]
+      },
+      {
+        "id": "proposal2",
+        "title": "Mobile App Development",
+        "client_name": "Tech Innovations",
+        "submission_date": "March 20, 2025",
+        "status": "Under Review",
+        "project_type": "Mobile App",
+        "duration": "16 Weeks",
+        "scope_of_work": [
+          { "title": "App Design", "tasks": ["Wireframing", "UI/UX Design"] },
+          { "title": "App Development", "tasks": ["Frontend Development", "Backend API"] },
+          { "title": "Testing & Launch", "tasks": ["Testing", "App Store Deployment"] }
+        ],
+        "timeline": [
+          { "week": "Week 1-4", "phase": "Design Phase", "description": "Design wireframes and user flows" },
+          { "week": "Week 5-10", "phase": "Development Phase", "description": "Develop frontend and backend" },
+          { "week": "Week 11-16", "phase": "Testing Phase", "description": "Conduct testing and deploy to app stores" }
+        ],
+        "technology_stack": [
+          { "name": "React Native", "role": "Mobile App Framework", "icon": "<svg>...</svg>" },
+          { "name": "Firebase", "role": "Backend-as-a-Service", "icon": "<svg>...</svg>" },
+          { "name": "MongoDB", "role": "Database", "icon": "<svg>...</svg>" }
+        ],
+        "pricing": [
+          { "title": "App Design", "hours": "50 hours", "rate": "$100", "amount": "$5,000" },
+          { "title": "App Development", "hours": "120 hours", "rate": "$180", "amount": "$21,600" }
+        ],
+        "testimonials": [
+          { "stars": 5, "text": "Great work on our app. The team exceeded expectations.", "author": "John Doe", "role": "CEO", "avatar": "path_to_image.jpg" }
+        ]
+      }
+    ]
+  }
+  
