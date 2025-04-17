@@ -5,36 +5,7 @@
     <meta charset="utf-8">
     <title>Case Study: Rangreli GA4 Project | StarLuxe Tech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Discover how StarLuxe Tech enhanced Rangreli’s marketing analytics with a structured GA4 optimization plan, ensuring clean data collection and actionable reporting.">
-    <meta name="keywords"
-        content="Marketing Analytics, GA4 Optimization, Data-Driven Reporting, UTM Standardization, Rangreli, StarLuxe Tech">
-    <meta name="author" content="StarLuxe Tech">
-    <link rel="canonical" href="https://starluxetech.com/case-study/rangreli">
-
-    <!-- Meta Description & Keywords -->
-    <meta name="description"
-        content="Discover how Rangreli refined its GA4 setup and improved campaign effectiveness through data-driven experimentation and real-time dashboards.">
-    <meta name="keywords"
-        content="GA4 Optimization, Marketing Analytics, Data Accuracy, UTM Standardization, Rangreli case study, actionable reporting">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <!-- SEO Indexing -->
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph Meta Tags for Social Media -->
-
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Case Study: Rangreli GA4 Optimization Project">
-    <meta property="og:image" content="https://framerusercontent.com/images/uS99VKWCABpEdTyS7SKUzBHEtQ.png">
-    <meta property="og:url" content="https://starluxetech.com/case-study/rangreli">
-    <meta property="og:type" content="article">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Case Study: Rangreli GA4 Optimization Project">
-    <meta name="twitter:description"
-        content="Explore how Rangreli enhanced its marketing analytics with StarLuxe Tech’s expert GA4 optimization and actionable reporting.">
-    <meta name="twitter:image" content="https://framerusercontent.com/images/uS99VKWCABpEdTyS7SKUzBHEtQ.png">
 
 
     <link href="/css/normalize.css" rel="stylesheet" type="text/css">
@@ -780,12 +751,14 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const proposalId = urlParams.get('id');  // Grabs the proposal ID from the URL (e.g., proposal1, proposal2)
+        const proposalId = urlParams.get('id'); 
 
         fetch('proposal.json')
             .then(response => response.json())
             .then(data => {
                 const proposal = data.proposals.find(p => p.id === proposalId);
+
+                document.title = `${proposal.title} | StarLuxe Tech`;
 
                 // Set Title and Client Name
                 document.getElementById('proposal-title').textContent = proposal.title;
