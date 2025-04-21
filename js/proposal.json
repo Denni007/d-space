@@ -539,6 +539,14 @@
       "duration": "7-8 Weeks",
       "scope_of_work": [
         {
+          "title": "UI/UX Design",
+          "tasks": [
+            "Wireframe structure and layout for all dashboard pages",
+            "Component-based design system using Figma",
+            "User journey review and feedback loop"
+          ]
+        },
+        {
           "title": "Frontend & Auth Setup",
           "tasks": [
             "React.js dashboard interface",
@@ -566,21 +574,31 @@
       "timeline": [
         {
           "week": "Week 1",
-          "phase": "UI Planning & Initial Dev",
-          "description": "Project scaffolding and auth logic"
+          "phase": "UI/UX Design & Planning",
+          "description": "Create wireframes in Figma, finalize layout, and confirm user flow"
         },
         {
-          "week": "Week 2-5",
+          "week": "Week 2",
+          "phase": "Frontend & Auth Setup",
+          "description": "Project scaffolding and authentication setup"
+        },
+        {
+          "week": "Week 3-6",
           "phase": "Feature Building",
-          "description": "Core features like chat, tracker, and file upload"
+          "description": "Core features like chat, tracker, and file handling"
         },
         {
-          "week": "Week 6-7",
+          "week": "Week 7-8",
           "phase": "Branding, Testing, and Launch",
           "description": "Finalize branding, debug, optimize, and go live"
         }
       ],
       "technology_stack": [
+        {
+          "name": "Figma",
+          "role": "UI/UX Design Tool",
+          "icon": "<svg>...</svg>"
+        },
         {
           "name": "React.js",
           "role": "Frontend Framework",
@@ -604,26 +622,31 @@
       ],
       "pricing": [
         {
+          "title": "UI/UX Design (Wireframes + Revisions)",
+          "hours": "18 hours",
+          "rate": "$25"
+        },
+        {
           "title": "Authentication & Setup",
-          "hours": "15 hours",
+          "hours": "25 hours",
           "rate": "$25"
         },
         {
           "title": "Core Features (Submission, Tracker, Chat, Revisions)",
-          "hours": "50 hours",
+          "hours": "150 hours",
           "rate": "$25"
         },
         {
           "title": "Invoice & File Management",
-          "hours": "17 hours",
+          "hours": "40 hours",
           "rate": "$25"
         },
         {
           "title": "Branding & QA",
-          "hours": "10 hours",
+          "hours": "20 hours",
           "rate": "$25"
         }
       ]
-    }
+    }    
   ]
 }
