@@ -1,285 +1,629 @@
 {
-    "proposals": [
-      {
-        "id": "proposal1",
-        "title": "E-Commerce Website Redesign",
-        "client_name": "Techstyle Fashion Group",
-        "submission_date": "March 15, 2025",
-        "status": "In Review",
-        "project_type": "Web Development",
-        "duration": "12 Weeks",
-        "scope_of_work": [
-          { "title": "Planning & Strategy", "tasks": ["Requirement Analysis", "User Research & Personas", "Information Architecture"] },
-          { "title": "Design", "tasks": ["UI/UX Design", "Prototyping", "Design Handoff"] },
-          { "title": "Development", "tasks": ["Frontend Development", "Backend Development", "Integration"] }
-        ],
-        "timeline": [
-          { "week": "Week 1-2", "phase": "Discovery Phase", "description": "Requirements gathering and project planning" },
-          { "week": "Week 3-6", "phase": "Design Phase", "description": "UI/UX design and prototyping" },
-          { "week": "Week 7-11", "phase": "Development Phase", "description": "Frontend and backend implementation" }
-        ],
-        "technology_stack": [
-          { "name": "React.js", "role": "Frontend Framework", "icon": "<svg>...</svg>" },
-          { "name": "Node.js", "role": "Backend Runtime", "icon": "<svg>...</svg>" },
-          { "name": "MongoDB", "role": "Database", "icon": "<svg>...</svg>" },
-          { "name": "AWS", "role": "Cloud Infrastructure", "icon": "<svg>...</svg>" }
-        ],
-        "pricing": [
-          { "title": "Planning & Strategy", "hours": "40 hours", "rate": "$150", "amount": "$6,000" },
-          { "title": "Design", "hours": "80 hours", "rate": "$175", "amount": "$14,000" },
-          { "title": "Development", "hours": "160 hours", "rate": "$200", "amount": "$32,000" }
-        ],
-        "testimonials": [
-          { "stars": 5, "text": "Outstanding work on our e-commerce platform.", "author": "Michael Chen", "role": "CTO", "avatar": "path_to_image.jpg" },
-          { "stars": 5, "text": "Professional team with excellent communication.", "author": "Sarah Johnson", "role": "Product Manager", "avatar": "path_to_image.jpg" }
-        ]
-      },
-      {
-        "id": "proposal2",
-        "title": "Mobile App Development",
-        "client_name": "Tech Innovations",
-        "submission_date": "March 20, 2025",
-        "status": "Under Review",
-        "project_type": "Mobile App",
-        "duration": "16 Weeks",
-        "scope_of_work": [
-          { "title": "App Design", "tasks": ["Wireframing", "UI/UX Design"] },
-          { "title": "App Development", "tasks": ["Frontend Development", "Backend API"] },
-          { "title": "Testing & Launch", "tasks": ["Testing", "App Store Deployment"] }
-        ],
-        "timeline": [
-          { "week": "Week 1-4", "phase": "Design Phase", "description": "Design wireframes and user flows" },
-          { "week": "Week 5-10", "phase": "Development Phase", "description": "Develop frontend and backend" },
-          { "week": "Week 11-16", "phase": "Testing Phase", "description": "Conduct testing and deploy to app stores" }
-        ],
-        "technology_stack": [
-          { "name": "React Native", "role": "Mobile App Framework", "icon": "<svg>...</svg>" },
-          { "name": "Firebase", "role": "Backend-as-a-Service", "icon": "<svg>...</svg>" },
-          { "name": "MongoDB", "role": "Database", "icon": "<svg>...</svg>" }
-        ],
-        "pricing": [
-          { "title": "App Design", "hours": "50 hours", "rate": "$100", "amount": "$5,000" },
-          { "title": "App Development", "hours": "120 hours", "rate": "$180", "amount": "$21,600" }
-        ],
-        "testimonials": [
-          { "stars": 5, "text": "Great work on our app. The team exceeded expectations.", "author": "John Doe", "role": "CEO", "avatar": "path_to_image.jpg" }
-        ]
-      },
-      {
-        "id": "Undisclosed",
-        "title": "Website Upgrade & UX Redesign",
-        "client_name": "Undisclosed",
-        "submission_date": "April 18, 2025",
-        "status": "Under Review",
-        "project_type": "Website Design & User Experience",
-        "duration": "10 Weeks",
-        "scope_of_work": [
-          {
-            "title": "Discovery & Strategy",
-            "tasks": [
-              "Current Website Audit",
-              "Brand & Vision Alignment",
-              "User Experience Assessment"
-            ]
-          },
-          {
-            "title": "UX/UI Redesign",
-            "tasks": [
-              "Wireframing & Information Architecture",
-              "High-Fidelity Mockups",
-              "Responsive Design Prototypes"
-            ]
-          },
-          {
-            "title": "Design Handoff & QA",
-            "tasks": [
-              "Developer-ready Design Specs",
-              "Cross-team Collaboration",
-              "QA for Accessibility & Functionality"
-            ]
-          }
-        ],
-        "timeline": [
-          {
-            "week": "Week 1-2",
-            "phase": "Discovery & Audit",
-            "description": "Conduct website audit, identify UX gaps, align goals with internal team"
-          },
-          {
-            "week": "Week 3-6",
-            "phase": "Design Execution",
-            "description": "Build wireframes, mockups, and interactive design prototypes"
-          },
-          {
-            "week": "Week 7-10",
-            "phase": "Finalization & Support",
-            "description": "Finalize all assets, prepare handoff documentation, and assist in implementation"
-          }
-        ],
-        "technology_stack": [
-          {
-            "name": "Figma",
-            "role": "UI/UX Design & Prototyping",
-            "icon": "<svg>...</svg>"
-          },
-          {
-            "name": "Adobe XD",
-            "role": "Design Exploration",
-            "icon": "<svg>...</svg>"
-          },
-          {
-            "name": "Zeplin",
-            "role": "Developer Handoff & Asset Management",
-            "icon": "<svg>...</svg>"
-          }
-        ],
-        "pricing": [
-          {
-            "title": "Discovery & Strategy",
-            "hours": "2 hours",
-            "rate": "$25",
-            "amount": "$50"
-          },
-          {
-            "title": "UX/UI Redesign",
-            "hours": "80 hours",
-            "rate": "$120",
-            "amount": "$9,600"
-          },
-          {
-            "title": "Handoff & QA",
-            "hours": "20 hours",
-            "rate": "$100",
-            "amount": "$2,000"
-          }
-        ],
-        "testimonials": [
-          {
-            "stars": 5,
-            "text": "The team completely transformed our website's user experience. Highly professional and aligned with our brand vision.",
-            "author": "Alex Morgan",
-            "role": "Head of Digital",
-            "avatar": "path_to_image.jpg"
-          }
-        ]
-      },{
-        "id": "proposal_pesa_001",
-        "title": "Epilepsy Ally Chatbot Integration & Enhancement",
-        "client_name": "Pediatric Epilepsy Surgery Alliance (PESA)",
-        "submission_date": "April 21, 2025",
-        "status": "Submitted",
-        "project_type": "Frontend & WordPress Development",
-        "duration": "10 Weeks",
-        "scope_of_work": [
-          {
-            "title": "Chatbot Integration",
-            "tasks": [
-              "Embed Python-based Langchain + QDrant chatbot via WordPress plugin",
-              "Ensure seamless mobile and desktop experience",
-              "Integrate multiple modalities for interaction"
-            ]
-          },
-          {
-            "title": "Performance Tracking",
-            "tasks": [
-              "Implement BrainTrust for interaction instrumentation",
-              "Set up Google Analytics events for usage tracking",
-              "Monitor and iterate based on user behavior insights"
-            ]
-          },
-          {
-            "title": "UI/UX Enhancements",
-            "tasks": [
-              "Improve user interface across views",
-              "Resolve usability pain points",
-              "Implement accessibility improvements"
-            ]
-          }
-        ],
-        "timeline": [
-          {
-            "week": "Week 1",
-            "phase": "Setup & Discovery",
-            "description": "Technical review of chatbot, identify WordPress integration points, setup environment"
-          },
-          {
-            "week": "Week 2-5",
-            "phase": "Implementation & Testing",
-            "description": "Integrate chatbot, configure new ui on th nextjs or reactjs, test on staging and live"
-          },
-          {
-            "week": "Week 5-6",
-            "phase": "Enhancement, Analytics Integration & Deployment",
-            "description": "Refine experience based on feedback, finalize rollout, documentation"
-          }
-        ],
-        "technology_stack": [
-          {
-            "name": "Reactjs / Nextjs",
-            "role": "Frontend Interface",
-            "icon": "<svg>...</svg>"
-          },
-          {
-            "name": "WordPress",
-            "role": "CMS & Hosting Platform",
-            "icon": "<svg>...</svg>"
-          },
-          {
-            "name": "Langchain + QDrant",
-            "role": "Chatbot Backend (Python RAG)",
-            "icon": "<svg>...</svg>"
-          },
-          {
-            "name": "Google Analytics / BrainTrust",
-            "role": "Analytics & Monitoring",
-            "icon": "<svg>...</svg>"
-          }
-        ],
-        "pricing": [
-          {
-            "title": "Chatbot Integration",
-            "hours": "40 hours",
-            "rate": "$0",
-            "amount": "$0"
-          },
-          {
-            "title": "Tracking & Analytics",
-            "hours": "20 hours",
-            "rate": "$0",
-            "amount": "$0"
-          },
-          {
-            "title": "UI/UX Improvements",
-            "hours": "6 hours",
-            "rate": "$0",
-            "amount": "$0"
-          },
-          {
-            "title": "Testing & Deployment",
-            "hours": "5 hours",
-            "rate": "$0",
-            "amount": "$0"
-          }
-        ],
-        "testimonials": [
-          {
-            "stars": 5,
-            "text": "Thoughtful, mission-driven implementation that respected our users' needs.",
-            "author": "Dr. Emily Hart",
-            "role": "Executive Director, PESA",
-            "avatar": "path_to_image.jpg"
-          },
-          {
-            "stars": 5,
-            "text": "Quick and clean WordPress integration for a complex AI tool.",
-            "author": "Jonathan Meyer",
-            "role": "Lead Engineer, Epilepsy Ally",
-            "avatar": "path_to_image.jpg"
-          }
-        ]
-      }
-      
-      
-    ]
-  }
-  
+  "proposals": [
+    {
+      "id": "proposal1",
+      "title": "E-Commerce Website Redesign",
+      "client_name": "Techstyle Fashion Group",
+      "submission_date": "March 15, 2025",
+      "status": "In Review",
+      "project_type": "Web Development",
+      "duration": "12 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Planning & Strategy",
+          "tasks": [
+            "Requirement Analysis",
+            "User Research & Personas",
+            "Information Architecture"
+          ]
+        },
+        {
+          "title": "Design",
+          "tasks": [
+            "UI/UX Design",
+            "Prototyping",
+            "Design Handoff"
+          ]
+        },
+        {
+          "title": "Development",
+          "tasks": [
+            "Frontend Development",
+            "Backend Development",
+            "Integration"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1-2",
+          "phase": "Discovery Phase",
+          "description": "Requirements gathering and project planning"
+        },
+        {
+          "week": "Week 3-6",
+          "phase": "Design Phase",
+          "description": "UI/UX design and prototyping"
+        },
+        {
+          "week": "Week 7-11",
+          "phase": "Development Phase",
+          "description": "Frontend and backend implementation"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "React.js",
+          "role": "Frontend Framework",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Node.js",
+          "role": "Backend Runtime",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "MongoDB",
+          "role": "Database",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "AWS",
+          "role": "Cloud Infrastructure",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "Planning & Strategy",
+          "hours": "40 hours",
+          "rate": "$150",
+          "amount": "$6,000"
+        },
+        {
+          "title": "Design",
+          "hours": "80 hours",
+          "rate": "$175",
+          "amount": "$14,000"
+        },
+        {
+          "title": "Development",
+          "hours": "160 hours",
+          "rate": "$200",
+          "amount": "$32,000"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "Outstanding work on our e-commerce platform.",
+          "author": "Michael Chen",
+          "role": "CTO",
+          "avatar": "path_to_image.jpg"
+        },
+        {
+          "stars": 5,
+          "text": "Professional team with excellent communication.",
+          "author": "Sarah Johnson",
+          "role": "Product Manager",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    },
+    {
+      "id": "proposal2",
+      "title": "Mobile App Development",
+      "client_name": "Tech Innovations",
+      "submission_date": "March 20, 2025",
+      "status": "Under Review",
+      "project_type": "Mobile App",
+      "duration": "16 Weeks",
+      "scope_of_work": [
+        {
+          "title": "App Design",
+          "tasks": [
+            "Wireframing",
+            "UI/UX Design"
+          ]
+        },
+        {
+          "title": "App Development",
+          "tasks": [
+            "Frontend Development",
+            "Backend API"
+          ]
+        },
+        {
+          "title": "Testing & Launch",
+          "tasks": [
+            "Testing",
+            "App Store Deployment"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1-4",
+          "phase": "Design Phase",
+          "description": "Design wireframes and user flows"
+        },
+        {
+          "week": "Week 5-10",
+          "phase": "Development Phase",
+          "description": "Develop frontend and backend"
+        },
+        {
+          "week": "Week 11-16",
+          "phase": "Testing Phase",
+          "description": "Conduct testing and deploy to app stores"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "React Native",
+          "role": "Mobile App Framework",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Firebase",
+          "role": "Backend-as-a-Service",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "MongoDB",
+          "role": "Database",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "App Design",
+          "hours": "50 hours",
+          "rate": "$100",
+          "amount": "$5,000"
+        },
+        {
+          "title": "App Development",
+          "hours": "120 hours",
+          "rate": "$180",
+          "amount": "$21,600"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "Great work on our app. The team exceeded expectations.",
+          "author": "John Doe",
+          "role": "CEO",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    },
+    {
+      "id": "Undisclosed",
+      "title": "Website Upgrade & UX Redesign",
+      "client_name": "Undisclosed",
+      "submission_date": "April 18, 2025",
+      "status": "Under Review",
+      "project_type": "Website Design & User Experience",
+      "duration": "10 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Discovery & Strategy",
+          "tasks": [
+            "Current Website Audit",
+            "Brand & Vision Alignment",
+            "User Experience Assessment"
+          ]
+        },
+        {
+          "title": "UX/UI Redesign",
+          "tasks": [
+            "Wireframing & Information Architecture",
+            "High-Fidelity Mockups",
+            "Responsive Design Prototypes"
+          ]
+        },
+        {
+          "title": "Design Handoff & QA",
+          "tasks": [
+            "Developer-ready Design Specs",
+            "Cross-team Collaboration",
+            "QA for Accessibility & Functionality"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1-2",
+          "phase": "Discovery & Audit",
+          "description": "Conduct website audit, identify UX gaps, align goals with internal team"
+        },
+        {
+          "week": "Week 3-6",
+          "phase": "Design Execution",
+          "description": "Build wireframes, mockups, and interactive design prototypes"
+        },
+        {
+          "week": "Week 7-10",
+          "phase": "Finalization & Support",
+          "description": "Finalize all assets, prepare handoff documentation, and assist in implementation"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Figma",
+          "role": "UI/UX Design & Prototyping",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Adobe XD",
+          "role": "Design Exploration",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Zeplin",
+          "role": "Developer Handoff & Asset Management",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "Discovery & Strategy",
+          "hours": "2 hours",
+          "rate": "$25",
+          "amount": "$50"
+        },
+        {
+          "title": "UX/UI Redesign",
+          "hours": "80 hours",
+          "rate": "$120",
+          "amount": "$9,600"
+        },
+        {
+          "title": "Handoff & QA",
+          "hours": "20 hours",
+          "rate": "$100",
+          "amount": "$2,000"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "The team completely transformed our website's user experience. Highly professional and aligned with our brand vision.",
+          "author": "Alex Morgan",
+          "role": "Head of Digital",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    },
+    {
+      "id": "proposal_pesa_001",
+      "title": "Epilepsy Ally Chatbot Integration & Enhancement",
+      "client_name": "Pediatric Epilepsy Surgery Alliance (PESA)",
+      "submission_date": "April 21, 2025",
+      "status": "Submitted",
+      "project_type": "Frontend & WordPress Development",
+      "duration": "10 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Chatbot Integration",
+          "tasks": [
+            "Embed Python-based Langchain + QDrant chatbot via WordPress plugin",
+            "Ensure seamless mobile and desktop experience",
+            "Integrate multiple modalities for interaction"
+          ]
+        },
+        {
+          "title": "Performance Tracking",
+          "tasks": [
+            "Implement BrainTrust for interaction instrumentation",
+            "Set up Google Analytics events for usage tracking",
+            "Monitor and iterate based on user behavior insights"
+          ]
+        },
+        {
+          "title": "UI/UX Enhancements",
+          "tasks": [
+            "Improve user interface across views",
+            "Resolve usability pain points",
+            "Implement accessibility improvements"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1",
+          "phase": "Setup & Discovery",
+          "description": "Technical review of chatbot, identify WordPress integration points, setup environment"
+        },
+        {
+          "week": "Week 2-5",
+          "phase": "Implementation & Testing",
+          "description": "Integrate chatbot, configure new ui on th nextjs or reactjs, test on staging and live"
+        },
+        {
+          "week": "Week 5-6",
+          "phase": "Enhancement, Analytics Integration & Deployment",
+          "description": "Refine experience based on feedback, finalize rollout, documentation"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Reactjs / Nextjs",
+          "role": "Frontend Interface",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "WordPress",
+          "role": "CMS & Hosting Platform",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Langchain + QDrant",
+          "role": "Chatbot Backend (Python RAG)",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Google Analytics / BrainTrust",
+          "role": "Analytics & Monitoring",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "Chatbot Integration",
+          "hours": "40 hours",
+          "rate": "$0",
+          "amount": "$0"
+        },
+        {
+          "title": "Tracking & Analytics",
+          "hours": "20 hours",
+          "rate": "$0",
+          "amount": "$0"
+        },
+        {
+          "title": "UI/UX Improvements",
+          "hours": "6 hours",
+          "rate": "$0",
+          "amount": "$0"
+        },
+        {
+          "title": "Testing & Deployment",
+          "hours": "5 hours",
+          "rate": "$0",
+          "amount": "$0"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "Thoughtful, mission-driven implementation that respected our users' needs.",
+          "author": "Dr. Emily Hart",
+          "role": "Executive Director, PESA",
+          "avatar": "path_to_image.jpg"
+        },
+        {
+          "stars": 5,
+          "text": "Quick and clean WordPress integration for a complex AI tool.",
+          "author": "Jonathan Meyer",
+          "role": "Lead Engineer, Epilepsy Ally",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    },
+    {
+      "id": "proposal_bubble",
+      "title": "Client Dashboard – No-Code (Bubble.io)",
+      "client_name": "TrueFrameStudios",
+      "submission_date": "undisclosed",
+      "status": "In Review",
+      "project_type": "Client Portal Development",
+      "duration": "6-8 Weeks",
+      "scope_of_work": [
+        {
+          "title": "UI/UX Design",
+          "tasks": [
+            "Wireframing of dashboard screens",
+            "Component-based design system",
+            "Client feedback & design approval"
+          ]
+        },
+        {
+          "title": "Dashboard Setup & User Auth",
+          "tasks": [
+            "Bubble.io environment setup",
+            "User registration/login"
+          ]
+        },
+        {
+          "title": "Feature Development",
+          "tasks": [
+            "Project submission form",
+            "Project progress board",
+            "Revision management section",
+            "Basic team-client chat",
+            "Invoice & subscription viewer",
+            "File upload & download"
+          ]
+        },
+        {
+          "title": "Branding & Hosting",
+          "tasks": [
+            "White-label customization",
+            "Custom domain setup with SSL",
+            "Final testing & optimization"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1",
+          "phase": "UI/UX Design & Planning",
+          "description": "Wireframing dashboard screens, finalizing component styles, and taking client feedback"
+        },
+        {
+          "week": "Week 2-5",
+          "phase": "Setup & User Flow Design",
+          "description": "Bubble environment configuration, login, and page structure"
+        },
+        {
+          "week": "Week 6-7",
+          "phase": "Feature Implementation",
+          "description": "Core module building: forms, chat, tracking"
+        },
+        {
+          "week": "Week 8",
+          "phase": "Branding & Launch",
+          "description": "Domain connection, white-label, and final test"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Figma",
+          "role": "UI/UX Design Tool",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Bubble.io",
+          "role": "No-Code Web Platform",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Stripe",
+          "role": "Invoice & Payment Integration",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Google Drive / Dropbox",
+          "role": "Optional External Storage",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "UI/UX Design (Wireframes + Revisions)",
+          "hours": "15 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Authentication & User Roles",
+          "hours": "10 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Core Features (Project Form, Tracker, Revisions, Chat)",
+          "hours": "40 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Invoices & File Handling",
+          "hours": "13 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Branding, Deployment & QA",
+          "hours": "15 hours",
+          "rate": "$25"
+        }
+      ]
+    },
+    {
+      "id": "proposal_custom_code",
+      "title": "Client Dashboard – Full Stack (React + Node.js)",
+      "client_name": "TrueFrameStudios",
+      "submission_date": "April 21, 2025",
+      "status": "Submitted",
+      "project_type": "Client Portal Development",
+      "duration": "7-8 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Frontend & Auth Setup",
+          "tasks": [
+            "React.js dashboard interface",
+            "User login/registration with JWT"
+          ]
+        },
+        {
+          "title": "Core Modules",
+          "tasks": [
+            "Project submission & tracker (status logic)",
+            "Revision & feedback handling",
+            "Real-time chat via Firebase or Socket.io",
+            "Invoice & payment history (Stripe API)",
+            "Secure file upload & download"
+          ]
+        },
+        {
+          "title": "Branding",
+          "tasks": [
+            "White-label setup",
+            "Domain and SSL deployment"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1",
+          "phase": "UI Planning & Initial Dev",
+          "description": "Project scaffolding and auth logic"
+        },
+        {
+          "week": "Week 2-6",
+          "phase": "Feature Building",
+          "description": "Core features like chat, tracker, and file upload"
+        },
+        {
+          "week": "Week 7-8",
+          "phase": "Branding, Testing, and Launch",
+          "description": "Finalize branding, debug, optimize, and go live"
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "React.js",
+          "role": "Frontend Framework",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Node.js",
+          "role": "Backend Runtime",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "MongoDB",
+          "role": "Database",
+          "icon": "<svg>...</svg>"
+        },
+        {
+          "name": "Firebase / AWS S3",
+          "role": "File Storage",
+          "icon": "<svg>...</svg>"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "Authentication & Setup",
+          "hours": "15 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Core Features (Submission, Tracker, Chat, Revisions)",
+          "hours": "55 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Invoice & File Management",
+          "hours": "17 hours",
+          "rate": "$25"
+        },
+        {
+          "title": "Branding & QA",
+          "hours": "10 hours",
+          "rate": "$25"
+        }
+      ]
+    }
+  ]
+}
