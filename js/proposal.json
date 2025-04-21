@@ -504,27 +504,27 @@
       "pricing": [
         {
           "title": "UI/UX Design (Wireframes + Revisions)",
-          "hours": "10 hours",
+          "hours": "20 hours",
           "rate": "$25"
         },
         {
           "title": "Authentication & User Roles",
-          "hours": "6 hours",
+          "hours": "30 hours",
           "rate": "$25"
         },
         {
           "title": "Core Features (Project Form, Tracker, Revisions, Chat)",
-          "hours": "35 hours",
+          "hours": "120 hours",
           "rate": "$25"
         },
         {
           "title": "Invoices & File Handling",
-          "hours": "13 hours",
+          "hours": "35 hours",
           "rate": "$25"
         },
         {
           "title": "Branding, Deployment & QA",
-          "hours": "10 hours",
+          "hours": "25 hours",
           "rate": "$25"
         }
       ]
