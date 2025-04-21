@@ -36,8 +36,9 @@
     { "src": "/case-studies", "dest": "/casestudylist.html"},
     { "src": "/case-study/learning-roots", "dest": "/casestudy.html"},
     { "src": "/case-study/rangreli", "dest": "/casestudy2.html"},
-    { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" },
-    { "src": "/proposal", "dest": "/proposal.html"}
+
+    { "src": "/proposal", "dest": "/proposal.html"},
+    { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
 }
