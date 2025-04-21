@@ -753,11 +753,11 @@
         const urlParams = new URLSearchParams(window.location.search);
         const proposalId = urlParams.get('id'); 
 
-        fetch('proposal.json')
+        fetch('/js/proposal.json')
             .then(response => response.json())
             .then(data => {
                 const proposal = data.proposals.find(p => p.id === proposalId);
-
+                console.log(proposal)
                 document.title = `${proposal.title} | StarLuxe Tech`;
 
                 // Set Title and Client Name
