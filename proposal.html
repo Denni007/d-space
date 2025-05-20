@@ -273,9 +273,9 @@
 
         .timeline-marker {
             position: absolute;
-            left: -30px;
-            width: 16px;
-            height: 16px;
+            left: -35px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             background-color: #3C5CCE;
             display: flex;
@@ -636,7 +636,11 @@
                 <h2 class="section-title">Project Timeline</h2>
                 <div class="timeline" id="timeline"></div>
             </section>
-
+            <!-- Out of Scope of Work -->
+            <section class="section" id="out-of-scope">
+                <h2 class="section-title">Out of Scope</h2>
+                <!-- Scope items will be injected dynamically here -->
+            </section>
             <!-- Technology Stack -->
             <section class="section" >
                 <h2 class="section-title">Technology Stack</h2>
@@ -822,6 +826,49 @@
                     `;
                     scopeContainer.appendChild(scopeItem);
                 });
+                const outscopeContainer = document.getElementById('out-of-scope');
+                proposal?.out_of_scope ? 
+                proposal?.out_of_scope.forEach((scope, index) => {
+                    var scopeItem = document.createElement('div');
+                    scopeItem.classList.add('scope-item');
+                    
+                    // If this is the first item, set it as active
+                    if (index === 0) {
+                        scopeItem.classList.add('active');
+                    }
+                    
+                    scopeItem.innerHTML = `
+                        <div class="scope-header" onclick="toggleAccordion(event)">
+                            <!-- First Icon: Same for all -->
+                            <h3>
+                                <span class="scope-icon icon-planning">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </span>
+                                ${scope.title}
+                            </h3>
+                            <!-- Last Icon: Same for all -->
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <ul>
+                                ${scope.tasks.map(task => `
+                                    <li>
+                                        <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        ${task}
+                                    </li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                    outscopeContainer.appendChild(scopeItem);
+                }) : outscopeContainer.style.display = 'none';
 
 
                 // Populate Timeline
@@ -834,7 +881,7 @@
                         <div class="timeline-marker">${index + 1}</div>  <!-- Dynamic marker starting from 1 -->
                         <div class="timeline-content">
                             <h3>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Same SVG for all markers -->
                                     <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
                                     <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5" stroke-linecap="round" />
@@ -855,7 +902,7 @@
                     techCard.classList.add('tech-card');
                     techCard.innerHTML = `
                         <div class="tech-icon">
-                            <img width="40" height="40" src="https://img.icons8.com/clouds/100/technology.png" alt="technology"/>
+                            <img width="40" height="40" src=${tech.icon} alt="technology"/>
                         </div>
                         <h3 class="tech-name">${tech.name}</h3>
                         <p class="tech-role">${tech.role}</p>
@@ -901,7 +948,8 @@
 
                 // Populate Client Testimonials
                 const testimonialsGrid = document.getElementById('testimonials');
-                proposal.testimonials.forEach(testimonial => {
+             
+                proposal?.testimonials?.forEach(testimonial => {
                     const testimonialCard = document.createElement('div');
                     testimonialCard.classList.add('testimonial-card');
                     testimonialCard.innerHTML = `

@@ -647,6 +647,156 @@
           "rate": "$25"
         }
       ]
-    }    
+    },
+    {
+      "id": "Dukier",
+      "title": "Full-Funnel Data Infrastructure & Campaign Optimization",
+      "client_name": "Dukier Cool products, for Cool pets 🐾",
+      "submission_date": "May 20, 2025",
+      "status": "In Review",
+      "project_type": "Data Engineering & Marketing Analytics",
+      "duration": "10 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Phase 0: GA4 Event Hygiene & Audit",
+          "tasks": [
+            "Conduct a thorough review of the current GA4 implementation.",
+        "Identify issues related to data accuracy, tracking configuration, and event setup.",
+        "Provide a detailed report outlining findings, including areas for improvement.",
+        "Address issues identified during the audit.",
+        "Implement recommended fixes, including correcting event tracking and parameters.",
+        "Configure enhanced measurement features for the custom event of 15 from the business point of view.",
+        "Standardize naming conventions for events and parameters.",
+        "Implement or update key events and conversions to ensure comprehensive tracking across the site/app.",
+        "Validate data accuracy using DebugView and Realtime reports.",
+        "Document tracking schema for future reference and alignment across teams."
+         ]
+        },
+        {
+          "title": "Phase 1: Server-Side Enrichment & Data Pipeline",
+          "tasks": [
+            "Set up a server-side container using Google Tag Manager (sGTM) hosted on a secure server.",
+            "Configure GA4 and Meta Ads server endpoints using GA4 and Conversion API (Meta).",
+            "Map client-side GA4 events to their server-side equivalents to ensure consistency, including purchase, add_to_cart, view_item, and begin_checkout.",
+            "Enrich server-side payloads with business-specific data like product cost, shipping charges, logistics cost, and customer segmentation labels (if available).",
+            "Use hashed user identifiers (email, phone) along with `client_id`, `fbp`, and `fbc` to support improved attribution across Meta Ads and GA4.",
+            "Ensure all event payloads follow the required schema for GA4 Measurement Protocol and Meta CAPI, including custom parameters.",
+            "Implement batching, retry logic, and logging for failed event dispatches to ensure robustness.",
+            "Validate and debug server-side event delivery using GA4 DebugView and Meta Events Manager.",
+            "Ensure full compliance with data protection laws such as GDPR and CCPA by avoiding direct personal data exposure and using secure hashing (e.g., SHA256) where applicable.",
+            "Maintain a technical configuration document for both GA4 server-side Measurement Protocol and Meta Conversion API setups."
+           ]
+        },
+        {
+          "title": "Phase 2: Data Ingestion & Reporting",
+          "tasks": [
+            "Set up automated data export from GA4 to BigQuery.",
+            "Design and build a robust data model for reporting and analysis.",
+            "Transform and enrich raw data in BigQuery using SQL or scheduled workflows (e.g., Cloud Functions or Dataform).",
+            "Develop interactive and user-friendly dashboards in Looker Studio tailored for different stakeholders (marketing, product, finance).",
+            "Establish performance monitoring and alerting mechanisms for key metrics.",
+            "Implement ad-level reporting by combining BigQuery data with Meta Ads and Google Ads datasets.",
+            "Calculate real POAS (Profit On Ad Spend) by blending conversion + cost data. (Shopify Data might need to export but will discuss on the mail)",
+            "Segment reporting views by channel, campaign, country, SKU, etc., to uncover optimization insights."
+          ]
+        }
+      ],
+      "out_of_scope": [
+        {
+          "title": "The following items are not included in the scope of this project",
+          "tasks": [
+            "Data pipeline construction for first/third-party data sources.",
+            "Creation of reports or dashboards not specified in this SOW.",
+            "Building any production-grade machine learning models.",
+            "Integration or optimization of other systems or tools not related to GA4.",
+            "Any activities not explicitly mentioned in this scope.",
+            "We can never achieve the same level of accuracy between Shopify,meta and GA4, as mentioned in the official documentation. This discrepancy is due to differences in tracking methodologies and data collection processes"
+
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1",
+          "phase": "Phase 0: GA4 Setup & Hygiene",
+          "description": "Establish a solid foundation by ensuring GA4 is properly configured and capturing all relevant user interactions."
+        },
+        {
+          "week": "Week 2-3",
+          "phase": "Phase 1: Enriched Server-Side Events",
+          "description": "Enhance data quality and flexibility by shifting to server-side tracking and including profitability metrics."
+        },
+        {
+          "week": "Week 6-10",
+          "phase": "Phase 2: Data Pipeline & Reporting",
+          "description": "Build a scalable and insightful analytics infrastructure through automated data pipelines and advanced dashboards."
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Google Analytics 4 (GA4)",
+          "role": "User Behavior Tracking",
+          "icon": "/images/google-analytics-svgrepo-com.svg"
+        },
+        {
+          "name": "BigQuery",
+          "role": "Data Warehouse",
+          "icon": "/images/bigquery-svgrepo-com.svg"
+        },
+        {
+          "name": "Meta Ads & Google Ads",
+          "role": "Advertising Platforms",
+          "icon": "/images/google-ads-svgrepo-com.svg"
+        },
+        {
+          "name": "Looker Studio",
+          "role": "Dashboard & Reporting",
+          "icon": "/images/looker-svgrepo-com.svg"
+        },
+        {
+          "name": "Shopify",
+          "role": "E-Commerce Platform",
+          "icon": "/images/shopifycom.svg"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "GA4 Setup & Audit",
+          "hours": "16 hours",
+          "rate": "$17",
+          "amount": "$250"
+        },
+        {
+          "title": "Server-Side Tracking & Integration",
+          "hours": "24 hours",
+          "rate": "$21",
+          "amount": "$7,500"
+        },
+        {
+          "title": "BigQuery Setup & Looker Studio Reporting",
+          "hours": "35 hours",
+          "rate": "$25",
+          "amount": "$9,000"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "Helped us unlock profit-level insights across all paid media.",
+          "author": "Lucía Martínez",
+          "role": "Ecommerce Manager",
+          "avatar": "path_to_image.jpg"
+        },
+        {
+          "stars": 5,
+          "text": "A strategic and technical partner who understands both business and data.",
+          "author": "Carlos Fernández",
+          "role": "Performance Marketing Lead",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    }
+     
+     
   ]
 }
