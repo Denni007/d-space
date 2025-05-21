@@ -703,7 +703,7 @@
       ],
       "out_of_scope": [
         {
-          "title": "The following items are not included in the scope of this project",
+          "title": "The following are excluded from this project.",
           "tasks": [
             "Data pipeline construction for first/third-party data sources.",
             "Creation of reports or dashboards not specified in this SOW.",
