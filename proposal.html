@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Case Study: Rangreli GA4 Project | StarLuxe Tech</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -960,7 +960,6 @@
             .then(response => response.json())
             .then(data => {
                 const proposal = data.proposals.find(p => p.id === proposalId);
-                console.log(proposal)
                 document.title = `${proposal.title} | StarLuxe Tech`;
 
                 // Set Title and Client Name
