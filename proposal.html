@@ -56,99 +56,7 @@
             -ms-flex-align: initial !important;
         }
 
-        /* Tablets (≤ 991px) */
-        @media (max-width: 991px) {
-            .project-details {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .proposal-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-                padding: 5px 10px !important;
-                line-height: 1.3;
-            }
-
-            .proposal-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-        }
-
-        /* Mobile (≤ 576px) */
-        @media (max-width: 576px) {
-            main {
-                padding: 20px 10px;
-            }
-
-            .project-details {
-                grid-template-columns: 1fr;
-            }
-
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline {
-                padding-left: 20px;
-            }
-
-            .timeline-content p {
-                margin-left: 0;
-            }
-
-            .timeline-marker {
-                left: -28px;
-            }
-
-            .pricing-item {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .pricing-total {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .detail-card,
-            .tech-card,
-            .section {
-                padding: 15px;
-            }
-
-            .scope-header h3 {
-                font-size: 15px !important;
-            }
-
-            .scope-content ul {
-                padding-left: 0px;
-            }
-
-            .scope-content ul li {
-                font-size: 14px !important;
-            }
-
-            .tech-name{
-                font-size: 16px !important;
-            }
-
-        }
-    </style>
+</style>
 
     <style>
         body {
@@ -413,18 +321,33 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            line-height: 1.5;
         }
 
         .timeline-content p {
             font-size: 14px;
-            color: #666;
+            color: #ffffff70;
             margin-left: 24px;
         }
 
         .timeline-week {
             font-size: 12px;
-            color: #666;
+            color: #ffffff70;
             margin-bottom: 5px;
+        }
+
+        .timeline-item svg {
+            width: 20px !important;
+            height: 20px !important;
+            min-width: 20px !important;
+            min-height: 20px !important;
+            max-width: 20px !important;
+            max-height: 20px !important;
+            flex-shrink: 0;
+        }
+
+        .timeline-item path {
+            stroke-width: 2 !important;
         }
 
         /* Technology stack */
@@ -623,7 +546,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .project-details {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -641,6 +564,14 @@
                 text-align: center;
                 gap: 20px;
             }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+              .btn1 {
+                padding: 5px 10px !important;
+                line-height: 1.3;
+            }
         }
 
         @media (max-width: 480px) {
@@ -657,11 +588,156 @@
                 width: 100%;
             }
 
-            .btn {
-                flex: 1;
-                justify-content: center;
-            }
-        }
+            
+
+          
+        } */
+    
+    
+    /* Tablets (≤ 991px) */
+@media (max-width: 991px) {
+    .project-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proposal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn1 {
+        padding: 5px 10px !important;
+        line-height: 1.3;
+    }
+
+    .proposal-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+
+   
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+    .project-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+/* Small devices (≤ 576px) */
+@media (max-width: 576px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .project-details,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-content p {
+        margin-left: 0;
+    }
+
+    .timeline-marker {
+        left: -24px;
+    }
+
+    .timeline-item{
+        padding-left: 15px;
+
+    }
+
+    .pricing-item,
+    .pricing-total {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detail-card,
+    .tech-card,
+    .section {
+        padding: 15px;
+    }
+
+    .scope-header h3 {
+        font-size: 15px !important;
+    }
+
+    .scope-content ul {
+        padding-left: 0px;
+    }
+
+    .scope-content ul li {
+        font-size: 14px !important;
+    }
+
+    .tech-name {
+        font-size: 16px !important;
+    }
+}
+
+/* Extra small devices (≤ 480px) */
+@media (max-width: 480px) {
+    .project-details {
+        grid-template-columns: 1fr;
+    }
+
+    .proposal-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .proposal-actions {
+        width: 100%;
+    }
+}
+
+    
     </style>
 </head>
 
@@ -790,8 +866,8 @@
                         <p>Schedule a call to discuss your project in detail</p>
                     </div>
                     <div class="cta-buttons">
-                        <a href="contact-us.html" class="btn btn-white">Schedule Call</a>
-                        <a href="mailto:starluxetech@gmail.com" class="btn btn-outline-white">Accept Proposal</a>
+                        <a href="contact-us.html" class="btn btn-white btn1">Schedule Call</a>
+                        <a href="mailto:starluxetech@gmail.com" class="btn btn-outline-white btn1">Accept Proposal</a>
                     </div>
                 </div>
             </section>
