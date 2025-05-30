@@ -675,16 +675,15 @@
         {
           "title": "Phase 1: Server-Side Enrichment & Data Pipeline",
           "tasks": [
-            "Set up a server-side container using Google Tag Manager (sGTM) hosted on a secure server.",
-            "Configure GA4 and Meta Ads server endpoints using GA4 and Conversion API (Meta).",
-            "Map client-side GA4 events to their server-side equivalents to ensure consistency, including purchase, add_to_cart, view_item, and begin_checkout.",
-            "Enrich server-side payloads with business-specific data like product cost, shipping charges, logistics cost, and customer segmentation labels (if available).",
-            "Use hashed user identifiers (email, phone) along with `client_id`, `fbp`, and `fbc` to support improved attribution across Meta Ads and GA4.",
-            "Ensure all event payloads follow the required schema for GA4 Measurement Protocol and Meta CAPI, including custom parameters.",
-            "Implement batching, retry logic, and logging for failed event dispatches to ensure robustness.",
+            "Set up a server-side container using Google Tag Manager (sGTM) hosted on a secure server. (Please check the event volumn and setup cost we required your team help for the custom domain and cloud setup)",
+            "Configure server endpoints for GA4 and Conversion API (Meta) and google ads conversion.",
+            "Map client-side GA4 events to their server-side equivalents to ensure consistency, including purchase, add_to_cart, view_item, and begin_checkout all other events.",
+            "Enrich server-side payloads with business-specific data like product cost, shipping charges, logistics cost, and customer segmentation labels (if available and we need to do Feature check on shopify api and server side container better to not send on any analytics platform but create basic dashboard).",
+            "Use hashed user identifiers (email, phone) along with `client_id`, `fbp`, and `fbc` to support improved attribution across Meta Ads,Google Ads and GA4.",
+            "Ensure all event payloads follow the required schema for GA4, Google Ads and Meta CAPI, including custom parameters.(if raw product cost and other params need to check based on api data however that will refelct on the brower api call" ,
             "Validate and debug server-side event delivery using GA4 DebugView and Meta Events Manager.",
             "Ensure full compliance with data protection laws such as GDPR and CCPA by avoiding direct personal data exposure and using secure hashing (e.g., SHA256) where applicable.",
-            "Maintain a technical configuration document for both GA4 server-side Measurement Protocol and Meta Conversion API setups."
+            "Maintain a technical configuration document for both GA4 server-side and Meta Conversion API setups."
            ]
         },
         {
@@ -693,11 +692,12 @@
             "Set up automated data export from GA4 to BigQuery.",
             "Design and build a robust data model for reporting and analysis.",
             "Transform and enrich raw data in BigQuery using SQL or scheduled workflows (e.g., Cloud Functions or Dataform).",
-            "Develop interactive and user-friendly dashboards in Looker Studio tailored for different stakeholders (marketing, product, finance).",
             "Establish performance monitoring and alerting mechanisms for key metrics.",
-            "Implement ad-level reporting by combining BigQuery data with Meta Ads and Google Ads datasets.",
+            "Implement ad-level reporting by BigQuery data with Meta Ads and Google Ads datasets.",
             "Calculate real POAS (Profit On Ad Spend) by blending conversion + cost data. (Shopify Data might need to export but will discuss on the mail)",
-            "Segment reporting views by channel, campaign, country, SKU, etc., to uncover optimization insights."
+            "Segment reporting views by channel, campaign, country, SKU, etc., to uncover optimization insights.",
+            "Develop interactive and user-friendly dashboards in Looker Studio tailored for different stakeholders (marketing, product, finance).",
+
           ]
         }
       ],

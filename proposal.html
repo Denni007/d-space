@@ -986,12 +986,7 @@
                 proposal.scope_of_work.forEach((scope, index) => {
                     const scopeItem = document.createElement('div');
                     scopeItem.classList.add('scope-item');
-
-                    // If this is the first item, set it as active
-                    if (index === 0) {
-                        scopeItem.classList.add('active');
-                    }
-
+                    scopeItem.classList.add('active');
                     scopeItem.innerHTML = `
                         <div class="scope-header" onclick="toggleAccordion(event)">
                             <!-- First Icon: Same for all -->
