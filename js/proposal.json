@@ -667,7 +667,7 @@
         "Implement recommended fixes, including correcting event tracking and parameters.",
         "Configure enhanced measurement features for the custom event of 15 from the business point of view.",
         "Standardize naming conventions for events and parameters.",
-        "Implement or update key events and conversions to ensure comprehensive tracking across the site/app.",
+        "Implement or update key events and conversions to ensure comprehensive tracking across the site.",
         "Validate data accuracy using DebugView and Realtime reports.",
         "Document tracking schema for future reference and alignment across teams."
          ]
@@ -675,28 +675,27 @@
         {
           "title": "Phase 1: Server-Side Enrichment & Data Pipeline",
           "tasks": [
-            "Set up a server-side container using Google Tag Manager (sGTM) hosted on a secure server. (Please check the event volumn and setup cost we required your team help for the custom domain and cloud setup)",
-            "Configure server endpoints for GA4 and Conversion API (Meta) and google ads conversion.",
-            "Map client-side GA4 events to their server-side equivalents to ensure consistency, including purchase, add_to_cart, view_item, and begin_checkout all other events.",
-            "Enrich server-side payloads with business-specific data like product cost, shipping charges, logistics cost, and customer segmentation labels (if available and we need to do Feature check on shopify api and server side container better to not send on any analytics platform but create basic dashboard).",
-            "Use hashed user identifiers (email, phone) along with `client_id`, `fbp`, and `fbc` to support improved attribution across Meta Ads,Google Ads and GA4.",
-            "Ensure all event payloads follow the required schema for GA4, Google Ads and Meta CAPI, including custom parameters.(if raw product cost and other params need to check based on api data however that will refelct on the brower api call" ,
-            "Validate and debug server-side event delivery using GA4 DebugView and Meta Events Manager.",
-            "Ensure full compliance with data protection laws such as GDPR and CCPA by avoiding direct personal data exposure and using secure hashing (e.g., SHA256) where applicable.",
-            "Maintain a technical configuration document for both GA4 server-side and Meta Conversion API setups."
+            "Deploy a server-side container using Google Tag Manager hosted on a secure server. Please assess the expected event volume and setup costs. We request your team's assistance in configuring the custom domain and cloud infrastructure.",
+            "Set up server endpoints for GA4, Meta Conversion API (CAPI), and Google Ads Conversion Tracking.",
+            "Ensure accurate mapping of client-side GA4 events to their server-side equivalents. This includes key events such as purchase, add_to_cart, view_item, and begin_checkout, among others.",
+            "Implement secure hashed identifiers (email, phone) alongside client_id, fbp, and fbc to support cross-platform attribution for GA4, Meta Ads, and Google Ads.",
+            "Ensure all event payloads follow the required schema for GA4, Google Ads and Meta CAPI, including custom parameters.(if raw product cost and other params need to check based on api data however that will not refelct on the brower api call" ,
+            "Use GA4 DebugView and Meta Events Manager to test, validate, and troubleshoot server-side event delivery.",
+            "Create and maintain a comprehensive technical configuration document covering both GA4 server-side setup and Meta Conversion API implementation."
            ]
         },
         {
           "title": "Phase 2: Data Ingestion & Reporting",
           "tasks": [
             "Set up automated data export from GA4 to BigQuery.",
-            "Design and build a robust data model for reporting and analysis.",
-            "Transform and enrich raw data in BigQuery using SQL or scheduled workflows (e.g., Cloud Functions or Dataform).",
+            "Use Google Ads native BigQuery connector to store data in bigquery (via Google Cloud).",
             "Establish performance monitoring and alerting mechanisms for key metrics.",
+            "Use Meta Ads third party BigQuery connector to store data in bigquery (via ETL tool).",
             "Implement ad-level reporting by BigQuery data with Meta Ads and Google Ads datasets.",
-            "Calculate real POAS (Profit On Ad Spend) by blending conversion + cost data. (Shopify Data might need to export but will discuss on the mail)",
-            "Segment reporting views by channel, campaign, country, SKU, etc., to uncover optimization insights.",
-            "Develop interactive and user-friendly dashboards in Looker Studio tailored for different stakeholders (marketing, product, finance).",
+            "We will integrate daily order data using the Shopify API, fetched via an Apps Script in Google Sheets.",
+            "Create 2-3 stakeholder-specific dashboards, each with a focused view: Marketing View: Spend, ROAS by Campaign & Channel , Product View: Revenue by SKU or Category, Finance View: Weekly POAS trends, Cost vs. Revenue, Use BigQuery connector in Looker Studio to avoid manual updates.",
+            "Segment reporting views Apply filters instead of building multiple pages/tabs to reduce processing load",
+            "Develop interactive and user-friendly dashboards in Looker Studio tailored for different stakeholders (marketing, product, finance)."
 
           ]
         }
@@ -709,9 +708,45 @@
             "Creation of reports or dashboards not specified in this SOW.",
             "Building any production-grade machine learning models.",
             "Integration or optimization of other systems or tools not related to GA4.",
+            "We will not support on server side beyond shopify limited api which possible directly on custom tag, variable or client.",
             "Any activities not explicitly mentioned in this scope.",
-            "We can never achieve the same level of accuracy between Shopify,meta and GA4, as mentioned in the official documentation. This discrepancy is due to differences in tracking methodologies and data collection processes"
-
+            "Any delays caused by dependencies or access-related issues may impact the overall project timeline.",
+            "We are limiting the reporting scope to basic KPIs and standard reports based on available data source tables. Custom queries or data blending will not be included."
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "title": "Phase 0: GA4 Event Hygiene & Audit",
+          "tasks": [
+            "Access to existing GA4 properties (with edit permissions)",
+            "Access to GTM containers (Web and App, if applicable)",
+            "Datalayer availability and consistency across website/app (requires your dev team to implemented)",
+            "Access to live staging/dev environments (if applicable for testing)",
+            "Website code access or shopify access"
+          ]
+        },
+        {
+          "title": "Phase 1: Server-Side Enrichment & Data Pipeline",
+          "tasks": [
+            "Custom domain setup for server-side GTM (e.g., tag.domain.com with DNS and SSL)",
+            "Cloud environment (GCP/AWS) provisioned with necessary access/roles",
+            "Access to Shopify Admin and API credentials",
+            "Availability of hashed user identifiers (email, phone) in datalayer or any varaible",
+            "List of enriched attributes (e.g., product cost, logistics cost, customer segments)",
+            "Legal/Privacy team input for GDPR/CCPA compliance"
+          ]
+        },
+        {
+          "title": "Phase 2: Data Ingestion & Reporting",
+          "tasks": [
+            "Google Cloud project access for BigQuery setup",
+        "Google Ads and Meta Ads account access with data export permissions",
+        "BigQuery billing account configured and active",
+        "Access to Looker Studio with BigQuery connector permissions",
+        "Daily order data schema and Shopify API access",
+        "Pre-approved KPIs and stakeholder reporting requirements",
+        "Client-side report validation point of contact"
           ]
         }
       ],
@@ -768,13 +803,13 @@
         },
         {
           "title": "Server-Side Tracking & Integration",
-          "hours": "24 hours",
+          "hours": "30 hours",
           "rate": "$21",
           "amount": "$7,500"
         },
         {
           "title": "BigQuery Setup & Looker Studio Reporting",
-          "hours": "35 hours",
+          "hours": "40 hours",
           "rate": "$25",
           "amount": "$9,000"
         }
