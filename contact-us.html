@@ -159,11 +159,11 @@
         </div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded',  function() {
           var form = document.getElementById('wf-form-Contact-Form');
       
           // Bind form submission to the dspaceexpert.convert() function
-          form.addEventListener('submit', function(e) {
+          form.addEventListener('submit', async function(e) {
               e.preventDefault(); // Prevent form submission from reloading the page
       
               // Prepare the properties object with the form data
@@ -203,6 +203,26 @@
                   document.querySelector('.w1-form-fail').style.display = 'none';
       
                   console.log('Visitor:', visitor);
+                  try {
+        const response = await fetch('https://contactclub.starluxetech.com/api/leads/new', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name:properties.name, email:properties.email, message:properties.name })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+         alert('Thank you! Your submission has been received!');
+        } else {
+          alert('Error: ' + (data.error || 'Unknown error'));
+        }
+      } catch (error) {
+        console.error('Request failed:', error);
+        alert('Failed to submit lead.');
+      }
               }
           });
       });

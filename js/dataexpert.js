@@ -212,13 +212,13 @@
           visitor.conversion_page = location.origin + location.pathname;
           visitor.visits_at_conversion = (visitor.visits || []).length;
           visitor.pageviews_before_conversion = visitor.pageviews || 0;
-          console.log('convert')
-          window.dataLayer.push({
+          console.log('convert');
+          window.dataLayer?.push({
             'event':'contact_us',
             'event_label':btoa(JSON.parse(data).name),
             'event_category':btoa(JSON.parse(data).email),
             'event_action':btoa(JSON.parse(data).Message)
-          })
+          });
           localStorage.setItem('dspaceexpert_visitor', JSON.stringify(visitor));
           return visitor;
         },
