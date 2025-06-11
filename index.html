@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>StarLuxe Analytics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233022559905658"
@@ -12,7 +16,7 @@
   <meta content="StarLuxe Analytics" property="twitter:title">
   <meta name="robots" content="index, follow">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="description" 
+  <meta name="description"
     content="Discover how Starluxetech utilizes cutting-edge data analytics and blockchain technology to drive innovation and success in various industries. Explore our innovative solutions today!">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
@@ -81,7 +85,7 @@
               <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
 
               <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
-              <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+              <div data-delay="0" data-hover="1" class="w-dropdown">
                 <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
                   aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
                   <div class="row row-align-center">
@@ -92,116 +96,192 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
                   <div class="dropdown-list-wrapper">
-                   
+                    <!-- ------------------------------- -->
                     <div class="dropdown-column">
-                        <h3 class="dropdown-title">SERVICES</h3>
-                        <!-- <i class="icon ga4" style="position: absolute;margin-top: 10px;"></i> -->
-                        <div class="dropdown-item">
-                           
-                            <a href="/ga4-migration">GA4 Migration</a>
-                            <p>Seamless transition to Google Analytics 4 with best practices</p>
-                        </div>
-                        <!-- <i class="icon tracking"></i> -->
-                        <div class="dropdown-item">
-                            
-                            <a href="/tracking">Tracking & Audit</a>
-                            <p>Ensure accurate data tracking with in-depth auditing</p>
-                        </div>
+                      <h3 class="dropdown-title">SERVICES</h3>
+                      <!-- <i class="icon ga4" style="position: absolute;margin-top: 10px; color: #ffffff;"></i> -->
+                      <div class="dropdown-item">
+                        <a href="/ga4-migration.html">GA4 Migration</a>
+                        <p>Seamless transition to Google Analytics 4 with best practices</p>
+                      </div>
+                      <!-- <i class="icon tracking"></i> -->
+                      <div class="dropdown-item">
+                        <a href="/tracking.html">Tracking & Audit</a>
+                        <p>Ensure accurate data tracking with in-depth auditing</p>
+                      </div>
+                      <!-- <i class="icon cro"></i> -->
+                      <div class="dropdown-item">
                         <!-- <i class="icon cro"></i> -->
-                        <div class="dropdown-item">
-                            <!-- <i class="icon cro"></i> -->
-                            <a href="/service/conversion-rate-optimization">CRO Service</a>
-                            <p>Optimize conversions and enhance user experience</p>
-                        </div>
+                        <a href="/cro-analytics.html">CRO Service</a>
+                        <p>Optimize conversions and enhance user experience</p>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/data-viz.html">GDPR Consent Service</a>
+                        <p>Exploitez la puissance de vos données 1st-party pour maximiser vos campagnes marketing</p>
+                      </div>
+
+
+                       <div class="dropdown-item">
+                      <a href="/">AI & Data Science</a>
+                      <p>Développez des stratégies IA avancées et concrètes</p>
                     </div>
-                 
-                    
-                    <div class="dropdown-column">
-                        <h3 class="dropdown-title">TECH & COMPLIANCE</h3>
-                        <div class="dropdown-item">
-                            <!-- <i class="icon gdpr"></i> -->
-                            <a href="/gdpr">GDPR Consent Service</a>
-                            <p>Ensure compliance with data privacy regulations</p>
-                        </div>
-                        <div class="dropdown-item">
-                            <!-- <i class="icon server"></i> -->
-                            <a href="/s2s-gtm">Server Side Tracking</a>
-                            <p>Enhance data accuracy with server-side GTM setup</p>
-                        </div>
+
+                       <div class="dropdown-item">
+                      <a href="/">Analytics Engineering & Infrastructure</a>
+                      <p>Accélérez vers une infrastructure Data performante</p>
                     </div>
-                </div>
-                <style>
-                  /* Dropdown Styling */
-.dropdown-list-wrapper {
-    background: #1e2029; /* Dark mode theme */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    gap: 30px;
-    width: 500px;
-    font-family: 'Poppins', sans-serif;
-}
+                    </div>
 
-/* Columns */
-.dropdown-column {
-    flex: 1;
-}
+                   
+              <!--TECH & COMPLIANCE  -->
+                  <div class="dropdown-column">
+                    <h3 class="dropdown-title">TECH & COMPLIANCE</h3>
+                    <div class="dropdown-item">
+                      <!-- <i class="icon gdpr"></i> -->
+                      <a href="/">GDPR Consent Service</a>
+                      <p>Ensure compliance with data privacy regulations</p>
+                    </div>
+                    <div class="dropdown-item">
+                      <!-- <i class="icon server"></i> -->
+                      <a href="/s2s-gtm.html">Server Side Tracking</a>
+                      <p>Enhance data accuracy with server-side GTM setup</p>
+                    </div>
 
-/* Section Titles */
-.dropdown-title {
-    font-size: 14px;
-    font-weight: bold;
-    color: #ff934f; /* Yellowish accent */
-    text-transform: uppercase;
-    margin-bottom: 0px;
-}
+                    <div class="dropdown-item">
+                      <!-- <i class="icon server"></i> -->
+                      <a href="/">Recrutement & Upskilling</a>
+                      <p>Nous travaillons avec les meilleurs. Pourquoi pas vous.</p>
+                    </div>
+                    <div class="dropdown-item">
+                      <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                      <a href="/">Retail & E-Commerce</a>
+                      <p>Retention & churn analysis, média analytics, segmentation, activation d’audiences et modèles d’attributions</p>
+                    </div>
 
-/* Items */
-.dropdown-item {
-    display: flex;
-    align-items: flex-start;
-     transition: transform 0.2s, background 0.2s;
-    border-radius: 6px;
-    cursor: pointer;
-    flex-direction: column;
-}
+                    <!-- cta box -->
+                    <div
+                      class="flex items-center justify-between cta-box p-4 rounded-lg w-fit shadow-sm mt-4 cursor-pointer">
+                      <!-- Text -->
+                      <p class=" text-[12px] w-[180px]">Travaillez avec les meilleurs consultants.</p>
 
-.dropdown-item:hover {
-    transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.1);
-}
+                      <!-- Profile images and arrow -->
+                      <div class="flex items-center space-x-2 ml-2">
+                        <!-- Profile Images -->
+                        <div class="flex -space-x-2">
+                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="consultant1"
+                            class="w-8 h-8 rounded-full border-2 border-white">
+                          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="consultant2"
+                            class="w-8 h-8 rounded-full border-2 border-white">
+                          <img src="https://randomuser.me/api/portraits/women/34.jpg" alt="consultant3"
+                            class="w-8 h-8 rounded-full border-2 border-white">
+                        </div>
 
-/* Links */
-.dropdown-item a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: 500;
-}
+                        <!-- Arrow Icon -->
+                        <div class="text-gray-200 pl-4">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
 
-/* Description */
-.dropdown-item p {
-    font-size: 12px;
-    color: #bbbbbb;
-    margin: 0;
-}
+                  </div>
+                  <style>
+                    .cta-box {
+                      background: rgba(255, 255, 255, 0.1);
+                      color: white;
+                      font-weight: medium;
+                      font-family: 'Poppins', sans-serif;
+                    }
+
+                    /* Dropdown Styling */
+                    .dropdown-list-wrapper {
+                      background: #1e2029;
+                      /* Dark mode theme */
+                      padding: 30px;
+                      margin-top: 28px;
+                      border-radius: 12px;
+                      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                      display: flex;
+                      gap: 25px;
+                      width: 680px;
+                      font-family: 'Poppins', sans-serif;
+                    }
+
+                    /* Columns */
+                    .dropdown-column {
+                      flex: 1;
+                    }
+
+                    /* Section Titles */
+                    .dropdown-title {
+                      font-size: 15px;
+                      font-weight: bold;
+                      color: #ff934f;
+                      /* Yellowish accent */
+                      text-transform: uppercase;
+                      margin-bottom: 0px;
+                      padding-left: 10px;
+                    }
+
+                    /* Items */
+                    .dropdown-item {
+                      display: flex;
+                      align-items: flex-start;
+                      transition: transform 0.2s, background 0.2s;
+                      border-radius: 6px;
+                      cursor: pointer;
+                      flex-direction: column;
+                    }
+
+                    .dropdown-item:hover {
+                      transform: translateX(5px);
+                      background: rgba(255, 255, 255, 0.1);
+                    }
+
+                    /* Links */
+                    .dropdown-item a {
+                      text-decoration: none;
+                      font-size: 12px;
+                      color: #ffffff;
+                      font-weight: 500;
+                    }
+
+                    /* Description */
+                    .dropdown-item p {
+                      font-size: 11px;
+                      color: #bbbbbb;
+                      margin: 0;
+                      padding-bottom:3px ;
+                    }
 
 
- .icon {
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-    flex-shrink: 0;
-}
+                    .icon {
+                      width: 15px;
+                      height: 15px;
+                      background-size: cover;
+                      flex-shrink: 0;
+                    }
 
-.ga4 { background-image: url(''); }
-.tracking { background-image: url('tracking-icon.png'); }
-.cro { background-image: url('cro-icon.png'); }
-.gdpr { background-image: url('gdpr-icon.png'); }
-.server { background-image: url('server-icon.png'); }
+                    .ga4 {
+                      background-image: url('');
+                    }
 
-                </style> 
+                    /* .tracking {
+                      background-image: url('tracking-icon.png');
+                    }
+
+                    .cro {
+                      background-image: url('cro-icon.png');
+                    }
+
+                    .gdpr {
+                      background-image: url('gdpr-icon.png');
+                    }
+
+                    .server {
+                      background-image: url('server-icon.png');
+                    } */
+                  </style>
                   <!-- <div class="dropdown-list-wrapper">
                     <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
                     <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
@@ -211,7 +291,7 @@
                       tabindex="0">Server Side
                       Tracking</a>
                     <div class="dropdown-bg"></div>
-                  </div> --> -->
+                  </div> -->
                 </nav>
               </div>
               <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
@@ -279,12 +359,11 @@
 
             <div class="framer-aesxrb" data-framer-name="Container" name="Container">
               <section class="framer-section ">
-                <ul class="logo-list marquee-content" >
-                  <li class="logo-item" >
+                <ul class="logo-list marquee-content">
+                  <li class="logo-item">
                     <div class="framer-8lyhk0-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
                             data-framer-background-image-wrapper="true"><img decoding="async"
@@ -295,11 +374,10 @@
                       </div>
                     </div>
                   </li>
-                  <li  class="logo-item" >
+                  <li class="logo-item">
                     <div class="framer-1ru4dsk-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
                             data-framer-background-image-wrapper="true"><img decoding="async"
@@ -310,11 +388,10 @@
                       </div>
                     </div>
                   </li>
-                  <li class="logo-item" >
+                  <li class="logo-item">
                     <div class="framer-1nj0387-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
                             data-framer-background-image-wrapper="true"><img decoding="async"
@@ -325,26 +402,24 @@
                       </div>
                     </div>
                   </li>
-                  <li class="logo-item" >
+                  <li class="logo-item">
                     <div class="framer-190d2ut-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
-                            data-framer-background-image-wrapper="true"><img decoding="async"
-                              src="/images/GA4.svg" alt=""
+                            data-framer-background-image-wrapper="true"><img decoding="async" src="/images/GA4.svg"
+                              alt=""
                               style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:contain">
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li class="logo-item" >
+                  <li class="logo-item">
                     <div class="framer-1sogepy-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
                             data-framer-background-image-wrapper="true"><img decoding="async"
@@ -355,11 +430,10 @@
                       </div>
                     </div>
                   </li>
-                  <li class="logo-item" >
+                  <li class="logo-item">
                     <div class="framer-14g34h7-container" style="width:186px;height:98px;flex-shrink:0">
                       <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        style=" border-radius: 30px; height: 100%; opacity: 1;"
-                        tabindex="0">
+                        style=" border-radius: 30px; height: 100%; opacity: 1;" tabindex="0">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
                             data-framer-background-image-wrapper="true"><img decoding="async"
@@ -372,8 +446,7 @@
                   </li>
                   <li class="logo-item">
                     <div class="framer-8lyhk0-container" style="width: 186px; height: 98px; flex-shrink: 0;">
-                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        tabindex="0"
+                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1" tabindex="0"
                         style=" height: 100%; border-radius: 30px; opacity: 1;">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div data-framer-background-image-wrapper="true"
@@ -387,8 +460,7 @@
                   </li>
                   <li class="logo-item">
                     <div class="framer-1ru4dsk-container" style="width: 186px; height: 98px; flex-shrink: 0;">
-                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        tabindex="0"
+                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1" tabindex="0"
                         style=" height: 100%; border-radius: 30px; opacity: 1;">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div data-framer-background-image-wrapper="true"
@@ -402,8 +474,7 @@
                   </li>
                   <li class="logo-item">
                     <div class="framer-1nj0387-container" style="width: 186px; height: 98px; flex-shrink: 0;">
-                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        tabindex="0"
+                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1" tabindex="0"
                         style=" height: 100%; border-radius: 30px; opacity: 1;">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div data-framer-background-image-wrapper="true"
@@ -417,8 +488,7 @@
                   </li>
                   <li class="logo-item">
                     <div class="framer-190d2ut-container" style="width: 186px; height: 98px; flex-shrink: 0;">
-                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1"
-                        tabindex="0"
+                      <div class="framer-BmD7Z framer-d0tu39 framer-v-d0tu39" data-framer-name="Variant 1" tabindex="0"
                         style=" height: 100%; border-radius: 30px; opacity: 1;">
                         <div class="framer-1cv6lkm" data-framer-name="Logo" style="opacity: 1;">
                           <div data-framer-background-image-wrapper="true"
@@ -457,56 +527,60 @@
               </a>
              
           </div> -->
-          <div class="card-heading center-content display-inline text-gray-4 tg4 panel-mobile-text">We help brands transform clicks into valuable customer insights, driving increased revenue.</div>
-          <div class="btn-container" style="display: flex; justify-content: center; padding-top: 38px;">
-            <button class="cssbuttons-io-button" onclick="window.location.href='https://www.starluxetech.com/contact-us'">
-              <span class="desktop-text">Press <span class="key-highlight">B</span> to book discovery call</span>
-              <span class="mobile-text">Book your free discovery call</span>
-              <div class="icon">
-                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-                </svg>
-              </div>
-            </button>
-          </div>
-          
-          <style>
-            .cssbuttons-io-button {
-              display: flex;
-              
-            }
-          
-            .desktop-text {
-              display: inline;
-            }
-          
-            .mobile-text {
-              display: none;
-            }
-          
-            @media (max-width: 768px) {
-              .desktop-text {
-                display: none;
+            <div class="card-heading center-content display-inline text-gray-4 tg4 panel-mobile-text">We help brands
+              transform clicks into valuable customer insights, driving increased revenue.</div>
+            <div class="btn-container" style="display: flex; justify-content: center; padding-top: 38px;">
+              <button class="cssbuttons-io-button"
+                onclick="window.location.href='https://www.starluxetech.com/contact-us'">
+                <span class="desktop-text">Press <span class="key-highlight">B</span> to book discovery call</span>
+                <span class="mobile-text">Book your free discovery call</span>
+                <div class="icon">
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                      fill="currentColor"></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            <style>
+              .cssbuttons-io-button {
+                display: flex;
+
               }
-              .mobile-text {
+
+              .desktop-text {
                 display: inline;
               }
-            }
-          </style>
-          
-          <script>
+
+              .mobile-text {
+                display: none;
+              }
+
+              @media (max-width: 768px) {
+                .desktop-text {
+                  display: none;
+                }
+
+                .mobile-text {
+                  display: inline;
+                }
+              }
+            </style>
+
+            <script>
               // Listen for keydown events on the entire document
-              document.addEventListener('keyup', function(event) {
-                
-                  //Check if the "B" key is pressed
-                  if (event.key.toLowerCase() === 'b') {
-                     // Redirect to the contact page or discovery call page
-                      window.location.href = 'https://www.starluxetech.com/contact-us'; // Replace with your actual contact page URL
-                  }
+              document.addEventListener('keyup', function (event) {
+
+                //Check if the "B" key is pressed
+                if (event.key.toLowerCase() === 'b') {
+                  // Redirect to the contact page or discovery call page
+                  window.location.href = 'https://www.starluxetech.com/contact-us'; // Replace with your actual contact page URL
+                }
               });
-          </script>
-          
+            </script>
+
 
 
 
@@ -1388,15 +1462,17 @@
                   </div>
                 </div>
               </div>
-              <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4
-                  migration</a><a href="/tracking" class="text-link">Tracking & Audit</a><a
-                  href="/service/conversion-rate-optimization" class="text-link">CRO Service</a><a href="/gdpr"
+              <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration.html" class="text-link">GA4
+                  migration</a><a href="/tracking.html" class="text-link">Tracking & Audit</a><a
+                  href="cro-analytics.html" class="text-link">CRO Service</a><a href="/data-viz.html"
                   class="text-link">GDPR Consent Service</a>
-                <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
+                <a href="/s2s-gtm.html" class="text-link">Server Side Tracking</a>
               </div>
 
-              <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a href="/case-studies" class="nav-link w-nav-link">Case Study</a><a href="/blogs" class="text-link">Blogs</a><a
-                  href="/pricing/pricing-1" class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
+              <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a
+                  href="/case-studies" class="nav-link w-nav-link">Case Study</a><a href="/blogs"
+                  class="text-link">Blogs</a><a href="/pricing/pricing-1" class="text-link">Services</a><a
+                  href="/our-team" class="text-link">Team</a>
               </div>
             </div>
             <div class="panel">
@@ -1426,10 +1502,9 @@
                 class="social-link-item w-inline-block"><img
                   src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
                   alt=""></a><a href="https://behance.net/starluxetech-" class="social-link-item w-inline-block"><img
-                  src="/images/behance-svgrepo-com.svg"
-                  alt=""></a><a href="https://www.linkedin.com/company/starluxetech/?viewAsMember=true" class="social-link-item w-inline-block"><img
-                  src="/images/linkedin.svg"
-                  alt=""></a></div>
+                  src="/images/behance-svgrepo-com.svg" alt=""></a><a
+                href="https://www.linkedin.com/company/starluxetech/?viewAsMember=true"
+                class="social-link-item w-inline-block"><img src="/images/linkedin.svg" alt=""></a></div>
           </div>
         </div>
       </div>
@@ -1446,13 +1521,13 @@
   <script src="/js/dataexpert.js" type="text/javascript"></script>
 
   <script>
-   document.addEventListener('DOMContentLoaded', function () {
-  const logoList = document.querySelector('.logo-list');
-  const logos = logoList.innerHTML; // Get all the logo items
-  logoList.innerHTML += logos; // Duplicate the logos for seamless scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      const logoList = document.querySelector('.logo-list');
+      const logos = logoList.innerHTML; // Get all the logo items
+      logoList.innerHTML += logos; // Duplicate the logos for seamless scroll
 
 
-});
+    });
 
   </script>
 
