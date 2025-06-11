@@ -1719,6 +1719,7 @@
   .dropdown-item:hover {
     color: #fff;
     background-color: rgba(255, 255, 255, .05);
+    transform: translateX(5px);
   }
   
   .dropdown-item.w--current {
