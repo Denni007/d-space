@@ -1,5 +1,138 @@
 {
+
   "proposals": [
+    {
+      "id": "PerfMonitorPhase1",
+      "title": "Marketing API Integration & Performance Alerting",
+      "client_name": "Internal Tools Team",
+      "submission_date": "June 13, 2025",
+      "status": "In Review",
+      "project_type": "Data Engineering & Alert Automation",
+      "duration": "4 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Phase 1: Data Ingestion & Performance Monitoring",
+          "tasks": [
+            "Connect to Google Ads API using Python SDK and extract key metrics (e.g., impressions, conversions, cost).",
+            "Connect to CallTrackingMetrics (CTM) API and extract call-related data (duration, caller ID, source, etc.).",
+            "Clean and normalize data from both sources and design an appropriate schema for BigQuery storage.",
+            "Set up scheduled data fetching using Cloud Functions (daily or hourly based on feasibility).",
+            "Create basic monitoring rules such as: campaigns with 0 impressions, CTR drop > 50%, cost increase > threshold, low daily conversions.",
+            "Trigger alerts via email or Slack (can be plain text or structured JSON) using a defined message format.",
+            "Ensure modular, well-documented Python code and provide deployment instructions for GCP.",
+            "Provide basic operational documentation covering setup, configuration, and rule extension."
+          ]
+        }
+      ],
+      "out_of_scope": [
+        {
+          "title": "The following are excluded from this project.",
+          "tasks": [
+            "UI or dashboard development.",
+            "Data ingestion from sources other than Google Ads or CTM.",
+            "Long-term monitoring and maintenance beyond handover.",
+            "Advanced anomaly detection using ML or forecasting models.",
+            "Integration with internal CRM or ticketing tools.",
+            "Any production-grade alert delivery pipelines (email servers, Slack bots beyond basic setup)."
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "title": "Phase 1: Data Ingestion & Monitoring Setup",
+          "tasks": [
+            "Access to Google Ads Manager account with developer token and credentials.",
+            "CallTrackingMetrics API credentials and endpoint access.",
+            "Google Cloud project with BigQuery and Cloud Functions enabled.",
+            "Slack webhook or SMTP credentials for alerts.",
+            "Predefined rules or KPIs for monitoring (or agreement on a minimal rule set)."
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1",
+          "phase": "API Connection & Schema Design",
+          "description": "Connect to Google Ads and CTM APIs, validate credentials, and define BigQuery schema."
+        },
+        {
+          "week": "Week 2",
+          "phase": "Data Pipeline & Scheduling",
+          "description": "Set up data ingestion jobs, validate data storage in BigQuery, and deploy scheduled functions."
+        },
+        {
+          "week": "Week 3",
+          "phase": "Monitoring Logic & Alert Setup",
+          "description": "Implement rule-based logic and configure Slack/email alert delivery with summaries."
+        },
+        {
+          "week": "Week 4",
+          "phase": "Testing, Documentation & Handover",
+          "description": "Test all pipelines and alerts, refine thresholds, and finalize deployment documentation."
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Python",
+          "role": "Scripting & API Integration",
+          "icon": "/images/python-svgrepo-com.svg"
+        },
+        {
+          "name": "Google Ads API",
+          "role": "Ad Data Source",
+          "icon": "/images/google-ads-svgrepo-com.svg"
+        },
+        {
+          "name": "CallTrackingMetrics API",
+          "role": "Call Data Source",
+          "icon": "/images/call.svg"
+        },
+        {
+          "name": "BigQuery",
+          "role": "Data Warehouse",
+          "icon": "/images/bigquery-svgrepo-com.svg"
+        },
+        {
+          "name": "Google Cloud Functions",
+          "role": "Scheduled Task Execution",
+          "icon": "/images/google-cloud-functions-svgrepo-com.svg"
+        },
+        {
+          "name": "Slack / Email",
+          "role": "Notification Channels",
+          "icon": "/images/slack-svgrepo-com.svg"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "API Integration & Data Pipeline",
+          "hours": "50 hours",
+          "rate": "$30",
+          "amount": "$900"
+        },
+        {
+          "title": "Alerting System & Deployment",
+          "hours": "10 hours",
+          "rate": "$50",
+          "amount": "$1,250"
+        },
+        {
+          "title": "Testing, Handover & Documentation",
+          "hours": "5 hours",
+          "rate": "$10",
+          "amount": "$600"
+        }
+      ],
+      "testimonials": [
+        {
+          "stars": 5,
+          "text": "Great Team for our Infra building on cloud. The team exceeded expectations.",
+          "author": "Paul Soloman",
+          "role": "CEO",
+          "avatar": "path_to_image.jpg"
+        }
+      ]
+    },    
     {
       "id": "proposal1",
       "title": "E-Commerce Website Redesign",

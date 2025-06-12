@@ -858,7 +858,7 @@
             </section>
 
             <!-- Client Testimonials -->
-            <section class="section">
+            <section class="section" id="testimonials2">
                 <h2 class="section-title">Client Testimonials</h2>
                 <div class="testimonials-grid" id="testimonials"></div>
             </section>
@@ -1189,7 +1189,7 @@
 
                 // Populate Client Testimonials
                 const testimonialsGrid = document.getElementById('testimonials');
-
+                proposal?.testimonials.length?
                 proposal?.testimonials?.forEach(testimonial => {
                     const testimonialCard = document.createElement('div');
                     testimonialCard.classList.add('testimonial-card');
@@ -1205,7 +1205,7 @@
                         </div>
                     `;
                     testimonialsGrid.appendChild(testimonialCard);
-                });
+                }) :  testimonialsGrid.parentElement.classList.add('section-title3');
             });
 
         // Accordion functionality for scope of work
