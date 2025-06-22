@@ -3027,6 +3027,7 @@ figcaption {
   color: #bbbbbb;
   margin: 0;
   padding-bottom:3px ;
+  line-height: normal;
 }
 .cta-box {
   background: rgba(255, 255, 255, 0.1);
