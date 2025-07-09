@@ -205,7 +205,7 @@
 
 body {
   padding-bottom: 96px;
-  background: 50%/contain url('https://www.halo-lab.com/cdn-cgi/image/anim=true,dpr=1,format=auto,quality=85/cloudflare-images/universe.f742a005ecd.png?f44fd916caf') #12141d;
+  /* background: 20%/contain url('/images/d.png') #12141d; */
   background-color: #12141d;
   font-family: Inter, sans-serif;
   color: hsla(0, 0%, 100%, 0.5);
@@ -1382,6 +1382,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 6px;
+  
   background-color: #FF934F;
   box-shadow: inset 0 0 20px 20px transparent;
   -webkit-transition: box-shadow 200ms ease;
@@ -2952,10 +2953,11 @@ figcaption {
 
 .nav-link:hover {
   opacity: 1;
+  color: #FF934F;
 }
 
 .nav-link.w--current {
-  color: #fff;
+  color: #FF934F;
 }
 
 .navbar {
@@ -2981,6 +2983,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 .navbar-controls {
@@ -3073,7 +3076,11 @@ figcaption {
 .navbar-wrapper {
   position: relative;
   z-index: 5;
-  background-color: #12141d;
+  width: 100%;
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  /* background-color: #12141d; */
 }
 
 .navbar-wrapper.sticky-top {
@@ -3081,6 +3088,10 @@ figcaption {
   position: sticky;
   top: 0px;
   z-index: 99;
+ 
+}
+.navbar-wrapper.container {
+  
 }
 
 .nav-menu {
@@ -3092,6 +3103,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 .dropdown-link-icon {

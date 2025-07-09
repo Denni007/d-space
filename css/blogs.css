@@ -1740,7 +1740,7 @@
   
   .navbar-wrapper {
     z-index: 5;
-    background-color: #12141d;
+    background-color: rgb(18, 20, 29);
     position: relative;
   }
   
