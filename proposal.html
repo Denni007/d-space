@@ -1206,7 +1206,7 @@
                         outscopeContainer.appendChild(scopeItem);
                     });
                 } else {
-                    outscopeContainer.parentElement.style.display = 'none'; // Hide the entire section if no out_of_scope data
+                    outscopeContainer.style.display = 'none'; 
                 }
     
                 const dependenciesContainer = document.getElementById('dependencies');
@@ -1251,7 +1251,7 @@
                         dependenciesContainer.appendChild(scopeItem);
                     });
                 } else {
-                    dependenciesContainer.parentElement.style.display = 'none'; // Hide the entire section if no dependencies data
+                    dependenciesContainer.style.display = 'none'; // Hide the entire section if no dependencies data
                 }
     
                 // Populate Timeline
