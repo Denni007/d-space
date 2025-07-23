@@ -963,8 +963,154 @@
           "avatar": "path_to_image.jpg"
         }
       ]
+    },
+    {
+      "id": "rangreli",
+      "title": "GTM Optimization & Business Overview Dashboard",
+      "client_name": "Rangreli – online retailer specializing in handmade home décor",
+      "submission_date": "July 23, 2025",
+      "status": "In Review",
+      "project_type": "Tracking Optimization & Reporting",
+      "duration": "2 Weeks",
+      "scope_of_work": [
+        {
+          "title": "Phase 0: GTM Audit & Shopify Code Transition",
+          "tasks": [
+            "Conduct detailed audit of GTM container to identify performance issues.",
+            "Evaluate GTM impact on page speed (especially PDPs).",
+            "Recommend GTM-lite approach and move core tracking (GA4, Meta Pixel, Ads) into Shopify theme.",
+            "Provide code snippets for Shopify theme-based event tracking.",
+            "Limit GTM use to marketing/non-critical tags.",
+            "Document the new tracking architecture (Shopify native + GTM marketing tags)."
+          ]
+        },
+        {
+          "title": "Phase 1: Standardized Event Configuration & Enablement",
+          "tasks": [
+            "Define and document Shopify-to-GA4 standard events.",
+            "Establish naming conventions and recommended parameters.",
+            "Align datalayer events across Meta Ads, Google Ads, and GA4.",
+            "Deliver one training session (recorded) for marketing and dev teams.",
+            "Provide QA checklist for tracking testing and ownership handoff."
+          ]
+        },
+        {
+          "title": "Phase 2: Business Overview Dashboard & Monthly Reporting",
+          "tasks": [
+            "Connect GA4 to Looker Studio (direct/native or via BigQuery).",
+            "Create a Looker Studio dashboard with key views: Sales, Marketing ROAS, Product, Finance.",
+            "Document dashboard logic and data sources for internal use."
+          ]
+        }
+      ],
+      "out_of_scope": [
+        {
+          "title": "Excluded Items",
+          "tasks": [
+            "Custom Shopify backend development beyond theme event implementation.",
+            "Custom attribution or data blending not covered in the dashboard.",
+            "Machine learning-based forecasting or modeling.",
+            "CRM or ESP integrations.",
+            "Server-side tracking (not required in this phase).",
+            "Any tasks not explicitly defined above."
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "title": "Phase 0: GTM Audit & Shopify Code Transition",
+          "tasks": [
+            "Access to GTM container (Edit permissions).",
+            "Access to Shopify theme files (or dev team collaboration).",
+            "GA4 property access with Admin role.",
+            "Live URLs and staging access for testing."
+          ]
+        },
+        {
+          "title": "Phase 1: Event Framework",
+          "tasks": [
+            "Agreement on standard event naming and business goals.",
+            "List of primary conversions and events to track.",
+            "Team members available for training session."
+          ]
+        },
+        {
+          "title": "Phase 2: Dashboard Setup",
+          "tasks": [
+            "Access to GA4, Google Ads, Meta Ads accounts.",
+            "Shopify Admin/API access for Apps Script integration.",
+            "Google Sheets access and permission to create BigQuery connectors.",
+            "Defined KPIs and desired dashboard structure from stakeholders."
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "week": "Week 1-2",
+          "phase": "GTM Audit",
+          "description": "Identify performance bottlenecks caused by GTM setup."
+        },
+        {
+          "week": "Week 1-2",
+          "phase": "Code Migration & Event Refactoring",
+          "description": "Move key tags to Shopify, implement clean tracking logic."
+        },
+        {
+          "week": "Week 2",
+          "phase": "Training & QA",
+          "description": "Internal enablement and tracking validation."
+        },
+        {
+          "week": "Week 2",
+          "phase": "Dashboard & Monthly Reporting",
+          "description": "Looker Studio setup, automation, and documentation."
+        }
+      ],
+      "technology_stack": [
+        {
+          "name": "Google Analytics 4",
+          "role": "User Behavior Tracking",
+          "icon": "/images/google-analytics-svgrepo-com.svg"
+        },
+        {
+          "name": "Shopify",
+          "role": "E-commerce Platform",
+          "icon": "/images/shopifycom.svg"
+        },
+        {
+          "name": "Google Tag Manager",
+          "role": "Pixel & Tag Management",
+          "icon": "/images/google-tag-manager-svgrepo-com.svg"
+        },
+        {
+          "name": "Looker Studio",
+          "role": "Dashboard & Reporting",
+          "icon": "/images/looker-svgrepo-com.svg"
+        }
+      ],
+      "pricing": [
+        {
+          "title": "GTM Audit & Shopify Transition",
+          "hours": "24 hours",
+          "rate": "$18",
+          "amount": "$600"
+        },
+        {
+          "title": "Standard Events Framework + Training",
+          "hours": "4 hours",
+          "rate": "$12",
+          "amount": "$360"
+        },
+        {
+          "title": "Looker Studio Setup + Reporting",
+          "hours": "4 hours",
+          "rate": "$18",
+          "amount": "$540"
+        }
+      ],
+      "testimonials": [
+        
+      ]
     }
-     
-     
   ]
 }

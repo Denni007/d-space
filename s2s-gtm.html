@@ -54,18 +54,17 @@
           class="button-circle-icon"></a>
     </div>
   </div>
-  <div class="navbar-wrapper sticky-top">
-    <div class="container">
-      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
-        role="banner" class="navbar w-nav">
+  <div class="navbar-wrapper sticky-top" style="">
+    <div class="container"> 
+      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
         <div class="navbar-row">
           <div class="div-block-6">
             <a href="/" class="navbar-1-brand w-nav-brand">
               <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="">
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
-                              <a href="/case-studies"class="text-link">Case Study</a> 
-                <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
+              <a href="/case-studies" class="nav-link w-nav-link">Case Study</a> 
+              <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
 
               <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
               <div data-delay="0" data-hover="1" class="w-dropdown" style="">
@@ -78,17 +77,122 @@
                   </div>
                 </div>
                 <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                  
                   <div class="dropdown-list-wrapper">
-                    <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
-                    <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
-<a href="/service/conversion-rate-optimization"
- class="dropdown-item w-dropdown-link" tabindex="0">CRO Service</a><a href="/gdpr" class="dropdown-item w-dropdown-link" tabindex="0">GDPR Consent Service</a>                    <a href="/s2s-gtm" class="dropdown-item w-dropdown-link" tabindex="0">Server Side
-                      Tracking</a>
-                    <div class="dropdown-bg"></div>
+                    <!-- EXPERTISE COLUMN -->
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">EXPERTISE</h3>
+                  
+                      <div class="dropdown-item">
+                        <a href="/expertises/tracking-analytics">
+                          Tracking & Analytics
+                          <p>The performance foundation for all your digital activities</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/expertises/data-activation-growth">
+                          Data Activation & Growth
+                          <p>Harness the power of your 1st-party data to maximize your marketing campaigns</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/expertises/analytics-engineering-infrastructure">
+                          Analytics Engineering & Infrastructure
+                          <p>Accelerate towards a high-performance Data infrastructure</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/expertises/data-strategy-governance">
+                          Data Strategy & Governance
+                          <p>Unlock the full potential of your data through data governance</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/expertises/recrutement-upskilling">
+                          Recruitment & Upskilling
+                          <p>We work with the best. Why shouldn't you?</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/en/expertises/data-science-ai">
+                          AI & Data Science
+                          <p>Develop advanced, practical AI strategies</p>
+                        </a>
+                      </div>
+                    </div>
+                  
+                    <!-- INDUSTRIES COLUMN -->
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">INDUSTRIES</h3>
+                  
+                      <div class="dropdown-item">
+                        <a href="/industries/retail-e-commerce">
+                          Retail & E-Commerce
+                          <p>Retention & churn analysis, media analytics, segmentation, audience activation and attribution models</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/industries/luxe-cosmetiques">
+                          Luxury & Cosmetics
+                          <p>Leverage data to deliver customized customer experiences.</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/industries/banque-assurances">
+                          Banking & Insurance
+                          <p>Predictive modeling for risk management. Data governance and compliance.</p>
+                        </a>
+                      </div>
+                  
+                      <div class="dropdown-item">
+                        <a href="/industries/medias-divertissement">
+                          Media & Entertainment
+                          <p>Improve audience engagement and natural search engine optimization.</p>
+                        </a>
+                      </div>
+                  
+                      
+                    </div>
+                  
+                    <style>
+                      @media (max-width: 768px) {
+                        .dropdown-list-wrapper {
+                          flex-direction: column;
+                          width: 100%;
+                          max-width: 100%;
+                          overflow-y: auto;
+                          overflow-x: hidden;
+                          max-height: 100%;
+                          box-sizing: border-box;
+                          scrollbar-width: none;
+                          -ms-overflow-style: none;
+                        }
+                  
+                        .dropdown-list-wrapper::-webkit-scrollbar {
+                          display: none;
+                        }
+                  
+                        .dropdown-column {
+                          width: 100%;
+                        }
+                  
+                        .dropdown-item p {
+                          display: none;
+                        }
+                      }
+                    </style>
                   </div>
                 </nav>
               </div>
-              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team" class="nav-link w-nav-link">Team</a>
+              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                class="nav-link w-nav-link">Team</a>
             </nav>
           </div>
           <div class="navbar-controls ">
@@ -417,7 +521,7 @@
                   <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
                 </div>
 
-              <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a href="/case-studies"class="text-link">Case Study</a> <a href="/blogs"
+              <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a href="/case-studies" class="nav-link w-nav-link">Case Study</a> <a href="/blogs"
                   class="text-link">Blogs</a><a href="/pricing/pricing-1" class="text-link">Services</a><a
                   href="/our-team" class="text-link">Team</a></div>
             </div>

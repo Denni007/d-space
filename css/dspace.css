@@ -514,7 +514,8 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  display: flex
+  display: flex;
+ 
 }
 
 .panel.style-guide-color-swatch {
@@ -1990,6 +1991,10 @@ figcaption {
   flex: 1 0 auto;
   background-color: transparent;
 } */
+
+
+
+
 .panel-body {
   z-index: 1;
   width: 100%;
@@ -2001,7 +2006,15 @@ figcaption {
   margin-right: auto;
   padding: 36px;
   display: flex;
-  position: relative
+  position: relative;
+  border-radius: 12px; /* Adjust as preferred */
+  
+  /* Optional: Subtle vertical gradient for a more "glossy", reflective look */
+  /* Adjust colors and direction as needed for desired effect */
+  /* background: linear-gradient(145deg, #333333, #222222); */
+  /* 3. Subtle Box Shadow: This is key for the "lifted" effect. Use a LIGHT color with low opacity. */
+  
+
 }
 
 .panel-body.justify-content-center {
@@ -2034,6 +2047,11 @@ figcaption {
 
 .panel-body.panel-body-large.align-content-center.no-padding {
   padding: 0px;
+}
+.panel-body:hover {
+ 
+  transform: translateY(-3px); Optional: Lift the card slightly
+  /* background: linear-gradient(145deg, #3a3a3a, #2a2a2a); /* Slightly lighter gradient on hover */
 }
 
 .panel-body.align-content-center {
