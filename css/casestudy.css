@@ -4347,6 +4347,7 @@ figcaption {
   overflow: hidden;
   padding: 12px;
   border-radius: 12px;
+  
 }
 
 .dropdown-grid-halves {
@@ -7735,7 +7736,9 @@ figcaption {
 }
 
 
-
+.justify-center{
+  justify-self: center;
+}
 
 .framer-section {
   display: flex;

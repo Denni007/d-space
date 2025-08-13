@@ -333,7 +333,7 @@ label {
   line-height: 1.42857143;
   color: #333333;
   vertical-align: middle;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border: 1px solid #cccccc;
 }
 .w-input:-moz-placeholder,
