@@ -1061,7 +1061,7 @@
         const proposalId = urlParams.get('id');
 
         // Define the API URL
-        const apiUrl = 'https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1';
+        const apiUrl = 'https://insider.starluxetech.com/api/proposals';
         // Define the local fallback URL
         const localJsonUrl = '/js/proposal.json';
 
@@ -1073,7 +1073,7 @@
                     const response = await fetch(apiUrl);
                     if (response.ok) {
                         const apiData = await response.json();
-                        data = apiData.proposals.find(p => p.id === proposalId);
+                        data = apiData.items.find(p => p.id === proposalId);
                         console.log('done to fetch from API, falling back to local JSON:');
                     }
                 } catch (error) {

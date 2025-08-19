@@ -915,33 +915,50 @@
     </div>
 
     <div class="section" id="proposal-content">
-
+        
         <div class="container">
+            <div id="proposal-list-container">
+                <h2>Proposals</h2>
+                <table id="proposal-list" border="1" cellpadding="8" style="border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Client Name</th>
+                            <th>Status</th>
+                            <th>Submission Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="5">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="proposal-header">
                 <div class="proposal-title">
+                  <button class="button-small w-button" id="new-proposal-btn">New Proposal </button>
+                  <label for="proposal-id-input" class="field-label">Project id</label>
+                  <input type="text" class="form-input form-input-small w-input" maxlength="256"
+                          name="project-name-input" id="proposal-id-input" value="" placeholder="id of Project">
                     <label for="proposal-title-input" class="field-label">Project Name</label>
-                    <input type="text" class="form-input form-input-small w-input" maxlength="256"
-                        name="project-name-input" id="proposal-title-input" value="" placeholder="Name of Project">
-
+                    <input type="text" class="form-input form-input-small w-input" id="proposal-title-input"
+                        placeholder="Name of Project">
                     <label for="client-name-input" class="field-label">Client Name</label>
-                    <input type="text" class="form-input form-input-small w-input" maxlength="256"
-                        name="client-name-input" id="client-name-input" value="Framer Commerce"
+                    <input type="text" class="form-input form-input-small w-input" id="client-name-input"
                         placeholder="Client Name">
                 </div>
-
             </div>
-
-            <div class="project-details" id="project-details">
+            <div class="project-details">
                 <div class="detail-card">
                     <h3><label for="submission-date-input" class="field-label">Submission Date</label></h3>
-                    <p><input type="date" class="form-input form-input-small w-input" name="submission-date-input"
-                            id="submission-date-input" value="2025-07-29"></p>
+                    <p><input type="date" class="form-input form-input-small w-input" id="submission-date-input"></p>
                 </div>
                 <div class="detail-card">
                     <h3><label for="status-select" class="field-label">Status</label></h3>
                     <p>
-                        <select class="form-input form-input-small w-select" name="status-select" id="status-select">
-                            <option value="In Review" selected>In Review</option>
+                        <select class="form-input form-input-small w-select" id="status-select">
+                            <option value="Draft">Draft</option>
+                            <option value="In Review">In Review</option>
                             <option value="Approved">Approved</option>
                             <option value="Pending">Pending</option>
                             <option value="Completed">Completed</option>
@@ -950,24 +967,18 @@
                 </div>
                 <div class="detail-card">
                     <h3><label for="project-type-input" class="field-label">Project Type</label></h3>
-                    <p>
-
-                        <input type="text" class="form-input form-input-small w-input" name="project-type-input"
-                            id="project-type-input" value="Data Engineering & Marketing Analytics">
-                    </p>
+                    <p><input type="text" class="form-input form-input-small w-input" id="project-type-input"></p>
                 </div>
                 <div class="detail-card">
                     <h3><label for="duration-input" class="field-label">Duration</label></h3>
-                    <p><input type="text" class="form-input form-input-small w-input" name="duration-input"
-                            id="duration-input" value="6 Weeks"></p>
+                    <p><input type="text" class="form-input form-input-small w-input" id="duration-input"></p>
                 </div>
             </div>
-
             <div class="section" id="scope-of-work">
                 <h2 class="section-title">Scope of Work</h2>
                 <div class="scope-item active">
-                    <div class="scope-header " onclick="toggleAccordion(event)">
-                        <div class="accordion-head">
+                    <div class="scope-header">
+                        <div class="accordion-head" onclick="toggleAccordion(event)">
                             <span class=" w-form-label">Phase</span>
                             <input type="text" class="phase-title-input form-input form-input-small  w-input"
                                 maxlength="746" name="phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
@@ -997,10 +1008,10 @@
                     </div>
                 </div>
                 <div class="cw-accent-btn ">
-                    <a href="#" class="add-item-btn button-small w-button"
-                        id="add-new-scope-btn" ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
+                    <a href="#" class="add-item-btn button-small w-button" id="add-new-scope-btn"
+                        ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
                 </div>
-                
+
                 <!-- <button class="button-small w-button" >Add New Phase</button> -->
 
 
@@ -1008,245 +1019,53 @@
             <div class="section">
                 <h2 class="section-title">Project Timeline</h2>
                 <div class="timeline" id="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-week">
-                            <span class="w-form-label">Time</span>
-                            <input type="text" class="timeline-week-input  form-input form-input-small w-input"
-                                name="timeline-week-1" value="Week 1">
-                        </div>
-                        <div class="timeline-marker">
-                            <div class="circle-small remove-item-btn">
-                                <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                    alt="" class="">
-                            </div>
-                        </div>
-                        <div class="timeline-phase">
-                            <span class="w-form-label">Phase: </span>
-                            <input type="text" class="timeline-phase-input form-input form-input-small w-input"
-                                name="timeline-phase-2" value="Phase 1: Enriched Server-Side Events">
-                        </div>
-
-                        <div class="timeline-content ">
-                            <span class=" w-form-label">Description : </span>
-                            <input type="text" class="timeline-description-input form-input form-input-small w-input"
-                                name="timeline-desc-1"
-                                value="Establish a solid foundation by ensuring GA4 is properly configured and capturing all relevant user interactions.">
-                        </div>
-                    </div>
-                    
-                    <button class="button-small justify-center w-button add-item-btn btn btn-sm"
-                        id="add-timeline-item-btn">Add Timeline Item</button>
-                
+                    <button class="button-small justify-center w-button" id="add-timeline-item-btn">Add Timeline
+                        Item</button>
                 </div>
             </div>
 
             <section class="section" id="out-of-scope">
                 <h2 class="section-title">Out of Scope</h2>
-                <div class="scope-item active">
-                    <div class="scope-header" onclick="toggleAccordion(event)">
-                        <div class="accordion-head ">
-                            <input type="text" class="out-of-scope-title-input form-input form-input-small  w-input"
-                                name="out-of-scope-title" value="The following are excluded from this project.">
-
-                            <div class="icon-circle-small bg-gray-3"
-                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
-                                    alt="" class="icon-small">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="scope-content">
-                        <ul>
-                            <li>
-                                <input type="text" class="out-of-scope-task-input  form-input form-input-small w-input"
-                                    value="Document tracking schema for future reference and alignment across teams.">
-                                <div class="circle-small remove-item-btn">
-                                    <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                        alt="" class="">
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="cw-accent-btn ">
-                            <a href="#" class="add-item-btn button-small w-button"
-                                data-target-ul="#out-of-scope .scope-item:nth-of-type(1) ul">Add List</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cw-accent-btn ">
-                    <a href="#" class="add-item-btn button-small w-button"
-                        id="add-new-out-of-scope-btn" ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add Out of scope
-                    </a>
-                </div>
+                <button class="button-small w-button" id="add-new-out-of-scope-btn">Add Exclusion Section</button>
             </section>
 
             <section class="section" id="dependencies">
                 <h2 class="section-title">Dependencies</h2>
-                <div class="scope-item active">
-                    <div class="scope-header" onclick="toggleAccordion(event)">
-                        <div class="accordion-head ">
-                            <input type="text" class="dependency-title-input form-input form-input-small  w-input"
-                                name="dependency-phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
-
-                            <div class="icon-circle-small bg-gray-3"
-                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
-                                    alt="" class="icon-small">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="scope-content">
-                        <ul>
-                            <li>
-                                <input type="text" class="dependency-task-input form-input form-input-small w-input"
-                                    value="Document tracking schema for future reference and alignment across teams.">
-                                <div class="circle-small remove-item-btn">
-                                    <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                        alt="" class="">
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="cw-accent-btn ">
-                            <a href="#" class="add-item-btn button-small w-button"
-                                data-target-ul="#dependencies .scope-item:nth-of-type(1) ul">Add List</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cw-accent-btn ">
-                    <a href="#" class="add-item-btn button-small w-button"
-                        id="add-new-dependency-btn" ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add Dependency</a>
-                </div>
+                <button class="button-small w-button" id="add-new-dependency-btn">Add Dependency</button>
             </section>
 
             <section class="section">
                 <h2 class="section-title">Technology Stack</h2>
                 <div class="tech-grid" id="technology-stack">
-                    <div class="tech-card content-center">
-                        <div>
-                            <span class="w-form-label">Name</span>
-                            <input type="text" class="tech-name-input form-input form-input-small w-input"
-                                name="tech-name-ga4" value="Google Analytics 4 (GA4)">
-
-                        </div>
-                        <div>
-                            <span class="w-form-label">Role</span>
-                            <input type="text" class="tech-role-input form-input form-input-small w-input"
-                                name="tech-role-ga4" value="User Behavior Tracking">
-
-                        </div>
-                        <div>
-                            <span class="w-form-label">Url</span>
-                            <input type="text" class="tech-icon-url-input form-input form-input-small w-input"
-                                name="tech-icon-ga4" placeholder="Image URL"
-                                value="https://raw.githubusercontent.com/devicons/devicon/master/icons/googleanalytics/googleanalytics-original.svg">
-
-                        </div>
-                        <div class="circle-small remove-item-btn justify-center">
-                            <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                alt="" class="">
-                        </div>
-                    </div>
-                    <button class="add-item-btn btn btn-s button-small w-button" id="add-tech-item-btn">Add
-                        Technology</button>
+                    <button class="button-small w-button" id="add-tech-item-btn">Add Technology</button>
                 </div>
             </section>
 
-            <section class="section" id="pricing-breakdown">
+            <section class="section">
                 <h2 class="section-title">Pricing Breakdown</h2>
                 <div class="pricing-items-container">
-                    <div class="pricing-item w-form">
-                        <div class="pricing-info ">
-                            <h3>
-                                <span class=" w-form-label">Description : </span>
-                                <input type="text" class="pricing-title-input form-input form-input-small w-input"
-                                    name="pricing-title-1" value="GA4 Setup & Audit">
-                            </h3>
-                            <form id="email-form" name="email-form" data-name="Email Form" aria-label="Email Form">
-                                <label class="checkbox-field switch w-checkbox">
-                                    <div
-                                        class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch">
-                                    </div>
-                                    <input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3"
-                                        style="opacity:0;position:absolute;z-index:-1">
-                                    <span class="checkbox-label w-form-label">Fixed Cost</span>
-                                </label>
-                            </form>
-                            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" aria-label="Email Form 2">
-                                <div class="row">
-                                    <label class="radio-button-field w-radio">
-                                        <input type="number" class="pricing-hours-input form-input form-input-small w-input" name="pricing-hours-1" value="16">
-                                        <span for="Radio Choice -3" class="radio-button-label w-form-label">Hours</span>
-                                    </label>
-                                    <label class="radio-button-field w-radio">
-                                        <input type="number" class="pricing-rate-input form-input form-input-small w-input" name="pricing-rate-1" value="25">                                                
-                                        <span for="Radio Choice -3" class="radio-button-label w-form-label">Rate</span>
-                                    </label>
-                                </div>
-                            </form>
-                           
-                        </div>
-                        <div class="pricing-amount">
-                            <!-- <h3 class="display-heading-2 calculated-amount">$ Display 2</h3> -->
-                            <span class="small-heading">$</span>
-                            <div class="display-heading-3 calculated-amount no-bottom-space">19</div>
-                        </div>
-                        <div class="circle-small remove-item-btn  justify-center">
-                            <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                alt="" class="">
-                        </div>
-                    </div>
-                    
                 </div>
-                <button class="add-item-btn btn btn-s button-small w-button" id="add-pricing-item-btn">Add
-                    Pricing</button>
-
+                <button class="button-small w-button" id="add-pricing-item-btn">Add Pricing Item</button>
                 <div class="pricing-total">
                     <div>Total</div>
-                    <div class="pricing-total-amount">$1902.00</div>
+                    <div class="pricing-total-amount">$0.00</div>
                 </div>
             </section>
 
-            <section class="section" id="testimonials2">
+            <section class="section">
                 <h2 class="section-title">Client Testimonials</h2>
                 <div class="testimonials-grid" id="testimonials">
-                    <div class="testimonial-card">
-                        <input type="text" class="testimonial-stars-input form-input form-input-small w-input" name="testimonial-stars-1"
-                            value="★★★★★">
-                        <p class="testimonial-text"><textarea class="testimonial-text-input form-input form-input-small  w-input"
-                                name="testimonial-text-1">Helped us unlock profit-level insights across all paid media.</textarea>
-                        </p>
-                        <div class="testimonial-author">
-
-                            <div class="testimonial-info">
-                                <h4><input type="text" class="testimonial-author-input form-input form-input-small w-input"
-                                        name="testimonial-author-1" value="Lucía Martínez"></h4>
-                                <p><input type="text" class="testimonial-role-input form-input form-input-small w-input"
-                                        name="testimonial-role-1" value="Ecommerce Manager"></p>
-                            </div>
-                        </div>
-                      
-                        <div class="circle-small remove-item-btn justify-center">
-                            <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                alt="" class="">
-                        </div>
-                    </div>
-                    <button class="add-item-btn btn btn-s button-small w-button " id="add-testimonial-item-btn">Add Testimonial</button>
-
+                    <button class="button-small w-button" id="add-testimonial-item-btn">Add Testimonial</button>
                 </div>
             </section>
-
-          
-            <h2 class="section-title" id="generate-json-btn">Generated JSON</h2>
-            <textarea id="json-output" class="form-input w-input" rows="20" style="font-family: monospace; display: none;"></textarea>
-
+ <button class="button-small w-button"id="generate-json-btn">Generated JSON</button>
+            <p>You can edit the JSON below to update the form fields directly.</p>
+            <button class="button-small w-button" id="save-proposal-btn">SAVE </button>
+            <textarea id="json-output" class="form-input w-input" rows="20"
+                style="font-family: monospace; display: none;"></textarea>
 
         </div>
     </div>
-
-
-   
     <div class="footer">
         <div class="container">
             <div class="panel">
@@ -1325,15 +1144,42 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  const apiUrl = 'https://insider.starluxetech.com/api/proposals';
+  const tableBody = document.querySelector('#proposal-list tbody') || document.querySelector('#proposal-list-body');
+  const listContainer = document.getElementById('proposal-list-container');
+  document.getElementById('generate-json-btn')?.addEventListener('click', generateJson, { once: false });
+  document.getElementById('save-proposal-btn')?.addEventListener('click', saveProposalFromGenerated);
 
-// --- 1. INITIAL SETUP & DEFAULTS ---
-const urlParams = new URLSearchParams(window.location.search);
-const proposalId = urlParams.get('id');
-const apiUrl = 'https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1';
-const localJsonUrl = '/js/proposal.json';
+  let proposals = [];
+  window.proposalId = null;
 
-const defaultProposal = {
+  // guard flags to avoid rebinding listeners on repeated edits
+  let staticListenersBound = false;
+  let bodyDelegationBound = false;
+  let jsonSyncBound = false;
+
+  // ----------------------------
+  // URL param helpers (routing)
+  // ----------------------------
+  function getIdParam() {
+    return new URLSearchParams(location.search).get('id');
+  }
+  function setIdParam(id, { replace = false } = {}) {
+    const url = new URL(location.href);
+    url.searchParams.set('id', id);
+    if (replace) history.replaceState({ id }, '', url);
+    else history.pushState({ id }, '', url);
+  }
+  function clearIdParam({ replace = false } = {}) {
+    const url = new URL(location.href);
+    url.searchParams.delete('id');
+    if (replace) history.replaceState({}, '', url);
+    else history.pushState({}, '', url);
+  }
+  function defaultProposal() {
+  return {
+    _id: null,
     id: "default-proposal-" + Date.now(),
     title: "New Project Proposal",
     client_name: "Enter Client Name",
@@ -1388,1241 +1234,1061 @@ const defaultProposal = {
       "role": "CTO"
     },
     ]
-};
-
-// --- UTILITY ---
-// Debounce function to prevent the UI from updating on every keystroke, improving performance.
-function debounce(func, delay) {
-    let timeout;
-    return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), delay);
-    };
+  };
 }
 
-
-// --- 2. DATA FETCHING LOGIC ---
-async function fetchData() {
-    // ... (This function remains unchanged)
-    let data = null;
-    if (proposalId) {
-        try {
-            const response = await fetch(apiUrl);
-            if (response.ok) {
-                const apiData = await response.json();
-                data = apiData.proposals.find(p => p.id === proposalId);
-            }
-        } catch (error) {
-            console.warn('API fetch failed:', error);
-        }
-    }
-    if (!data) {
-        try {
-            const response = await fetch(localJsonUrl);
-            if (response.ok) {
-                const localData = await response.json();
-                if (proposalId) {
-                    data = localData.proposals.find(p => p.id === proposalId);
-                }
-            }
-        } catch (error) {
-            console.warn('Local JSON fetch failed:', error);
-        }
-    }
-    return data;
+// --- Open NEW proposal with defaults ---
+async function openNewProposal({ skipPush = false } = {}) {
+  const proposal = defaultProposal();
+  window.proposalId = null; // ensure generateJson treats this as new
+  if (listContainer) listContainer.style.display = 'none';
+  clearDynamicSections();
+  initializePage(proposal);
+  if (!skipPush) setIdParam('new');
 }
+document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
+  openNewProposal();
+});
+  // ----------------------------
+  // Fetch proposals & render list
+  // ----------------------------
+  async function loadProposals() {
+    if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Loading...</td></tr>`;
+    try {
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+      // Expecting { items: [...] }
+      proposals = data.items || [];
 
-// --- 3. DYNAMIC FORM POPULATION ---
-function populateFormWithData(proposal) {
+      if (!proposals.length) {
+        if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">No proposals found</td></tr>`;
+        return;
+      }
+
+      if (tableBody) {
+        tableBody.innerHTML = proposals.map(p => `
+          <tr>
+            <td>${escapeHtml(p.title || 'Untitled')}</td>
+            <td>${escapeHtml(p.client_name || '')}</td>
+            <td>${escapeHtml(p.id || '')}</td>
+            <td>${escapeHtml(p.submission_date || '')}</td>
+            <td>
+              <button class="edit-btn" data-id="${String(p._id)}">Edit</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+    } catch (err) {
+      console.error(err);
+      if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Error loading proposals</td></tr>`;
+    }
+  }
+
+  // ----------------------------
+  // Open proposal for editing
+  // ----------------------------
+  async function openProposal(id, { skipPush = false } = {}) {
+    const proposal = proposals.find(p =>
+      p._id === String(id)
+    );
     if (!proposal) return;
-    document.title = `Editing: ${proposal.title} | StarLuxe Tech`;
+    console.log(proposal)
+    window.proposalId = String(id);
+    // Hide list section if present
+    if (listContainer) listContainer.style.display = 'none';
+    // Render editor
+    clearDynamicSections();
+    initializePage(proposal);
+    generateJson()
+    // Update URL (?id=...)
+    if (!skipPush) setIdParam(id);
+  }
 
-    // Populate static fields
-    document.getElementById('proposal-title-input').value = proposal.title || '';
-    document.getElementById('client-name-input').value = proposal.client_name || '';
-    document.getElementById('status-select').value = proposal.status || 'Draft';
-    document.getElementById('project-type-input').value = proposal.project_type || '';
-    document.getElementById('duration-input').value = proposal.duration || '';
+  // ----------------------------
+  // Back to list (optional button)
+  // ----------------------------
+  document.getElementById('back-to-list-btn')?.addEventListener('click', () => {
+    if (listContainer) listContainer.style.display = 'block';
+    clearIdParam();     // remove ?id
+    window.proposalId = null;
+  });
 
-    // DATE HANDLING
-    if (proposal.submission_date) {
-        try {
-            const date = new Date(proposal.submission_date);
-            date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-            document.getElementById('submission-date-input').value = date.toISOString().split('T')[0];
-        } catch (e) {
-            document.getElementById('submission-date-input').value = '';
-        }
+  // ----------------------------
+  // Browser back/forward
+  // ----------------------------
+  window.addEventListener('popstate', () => {
+    const id = getIdParam();
+    if (id) {
+      console.log(id)
+      openProposal(id, { skipPush: true });
+    } else {
+      if (listContainer) listContainer.style.display = 'block';
+      window.proposalId = null;
+    }
+  });
+
+  // ----------------------------
+  // Clear old dynamic elements
+  // ----------------------------
+  function clearDynamicSections() {
+    document.querySelectorAll('.scope-item').forEach(el => el.remove());
+    document.querySelectorAll('.timeline-item').forEach(el => el.remove());
+    document.querySelectorAll('.pricing-item').forEach(el => el.remove());
+    document.querySelectorAll('.tech-card').forEach(el => el.remove());
+    document.querySelectorAll('.testimonial-card').forEach(el => el.remove());
+  }
+
+  // ----------------------------
+  // Full initialization
+  // ----------------------------
+  function initializePage(proposal) {
+    populateFormWithData(proposal);
+    updateTotalPricing();
+    // Bind add buttons ONCE
+    if (!staticListenersBound) {
+      document.getElementById('add-pricing-item-btn')?.addEventListener('click', () => addPricingItem());
+      document.getElementById('add-timeline-item-btn')?.addEventListener('click', () => addTimelineItem());
+      document.getElementById('add-tech-item-btn')?.addEventListener('click', () => addTechnologyItem());
+      document.getElementById('add-testimonial-item-btn')?.addEventListener('click', () => addTestimonialItem());
+      document.getElementById('add-new-scope-btn')?.addEventListener('click', () => {
+        addFullScopeItem('#scope-of-work', {}, { title: 'phase-title-input', task: 'scope-task-input' }, 'New Phase');
+      });
+      document.getElementById('add-new-out-of-scope-btn')?.addEventListener('click', () => {
+        addFullScopeItem('#out-of-scope', {}, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, 'New Exclusion Section');
+      });
+      document.getElementById('add-new-dependency-btn')?.addEventListener('click', () => {
+        addFullScopeItem('#dependencies', {}, { title: 'dependency-title-input', task: 'dependency-task-input' }, 'New Dependency Section');
+      });
+      staticListenersBound = true;
     }
 
-    // Populate dynamic sections
-    populateListSection('#scope-of-work', proposal.scope_of_work, {
-        title: 'phase-title-input',
-        task: 'scope-task-input'
-    }, "New Phase");
-    populateListSection('#out-of-scope', proposal.out_of_scope, {
-        title: 'out-of-scope-title-input',
-        task: 'out-of-scope-task-input'
-    }, "New Exclusion Section");
-    populateListSection('#dependencies', proposal.dependencies, {
-        title: 'dependency-title-input',
-        task: 'dependency-task-input'
-    }, "New Dependency Section");
+    // Event delegation for dynamic add/remove (bind once)
+    if (!bodyDelegationBound) {
+      document.body.addEventListener('click', function(event) {
+        if (event.target.matches('.add-task-btn')) {
+          event.preventDefault();
+          const scopeContent = event.target.closest('.scope-content');
+          if (scopeContent) {
+            const ul = scopeContent.querySelector('ul');
+            const titleInput = scopeContent.closest('.scope-item').querySelector('input[class*="-title-input"]');
+            let taskClass = 'scope-task-input';
+            if (titleInput?.className.includes('out-of-scope')) taskClass = 'out-of-scope-task-input';
+            if (titleInput?.className.includes('dependency')) taskClass = 'dependency-task-input';
+            addScopeTask(ul, taskClass);
+          }
+        }
+        const removeBtn = event.target.closest('.remove-item-btn');
+        if (removeBtn) {
+          const li = removeBtn.closest('li');
+          if (li) li.remove();
+          if (removeBtn.classList.contains('remove-pricing-btn')) {
+            updateTotalPricing();
+          }
+        }
+      });
+      bodyDelegationBound = true;
+    }
+
+    // JSON textarea sync back to UI (bind once)
+    if (!jsonSyncBound) {
+      const jsonOutputTextarea = document.getElementById('json-output');
+      if (jsonOutputTextarea) {
+        const syncJsonToUi = debounce((event) => {
+          const jsonString = event.target.value;
+          try {
+            if (jsonString) {
+              const newProposalData = JSON.parse(jsonString);
+              event.target.style.borderColor = '';
+              populateFormWithData(newProposalData);
+              updateTotalPricing();
+            }
+          } catch (error) {
+            event.target.style.borderColor = 'red';
+            console.error("Invalid JSON format:", error);
+          }
+        }, 500);
+        jsonOutputTextarea.addEventListener('input', syncJsonToUi);
+      }
+      jsonSyncBound = true;
+    }
+  }
+
+  // ----------------------------
+  // Table Edit button -> open
+  // ----------------------------
+  if (tableBody) {
+    tableBody.addEventListener('click', e => {
+      const btn = e.target.closest('.edit-btn');
+      if (btn) {
+        const id = btn.getAttribute('data-id');
+        console.log(id)
+        openProposal(id); // pushes ?id=...
+      }
+    });
+  }
+
+  // ----------------------------
+  // Start
+  // ----------------------------
+  await loadProposals();
+
+  // If URL has ?id=..., open that proposal without pushing history again
+  const initialId = getIdParam();
+  if (initialId === 'new') {
+    openNewProposal({ skipPush: true });
+  } else if (initialId) {
+    openProposal(initialId, { skipPush: true });
+  }
+
+  // -------------------------------------------------------
+  // Helpers & UI functions (populate/add/etc.) BELOW
+  // -------------------------------------------------------
+
+  // Populate Form with Proposal Data
+  function populateFormWithData(proposal) {
+    if (!proposal) return;
+    document.title = `Editing: ${proposal.title || ''} | StarLuxe Tech`;
+    setVal('proposal-id-input', proposal.id || '');
+    setVal('proposal-title-input', proposal.title || '');
+    setVal('client-name-input', proposal.client_name || '');
+    setVal('status-select', proposal.status || 'Draft');
+    setVal('project-type-input', proposal.project_type || '');
+    setVal('duration-input', proposal.duration || '');
+
+    if (proposal.submission_date) {
+      try {
+        const date = new Date(proposal.submission_date);
+        date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+        setVal('submission-date-input', date.toISOString().split('T')[0]);
+      } catch (e) {
+        setVal('submission-date-input', '');
+      }
+    }
+
+    populateListSection('#scope-of-work', proposal.scope_of_work, { title: 'phase-title-input', task: 'scope-task-input' }, "New Phase");
+    populateListSection('#out-of-scope', proposal.out_of_scope, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, "New Exclusion Section");
+    populateListSection('#dependencies', proposal.dependencies, { title: 'dependency-title-input', task: 'dependency-task-input' }, "New Dependency Section");
     populateTimeline(proposal.timeline);
     populatePricing(proposal.pricing);
     populateTechnologyStack(proposal.technology_stack);
     populateTestimonials(proposal.testimonials);
-}
+  }
 
-// All `populate...` helper functions remain the same...
-function populateListSection(containerSelector, items, classNames, titlePrefix) {
+  function populateListSection(containerSelector, items, classNames, titlePrefix) {
     const container = document.querySelector(containerSelector);
     if (!container || !items) return;
     container.querySelectorAll('.scope-item').forEach(item => item.remove());
     items.forEach(itemData => addFullScopeItem(containerSelector, itemData, classNames, titlePrefix));
-}
+  }
 
-function populateTimeline(timelineItems) {
+  function populateTimeline(timelineItems) {
     const container = document.getElementById('timeline');
     if (!container || !timelineItems) return;
     container.querySelectorAll('.timeline-item').forEach(item => item.remove());
     timelineItems.forEach(itemData => addTimelineItem(itemData));
-}
+  }
 
-function populatePricing(pricingItems) {
+  function populatePricing(pricingItems) {
     const container = document.querySelector('.pricing-items-container');
     if (!container || !pricingItems) return;
     container.innerHTML = '';
     pricingItems.forEach(itemData => {
-        let preparedData = {
-            ...itemData,
-            is_fixed: false
-        };
-        if (String(itemData.hours).toLowerCase().includes('fixed')) {
-            preparedData.is_fixed = true;
-            preparedData.hours = parseFloat(String(itemData.rate).replace(/[^0-9.-]+/g, '')) || 0;
-            preparedData.rate = 1;
-        } else {
-            preparedData.hours = parseFloat(String(itemData.hours).replace(/ hours/i, '')) || 0;
-            preparedData.rate = parseFloat(String(itemData.rate).replace(/[$\/hr]/g, '')) || 0;
-        }
-        addPricingItem(preparedData);
+      let preparedData = { ...itemData, is_fixed: false };
+      if (String(itemData.hours).toLowerCase().includes('fixed')) {
+        preparedData.is_fixed = true;
+        preparedData.hours = parseFloat(String(itemData.rate).replace(/[^0-9.-]+/g, '')) || 0;
+        preparedData.rate = 1;
+      } else {
+        preparedData.hours = parseFloat(String(itemData.hours).replace(/ hours/i, '')) || 0;
+        preparedData.rate = parseFloat(String(itemData.rate).replace(/[$\/hr]/g, '')) || 0;
+      }
+      addPricingItem(preparedData);
     });
-}
+    updateTotalPricing();
+  }
 
-function populateTechnologyStack(techItems) {
+  function populateTechnologyStack(techItems) {
     const grid = document.getElementById('technology-stack');
     if (!grid || !techItems) return;
     grid.querySelectorAll('.tech-card').forEach(card => card.remove());
     techItems.forEach(techData => addTechnologyItem(techData));
-}
+  }
 
-function populateTestimonials(testimonialItems) {
+  function populateTestimonials(testimonialItems) {
     const grid = document.getElementById('testimonials');
     if (!grid || !testimonialItems) return;
     grid.querySelectorAll('.testimonial-card').forEach(card => card.remove());
     testimonialItems.forEach(itemData => addTestimonialItem(itemData));
-}
+  }
 
-
-// --- 4. DYNAMIC ITEM CREATION & HELPERS ---
-// All `add...Item` functions remain the same...
-function addFullScopeItem(containerSelector, data = {}, classNames, titlePrefix) {
+  // Builders
+  function addFullScopeItem(containerSelector, data = {}, classNames, titlePrefix) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
     const title = data.title || titlePrefix;
     const tasks = data.tasks || [];
     const tasksHtml = tasks.map(task => `
-                <li>
-                <input type="text" class="${classNames.task} form-input form-input-small w-input" value="${task}">
-                <div class="circle-small remove-item-btn"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove"></div>
-                </li>`).join('');
+      <li>
+        <input type="text" class="${classNames.task} form-input form-input-small w-input" value="${escapeHtml(task)}">
+        <div class="circle-small remove-item-btn">
+          <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
+        </div>
+      </li>`).join('');
     const scopeItem = document.createElement('div');
     scopeItem.className = 'scope-item active';
     scopeItem.innerHTML = `
-                <div class="scope-header" onclick="toggleAccordion(event)">
-                <div class="accordion-head">
-                    <input type="text" class="${classNames.title} form-input w-input" value="${title}">
-                    <div class="icon-circle-small bg-gray-3" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg" alt="" class="icon-small">
-                  </div>
-                </div>
-                </div>
-                <div class="scope-content">
-                <ul>${tasksHtml}</ul>
-                <div class="cw-accent-btn ">
-                            <a href="#" class="add-task-btn button-small w-button"
-                                data-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add List</a>
-                        </div>
-               
-                </div>
-`; 
-const lastChild = container.lastElementChild;
+      <div class="scope-header" >
+        <div class="accordion-head" onclick="toggleAccordion(event)">
+          <input type="text" class="${classNames.title} form-input w-input" value="${escapeHtml(title)}">
+          <div class="icon-circle-small bg-gray-3">
+            <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg" alt="" class="icon-small">
+          </div>
+        </div>
+      </div>
+      <div class="scope-content">
+        <ul>${tasksHtml}</ul>
+        <div class="cw-accent-btn">
+          <a href="#" class="add-task-btn button-small w-button">Add List</a>
+        </div>
+      </div>`;
+    const lastChild = container.lastElementChild;
+    container.insertBefore(scopeItem, lastChild);
+  }
 
-// Insert scopeItem before the last child
-container.insertBefore(scopeItem, lastChild);
-}
-
-function addScopeTask(ulElement, inputClass) {
+  function addScopeTask(ulElement, inputClass) {
+    if (!ulElement) return;
     const li = document.createElement('li');
     li.innerHTML = `
-    <input type="text" class="${inputClass} form-input form-input-small w-input" value="">
-    <div class="circle-small remove-item-btn">
+      <input type="text" class="${inputClass} form-input form-input-small w-input" value="">
+      <div class="circle-small remove-item-btn">
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
-        </div>`;
+      </div>`;
     ulElement.appendChild(li);
-    li.querySelector('input').focus();
-}
+    li.querySelector('input')?.focus();
+  }
 
-function addPricingItem(data = {}) {
+  function addPricingItem(data = {}) {
     const container = document.querySelector('.pricing-items-container');
+    if (!container) return;
     const newItem = document.createElement('div');
     newItem.classList.add('pricing-item', 'w-form');
     const uniqueId = "checkbox-" + Date.now();
     const title = data.title || "New Service";
-    const hours = data.hours || 8;
-    const rate = data.rate || 25;
-    const is_fixed = data.is_fixed || false;
-    newItem.innerHTML = `<div class="pricing-info"><h3><span class="w-form-label">Description:</span>
-        <input type="text" class="pricing-title-input form-input w-input" value="${title}"></h3>
-        <form id="email-form" name="email-form" data-name="Email Form" aria-label="Email Form">
-                                <label class="checkbox-field switch w-checkbox">
-                                    <div
-                                        class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch">
-                                    </div>
-                                    <input type="checkbox" id="checkbox-3" class="fixed-cost-checkbox checkbox-${uniqueId}" style="opacity:0;position:absolute;z-index:-1" ${is_fixed ? 'checked' : ''}>
-                                    <span class="checkbox-label w-form-label">Fixed Cost</span>
-                                </label>
-                            </form>
-               
-            <div class="row rate-based-row">
-                <label class="radio-button-field w-radio">
-                    <input type="number" class="pricing-hours-input form-input form-input-small w-input" value="${hours}">
-                    <span class="radio-button-label w-form-label hours-label">Hours</span></label>
-                    <label class="radio-button-field w-radio rate-label-wrapper">
-                        <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${rate}">
-                        <span class="radio-button-label w-form-label">Rate</span></label></div></div>
-                        <div class="pricing-amount"><span class="small-heading">$</span>
-                            <div class="display-heading-3 calculated-amount no-bottom-space">0</div></div><div class="circle-small remove-item-btn remove-pricing-btn justify-center"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove"></div>`;
+    const hours = data.hours ?? 8;
+    const rate = data.rate ?? 25;
+    const is_fixed = !!data.is_fixed;
+
+    newItem.innerHTML = `
+      <div class="pricing-info">
+        <h3><span class="w-form-label">Description:</span>
+          <input type="text" class="pricing-title-input form-input w-input" value="${escapeHtml(title)}">
+        </h3>
+        <label class="checkbox-field switch w-checkbox">
+          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch"></div>
+          <input type="checkbox" class="fixed-cost-checkbox ${uniqueId}" style="opacity:0;position:absolute;z-index:-1" ${is_fixed ? 'checked' : ''}>
+          <span class="checkbox-label w-form-label">Fixed Cost</span>
+        </label>
+        <div class="row rate-based-row">
+          <label class="radio-button-field w-radio">
+            <input type="number" class="pricing-hours-input form-input form-input-small w-input" value="${Number(hours)}">
+            <span class="radio-button-label w-form-label hours-label">Hours</span>
+          </label>
+          <label class="radio-button-field w-radio rate-label-wrapper">
+            <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${Number(rate)}">
+            <span class="radio-button-label w-form-label">Rate</span>
+          </label>
+        </div>
+      </div>
+      <div class="pricing-amount">
+        <span class="small-heading">$</span>
+        <div class="display-heading-3 calculated-amount no-bottom-space">0</div>
+      </div>
+      <div class="circle-small remove-item-btn remove-pricing-btn justify-center">
+        <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
+      </div>`;
     container.appendChild(newItem);
 
     setupPricingCalculations(newItem);
-    newItem.querySelector('.remove-pricing-btn').addEventListener('click', (e) => {
-        e.target.closest('.pricing-item').remove();
-        updateTotalPricing();
+    newItem.querySelector('.remove-pricing-btn')?.addEventListener('click', (e) => {
+      e.currentTarget.closest('.pricing-item')?.remove();
+      updateTotalPricing();
     });
-}
+  }
 
-function addTimelineItem(data = {}) {
+  function addTimelineItem(data = {}) {
     const container = document.getElementById('timeline');
+    if (!container) return;
     const newItem = document.createElement('div');
     newItem.classList.add('timeline-item');
     const count = container.querySelectorAll('.timeline-item').length + 1;
     const week = data.week || `Week ${count}`;
     const phase = data.phase || `Phase ${count}: New Title`;
     const description = data.description || "Description for the new phase.";
-    newItem.innerHTML = `<div class="timeline-week">
+    newItem.innerHTML = `
+      <div class="timeline-week">
         <span class="w-form-label">Time</span>
-        <input type="text" class="timeline-week-input form-input form-input-small w-input" value="${week}"></div>
-        <div class="timeline-marker">
-            <div class="circle-small remove-item-btn timeline-remove-btn">
-            <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
-            </div>
+        <input type="text" class="timeline-week-input form-input form-input-small w-input" value="${escapeHtml(week)}">
+      </div>
+      <div class="timeline-marker">
+        <div class="circle-small remove-item-btn timeline-remove-btn">
+          <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
         </div>
-            <div class="timeline-content"><span class="w-form-label">Phase:</span>
-                <input type="text" class="timeline-phase-input form-input w-input" value="${phase}">
-                <span class="w-form-label">Description:</span>
-                <textarea class="timeline-description-input form-input w-input">${description}</textarea>
-            </div>`;
+      </div>
+      <div class="timeline-content">
+        <span class="w-form-label">Phase:</span>
+        <input type="text" class="timeline-phase-input form-input w-input" value="${escapeHtml(phase)}">
+        <span class="w-form-label">Description:</span>
+        <textarea class="timeline-description-input form-input w-input">${escapeHtml(description)}</textarea>
+      </div>`;
     container.insertBefore(newItem, document.getElementById('add-timeline-item-btn'));
-    newItem.querySelector('.timeline-remove-btn').addEventListener('click', (e) => e.target.closest('.timeline-item').remove());
-}
+    newItem.querySelector('.timeline-remove-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.timeline-item')?.remove());
+  }
 
-function addTechnologyItem(data = {}) {
+  function addTechnologyItem(data = {}) {
     const grid = document.getElementById('technology-stack');
+    if (!grid) return;
     const newItem = document.createElement('div');
     newItem.classList.add('tech-card');
     const name = data.name || "New Tech";
     const role = data.role || "Role";
     const icon = data.icon || "https://via.placeholder.com/40";
     newItem.innerHTML = `
-    <img class="tech-icon-img" width="40" height="40" src="${icon}" alt="tech icon">
-    <div>
+      <img class="tech-icon-img" width="40" height="40" src="${escapeHtml(icon)}" alt="tech icon">
+      <div>
         <span class="w-form-label">Name</span>
-        <input type="text" class="tech-name-input form-input form-input-small w-input" value="${name}">
-        </div><div><span class="w-form-label">Role</span><input type="text" class="tech-role-input form-input form-input-small w-input" value="${role}"></div><div><span class="w-form-label">Icon URL</span><input type="text" class="tech-icon-url-input form-input form-input-small w-input" value="${icon}"></div><div class="circle-small remove-item-btn remove-tech-btn justify-center"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove"></div>`;
+        <input type="text" class="tech-name-input form-input form-input-small w-input" value="${escapeHtml(name)}">
+      </div>
+      <div>
+        <span class="w-form-label">Role</span>
+        <input type="text" class="tech-role-input form-input form-input-small w-input" value="${escapeHtml(role)}">
+      </div>
+      <div>
+        <span class="w-form-label">Icon URL</span>
+        <input type="text" class="tech-icon-url-input form-input form-input-small w-input" value="${escapeHtml(icon)}">
+      </div>
+      <div class="circle-small remove-item-btn remove-tech-btn justify-center">
+        <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
+      </div>`;
     grid.insertBefore(newItem, document.getElementById('add-tech-item-btn'));
-    newItem.querySelector('.remove-tech-btn').addEventListener('click', (e) => e.target.closest('.tech-card').remove());
-    newItem.querySelector('.tech-icon-url-input').addEventListener('input', (e) => {
-        newItem.querySelector('.tech-icon-img').src = e.target.value;
+    newItem.querySelector('.remove-tech-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.tech-card')?.remove());
+    newItem.querySelector('.tech-icon-url-input')?.addEventListener('input', (e) => {
+      newItem.querySelector('.tech-icon-img').src = e.target.value;
     });
-}
+  }
 
-function addTestimonialItem(data = {}) {
+  function addTestimonialItem(data = {}) {
     const grid = document.getElementById('testimonials');
+    if (!grid) return;
     const newItem = document.createElement('div');
     newItem.classList.add('testimonial-card');
     const stars = '★'.repeat(data.stars || 5);
     const text = data.text || "A great testimonial about our work.";
     const author = data.author || "John Doe";
     const role = data.role || "CEO, Company";
-    newItem.innerHTML = `<input type="text" class="testimonial-stars-input form-input form-input-small w-input" value="${stars}"><textarea class="testimonial-text-input form-input w-input">${text}</textarea><div class="testimonial-author"><div class="testimonial-info"><h4><input type="text" class="testimonial-author-input form-input form-input-small w-input" value="${author}"></h4><p><input type="text" class="testimonial-role-input form-input form-input-small w-input" value="${role}"></p></div></div><div class="circle-small remove-item-btn remove-testimonial-btn justify-center"><img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove"></div>`;
+    newItem.innerHTML = `
+      <input type="text" class="testimonial-stars-input form-input form-input-small w-input" value="${stars}">
+      <textarea class="testimonial-text-input form-input w-input">${escapeHtml(text)}</textarea>
+      <div class="testimonial-author">
+        <div class="testimonial-info">
+          <h4><input type="text" class="testimonial-author-input form-input form-input-small w-input" value="${escapeHtml(author)}"></h4>
+          <p><input type="text" class="testimonial-role-input form-input form-input-small w-input" value="${escapeHtml(role)}"></p>
+        </div>
+      </div>
+      <div class="circle-small remove-item-btn remove-testimonial-btn justify-center">
+        <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
+      </div>`;
     grid.insertBefore(newItem, document.getElementById('add-testimonial-item-btn'));
-    newItem.querySelector('.remove-testimonial-btn').addEventListener('click', (e) => e.target.closest('.testimonial-card').remove());
-}
+    newItem.querySelector('.remove-testimonial-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.testimonial-card')?.remove());
+  }
 
-// --- 5. INTERACTIVITY & CALCULATIONS ---
-window.toggleAccordion = function(event) {
-    if (event.target.tagName.toLowerCase() === 'input') return;
-    event.currentTarget.closest('.scope-item').classList.toggle('active');
-}
+  // Interactivity & Calculations
+  window.toggleAccordion = function(event) {
+    if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') return;
+    event.currentTarget.closest('.scope-item')?.classList.toggle('active');
+  };
 
-function setupPricingCalculations(item) {
-    console.log(item)
+  function setupPricingCalculations(item) {
     const checkbox = item.querySelector('.fixed-cost-checkbox');
     const hoursInput = item.querySelector('.pricing-hours-input');
     const rateInput = item.querySelector('.pricing-rate-input');
     const calculatedAmountSpan = item.querySelector('.calculated-amount');
     const rateWrapper = item.querySelector('.rate-label-wrapper');
     const hoursLabel = item.querySelector('.hours-label');
-    const updateAmount = () => {
-        let amount = 0;
-        const hours = parseFloat(hoursInput.value) || 0;
-        if (checkbox.checked) {
-            amount = hours;
-        } else {
-            const rate = parseFloat(rateInput.value) || 0;
-            amount = hours * rate;
-        }
-        calculatedAmountSpan.textContent = amount.toFixed(2);
-        updateTotalPricing();
-    };
-    const 
-    togglePricingType = () => {
-        if (checkbox.checked) {
-            rateWrapper.children[0].toggleAttribute("disabled", true)
-            hoursLabel.textContent = 'Fixed Amount';
-        } else {
-            rateWrapper.children[0].toggleAttribute("disabled", false)
 
-            hoursLabel.textContent = 'Hours';
-        }
-        updateAmount();
+    const updateAmount = () => {
+      let amount = 0;
+      const hours = parseFloat(hoursInput.value) || 0;
+      if (checkbox.checked) {
+        amount = hours; // fixed amount stored in hours input
+      } else {
+        const rate = parseFloat(rateInput.value) || 0;
+        amount = hours * rate;
+      }
+      calculatedAmountSpan.textContent = amount.toFixed(2);
+      updateTotalPricing();
     };
+
+    const togglePricingType = () => {
+      if (checkbox.checked) {
+        rateWrapper.children[0]?.setAttribute("disabled", "true");
+        hoursLabel.textContent = 'Fixed Amount';
+      } else {
+        rateWrapper.children[0]?.removeAttribute("disabled");
+        hoursLabel.textContent = 'Hours';
+      }
+      updateAmount();
+    };
+
     checkbox.addEventListener('change', togglePricingType);
     hoursInput.addEventListener('input', updateAmount);
     rateInput.addEventListener('input', updateAmount);
     togglePricingType();
-}
+  }
 
-function updateTotalPricing() {
+  function updateTotalPricing() {
     let totalAmount = 0;
     document.querySelectorAll('.pricing-item .calculated-amount').forEach(span => {
-        totalAmount += parseFloat(span.textContent) || 0;
+      totalAmount += parseFloat(span.textContent) || 0;
     });
-    document.querySelector('.pricing-total-amount').textContent = `$${totalAmount.toFixed(2)}`;
-}
-
-
-// --- 6. JSON GENERATION ---
-function generateJson() {
-    const rawDateValue = document.getElementById('submission-date-input').value;
-    let formattedDate = "";
-    if (rawDateValue) {
-        try {
-            const [year, month, day] = rawDateValue.split('-');
-            const dateObj = new Date(year, parseInt(month, 10) - 1, day);
-            formattedDate = new Intl.DateTimeFormat('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                timeZone: 'UTC'
-            }).format(dateObj);
-        } catch (e) {
-            formattedDate = rawDateValue;
-        }
+    const totalEl = document.querySelector('.pricing-total-amount');
+    if (totalEl) totalEl.textContent = `$${totalAmount.toFixed(2)}`;
+  }
+  function buildProposalFromForm() {
+  const rawDateValue = getVal('submission-date-input');
+  let formattedDate = "";
+  if (rawDateValue) {
+    try {
+      const [year, month, day] = rawDateValue.split('-');
+      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+      formattedDate = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+      }).format(dateObj);
+    } catch (e) {
+      formattedDate = rawDateValue;
     }
-    const proposalData = {
-        id: proposalId || "new-proposal-" + Date.now(),
-        title: document.getElementById('proposal-title-input').value,
-        client_name: document.getElementById('client-name-input').value,
-        submission_date: formattedDate,
-        status: document.getElementById('status-select').value,
-        project_type: document.getElementById('project-type-input').value,
-        duration: document.getElementById('duration-input').value,
-        scope_of_work: [],
-        out_of_scope: [],
-        dependencies: [],
-        timeline: [],
-        pricing: [],
-        technology_stack: [],
-        testimonials: []
-    };
-    document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
-        const checkbox = item.querySelector('.fixed-cost-checkbox');
-        if (checkbox.checked) {
-            proposalData.pricing.push({
-                title: item.querySelector('.pricing-title-input').value,
-                hours: "Fixed Cost",
-                rate: `$${item.querySelector('.pricing-hours-input').value}`
-            });
-        } else {
-            proposalData.pricing.push({
-                title: item.querySelector('.pricing-title-input').value,
-                hours: `${item.querySelector('.pricing-hours-input').value} hours`,
-                rate: `$${item.querySelector('.pricing-rate-input').value}/hr`
-            });
-        }
-    });
-    const getScopeData = (selector, titleClass, taskClass) => {
-        const items = [];
-        document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
-            const title = item.querySelector(`.${titleClass}`)?.value || '';
-            const tasks = [];
-            item.querySelectorAll(`.${taskClass}`).forEach(taskInput => {
-                if (taskInput.value) tasks.push(taskInput.value);
-            });
-            if (title) items.push({
-                title,
-                tasks
-            });
-        });
-        return items;
-    };
-    proposalData.scope_of_work = getScopeData('#scope-of-work', 'phase-title-input', 'scope-task-input');
-    proposalData.out_of_scope = getScopeData('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
-    proposalData.dependencies = getScopeData('#dependencies', 'dependency-title-input', 'dependency-task-input');
-    document.querySelectorAll('#timeline .timeline-item').forEach(item => {
-        proposalData.timeline.push({
-            week: item.querySelector('.timeline-week-input').value,
-            phase: item.querySelector('.timeline-phase-input').value,
-            description: item.querySelector('.timeline-description-input').value
-        });
-    });
-    document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
-        proposalData.technology_stack.push({
-            name: item.querySelector('.tech-name-input').value,
-            role: item.querySelector('.tech-role-input').value,
-            icon: item.querySelector('.tech-icon-url-input').value
-        });
-    });
-    document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
-        proposalData.testimonials.push({
-            stars: (item.querySelector('.testimonial-stars-input').value.match(/★/g) || []).length,
-            text: item.querySelector('.testimonial-text-input').value,
-            author: item.querySelector('.testimonial-author-input').value,
-            role: item.querySelector('.testimonial-role-input').value
-        });
-    });
+  }
 
-    const outputElement = document.getElementById('json-output');
-    outputElement.value = JSON.stringify(proposalData, null, 2); // Use .value for textarea
+  const proposal = {
+    // For NEW → client id; for EDIT → keep semantic id if you have it
+    id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
+    _id: window.proposalId || null, // Mongo doc id when editing
+    title: getVal('proposal-title-input'),
+    client_name: getVal('client-name-input'),
+    submission_date: formattedDate,
+    status: getVal('status-select') || 'Draft',
+    project_type: getVal('project-type-input'),
+    duration: getVal('duration-input'),
+    scope_of_work: [],
+    out_of_scope: [],
+    dependencies: [],
+    timeline: [],
+    pricing: [],
+    technology_stack: [],
+    testimonials: []
+  };
+
+  // Pricing
+  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+    const checkbox = item.querySelector('.fixed-cost-checkbox');
+    if (checkbox?.checked) {
+      proposal.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: "Fixed Cost",
+        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+      });
+    } else {
+      proposal.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+      });
+    }
+  });
+
+  // Scope-like sections
+  const collectScope = (selector, titleClass, taskClass) => {
+    const items = [];
+    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+      const title = item.querySelector(`.${titleClass}`)?.value || '';
+      const tasks = [];
+      item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
+      if (title) items.push({ title, tasks });
+    });
+    return items;
+  };
+  proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
+  proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+  proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+  // Timeline
+  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+    proposal.timeline.push({
+      week: item.querySelector('.timeline-week-input')?.value || '',
+      phase: item.querySelector('.timeline-phase-input')?.value || '',
+      description: item.querySelector('.timeline-description-input')?.value || ''
+    });
+  });
+
+  // Tech stack
+  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+    proposal.technology_stack.push({
+      name: item.querySelector('.tech-name-input')?.value || '',
+      role: item.querySelector('.tech-role-input')?.value || '',
+      icon: item.querySelector('.tech-icon-url-input')?.value || ''
+    });
+  });
+
+  // Testimonials
+  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+    proposal.testimonials.push({
+      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+      text: item.querySelector('.testimonial-text-input')?.value || '',
+      author: item.querySelector('.testimonial-author-input')?.value || '',
+      role: item.querySelector('.testimonial-role-input')?.value || ''
+    });
+  });
+
+  return proposal;
+}
+  // JSON generation (kept as-is except id comes from window.proposalId when present)
+  function generateJson() {
+  const rawDateValue = getVal('submission-date-input');
+  console.log(rawDateValue)
+  let formattedDate = "";
+  if (rawDateValue) {
+    try {
+      const [year, month, day] = rawDateValue.split('-');
+      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+      formattedDate = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+      }).format(dateObj);
+    } catch (e) {
+      formattedDate = rawDateValue;
+    }
+  }
+
+  const idParam = getIdParam();                    // "new" or actual _id when editing
+  const isEditing = !!(idParam && idParam !== 'new');
+
+  const proposalData = {
+    _id: isEditing ? idParam : null,               // carry Mongo _id when editing
+    id: isEditing ?  getVal('proposal-id-input') : ("new-proposal-" + Date.now()),  // optional client-side id for new
+    title: getVal('proposal-title-input'),
+    client_name: getVal('client-name-input'),
+    submission_date: formattedDate,
+    status: getVal('status-select'),
+    project_type: getVal('project-type-input'),
+    duration: getVal('duration-input'),
+    scope_of_work: [],
+    out_of_scope: [],
+    dependencies: [],
+    timeline: [],
+    pricing: [],
+    technology_stack: [],
+    testimonials: []
+  };
+
+  // Pricing
+  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+    const checkbox = item.querySelector('.fixed-cost-checkbox');
+    if (checkbox?.checked) {
+      proposalData.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: "Fixed Cost",
+        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+      });
+    } else {
+      proposalData.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+      });
+    }
+  });
+
+  // Generic collector
+  const getScopeData = (selector, titleClass, taskClass) => {
+    const items = [];
+    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+      const title = item.querySelector(`.${titleClass}`)?.value || '';
+      const tasks = [];
+      item.querySelectorAll(`.${taskClass}`).forEach(taskInput => {
+        if (taskInput.value) tasks.push(taskInput.value);
+      });
+      if (title) items.push({ title, tasks });
+    });
+    return items;
+  };
+
+  proposalData.scope_of_work = getScopeData('#scope-of-work', 'phase-title-input', 'scope-task-input');
+  proposalData.out_of_scope = getScopeData('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+  proposalData.dependencies = getScopeData('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+    proposalData.timeline.push({
+      week: item.querySelector('.timeline-week-input')?.value || '',
+      phase: item.querySelector('.timeline-phase-input')?.value || '',
+      description: item.querySelector('.timeline-description-input')?.value || ''
+    });
+  });
+
+  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+    proposalData.technology_stack.push({
+      name: item.querySelector('.tech-name-input')?.value || '',
+      role: item.querySelector('.tech-role-input')?.value || '',
+      icon: item.querySelector('.tech-icon-url-input')?.value || ''
+    });
+  });
+
+  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+    proposalData.testimonials.push({
+      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+      text: item.querySelector('.testimonial-text-input')?.value || '',
+      author: item.querySelector('.testimonial-author-input')?.value || '',
+      role: item.querySelector('.testimonial-role-input')?.value || ''
+    });
+  });
+
+  // Cache for Save button
+  window.generatedProposal = proposalData;
+
+  // Preview
+  const outputElement = document.getElementById('json-output');
+  if (outputElement) {
+    outputElement.value = JSON.stringify(proposalData, null, 2);
     outputElement.style.display = 'block';
+  } else {
+    console.log('Generated JSON:', proposalData);
+  }
 }
 
 
-// --- 7. INITIALIZATION & EVENT LISTENERS ---
-async function initializePage() {
-    let proposal = await fetchData();
+  // Utilities
+  function debounce(func, delay) {
+    let timeout;
+    return function(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+  async function saveProposalFromGenerated(e) {
+  e?.preventDefault?.();
 
-    if (!proposal) {
-        console.warn("No proposal data found. Loading default template.");
-        proposal = defaultProposal;
+  // Ensure we have the latest JSON from the form
+  generateJson();
+  const payload = window.generatedProposal;
+  console.log(payload)
+  const idParam = getIdParam();
+  const isNew = !idParam || idParam === 'new';
+
+  const btn = document.getElementById('save-proposal-btn');
+  btn?.setAttribute('disabled', 'true');
+  btn?.classList?.add('is-loading');
+
+  try {
+    const url = isNew
+      ? `${apiUrl}`
+      : `${apiUrl}/${encodeURIComponent(idParam)}`;
+
+    const method = isNew ? 'POST' : 'PUT';
+
+    const res = await fetch(url, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data?.error || `${res.status} ${res.statusText}`);
+
+    const saved = data?.item || data?.data || data;
+    const newId = saved?._id;
+
+    // If created, switch URL from ?id=new to the real id
+    if (isNew && newId) {
+      const urlReplace = new URL(location.href);
+      urlReplace.searchParams.set('id', newId);
+      history.replaceState({ id: newId }, '', urlReplace);
+      window.proposalId = newId; // now in edit mode
     }
 
-    populateFormWithData(proposal);
-    updateTotalPricing();
-
-    // Add event listeners for all static "Add" buttons
-    document.getElementById('add-pricing-item-btn')?.addEventListener('click', () => addPricingItem());
-    document.getElementById('add-timeline-item-btn')?.addEventListener('click', () => addTimelineItem());
-    document.getElementById('add-tech-item-btn')?.addEventListener('click', () => addTechnologyItem());
-    document.getElementById('add-testimonial-item-btn')?.addEventListener('click', () => addTestimonialItem());
-    document.getElementById('add-new-scope-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#scope-of-work', {}, {
-            title: 'phase-title-input',
-            task: 'scope-task-input'
-        }, 'New Phase');
-    });
-    document.getElementById('add-new-out-of-scope-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#out-of-scope', {}, {
-            title: 'out-of-scope-title-input',
-            task: 'out-of-scope-task-input'
-        }, 'New Exclusion Section');
-    });
-    document.getElementById('add-new-dependency-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#dependencies', {}, {
-            title: 'dependency-title-input',
-            task: 'dependency-task-input'
-        }, 'New Dependency Section');
-    });
-
-    // Event delegation for dynamically created buttons
-    document.body.addEventListener('click', function(event) {
-        if (event.target.matches('.add-task-btn')) {
-            event.preventDefault();
-            const scopeContent = event.target.closest('.scope-content');
-            if (scopeContent) {
-                const ul = scopeContent.querySelector('ul');
-                const titleInput = scopeContent.closest('.scope-item').querySelector('input[class*="-title-input"]');
-                let taskClass = 'scope-task-input';
-                if (titleInput.className.includes('out-of-scope')) taskClass = 'out-of-scope-task-input';
-                if (titleInput.className.includes('dependency')) taskClass = 'dependency-task-input';
-                addScopeTask(ul, taskClass);
-            }
-        }
-        const removeBtn = event.target.closest('.remove-item-btn');
-        if (removeBtn) {
-            const li = removeBtn.closest('li');
-            if (li) li.remove();
-        }
-    });
-
-    // Main Generate JSON button
-    document.getElementById('generate-json-btn')?.addEventListener('click', generateJson);
-
-    // **NEW**: Two-way sync from JSON textarea back to the UI
-    const jsonOutputTextarea = document.getElementById('json-output');
-    const syncJsonToUi = debounce((event) => {
-        const jsonString = event.target.value;
-        try {
-            if (jsonString) {
-                const newProposalData = JSON.parse(jsonString);
-                event.target.style.borderColor = ''; // Clear error style
-                populateFormWithData(newProposalData);
-                updateTotalPricing(); // Recalculate everything after populating
-            }
-        } catch (error) {
-            event.target.style.borderColor = 'red'; // Show error on invalid JSON
-            console.error("Invalid JSON format:", error);
-        }
-    }, 500); // 500ms delay after user stops typing
-
-    jsonOutputTextarea.addEventListener('input', syncJsonToUi);
-
-    console.log("Page initialized.");
+    alert(isNew ? 'Created successfully.' : 'Updated successfully.');
+    if (listContainer) listContainer.style.display = 'block';
+      clearIdParam({ replace: true });   // remove id param
+      window.proposalId = null;          // 
+    // Refresh the table so list view is up to date
+    await loadProposals();
+  } catch (err) {
+    console.error(err);
+    alert(`Save failed: ${err.message}`);
+  } finally {
+    btn?.removeAttribute('disabled');
+    btn?.classList?.remove('is-loading');
+  }
 }
 
-initializePage();
+  function buildProposalFromForm() {
+  const rawDateValue = getVal('submission-date-input');
+  let formattedDate = "";
+  if (rawDateValue) {
+    try {
+      const [year, month, day] = rawDateValue.split('-');
+      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+      formattedDate = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+      }).format(dateObj);
+    } catch (e) {
+      formattedDate = rawDateValue;
+    }
+  }
+
+  const proposal = {
+    // For NEW → client id; for EDIT → keep semantic id if you have it
+    id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
+    _id: window.proposalId || null, // Mongo doc id when editing
+    title: getVal('proposal-title-input'),
+    client_name: getVal('client-name-input'),
+    submission_date: formattedDate,
+    status: getVal('status-select') || 'Draft',
+    project_type: getVal('project-type-input'),
+    duration: getVal('duration-input'),
+    scope_of_work: [],
+    out_of_scope: [],
+    dependencies: [],
+    timeline: [],
+    pricing: [],
+    technology_stack: [],
+    testimonials: []
+  };
+
+  // Pricing
+  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+    const checkbox = item.querySelector('.fixed-cost-checkbox');
+    if (checkbox?.checked) {
+      proposal.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: "Fixed Cost",
+        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+      });
+    } else {
+      proposal.pricing.push({
+        title: item.querySelector('.pricing-title-input')?.value || '',
+        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+      });
+    }
+  });
+
+  // Scope-like sections
+  const collectScope = (selector, titleClass, taskClass) => {
+    const items = [];
+    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+      const title = item.querySelector(`.${titleClass}`)?.value || '';
+      const tasks = [];
+      item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
+      if (title) items.push({ title, tasks });
+    });
+    return items;
+  };
+  proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
+  proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+  proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+  // Timeline
+  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+    proposal.timeline.push({
+      week: item.querySelector('.timeline-week-input')?.value || '',
+      phase: item.querySelector('.timeline-phase-input')?.value || '',
+      description: item.querySelector('.timeline-description-input')?.value || ''
+    });
+  });
+
+  // Tech stack
+  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+    proposal.technology_stack.push({
+      name: item.querySelector('.tech-name-input')?.value || '',
+      role: item.querySelector('.tech-role-input')?.value || '',
+      icon: item.querySelector('.tech-icon-url-input')?.value || ''
+    });
+  });
+
+  // Testimonials
+  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+    proposal.testimonials.push({
+      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+      text: item.querySelector('.testimonial-text-input')?.value || '',
+      author: item.querySelector('.testimonial-author-input')?.value || '',
+      role: item.querySelector('.testimonial-role-input')?.value || ''
+    });
+  });
+
+  return proposal;
+}
+
+  function setVal(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+  function getVal(id) { const el = document.getElementById(id); return el ? el.value : ''; }
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;')
+      .replace(/'/g,'&#039;');
+  }
 });
+
+
         </script>
-     <script>
-        // const urlParams = new URLSearchParams(window.location.search);
-        // const proposalId = urlParams.get('id');
-
-        // // Define the API URL
-        // const apiUrl = 'https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1';
-        // // Define the local fallback URL
-        // const localJsonUrl = '/js/proposal.json';
-
-        // // Function to fetch data
-        // async function fetchData() {
-        //     let data = null;
-        //     if (proposalId) {
-        //         try {
-        //             const response = await fetch(apiUrl);
-        //             if (response.ok) {
-        //                 const apiData = await response.json();
-        //                 data = apiData.proposals.find(p => p.id === proposalId);
-        //                 console.log('done to fetch from API, falling back to local JSON:');
-        //             }
-        //         } catch (error) {
-        //             console.warn('Failed to fetch from API, falling back to local JSON:', error);
-        //         }
-        //     }
-
-        //     if (!data) {
-        //         try {
-        //             const response = await fetch(localJsonUrl);
-        //             if (response.ok) {
-        //                 const localData = await response.json();
-        //                 data = localData.proposals.find(p => p.id === proposalId);
-        //                 // If proposalId wasn't found in API or not present,
-        //                 // and it's also not found in local, this will remain null.
-        //                 // If proposalId wasn't present, we'd ideally load a default
-        //                 // or first proposal from local, but your current logic relies
-        //                 // on proposalId. Let's assume a match is expected.
-        //                 if (!proposalId && localData.proposals.length > 0) {
-        //                     data = localData.proposals[0]; // Load the first proposal if no ID is provided
-        //                 }
-        //             }
-        //         } catch (error) {
-        //             console.error('Failed to fetch local JSON:', error);
-        //         }
-        //     }
-        //     return data;
-        // }
-
-        // fetchData()
-        //     .then(proposal => {
-        //         if (!proposal) {
-        //             console.error('Proposal not found.');
-        //             // Optionally redirect to an error page or display a message
-        //             return;
-        //         }
-
-        //         document.title = `${proposal.title} | StarLuxe Tech`;
-
-        //         // Set Title and Client Name
-        //         document.getElementById('proposal-title')?.textContent = proposal.title;
-        //         document.getElementById('client-name').textContent = `Client: ${proposal.client_name}`;
-
-        //         // Populate project details
-        //         const projectDetails = document.getElementById('project-details');
-        //         const details = [
-        //             { title: "Submission Date", content: proposal.submission_date },
-        //             { title: "Status", content: `<span class="status-dot"></span>${proposal.status}` },
-        //             { title: "Project Type", content: proposal.project_type },
-        //             { title: "Duration", content: proposal.duration }
-        //         ];
-        //         details.forEach(detail => {
-        //             const detailCard = document.createElement('div');
-        //             detailCard.classList.add('detail-card');
-        //             detailCard.innerHTML = `<h3>${detail.title}</h3><p>${detail.content}</p>`;
-        //             projectDetails.appendChild(detailCard);
-        //         });
-
-        //         // Populate Scope of Work
-        //         const scopeContainer = document.getElementById('scope-of-work');
-        //         proposal.scope_of_work.forEach((scope, index) => {
-        //             const scopeItem = document.createElement('div');
-        //             scopeItem.classList.add('scope-item');
-        //             scopeItem.classList.add('active');
-        //             scopeItem.innerHTML = `
-        //                 <div class="scope-header" onclick="toggleAccordion(event)">
-        //                     <h3>
-        //                         <span class="scope-icon icon-planning">
-        //                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                                 <path
-        //                                     d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-        //                                     fill="currentColor" />
-        //                             </svg>
-        //                         </span>
-        //                         ${scope.title}
-        //                     </h3>
-        //                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www0.w3.org/2000/svg">
-        //                         <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        //                     </svg>
-        //                 </div>
-        //                 <div class="scope-content">
-        //                     <ul>
-        //                         ${scope.tasks.map(task => `
-        //                             <li>
-        //                                 <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        //                                     <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        //                                 </svg>
-        //                                 ${task}
-        //                             </li>`).join('')}
-        //                     </ul>
-        //                 </div>
-        //             `;
-        //             scopeContainer.appendChild(scopeItem);
-        //         });
-
-        //         const outscopeContainer = document.getElementById('out-of-scope');
-        //         if (proposal?.out_of_scope && proposal.out_of_scope.length > 0) {
-        //             proposal.out_of_scope.forEach((scope, index) => {
-        //                 var scopeItem = document.createElement('div');
-        //                 scopeItem.classList.add('scope-item');
-
-        //                 // If this is the first item, set it as active
-        //                 if (index === 0) {
-        //                     scopeItem.classList.add('active');
-        //                 }
-
-        //                 scopeItem.innerHTML = `
-        //                     <div class="scope-header" onclick="toggleAccordion(event)">
-        //                         <h3>
-        //                             <span class="scope-icon icon-planning">
-        //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                                     <path
-        //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-        //                                         fill="currentColor" />
-        //                                 </svg>
-        //                             </span>
-        //                             ${scope.title}
-        //                         </h3>
-        //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        //                         </svg>
-        //                     </div>
-        //                     <div class="scope-content">
-        //                         <ul>
-        //                             ${scope.tasks.map(task => `
-        //                                 <li>
-        //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        //                                     </svg>
-        //                                     ${task}
-        //                                 </li>`).join('')}
-        //                         </ul>
-        //                     </div>
-        //                 `;
-        //                 outscopeContainer.appendChild(scopeItem);
-        //             });
-        //         } else {
-        //             outscopeContainer.style.display = 'none';
-        //         }
-
-        //         const dependenciesContainer = document.getElementById('dependencies');
-        //         if (proposal?.dependencies && proposal.dependencies.length > 0) {
-        //             proposal.dependencies.forEach((scope, index) => {
-        //                 var scopeItem = document.createElement('div');
-        //                 scopeItem.classList.add('scope-item');
-
-        //                 // If this is the first item, set it as active
-        //                 if (index === 0) {
-        //                     scopeItem.classList.add('active');
-        //                 }
-
-        //                 scopeItem.innerHTML = `
-        //                     <div class="scope-header" onclick="toggleAccordion(event)">
-        //                         <h3>
-        //                             <span class="scope-icon icon-planning">
-        //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                                     <path
-        //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-        //                                         fill="currentColor" />
-        //                                 </svg>
-        //                             </span>
-        //                             ${scope.title}
-        //                         </h3>
-        //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        //                         </svg>
-        //                     </div>
-        //                     <div class="scope-content">
-        //                         <ul>
-        //                             ${scope.tasks.map(task => `
-        //                                 <li>
-        //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        //                                     </svg>
-        //                                     ${task}
-        //                                 </li>`).join('')}
-        //                         </ul>
-        //                     </div>
-        //                 `;
-        //                 dependenciesContainer.appendChild(scopeItem);
-        //             });
-        //         } else {
-        //             dependenciesContainer.style.display = 'none'; // Hide the entire section if no dependencies data
-        //         }
-
-        //         // Populate Timeline
-        //         const timelineContainer = document.getElementById('timeline');
-        //         proposal.timeline.forEach((item, index) => {
-        //             const timelineItem = document.createElement('div');
-        //             timelineItem.classList.add('timeline-item');
-        //             timelineItem.innerHTML = `
-        //                 <div class="timeline-week">${item.week}</div>
-        //                 <div class="timeline-marker">${index + 1}</div>  <div class="timeline-content">
-        //                     <h3>
-        //                         <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //                             <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
-        //                             <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5" stroke-linecap="round" />
-        //                         </svg>
-        //                         ${item.phase}
-        //                     </h3>
-        //                     <p>${item.description}</p>
-        //                 </div>
-        //             `;
-        //             timelineContainer.appendChild(timelineItem);
-        //         });
-
-
-        //         // Populate Technology Stack
-        //         const techGrid = document.getElementById('technology-stack');
-        //         proposal.technology_stack.forEach(tech => {
-        //             const techCard = document.createElement('div');
-        //             techCard.classList.add('tech-card');
-        //             techCard.innerHTML = `
-        //                 <div class="tech-icon">
-        //                     <img width="40" height="40" src=${tech.icon} alt="technology"/>
-        //                 </div>
-        //                 <h3 class="tech-name">${tech.name}</h3>
-        //                 <p class="tech-role">${tech.role}</p>
-        //             `;
-        //             techGrid.appendChild(techCard);
-        //         });
-
-
-        //         // Populate Pricing Breakdown
-        //         const pricingContainer = document.getElementById('pricing-breakdown');
-        //         let totalAmount = 0; // Initialize a variable to store the total amount
-
-        //         proposal.pricing.forEach(pricing => {
-        //             // Extract numeric value from the rate string
-        //             const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
-
-        //             // Calculate the amount by multiplying rate and hours
-        //             const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
-
-        //             // Add the calculated amount to the total amount
-        //             totalAmount += parseFloat(amount);
-
-        //             const pricingItem = document.createElement('div');
-        //             pricingItem.classList.add('pricing-item');
-        //             pricingItem.innerHTML = `
-        //                 <div class="pricing-info">
-        //                     <h3>${pricing.title}</h3>
-        //                     <p>${pricing.hours} @ ${pricing.rate}/hr</p>
-        //                 </div>
-        //                 <div class="pricing-amount">$${amount}</div>
-        //             `;
-        //             pricingContainer.appendChild(pricingItem);
-        //         });
-        //         // Add the total amount section at the bottom
-        //         const pricingTotal = document.createElement('div');
-        //         pricingTotal.classList.add('pricing-total');
-        //         pricingTotal.innerHTML = `
-        //             <div>Total</div>
-        //             <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
-        //         `;
-        //         pricingContainer.appendChild(pricingTotal);
-
-        //         // Populate Client Testimonials
-        //         const testimonialsSection = document.getElementById('testimonials2'); // Assuming an outer div/section for testimonials
-        //         const testimonialsGrid = document.getElementById('testimonials');
-
-        //         if (proposal?.testimonials && proposal.testimonials.length > 0) {
-        //             proposal.testimonials.forEach(testimonial => {
-        //                 const testimonialCard = document.createElement('div');
-        //                 testimonialCard.classList.add('testimonial-card');
-        //                 testimonialCard.innerHTML = `
-        //                     <div class="testimonial-stars">${'★'.repeat(testimonial.stars)}</div>
-        //                     <p class="testimonial-text">"${testimonial.text}"</p>
-        //                     <div class="testimonial-author">
-        //                         <img src="./images/person.png" class="testimonial-avatar">
-        //                         <div class="testimonial-info">
-        //                             <h4>${testimonial.author}</h4>
-        //                             <p>${testimonial.role}</p>
-        //                         </div>
-        //                     </div>
-        //                 `;
-        //                 testimonialsGrid.appendChild(testimonialCard);
-        //             });
-        //             testimonialsSection.style.display = ''; // Make sure the section is visible
-        //         } else {
-        //             testimonialsSection.classList.remove('section');
-        //             testimonialsSection.classList.add('section-title3');
-        //         }
-        //     })
-        //     .catch(error => {
-        //         console.error('Error processing proposal data:', error);
-        //         // Handle cases where no proposal data could be loaded at all
-        //         // e.g., display a "Proposal Not Found" message to the user
-        //     });
-
-        // // Accordion functionality for scope of work
-        // function toggleAccordion(event) {
-        //     const scopeItem = event.currentTarget.closest('.scope-item');
-
-        //     // Toggle active class to show or hide content
-        //     scopeItem.classList.toggle('active');
-
-        //     // Close other items if they are open
-        //     const allScopeItems = document.querySelectorAll('.scope-item');
-        //     allScopeItems.forEach(item => {
-        //         if (item !== scopeItem && item.classList.contains('active')) {
-        //             item.classList.remove('active');
-        //         }
-        //     });
-        // }
-    </script>
-    <script>
-        // // Accordion Toggle Function (kept as it's part of the interactive HTML)
-        // function toggleAccordion(event) {
-        //     const scopeItem = event.currentTarget.closest('.scope-item');
-        //     scopeItem.classList.toggle('active');
-        // }
-
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     const generateJsonBtn = document.getElementById('generate-json-btn');
-        //     const jsonOutput = document.getElementById('json-output');
-
-        //     // --- Helper Functions for Dynamic Items ---
-        //     function addListItem(ulElement, className) {
-        //         const li = document.createElement('li');
-
-        //         const input = document.createElement('input');
-        //         input.type = 'text';
-        //         input.classList.add(className, 'form-input', 'form-input-small', 'w-input');
-        //         input.value = '';
-        //         input.name = `${className.replace(/-/g, '_')}_${Date.now()}`;
-        //         li.appendChild(input);
-
-        //         const removeDiv = document.createElement('div');
-        //         removeDiv.classList.add('circle-small', 'remove-item-btn');
-
-        //         const img = document.createElement('img');
-        //         img.src = 'https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg';
-        //         img.alt = '';
-        //         removeDiv.appendChild(img);
-
-        //         removeDiv.addEventListener('click', () => {
-        //             li.remove();
-        //             updateTotalPricing(); // Optional, only relevant for pricing sections
-        //         });
-        //         li.appendChild(removeDiv);
-        //         ulElement.appendChild(li);
-        //     }
-
-        //     function addPricingItem() {
-        //         const container = document.querySelector('.pricing-items-container');
-        //         const newPricingItem = document.createElement('div');
-        //         newPricingItem.classList.add('pricing-item');
-        //         newPricingItem.classList.add('w-form');
-
-        //         const uniqueId = Date.now(); // Unique ID for inputs
-        //         newPricingItem.innerHTML = `
-                
-        //         <div class="pricing-info ">
-        //                     <h3>
-        //                         <span class=" w-form-label">Description : </span>
-        //                         <input type="text" class="pricing-title-input form-input form-input-small w-input"
-        //                             name="pricing-title-${uniqueId}" value="GA4 Setup & Audit">
-        //                     </h3>
-        //                     <form id="email-form" name="email-form" data-name="Email Form" aria-label="Email Form">
-        //                         <label class="checkbox-field switch w-checkbox">
-        //                             <div
-        //                                 class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch">
-        //                             </div>
-        //                             <input type="checkbox" id="checkbox-3" name="checkbox-${uniqueId}" data-name="Checkbox 3"
-        //                                 style="opacity:0;position:absolute;z-index:-1">
-        //                             <span class="checkbox-label w-form-label">Fixed Cost</span>
-        //                         </label>
-        //                     </form>
-        //                     <form id="email-form-2" name="email-form-2" data-name="Email Form 2" aria-label="Email Form 2">
-        //                         <div class="row">
-        //                             <label class="radio-button-field w-radio">
-        //                                 <input type="number" class="pricing-hours-input form-input form-input-small w-input" name="pricing-hours-${uniqueId}" value="16">
-        //                                 <span for="Radio Choice -3" class="radio-button-label w-form-label">Hours</span>
-        //                             </label>
-        //                             <label class="radio-button-field w-radio">
-        //                                 <input type="number" class="pricing-rate-input form-input form-input-small w-input" name="pricing-rate-${uniqueId}" value="25">                                                
-        //                                 <span for="Radio Choice -3" class="radio-button-label w-form-label">Rate</span>
-        //                             </label>
-        //                         </div>
-        //                     </form>
-                           
-        //                 </div>
-        //                 <div class="pricing-amount">
-        //                     <!-- <h3 class="display-heading-2 calculated-amount">$ Display 2</h3> -->
-        //                     <span class="small-heading">$</span>
-        //                     <div class="display-heading-3 calculated-amount no-bottom-space">19</div>
-        //                 </div>
-        //                 <div class="circle-small remove-item-btn  remove-pricing-btn justify-center">
-        //                     <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-        //                         alt="" class="">
-        //                 </div>
-        //         `;
-        //         container.appendChild(newPricingItem);
-        //         setupPricingCalculations(newPricingItem);
-        //         newPricingItem.querySelector('.remove-pricing-btn').addEventListener('click', (e) => {
-        //             e.target.closest('.pricing-item').remove();
-        //             updateTotalPricing();
-        //         });
-        //     }
-
-        //     function addTimelineItem() {
-        //         const timelineContainer = document.getElementById('timeline');
-        //         const newItem = document.createElement('div');
-        //         newItem.classList.add('timeline-item');
-        //         const newMarkerNumber = timelineContainer.querySelectorAll('.timeline-item').length + 1;
-        //         const uniqueId = Date.now();
-        //         newItem.innerHTML = `<div class="timeline-week">
-        //                 <span class="w-form-label">Time</span>
-        //                 <input type="text" class="timeline-week-input form-input form-input-small w-input" name="timeline-week-${uniqueId}" value="Week ${newMarkerNumber}" />
-        //             </div>
-
-        //             <div class="timeline-marker">
-        //                 <div class="circle-small remove-item-btn timeline-remove-btn">
-        //                     <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="" />
-        //                 </div>
-        //             </div>
-
-        //             <div class="timeline-phase">
-        //                 <span class="w-form-label">Phase:</span>
-        //                 <input type="text" class="timeline-phase-input form-input form-input-small w-input" name="timeline-phase-${uniqueId}" value="Phase ${newMarkerNumber}: New Phase Title" />
-        //             </div>
-
-        //             <div class="timeline-content">
-        //                 <span class="w-form-label">Description:</span>
-        //                 <input type="text" class="timeline-description-input form-input form-input-small w-input" name="timeline-desc-${newMarkerNumber}" value="Description for the new phase." />
-        //             </div>
-
-        //         `;
-        //         timelineContainer.insertBefore(newItem, document.getElementById('add-timeline-item-btn'));
-        //         newItem.querySelector('.timeline-remove-btn').addEventListener('click', (e) => e.target.closest('.timeline-item').remove());
-        //     }
-
-        //     function addTechnologyItem() {
-        //         const techGrid = document.getElementById('technology-stack');
-        //         const newTechCard = document.createElement('div');
-        //         newTechCard.classList.add('tech-card');
-        //         const uniqueId = Date.now();
-        //         newTechCard.innerHTML = `
-        //                 <div>
-        //                     <span class="w-form-label">Name</span>
-        //                     <input type="text" class="tech-name-input form-input form-input-small w-input" name="tech-name-${uniqueId}" value="New Technology">
-
-        //                 </div>
-        //                 <div>
-        //                     <span class="w-form-label">Role</span>
-        //                     <input type="text" class="tech-role-input form-input form-input-small w-input" name="tech-role-${uniqueId}" value="Role">
-
-        //                 </div>
-        //                 <div>
-        //                     <span class="w-form-label">Url</span>
-        //                     <input type="text" class="tech-icon-url-input form-input form-input-small w-input" name="tech-icon-${uniqueId}" placeholder="Image URL" value="https://via.placeholder.com/40">
-
-        //                 </div>
-        //                 <div class="circle-small remove-item-btn remove-tech-btn justify-center">
-        //                     <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="" class="">
-        //                 </div> 
-        //         `;
-        //         techGrid.insertBefore(newTechCard, document.getElementById('add-tech-item-btn'));
-        //         newTechCard.querySelector('.remove-tech-btn').addEventListener('click', (e) => e.target.closest('.tech-card').remove());
-        //         newTechCard.querySelector('.tech-icon-url-input').addEventListener('input', (e) => {
-        //             newTechCard.querySelector('.tech-icon-img').src = e.target.value;
-        //         });
-        //     }
-
-        //     function addTestimonialItem() {
-        //         const testimonialsGrid = document.getElementById('testimonials');
-        //         const newTestimonialCard = document.createElement('div');
-        //         newTestimonialCard.classList.add('testimonial-card');
-        //         const uniqueId = Date.now();
-        //         newTestimonialCard.innerHTML = `
-        //                 <input type="text" class="testimonial-stars-input form-input form-input-small w-input" name="testimonial-stars-${uniqueId}"
-        //                     value="★★★★★">
-        //                 <p class="testimonial-text">
-        //                     <textarea class="testimonial-text-input form-input form-input-small  w-input"
-        //                         name="testimonial-text-${uniqueId}">Helped us unlock profit-level insights across all paid media.</textarea>
-        //                 </p>
-        //                 <div class="testimonial-author">
-
-        //                     <div class="testimonial-info">
-        //                         <h4><input type="text" class="testimonial-author-input form-input form-input-small w-input"
-        //                                 name="testimonial-author-${uniqueId}" value="Lucía Martínez"></h4>
-        //                         <p><input type="text" class="testimonial-role-input form-input form-input-small w-input"
-        //                                 name="testimonial-role-${uniqueId}" value="Ecommerce Manager"></p>
-        //                     </div>
-        //                 </div>
-                      
-        //                 <div class="circle-small remove-item-btn remove-testimonial-btn justify-center">
-        //                     <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-        //                         alt="" class="">
-        //                 </div>
-                    
-        //         `;
-        //         testimonialsGrid.insertBefore(newTestimonialCard, document.getElementById('add-testimonial-item-btn'));
-        //         newTestimonialCard.querySelector('.remove-testimonial-btn').addEventListener('click', (e) => e.target.closest('.testimonial-card').remove());
-        //         newTestimonialCard.querySelector('.testimonial-avatar-url-input').addEventListener('input', (e) => {
-        //             newTestimonialCard.querySelector('.testimonial-avatar-img').src = e.target.value;
-        //         });
-        //     }
-
-        //     // --- Setup Event Listeners for Add/Remove Buttons ---
-
-        //     document.querySelectorAll('.add-item-btn').forEach(element => {
-        //         element.addEventListener('click', (e) => {
-        //             const targetUlSelector = e.target.dataset.targetUl;
-
-        //             console.log(targetUlSelector);
-        //             if (targetUlSelector) {
-        //                 const ul = document.querySelector(targetUlSelector);
-
-        //                 if (ul) {
-        //                     let inputClassName = 'scope-task-input'; // Default
-        //                     // Check if the button belongs to a specific section that requires a different class
-        //                     if (e.target.id === 'add-dependency-item-btn' || ul.closest('#dependencies')) { // Assuming 'add-dependency-item-btn' exists or you target by parent
-        //                         inputClassName = 'dependency-task-input';
-        //                     } else if (e.target.id === 'add-out-of-scope-item-btn' || ul.closest('#out-of-scope')) {
-        //                         inputClassName = 'out-of-scope-task-input';
-        //                     }
-        //                     // You might need more conditions here for other specific list types
-        //                     addListItem(ul, inputClassName);
-        //                 }
-        //             } else if (e.target.id === 'add-pricing-item-btn') {
-        //                 addPricingItem();
-        //             } else if (e.target.id === 'add-timeline-item-btn') {
-        //                 addTimelineItem();
-        //             } else if (e.target.id === 'add-tech-item-btn') {
-        //                 addTechnologyItem();
-        //             } else if (e.target.id === 'add-testimonial-item-btn') {
-        //                 addTestimonialItem();
-
-        //             }
-        //         });
-        //     });
-
-        //     // Initialize remove buttons for pre-existing items
-        //     document.querySelectorAll('.remove-item-btn').forEach(button => {
-        //         button.addEventListener('click', (e) => {
-        //             e.target.closest('li, .pricing-item, .timeline-item, .tech-card, .testimonial-card').remove();
-        //             updateTotalPricing(); // Recalculate total if a pricing item is removed
-        //         });
-        //     });
-
-        //     // --- Pricing Calculation Logic ---
-
-        //     function setupPricingCalculations(item) {
-        //         const hoursInput = item.querySelector('.pricing-hours-input');
-        //         const rateInput = item.querySelector('.pricing-rate-input');
-        //         const calculatedAmountSpan = item.querySelector('.calculated-amount');
-
-        //         const updateAmount = () => {
-        //             const hours = parseFloat(hoursInput.value) || 0;
-        //             const rate = parseFloat(rateInput.value) || 0;
-        //             calculatedAmountSpan.textContent = (hours * rate).toFixed(2);
-        //             updateTotalPricing();
-        //         };
-
-        //         hoursInput.addEventListener('input', updateAmount);
-        //         rateInput.addEventListener('input', updateAmount);
-        //         updateAmount(); // Initial calculation for this item
-        //     }
-
-        //     function updateTotalPricing() {
-        //         let totalAmount = 0;
-        //         document.querySelectorAll('.pricing-item .calculated-amount').forEach(span => {
-        //             totalAmount += parseFloat(span.textContent);
-        //         });
-        //         document.querySelector('.pricing-total-amount').textContent = `$${totalAmount.toFixed(2)}`;
-        //     }
-
-        //     // Apply pricing calculation setup to all initial pricing items
-        //     document.querySelectorAll('.pricing-item').forEach(setupPricingCalculations);
-
-        //     // --- Main JSON Generation Logic ---
-
-        //     generateJsonBtn.addEventListener('click', () => {
-        //         const proposalData = {
-        //             id: "FramerCommerce", // This is hardcoded as it's not editable in the current structure
-        //             title: document.getElementById('proposal-title-input').value,
-        //             status: document.getElementById('status-select').value,
-        //             pricing: [],
-        //             duration: document.getElementById('duration-input').value,
-        //             timeline: [],
-        //             client_name: document.getElementById('client-name-input').value,
-        //             dependencies: [],
-        //             out_of_scope: [],
-        //             project_type: document.getElementById('project-type-input').value,
-        //             testimonials: [],
-        //             scope_of_work: [],
-        //             submission_date: document.getElementById('submission-date-input').value,
-        //             technology_stack: []
-        //         };
-
-        //         // Populate Pricing
-        //         document.querySelectorAll('.pricing-item').forEach(item => {
-        //             const title = item.querySelector('.pricing-title-input').value;
-        //             const hours = parseInt(item.querySelector('.pricing-hours-input').value);
-        //             const rate = parseFloat(item.querySelector('.pricing-rate-input').value);
-        //             const amount = parseFloat(item.querySelector('.calculated-amount').textContent);
-        //             proposalData.pricing.push({
-        //                 rate: `$${rate}`,
-        //                 hours: `${hours} hours`,
-        //                 title: title,
-        //                 amount: `$${amount.toFixed(2)}`
-        //             });
-        //         });
-
-        //         // Populate Scope of Work
-        //         document.querySelectorAll('#scope-of-work .scope-item').forEach(phaseDiv => {
-        //             const phaseTitleElement = phaseDiv.querySelector('.phase-title-input');
-        //             const phaseTitle = phaseTitleElement ? phaseTitleElement.value : 'Untitled Phase';
-        //             const tasks = [];
-        //             phaseDiv.querySelectorAll('ul li input.scope-task-input').forEach(taskInput => {
-        //                 tasks.push(taskInput.value);
-        //             });
-        //             proposalData.scope_of_work.push({
-        //                 title: phaseTitle.replace(/Phase \d+: /, ''), // Clean up phase title for JSON
-        //                 tasks: tasks
-        //             });
-        //         });
-
-        //         // Populate Timeline
-        //         document.querySelectorAll('#timeline .timeline-item').forEach(item => {
-        //             const week = item.querySelector('.timeline-week-input').value;
-        //             const phase = item.querySelector('.timeline-phase-input').value;
-        //             const description = item.querySelector('.timeline-description-input').value;
-        //             proposalData.timeline.push({
-        //                 week: week,
-        //                 phase: phase,
-        //                 description: description
-        //             });
-        //         });
-
-        //         // Populate Out of Scope
-        //         document.querySelectorAll('#out-of-scope .scope-item').forEach(sectionDiv => {
-        //             const titleElement = sectionDiv.querySelector('.out-of-scope-title-input');
-        //             const title = titleElement ? titleElement.value : 'Untitled Exclusion Section';
-        //             const tasks = [];
-        //             sectionDiv.querySelectorAll('ul li input.out-of-scope-task-input').forEach(taskInput => {
-        //                 tasks.push(taskInput.value);
-        //             });
-        //             proposalData.out_of_scope.push({
-        //                 title: title,
-        //                 tasks: tasks
-        //             });
-        //         });
-
-        //         // Populate Dependencies
-        //         document.querySelectorAll('#dependencies .scope-item').forEach(phaseDiv => {
-        //             const phaseTitleElement = phaseDiv.querySelector('.dependency-title-input');
-        //             const phaseTitle = phaseTitleElement ? phaseTitleElement.value : 'Untitled Dependency Phase';
-        //             const tasks = [];
-        //             phaseDiv.querySelectorAll('ul li input.dependency-task-input').forEach(taskInput => {
-        //                 tasks.push(taskInput.value);
-        //             });
-        //             proposalData.dependencies.push({
-        //                 title: phaseTitle,
-        //                 tasks: tasks
-        //             });
-        //         });
-
-        //         // Populate Technology Stack
-        //         document.querySelectorAll('#technology-stack .tech-card').forEach(card => {
-        //             const name = card.querySelector('.tech-name-input').value;
-        //             const role = card.querySelector('.tech-role-input').value;
-        //             const icon = card.querySelector('.tech-icon-url-input') ? card.querySelector('.tech-icon-url-input').value : '';
-        //             proposalData.technology_stack.push({
-        //                 icon: icon,
-        //                 name: name,
-        //                 role: role
-        //             });
-        //         });
-
-        //         // Populate Testimonials
-        //         document.querySelectorAll('#testimonials .testimonial-card').forEach(card => {
-        //             const starsInput = card.querySelector('.testimonial-stars-input');
-        //             const stars = starsInput ? starsInput.value : '';
-        //             const text = card.querySelector('.testimonial-text-input').value;
-        //             const author = card.querySelector('.testimonial-author-input').value;
-        //             const role = card.querySelector('.testimonial-role-input').value;
-        //             const avatar = card.querySelector('.testimonial-avatar-url-input') ? card.querySelector('.testimonial-avatar-url-input').value : '';
-
-        //             proposalData.testimonials.push({
-        //                 role: role,
-        //                 text: text,
-        //                 stars: stars.length, // Assuming stars are represented by '★' characters
-        //                 author: author,
-        //                 avatar: avatar
-        //             });
-        //         });
-
-        //         jsonOutput.textContent = JSON.stringify(proposalData, null, 2);
-        //     });
-
-        //     // Initial total pricing update to ensure consistency
-        //     updateTotalPricing();
-        // });
-    </script> 
-
-
+        
+    <!-- <script>
+        async function getSiloData(siloId, apiKey) {
+  const url = `https://api.jsonsilo.com/api/v1/manage/${siloId}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'X-MAN-API': apiKey,
+        'Content-Type': 'application/json'
+      },
+    });
+
+    if (!response.ok) {
+      // Handle non-200 responses, e.g., 404 Not Found, 401 Unauthorized
+      const errorText = await response.text();
+      throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}. Response: ${errorText}`);
+    }
+
+    const data = await response.json();
+    console.log("Successfully fetched Silo data:", data);
+    return data;
+  } catch (error) {
+    console.error("Error fetching Silo data:", error);
+    return null;
+  }
+}
+
+
+// Function to update a specific entry within a JSON Silo using a PATCH request.
+// This function uses the PATCH endpoint to modify data for a given entryId.
+// The data object will replace the existing data for that entry.
+async function patchSiloEntry(siloId, entryId, newData,apiKey) {
+    console.log(entryId)
+  const url = `https://api.jsonsilo.com/api/v1/manage/${siloId}/${entryId}`;
+  
+  // The PATCH request body must be a JSON object containing the `data` field.
+  const payload = {
+    data: newData
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'PATCH',
+      headers: {
+        'X-MAN-API': apiKey,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      // Handle non-200 responses. The API might return details on why the request failed.
+      const errorText = await response.text();
+      throw new Error(`Failed to patch data: ${response.status} ${response.statusText}. Response: ${errorText}`);
+    }
+
+    const updatedData = await response.json();
+    console.log("Successfully patched entry:", updatedData);
+    return updatedData;
+  } catch (error) {
+    console.error("Error patching Silo entry:", error);
+    return null;
+  }
+}
+
+// --- Integration with HTML Form ---
+
+// IMPORTANT: Replace these placeholder values with your actual data.
+const mySiloId = "73eaa9da-7e89-41d3-93d5-4ceb19e125c1";
+const myEntryId = "FramerCommerce"; // The static ID from the original JSON
+const myApiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiJLU25FdzRRZ3c5UGc4M0pTR3VuaUtZZkdPT2EyIiwiaXNzIjoiaHR0cHM6Ly9qc29uc2lsby5jb20iLCJleHAiOjE3NTY5MzE2MTR9.buTf20_8muzYaalKGcmUDb1BZpqz7xaoPMPadEKnbU0";
+
+// Function to collect all data from the HTML form and format it into a JSON object.
+function getProposalDataFromForm() {
+    const pricingItems = [];
+    document.querySelectorAll('.pricing-item').forEach(item => {
+        const title = item.querySelector('.pricing-title-input').value;
+        const hours = parseInt(item.querySelector('.pricing-hours-input').value) || 0;
+        const rate = parseFloat(item.querySelector('.pricing-rate-input').value) || 0;
+        const amount = hours * rate;
+        pricingItems.push({
+            rate: `$${rate}`,
+            hours: `${hours} hours`,
+            title: title,
+            amount: `$${amount.toFixed(2)}`
+        });
+    });
+
+    const timelineItems = [];
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        const week = item.querySelector('.timeline-week-input').value;
+        const phase = item.querySelector('.timeline-phase-input').value;
+        const description = item.querySelector('.timeline-description-input').value;
+        timelineItems.push({
+            week: week,
+            phase: phase,
+            description: description
+        });
+    });
+    
+    // ... Add similar logic for other sections like scope_of_work, dependencies, out_of_scope, testimonials, technology_stack
+    // For brevity, only a few are included in this example. You would need to add full parsers for each section.
+    
+    return {
+        id: "FramerCommerce", // This is a static ID from your original JSON
+        title: document.getElementById('proposal-title-input').value,
+        status: document.getElementById('status-select').value,
+        pricing: pricingItems,
+        duration: document.getElementById('duration-input').value,
+        timeline: timelineItems,
+        client_name: document.getElementById('client-name-input').value,
+        // ... include other data fields here
+    };
+}
+
+
+// Event listener for the "Save to Silo" button.
+document.addEventListener('DOMContentLoaded', () => {
+    // A button to trigger the save action needs to be added to the HTML
+    // For this example, let's assume there is a button with id="save-to-silo-btn".
+    const saveButton = document.getElementById('save-to-silo-btn');
+    if (saveButton) {
+        saveButton.addEventListener('click', async () => {
+            console.log("Saving data to JSON Silo...");
+            localStorage.getItem("newdata");
+            console.log(localStorage.getItem("newdata").JSON());
+            const newProposalData = getProposalDataFromForm();
+            await patchSiloEntry(mySiloId, myEntryId, newProposalData, myApiKey);
+        });
+    }
+
+    // You can also add a button to load data on page load
+    // For this example, let's assume there is a button with id="load-from-silo-btn".
+    const loadButton = document.getElementById('load-from-silo-btn');
+    if (loadButton) {
+        loadButton.addEventListener('click', async () => {
+            console.log("Loading data from JSON Silo...");
+            const siloData = await getSiloData(mySiloId, myApiKey);
+            if (siloData) {
+                // Here, you would implement a function to populate your form with the loaded data.
+                // For example: populateFormWithData(siloData.data[myEntryId]);
+                console.log(siloData);
+            }
+        });
+    }
+});
+
+    </script> -->
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64d531d8b3d556ea8480e670"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
