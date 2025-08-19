@@ -40,6 +40,8 @@
     { "src": "/case-study/rangreli", "dest": "/casestudy2.html"},
 
     { "src": "/proposal", "dest": "/proposal.html"},
+    { "src": "/proposaledit", "dest": "/proposaledit.html"},
+
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
     
   ]
