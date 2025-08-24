@@ -1795,7 +1795,7 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   margin-right: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   padding-left: 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -2050,7 +2050,7 @@ figcaption {
 }
 .panel-body:hover {
  
-  transform: translateY(-3px); Optional: Lift the card slightly
+  /* transform: translateY(-3px); Optional: Lift the card slightly */
   /* background: linear-gradient(145deg, #3a3a3a, #2a2a2a); /* Slightly lighter gradient on hover */
 }
 
@@ -2698,6 +2698,11 @@ figcaption {
 
 .space-bottom-large {
   margin-bottom: 15px;
+}
+
+
+.space-top-large {
+  margin-top: 15px;
 }
 
 .space-bottom-large.sbl {
@@ -4579,7 +4584,7 @@ figcaption {
   margin-top: 20px;
   gap: 20px;
   border-radius: 12px;
-  background: #1e2029;
+  /* background: #1e2029; */
 }
 
 .dropdown-grid-halves {

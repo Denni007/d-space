@@ -221,230 +221,220 @@
                 <h1 class="panel-subheading text-primary-2">Contact Us</h1>
                 <h3 class="display-heading-4 no-bottom-space">Let's take a look at your current configuration and your needs.</h3>
             </div>
-            <div class="w-container">
-                <main class="min-h-screen"><div id="ga4-panel" role="tabpanel" aria-labelledby="ga4-tab" class="focus:outline-none" style=""><div class="space-y-8"><div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800"><div class="flex items-center justify-between gap-4"><div><h3 class="text-base font-semibold text-blue-900 dark:text-blue-100 mb-1 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-4 h-4"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>GA4 UTM Parameter Tutorial</h3><p class="text-blue-700 dark:text-blue-300 text-xs">Master Google Analytics 4 UTM parameters and channel grouping</p></div><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-4 py-2 text-sm gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play "><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>Tutorial</button></div></div><div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6"><div class="flex items-center gap-3 mb-4"><img src="/google-analytics-4.svg" alt="GA4" class="w-6 h-6"><h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">GA4 Channel Definitions</h3></div><div class="space-y-4"><div><label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select GA4 Channel (Optional)</label><select class="w-full p-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:ring-blue-500/20 focus:outline-none focus:ring-4"><option value="">All channels (no filtering)</option><option value="Affiliates">Affiliates</option><option value="Audio">Audio</option><option value="Cross-network">Cross-network</option><option value="Direct">Direct</option><option value="Display">Display</option><option value="Email">Email</option><option value="Mobile Push Notifications">Mobile Push Notifications</option><option value="Organic Search">Organic Search</option><option value="Organic Shopping">Organic Shopping</option><option value="Organic Social">Organic Social</option><option value="Organic Video">Organic Video</option><option value="Paid Other">Paid Other</option><option value="Paid Search">Paid Search</option><option value="Paid Shopping">Paid Shopping</option><option value="Paid Social">Paid Social</option><option value="Paid Video">Paid Video</option><option value="Referral">Referral</option><option value="SMS">SMS</option></select></div><div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"><h4 class="font-semibold text-blue-900 dark:text-blue-100 mb-2">Paid Other</h4><p class="text-sm text-blue-800 dark:text-blue-200 mb-3"><strong>Description:</strong> Paid Other is the channel by which users arrive at your site/app via ads, but not through an ad identified as Search, Social, Shopping, or Video.</p><p class="text-sm text-blue-800 dark:text-blue-200"><strong>GA4 Grouping Condition:</strong> Medium matches regex ^(.*cp.*|ppc|retargeting|paid.*)$</p></div></div></div><div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6"><h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-6">Base URL &amp; UTM Parameters</h3><div class="space-y-6"><div class="space-y-2"><label for="input-uf1oukfom" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 after:content-[&quot;*&quot;] after:text-red-500 after:ml-1">Website URL</label><div class="relative"><input id="input-uf1oukfom" aria-describedby="input-uf1oukfom-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-blue-500 focus:ring-blue-500/20
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="https://example.com/page" value="https://peppy-muffin-c4a420.netlify.app/"></div><p id="input-uf1oukfom-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">The destination URL for your campaign</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div><label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Campaign Source (utm_source) *</label><div class="relative w-full"><button id="dropdown-dfclk8vex" type="button" aria-haspopup="listbox" aria-expanded="false" aria-invalid="false" class="
-          w-full flex items-center justify-between px-4 py-3 text-left
-          border-2 rounded-xl transition-all duration-200 shadow-sm
-          border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-          bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-          focus:outline-none focus:ring-4
-          cursor-pointer
-        "><span class="block truncate font-medium text-gray-500 dark:text-gray-400">e.g., google, facebook</span><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down text-gray-400 transition-transform duration-200 "><path d="m6 9 6 6 6-6"></path></svg></div></button></div><p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Where the traffic comes from (filtered for Paid Other)</p></div><div><label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Campaign Medium (utm_medium) *</label><div class="relative w-full"><button id="dropdown-dkbjdeww8" type="button" aria-haspopup="listbox" aria-expanded="false" aria-invalid="false" class="
-          w-full flex items-center justify-between px-4 py-3 text-left
-          border-2 rounded-xl transition-all duration-200 shadow-sm
-          border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-          bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-          focus:outline-none focus:ring-4
-          cursor-pointer
-        "><span class="block truncate font-medium text-gray-500 dark:text-gray-400">e.g., cpc, email, social</span><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down text-gray-400 transition-transform duration-200 "><path d="m6 9 6 6 6-6"></path></svg></div></button></div><p class="text-xs text-gray-500 dark:text-gray-400 mt-1">How the traffic gets to you (filtered for Paid Other)</p></div><div class="space-y-2"><label for="input-xajzom9r5" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 after:content-[&quot;*&quot;] after:text-red-500 after:ml-1">Campaign Name (utm_campaign) *</label><div class="relative"><input id="input-xajzom9r5" aria-describedby="input-xajzom9r5-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="e.g., summer_sale_2025" value=""></div><p id="input-xajzom9r5-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">What campaign it's for</p></div></div></div></div><div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden "><button aria-expanded="false" aria-controls="accordion-content-optional-utm-parameters" class="
-          w-full flex items-center justify-between p-6 text-left transition-all duration-200
-          hover:bg-gray-50 dark:hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset
-          
-        "><div class="flex items-center gap-3 flex-1"><h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Optional UTM Parameters</h3></div><div class="flex-shrink-0 ml-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></div></button><div id="accordion-content-optional-utm-parameters" class="overflow-hidden transition-all duration-300 ease-in-out" aria-hidden="true" style="height: 0px;"><div class="p-6 pt-0"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="space-y-2"><label for="input-nzyxz8t13" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Campaign Term (utm_term)</label><div class="relative"><input id="input-nzyxz8t13" aria-describedby="input-nzyxz8t13-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="running+shoes" value=""></div><p id="input-nzyxz8t13-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Keywords for paid search campaigns</p></div><div class="space-y-2"><label for="input-q1vqizmiw" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Campaign Content (utm_content)</label><div class="relative"><input id="input-q1vqizmiw" aria-describedby="input-q1vqizmiw-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="logolink" value=""></div><p id="input-q1vqizmiw-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Used to differentiate similar content or links within the same ad</p></div><div class="space-y-2"><label for="input-p6c2xx3ra" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Campaign ID (utm_id)</label><div class="relative"><input id="input-p6c2xx3ra" aria-describedby="input-p6c2xx3ra-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="campaign_123" value=""></div><p id="input-p6c2xx3ra-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">A unique identifier for your campaign</p></div><div class="space-y-2"><label for="input-eymd6yazd" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Source Platform (utm_source_platform)</label><div class="relative"><input id="input-eymd6yazd" aria-describedby="input-eymd6yazd-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="Google Ads" value=""></div><p id="input-eymd6yazd-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Platform where marketing activity is managed</p></div><div class="space-y-2"><label for="input-9toc3mizz" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Creative Format (utm_creative_format)</label><div class="relative"><input id="input-9toc3mizz" aria-describedby="input-9toc3mizz-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="display_banner_300x250" value=""></div><p id="input-9toc3mizz-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Type of creative (display, video, search, etc.)</p></div><div class="space-y-2"><label for="input-h7v1xrdp1" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 ">Marketing Tactic (utm_marketing_tactic)</label><div class="relative"><input id="input-h7v1xrdp1" aria-describedby="input-h7v1xrdp1-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="remarketing_dynamic" value=""></div><p id="input-h7v1xrdp1-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Targeting criteria (remarketing, prospecting, etc.)</p></div></div><div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-600"><div class="flex items-center justify-between mb-4"><h4 class="text-md font-semibold text-gray-900 dark:text-gray-100">Custom Parameters</h4><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-4 py-2 text-sm gap-2 "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus "><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add Parameter</button></div><div class="text-center py-8 text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings w-12 h-12 mx-auto mb-3 opacity-50"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg><p>No custom parameters added. Click "Add Parameter" to add custom tracking parameters.</p></div></div></div></div></div><div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-6 border-2 border-blue-200 dark:border-blue-800 shadow-lg"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-blue-900 dark:text-blue-100 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Generated UTM URL</h2><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-8 py-4 text-base gap-3 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy "><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Copy URL</button></div><div class="bg-white dark:bg-gray-800 rounded-lg p-4 border-2 border-blue-200 dark:border-blue-700 shadow-inner"><code class="text-sm break-all text-gray-800 dark:text-gray-200 font-mono leading-relaxed">https://peppy-muffin-c4a420.netlify.app/</code></div></div><div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6"><h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">GA4 Default Channel Prediction</h3><div class="space-y-4"><div class="border-b border-gray-200 dark:border-gray-600 pb-6 mb-6"><h4 class="text-md font-semibold text-gray-900 dark:text-gray-100 mb-3">Analyze Existing URL</h4><div class="space-y-4"><div class="flex gap-3"><div class="flex-1"><div class="space-y-2"><div class="relative"><div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-4 h-4"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div><input id="input-euijdsfki" aria-describedby="input-euijdsfki-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-12 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="https://example.com/page?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=summer_sale" value="https://peppy-muffin-c4a420.netlify.app/"></div><p id="input-euijdsfki-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Enter a complete URL with UTM parameters to analyze</p></div></div><div class="flex gap-2"><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-6 py-3 text-sm gap-2 "><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search "><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>Analyze</button><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 shadow-md hover:shadow-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100 dark:border-gray-700 focus:ring-gray-500 px-6 py-3 text-sm gap-2 " title="Copy URL" aria-label="Copy URL"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy "><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div class="space-y-4"><div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"><div class="flex items-center justify-between mb-3"><span class="text-sm font-medium text-blue-900 dark:text-blue-100">GA4 Channel Prediction:</span><span class="
-      inline-flex items-center font-medium rounded-full
-      bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400
-      px-2 py-1 text-xs
-      
-    ">Unassigned</span></div><p class="text-sm text-blue-800 dark:text-blue-200"><strong>Explanation:</strong> Requires utm_source and utm_medium for prediction</p></div><div class="space-y-3"><div class="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"><div class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><div><h6 class="text-sm font-medium text-red-900 dark:text-red-100 mb-1">Issues Found:</h6><ul class="text-sm text-red-800 dark:text-red-200 space-y-1"><li>• Missing core UTM parameters (source and medium)</li><li>• Parameters do not match any GA4 channel definition</li></ul></div></div></div></div><div class="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg"><h6 class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">Base URL:</h6><code class="text-sm text-gray-700 dark:text-gray-300 break-all">https://peppy-muffin-c4a420.netlify.app/</code></div></div></div></div><div><h4 class="text-md font-semibold text-gray-900 dark:text-gray-100 mb-3">Current Parameters Prediction</h4><div class="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg"><div class="flex items-center justify-between mb-2"><span class="text-sm font-medium text-gray-700 dark:text-gray-300">Predicted Channel:</span><span class="
-      inline-flex items-center font-medium rounded-full
-      bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400
-      px-2 py-1 text-xs
-      
-    ">Unassigned</span></div><p class="text-sm text-gray-600 dark:text-gray-400"><strong>Explanation:</strong> Requires utm_source and utm_medium for prediction</p></div></div></div></div><div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden "><button aria-expanded="false" aria-controls="accordion-content-template-management" class="
-          w-full flex items-center justify-between p-6 text-left transition-all duration-200
-          hover:bg-gray-50 dark:hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset
-          
-        "><div class="flex items-center gap-3 flex-1"><div class="flex-shrink-0 text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save w-5 h-5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg></div><h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Template Management</h3></div><div class="flex-shrink-0 ml-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></div></button><div id="accordion-content-template-management" class="overflow-hidden transition-all duration-300 ease-in-out" aria-hidden="true" style="height: 0px;"><div class="p-6 pt-0"><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="space-y-4"><h3 class="text-md font-medium text-gray-700 dark:text-gray-300">Save Template</h3><div class="space-y-2"><div class="relative"><input id="input-x9t6vgdoy" aria-describedby="input-x9t6vgdoy-helper" aria-invalid="false" type="text" class="
-            block w-full rounded-xl border-2 transition-all duration-200 shadow-sm
-            pl-4 pr-4 py-3
-            border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500
-            bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
-            focus:outline-none focus:ring-4
-            disabled:opacity-50 disabled:cursor-not-allowed
-            
-          " placeholder="Template name (e.g., 'My Campaign Template')" value=""></div><p id="input-x9t6vgdoy-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">Give your template a descriptive name</p></div><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-6 py-3 text-sm gap-2 " disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save "><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>Save Template</button></div><div class="space-y-4"><h3 class="text-md font-medium text-gray-700 dark:text-gray-300">Manage Templates</h3><select class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700"><option value="">Select template...</option></select><div class="flex gap-2"><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-4 py-2 text-sm gap-2 " disabled="">Load</button><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg hover:shadow-xl focus:ring-red-500 px-4 py-2 text-sm gap-2 " disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 "><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>Delete</button><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 shadow-md hover:shadow-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100 dark:border-gray-700 focus:ring-gray-500 px-4 py-2 text-sm gap-2 "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw "><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>Reset</button></div></div><div class="space-y-4"><h3 class="text-md font-medium text-gray-700 dark:text-gray-300">Export/Import</h3><div class="space-y-2"><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 px-4 py-2 text-sm gap-2 w-full" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download "><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>Export Templates</button><div><input type="file" accept=".json" class="hidden" id="import-templates-ga4"><button type="button" class="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 shadow-md hover:shadow-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100 dark:border-gray-700 focus:ring-gray-500 px-4 py-2 text-sm gap-2 w-full"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload "><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>Import Templates</button></div></div></div></div></div></div></div></div></div></main>
-                <div class="panel-body">
-                    <div class="space-bottom">
-                        <h3 class="card-heading display-inline">Or drop your questions below. We&#x27;ll get right
-                            back to you.</h3>
-                    </div>
-                    <div class="form w-form">
-                      <div class="form-success w1-form-done" style="display:none;">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="form-error w1-form-fail" style="display:none;">
-                        <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>  
-
-                      <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form" method="get" class="form-vertical">
-                          <div class="w-layout-grid form-grid-halves">
-                              <input type="text" class="form-input form-input-large w-input" maxlength="256" name="name" data-name="Name" placeholder="Your Name" id="contact-name" required="">
-                              <input type="text" class="form-input form-input-large w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address" id="contact-email" required="">
-                          </div>
-                          <textarea placeholder="Your Message" maxlength="5000" id="Message" name="Message" data-name="Message" class="form-input textarea w-input"></textarea>
-                          <input type="submit" value="Send Message" data-wait="Please wait..." id="w-node-d3363dee-b8dc-ea49-7f77-40950b18e8bd-8aea83c2" class="button-large bg-primary-4 w-button">
-                      </form>
+            <div data-duration-in="300" data-duration-out="100" class="tabs-vertical w-tabs">
+              <div class="tabs-vertical-menu w-tab-menu" role="tablist">
+                <a data-w-tab="Tab 1" class="tabs-vertical-tab w-inline-block w-tab-link w--current" id="w-tabs-1-data-w-tab-0"
+                  href="#w-tabs-1-data-w-pane-0" role="tab" aria-controls="w-tabs-1-data-w-pane-0" aria-selected="false" tabindex="-1">
+                  <div>User Data</div>
+                </a>
+                <a data-w-tab="Tab 2" class="tabs-vertical-tab w-inline-block w-tab-link" tabindex="-1" id="w-tabs-1-data-w-tab-1"
+                  href="#w-tabs-1-data-w-pane-1" role="tab" aria-controls="w-tabs-1-data-w-pane-1" aria-selected="false">
+                  <div>Gallery</div>
+                </a>
+                <a data-w-tab="Tab 3" class="tabs-vertical-tab w-inline-block w-tab-link" id="w-tabs-1-data-w-tab-2"
+                  href="#w-tabs-1-data-w-pane-2" role="tab" aria-controls="w-tabs-1-data-w-pane-2" aria-selected="true">
+                  <div>Components</div>
+                </a>
+                <a data-w-tab="Tab 4" class="tabs-vertical-tab w-inline-block w-tab-link" id="w-tabs-1-data-w-tab-3"
+                  href="#w-tabs-1-data-w-pane-3" role="tab" aria-controls="w-tabs-1-data-w-pane-3" aria-selected="false" tabindex="-1">
+                  <div>Support</div>
+                </a>
+                <a data-w-tab="Tab 5" class="tabs-vertical-tab w-inline-block w-tab-link" id="w-tabs-1-data-w-tab-4"
+                  href="#w-tabs-1-data-w-pane-4" role="tab" aria-controls="w-tabs-1-data-w-pane-4" aria-selected="false" tabindex="-1">
+                  <div>Support</div>
+                </a>
+              </div>
+              <div class="w-tab-content space-top-large">
+                <div data-w-tab="Tab 1" class="w-tab-pane" id="w-tabs-1-data-w-pane-0" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-0" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <div class="space-bottom-large">
+                        <h5 class="panel-subheading text-primary-3">Panels2</h5>
+                        <div>Google Analytics Default channel</div>
+                          
+                      </div>
                      
+                      <select id="Select-2" name="Select-2" data-name="Select 2" class="form-input  search-modal-input w-input">
+                        <option value="standard">Standard</option>
+                        <option value="First">First Choice</option>
+                        <option value="Second">Second Choice</option>
+                        <option value="Third">Third Choice</option>
+                      </select>
+                      
+                      <div class="p-4 mt-2 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg">
+                        <h4 class="font-semibold text-orange-900 dark:text-orange-100 mb-2">Paid Shopping</h4>
+                        <p class="text-sm text-orange-800 dark:text-orange-200 mb-3"><strong>Description:</strong> Paid Shopping is the
+                          channel by which users arrive at your site/app via paid ads on shopping sites like Amazon or ebay or on individual
+                          retailer sites.</p>
+                        <p class="text-sm text-orange-800 dark:text-orange-200"><strong>GA4 Grouping Condition:</strong> (Source matches a
+                          list of shopping sites OR Campaign Name matches regex ^(.*(([^a-df-z]|^)shop|shopping).*)$) AND Medium matches regex
+                          ^(.*cp.*|ppc|retargeting|paid.*)$</p>
+                      </div>
+                     
+                    </div>
                   </div>
-                  
                 </div>
+                <div data-w-tab="Tab 2" class="w-tab-pane" id="w-tabs-1-data-w-pane-1" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-1">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <div class="space-bottom-large">
+                        <h5 class="panel-subheading text-primary-3">Panels</h5>
+                        <div>
+                          <h3 class="card-heading display-inline">Built to perform.</h3>
+                          <div class="card-heading display-inline text-gray-4"> Flexible panels are perfect for building functional
+                            layouts.</div>
+                        </div>
+                      </div>
+                      <div class="text-lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.</div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Tab 3" class="w-tab-pane w--tab-active" id="w-tabs-1-data-w-pane-2" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-2" style="opacity: 1; transition: all, opacity 300ms;">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <div class="space-bottom-large">
+                        <h5 class="panel-subheading text-primary-4">Panels</h5>
+                        <div>
+                          <h3 class="card-heading display-inline">Built to perform.</h3>
+                          <div class="card-heading display-inline text-gray-4"> Flexible panels are perfect for building functional
+                            layouts.</div>
+                        </div>
+                      </div>
+                      <div class="text-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Tab 4" class="w-tab-pane" id="w-tabs-1-data-w-pane-3" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-3" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <div class="space-bottom-large">
+                        <h5 class="panel-subheading text-primary-1">Panels</h5>
+                        <div>
+                          <h3 class="card-heading display-inline">Modular and versatile.</h3>
+                          <div class="card-heading display-inline text-gray-4"> Flexible panels are perfect for building functional
+                            layouts.</div>
+                        </div>
+                      </div>
+                      <div class="text-lead">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                        voluptas assumenda est, omnis dolor repellendus.</div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Tab 5" class="w-tab-pane" id="w-tabs-1-data-w-pane-4" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-4" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <div class="space-bottom-large">
+                        <h5 class="panel-subheading text-primary-1">Panel4</h5>
+                        <div>
+                          <h3 class="card-heading display-inline">Modular and versatile.</h3>
+                          <div class="card-heading display-inline text-gray-4"> Flexible panels are perfect for building functional
+                            layouts.</div>
+                        </div>
+                      </div>
+                      <div class="text-lead">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                        voluptas assumenda est, omnis dolor repellendus.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-tab-content space-top-large">
+                <div data-w-tab="Tab 1" class="w-tab-pane" id="w-tabs-1-data-w-pane-0" role="tabpanel"
+                  aria-labelledby="w-tabs-1-data-w-tab-0" style="">
+                  <div class="panel">
+                    <div class=" dark-800 rounded-xl  panel-body">
+                      <h3 class="text-lg font-semibold text-white-900 dark:text-white-100 mb-6">Base URL &amp; UTM Parameters</h3>
+                      <div class="space-y-6">
+                        <div class="space-y-2">
+                          <label for="input-qom8ju2zr" class="block text-sm font-semibold ">Website
+                          URL</label>
+                          <div class="relative">
+                            <input id="input-qom8ju2zr" aria-describedby="input-qom8ju2zr-helper" aria-invalid="false" type="text"
+                              class="form-input form-input-large w-input" placeholder="https://example.com/page" value="">
+                          </div>
+                          <p id="input-qom8ju2zr-helper" class="text-sm text-gray-500 dark:text-gray-400 mt-1">The destination URL for your
+                             campaign
+                          </p>
+                       </div>
+                       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                           <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 after:content-[&quot;*&quot;] after:text-red-500 after:ml-1">Campaign Source (utm_source)
+                          </label>
+                           <div class="relative w-full">
+                              <select id="Select-2" name="Select-2" data-name="Select 2" class="form-input  search-modal-input w-input">
+                    <option value="standard">Standard</option>
+                    <option value="First">First Choice</option>
+                    <option value="Second">Second Choice</option>
+                    <option value="Third">Third Choice</option>
+                  </select>
+                           </div>
+                           <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Where the traffic comes from (filtered for Audio)</p>
+                        </div>
+                        <div>
+                           <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 after:content-[&quot;*&quot;] after:text-red-500 after:ml-1">Campaign Medium (utm_medium)
+                         </label>
+                           <div class="relative w-full">
+                              <select id="Select-2" name="Select-2" data-name="Select 2" class="form-input  search-modal-input w-input">
+                    <option value="standard">Standard</option>
+                    <option value="First">First Choice</option>
+                    <option value="Second">Second Choice</option>
+                    <option value="Third">Third Choice</option>
+                  </select>
+                           </div>
+                           <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">How the traffic gets to you (filtered for Audio)</p>
+                        </div>
+                        <div class="space-y-2">
+                           <label for="input-lwm2y5gj5" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 after:content-[&quot;*&quot;] after:text-red-500 after:ml-1">Campaign
+                           Name (utm_campaign)</label>
+                           <div class="relative"><select id="Select-2" name="Select-2" data-name="Select 2" class="form-input  search-modal-input w-input">
+                    <option value="standard">Standard</option>
+                    <option value="First">First Choice</option>
+                    <option value="Second">Second Choice</option>
+                    <option value="Third">Third Choice</option>
+                  </select>
+                  </div>
+                           <p id="input--helper" class="text-xs text-gray-500 dark:text-gray-400 mt-1">What campaign it's for</p>
+                        </div>
+                     </div>
+                      </div>
+                   </div>
+                   </div>
+                </div>
+              </div>
+
             </div>
-            
-           
         </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded',  function() {
-          var form = document.getElementById('wf-form-Contact-Form');
-      
-          // Bind form submission to the dspaceexpert.convert() function
-          form.addEventListener('submit', async function(e) {
-              e.preventDefault(); // Prevent form submission from reloading the page
-      
-              // Prepare the properties object with the form data
-              var properties = {
-                  name: document.getElementById('contact-name').value.trim(),
-                  email: document.getElementById('contact-email').value.trim(),
-                  message: document.getElementById('Message').value.trim()
-              };
-      
-              // Validation for name (allow only letters and spaces)
-              var namePattern = /^[a-zA-Z\s]+$/;
-              // Validation for email (basic email format check)
-              var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      
-              // Check if form is valid (you can add your own validation logic here)
-              if (properties.name === '' || !namePattern.test(properties.name)) {
-                  // Show the error message if name is empty or contains invalid characters
-                  document.querySelector('.w1-form-done').style.display = 'none';
-                  document.querySelector('.w1-form-fail').style.display = 'block';
-                  document.querySelector('.w1-form-fail').innerText = 'Please enter a valid name (letters and spaces only).';
-              } else if (properties.email === '' || !emailPattern.test(properties.email)) {
-                  // Show the error message if the email is invalid
-                  document.querySelector('.w1-form-done').style.display = 'none';
-                  document.querySelector('.w1-form-fail').style.display = 'block';
-                  document.querySelector('.w1-form-fail').innerText = 'Please enter a valid email address.';
-              } else if (properties.message === '') {
-                  // Show the error message if message is empty
-                  document.querySelector('.w1-form-done').style.display = 'none';
-                  document.querySelector('.w1-form-fail').style.display = 'block';
-                  document.querySelector('.w1-form-fail').innerText = 'All fields are required.';
-              } else {
-                  // Call the dspaceexpert.convert() function with the form data
-                  var visitor = dspaceexpert.convert(properties);
-      
-                  // Show the success message after form submission
-                  document.querySelector('.w1-form-done').style.display = 'block';
-                  document.querySelector('.w1-form-fail').style.display = 'none';
-      
-                  console.log('Visitor:', visitor);
-                  try {
-        const response = await fetch('https://contactclub.starluxetech.com/api/leads/new', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name:properties.name, email:properties.email, message:properties.name })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-         alert('Thank you! Your submission has been received!');
-        } else {
-          alert('Error: ' + (data.error || 'Unknown error'));
-        }
-      } catch (error) {
-        console.error('Request failed:', error);
-        alert('Failed to submit lead.');
-      }
-              }
-          });
-      });
-    </script>
-    
+    <div class="wf-section">
+      <div class="container">
+        <div class="panel section cta">
+          <div class="panel-body align-content-center panel-mobile">
+            <div class="center-content content-width-large">
+              <h3 class="display-heading-3 display-heading-3-1">Get Your Data Performance Report</h3>
+              <div class="space-bottom-large">
+                <div class="card-heading display-inline text-gray-4 tg4 panel-mobile-text">Worst case
+                  scenario?<br>‍<br>You find out you've got the one analyst in the world that can't improve
+                  business insights.</div>
+              </div>
+              <div>
+                <a href="/contact-us" class="button-large btn-orange w-button">Schedule it here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
       
 <!--   
     

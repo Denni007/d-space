@@ -10,8 +10,8 @@
 
     <link href="/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-    <!-- <link href="/css/dspace.css" rel="stylesheet" type="text/css"> -->
-    <link href="/css/casestudy.css" rel="stylesheet" type="text/css">
+    <link href="/css/dspace.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/css/casestudy.css" rel="stylesheet" type="text/css"> -->
 
     <script src="https://player.vimeo.com/api/player.js"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -55,8 +55,7 @@
             -webkit-align-items: initial !important;
             -ms-flex-align: initial !important;
         }
-
-</style>
+    </style>
 
     <style>
         body {
@@ -592,152 +591,150 @@
 
           
         } */
-    
-    
-    /* Tablets (≤ 991px) */
-@media (max-width: 991px) {
-    .project-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .proposal-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .btn1 {
-        padding: 5px 10px !important;
-        line-height: 1.3;
-    }
-
-    .proposal-actions {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 100%;
-        justify-content: center;
-    }
 
 
+        /* Tablets (≤ 991px) */
+        @media (max-width: 991px) {
+            .project-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-   
-}
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-/* Mobile (≤ 768px) */
-@media (max-width: 768px) {
-    .project-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            .proposal-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
 
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
 
-    .cta-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
+            .btn1 {
+                padding: 5px 10px !important;
+                line-height: 1.3;
+            }
 
-    p{
-        margin-bottom: 10px;
-    }
+            .proposal-actions {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+                justify-content: center;
+            }
 
-    
-}
 
-/* Small devices (≤ 576px) */
-@media (max-width: 576px) {
-    main {
-        padding: 20px 10px;
-    }
 
-    .project-details,
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .timeline {
-        padding-left: 20px;
-    }
+        }
 
-    .timeline-content p {
-        margin-left: 0;
-    }
+        /* Mobile (≤ 768px) */
+        @media (max-width: 768px) {
+            .project-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .timeline-marker {
-        left: -24px;
-    }
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .timeline-item{
-        padding-left: 15px;
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
 
-    }
+            .cta-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
 
-    .pricing-item,
-    .pricing-total {
-        flex-direction: column;
-        gap: 10px;
-    }
+            p {
+                margin-bottom: 10px;
+            }
 
-    .detail-card,
-    .tech-card,
-    .section {
-        padding: 15px;
-    }
 
-    .scope-header h3 {
-        font-size: 15px !important;
-    }
+        }
 
-    .scope-content ul {
-        padding-left: 0px;
-    }
+        /* Small devices (≤ 576px) */
+        @media (max-width: 576px) {
+            main {
+                padding: 20px 10px;
+            }
 
-    .scope-content ul li {
-        font-size: 14px !important;
-    }
+            .project-details,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .tech-name {
-        font-size: 16px !important;
-    }
-}
+            .timeline {
+                padding-left: 20px;
+            }
 
-/* Extra small devices (≤ 480px) */
-@media (max-width: 480px) {
-    .project-details {
-        grid-template-columns: 1fr;
-    }
+            .timeline-content p {
+                margin-left: 0;
+            }
 
-    .proposal-header {
-        flex-direction: column;
-        gap: 15px;
-    }
+            .timeline-marker {
+                left: -24px;
+            }
 
-    .proposal-actions {
-        width: 100%;
-    }
-}
+            .timeline-item {
+                padding-left: 15px;
 
-    
+            }
+
+            .pricing-item,
+            .pricing-total {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .detail-card,
+            .tech-card,
+            .section {
+                padding: 15px;
+            }
+
+            .scope-header h3 {
+                font-size: 15px !important;
+            }
+
+            .scope-content ul {
+                padding-left: 0px;
+            }
+
+            .scope-content ul li {
+                font-size: 14px !important;
+            }
+
+            .tech-name {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Extra small devices (≤ 480px) */
+        @media (max-width: 480px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+
+            .proposal-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .proposal-actions {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -752,156 +749,164 @@
     </div>
 
     <div class="navbar-wrapper sticky-top" style="">
-        <div class="container"> 
-          <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
-            <div class="navbar-row">
-              <div class="div-block-6">
-                <a href="/" class="navbar-1-brand w-nav-brand">
-                  <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="">
-                </a>
-                <nav role="navigation" class="nav-menu w-nav-menu">
-                  <a href="/case-studies" class="nav-link w-nav-link">Case Study</a> 
-                  <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
-    
-                  <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
-                  <div data-delay="0" data-hover="1" class="w-dropdown" style="">
-                    <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
-                      aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-                      <div class="row row-align-center">
-                        <div>Services</div><img
-                          src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
-                          alt="" class="dropdown-link-icon">
-                      </div>
+        <div class="container">
+            <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+                <div class="navbar-row">
+                    <div class="div-block-6">
+                        <a href="/" class="navbar-1-brand w-nav-brand">
+                            <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89"
+                                alt="">
+                        </a>
+                        <nav role="navigation" class="nav-menu w-nav-menu">
+                            <a href="/case-studies" class="nav-link w-nav-link">Case Study</a>
+                            <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
+
+                            <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+                            <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0"
+                                    aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false"
+                                    role="button" tabindex="0">
+                                    <div class="row row-align-center">
+                                        <div>Services</div><img
+                                            src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                                            alt="" class="dropdown-link-icon">
+                                    </div>
+                                </div>
+                                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0"
+                                    aria-labelledby="w-dropdown-toggle-0">
+
+                                    <div class="dropdown-list-wrapper">
+                                        <!-- EXPERTISE COLUMN -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">EXPERTISE</h3>
+
+                                            <div class="dropdown-item">
+                                                <a href="/expertises/tracking-analytics">
+                                                    Tracking & Analytics
+                                                    <p>The performance foundation for all your digital activities</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/expertises/data-activation-growth">
+                                                    Data Activation & Growth
+                                                    <p>Harness the power of your 1st-party data to maximize your
+                                                        marketing campaigns</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/expertises/analytics-engineering-infrastructure">
+                                                    Analytics Engineering & Infrastructure
+                                                    <p>Accelerate towards a high-performance Data infrastructure</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/expertises/data-strategy-governance">
+                                                    Data Strategy & Governance
+                                                    <p>Unlock the full potential of your data through data governance
+                                                    </p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/expertises/recrutement-upskilling">
+                                                    Recruitment & Upskilling
+                                                    <p>We work with the best. Why shouldn't you?</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/en/expertises/data-science-ai">
+                                                    AI & Data Science
+                                                    <p>Develop advanced, practical AI strategies</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- INDUSTRIES COLUMN -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">INDUSTRIES</h3>
+
+                                            <div class="dropdown-item">
+                                                <a href="/industries/retail-e-commerce">
+                                                    Retail & E-Commerce
+                                                    <p>Retention & churn analysis, media analytics, segmentation,
+                                                        audience activation and attribution models</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/industries/luxe-cosmetiques">
+                                                    Luxury & Cosmetics
+                                                    <p>Leverage data to deliver customized customer experiences.</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/industries/banque-assurances">
+                                                    Banking & Insurance
+                                                    <p>Predictive modeling for risk management. Data governance and
+                                                        compliance.</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-item">
+                                                <a href="/industries/medias-divertissement">
+                                                    Media & Entertainment
+                                                    <p>Improve audience engagement and natural search engine
+                                                        optimization.</p>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <style>
+                                            @media (max-width: 768px) {
+                                                .dropdown-list-wrapper {
+                                                    flex-direction: column;
+                                                    width: 100%;
+                                                    max-width: 100%;
+                                                    overflow-y: auto;
+                                                    overflow-x: hidden;
+                                                    max-height: 100%;
+                                                    box-sizing: border-box;
+                                                    scrollbar-width: none;
+                                                    -ms-overflow-style: none;
+                                                }
+
+                                                .dropdown-list-wrapper::-webkit-scrollbar {
+                                                    display: none;
+                                                }
+
+                                                .dropdown-column {
+                                                    width: 100%;
+                                                }
+
+                                                .dropdown-item p {
+                                                    display: none;
+                                                }
+                                            }
+                                        </style>
+                                    </div>
+                                </nav>
+                            </div>
+                            <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                                class="nav-link w-nav-link">Team</a>
+                        </nav>
                     </div>
-                    <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
-                      
-                      <div class="dropdown-list-wrapper">
-                        <!-- EXPERTISE COLUMN -->
-                        <div class="dropdown-column">
-                          <h3 class="dropdown-title">EXPERTISE</h3>
-                      
-                          <div class="dropdown-item">
-                            <a href="/expertises/tracking-analytics">
-                              Tracking & Analytics
-                              <p>The performance foundation for all your digital activities</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/expertises/data-activation-growth">
-                              Data Activation & Growth
-                              <p>Harness the power of your 1st-party data to maximize your marketing campaigns</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/expertises/analytics-engineering-infrastructure">
-                              Analytics Engineering & Infrastructure
-                              <p>Accelerate towards a high-performance Data infrastructure</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/expertises/data-strategy-governance">
-                              Data Strategy & Governance
-                              <p>Unlock the full potential of your data through data governance</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/expertises/recrutement-upskilling">
-                              Recruitment & Upskilling
-                              <p>We work with the best. Why shouldn't you?</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/en/expertises/data-science-ai">
-                              AI & Data Science
-                              <p>Develop advanced, practical AI strategies</p>
-                            </a>
-                          </div>
+                    <div class="navbar-controls ">
+                        <div class="navbar-buttons ">
+                            <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
                         </div>
-                      
-                        <!-- INDUSTRIES COLUMN -->
-                        <div class="dropdown-column">
-                          <h3 class="dropdown-title">INDUSTRIES</h3>
-                      
-                          <div class="dropdown-item">
-                            <a href="/industries/retail-e-commerce">
-                              Retail & E-Commerce
-                              <p>Retention & churn analysis, media analytics, segmentation, audience activation and attribution models</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/industries/luxe-cosmetiques">
-                              Luxury & Cosmetics
-                              <p>Leverage data to deliver customized customer experiences.</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/industries/banque-assurances">
-                              Banking & Insurance
-                              <p>Predictive modeling for risk management. Data governance and compliance.</p>
-                            </a>
-                          </div>
-                      
-                          <div class="dropdown-item">
-                            <a href="/industries/medias-divertissement">
-                              Media & Entertainment
-                              <p>Improve audience engagement and natural search engine optimization.</p>
-                            </a>
-                          </div>
-                      
-                          
-                        </div>
-                      
-                        <style>
-                          @media (max-width: 768px) {
-                            .dropdown-list-wrapper {
-                              flex-direction: column;
-                              width: 100%;
-                              max-width: 100%;
-                              overflow-y: auto;
-                              overflow-x: hidden;
-                              max-height: 100%;
-                              box-sizing: border-box;
-                              scrollbar-width: none;
-                              -ms-overflow-style: none;
-                            }
-                      
-                            .dropdown-list-wrapper::-webkit-scrollbar {
-                              display: none;
-                            }
-                      
-                            .dropdown-column {
-                              width: 100%;
-                            }
-                      
-                            .dropdown-item p {
-                              display: none;
-                            }
-                          }
-                        </style>
-                      </div>
-                    </nav>
-                  </div>
-                  <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
-                    class="nav-link w-nav-link">Team</a>
-                </nav>
-              </div>
-              <div class="navbar-controls ">
-                <div class="navbar-buttons ">
-                  <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
+                        <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt=""></div>
+                    </div>
                 </div>
-                <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt=""></div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     <main id="proposal-content">
         <div class="container">
             <div class="proposal-header">
@@ -1054,12 +1059,12 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const proposalId = urlParams.get('id');
-    
+
         // Define the API URL
-        const apiUrl = 'https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1';
+        const apiUrl = 'https://insider.starluxetech.com/api/proposals';
         // Define the local fallback URL
         const localJsonUrl = '/js/proposal.json';
-    
+
         // Function to fetch data
         async function fetchData() {
             let data = null;
@@ -1068,14 +1073,31 @@
                     const response = await fetch(apiUrl);
                     if (response.ok) {
                         const apiData = await response.json();
-                        data = apiData.proposals.find(p => p.id === proposalId);
+                        data = apiData.items.find(p => p.id === proposalId);
                         console.log('done to fetch from API, falling back to local JSON:');
                     }
                 } catch (error) {
                     console.warn('Failed to fetch from API, falling back to local JSON:', error);
+                    try {
+                    const response = await fetch(localJsonUrl);
+                    if (response.ok) {
+                        const localData = await response.json();
+                        data = localData.proposals.find(p => p.id === proposalId);
+                        // If proposalId wasn't found in API or not present,
+                        // and it's also not found in local, this will remain null.
+                        // If proposalId wasn't present, we'd ideally load a default
+                        // or first proposal from local, but your current logic relies
+                        // on proposalId. Let's assume a match is expected.
+                        if (!proposalId && localData.proposals.length > 0) {
+                            data = localData.proposals[0]; // Load the first proposal if no ID is provided
+                        }
+                    }
+                } catch (error) {
+                    console.error('Failed to fetch local JSON:', error);
+                }
                 }
             }
-    
+
             if (!data) {
                 try {
                     const response = await fetch(localJsonUrl);
@@ -1097,7 +1119,7 @@
             }
             return data;
         }
-    
+
         fetchData()
             .then(proposal => {
                 if (!proposal) {
@@ -1105,13 +1127,13 @@
                     // Optionally redirect to an error page or display a message
                     return;
                 }
-    
+
                 document.title = `${proposal.title} | StarLuxe Tech`;
-    
+
                 // Set Title and Client Name
                 document.getElementById('proposal-title').textContent = proposal.title;
                 document.getElementById('client-name').textContent = `Client: ${proposal.client_name}`;
-    
+
                 // Populate project details
                 const projectDetails = document.getElementById('project-details');
                 const details = [
@@ -1126,7 +1148,7 @@
                     detailCard.innerHTML = `<h3>${detail.title}</h3><p>${detail.content}</p>`;
                     projectDetails.appendChild(detailCard);
                 });
-    
+
                 // Populate Scope of Work
                 const scopeContainer = document.getElementById('scope-of-work');
                 proposal.scope_of_work.forEach((scope, index) => {
@@ -1163,18 +1185,18 @@
                     `;
                     scopeContainer.appendChild(scopeItem);
                 });
-    
+
                 const outscopeContainer = document.getElementById('out-of-scope');
                 if (proposal?.out_of_scope && proposal.out_of_scope.length > 0) {
                     proposal.out_of_scope.forEach((scope, index) => {
                         var scopeItem = document.createElement('div');
                         scopeItem.classList.add('scope-item');
-    
+
                         // If this is the first item, set it as active
                         if (index === 0) {
                             scopeItem.classList.add('active');
                         }
-    
+
                         scopeItem.innerHTML = `
                             <div class="scope-header" onclick="toggleAccordion(event)">
                                 <h3>
@@ -1206,20 +1228,20 @@
                         outscopeContainer.appendChild(scopeItem);
                     });
                 } else {
-                    outscopeContainer.style.display = 'none'; 
+                    outscopeContainer.style.display = 'none';
                 }
-    
+
                 const dependenciesContainer = document.getElementById('dependencies');
                 if (proposal?.dependencies && proposal.dependencies.length > 0) {
                     proposal.dependencies.forEach((scope, index) => {
                         var scopeItem = document.createElement('div');
                         scopeItem.classList.add('scope-item');
-    
+
                         // If this is the first item, set it as active
                         if (index === 0) {
                             scopeItem.classList.add('active');
                         }
-    
+
                         scopeItem.innerHTML = `
                             <div class="scope-header" onclick="toggleAccordion(event)">
                                 <h3>
@@ -1253,7 +1275,7 @@
                 } else {
                     dependenciesContainer.style.display = 'none'; // Hide the entire section if no dependencies data
                 }
-    
+
                 // Populate Timeline
                 const timelineContainer = document.getElementById('timeline');
                 proposal.timeline.forEach((item, index) => {
@@ -1274,8 +1296,8 @@
                     `;
                     timelineContainer.appendChild(timelineItem);
                 });
-    
-    
+
+
                 // Populate Technology Stack
                 const techGrid = document.getElementById('technology-stack');
                 proposal.technology_stack.forEach(tech => {
@@ -1290,22 +1312,22 @@
                     `;
                     techGrid.appendChild(techCard);
                 });
-    
-    
+
+
                 // Populate Pricing Breakdown
                 const pricingContainer = document.getElementById('pricing-breakdown');
                 let totalAmount = 0; // Initialize a variable to store the total amount
-    
+
                 proposal.pricing.forEach(pricing => {
                     // Extract numeric value from the rate string
                     const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
-    
+
                     // Calculate the amount by multiplying rate and hours
                     const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
-    
+
                     // Add the calculated amount to the total amount
                     totalAmount += parseFloat(amount);
-    
+
                     const pricingItem = document.createElement('div');
                     pricingItem.classList.add('pricing-item');
                     pricingItem.innerHTML = `
@@ -1325,11 +1347,11 @@
                     <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
                 `;
                 pricingContainer.appendChild(pricingTotal);
-    
+
                 // Populate Client Testimonials
                 const testimonialsSection = document.getElementById('testimonials2'); // Assuming an outer div/section for testimonials
                 const testimonialsGrid = document.getElementById('testimonials');
-    
+
                 if (proposal?.testimonials && proposal.testimonials.length > 0) {
                     proposal.testimonials.forEach(testimonial => {
                         const testimonialCard = document.createElement('div');
@@ -1358,14 +1380,14 @@
                 // Handle cases where no proposal data could be loaded at all
                 // e.g., display a "Proposal Not Found" message to the user
             });
-    
+
         // Accordion functionality for scope of work
         function toggleAccordion(event) {
             const scopeItem = event.currentTarget.closest('.scope-item');
-    
+
             // Toggle active class to show or hide content
             scopeItem.classList.toggle('active');
-    
+
             // Close other items if they are open
             const allScopeItems = document.querySelectorAll('.scope-item');
             allScopeItems.forEach(item => {
@@ -1376,271 +1398,271 @@
         }
     </script>
     <script>
-    //     const urlParams = new URLSearchParams(window.location.search);
-    //     const proposalId = urlParams.get('id');
-    //   add the get logic other wise below json file logic  https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1
-    //     fetch('/js/proposal.json')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             const proposal = data.proposals.find(p => p.id === proposalId);
-    //             document.title = `${proposal.title} | StarLuxe Tech`;
+        //     const urlParams = new URLSearchParams(window.location.search);
+        //     const proposalId = urlParams.get('id');
+        //   add the get logic other wise below json file logic  https://api.jsonsilo.com/public/73eaa9da-7e89-41d3-93d5-4ceb19e125c1
+        //     fetch('/js/proposal.json')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             const proposal = data.proposals.find(p => p.id === proposalId);
+        //             document.title = `${proposal.title} | StarLuxe Tech`;
 
-    //             // Set Title and Client Name
-    //             document.getElementById('proposal-title').textContent = proposal.title;
-    //             document.getElementById('client-name').textContent = `Client: ${proposal.client_name}`;
+        //             // Set Title and Client Name
+        //             document.getElementById('proposal-title').textContent = proposal.title;
+        //             document.getElementById('client-name').textContent = `Client: ${proposal.client_name}`;
 
-    //             // Populate project details
-    //             const projectDetails = document.getElementById('project-details');
-    //             const details = [
-    //                 { title: "Submission Date", content: proposal.submission_date },
-    //                 { title: "Status", content: `<span class="status-dot"></span>${proposal.status}` },
-    //                 { title: "Project Type", content: proposal.project_type },
-    //                 { title: "Duration", content: proposal.duration }
-    //             ];
-    //             details.forEach(detail => {
-    //                 const detailCard = document.createElement('div');
-    //                 detailCard.classList.add('detail-card');
-    //                 detailCard.innerHTML = `<h3>${detail.title}</h3><p>${detail.content}</p>`;
-    //                 projectDetails.appendChild(detailCard);
-    //             });
+        //             // Populate project details
+        //             const projectDetails = document.getElementById('project-details');
+        //             const details = [
+        //                 { title: "Submission Date", content: proposal.submission_date },
+        //                 { title: "Status", content: `<span class="status-dot"></span>${proposal.status}` },
+        //                 { title: "Project Type", content: proposal.project_type },
+        //                 { title: "Duration", content: proposal.duration }
+        //             ];
+        //             details.forEach(detail => {
+        //                 const detailCard = document.createElement('div');
+        //                 detailCard.classList.add('detail-card');
+        //                 detailCard.innerHTML = `<h3>${detail.title}</h3><p>${detail.content}</p>`;
+        //                 projectDetails.appendChild(detailCard);
+        //             });
 
-    //             // Populate Scope of Work
-    //             const scopeContainer = document.getElementById('scope-of-work');
-    //             proposal.scope_of_work.forEach((scope, index) => {
-    //                 const scopeItem = document.createElement('div');
-    //                 scopeItem.classList.add('scope-item');
-    //                 scopeItem.classList.add('active');
-    //                 scopeItem.innerHTML = `
-    //                     <div class="scope-header" onclick="toggleAccordion(event)">
-    //                         <!-- First Icon: Same for all -->
-    //                         <h3>
-    //                             <span class="scope-icon icon-planning">
-    //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                                     <path
-    //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-    //                                         fill="currentColor" />
-    //                                 </svg>
-    //                             </span>
-    //                             ${scope.title}
-    //                         </h3>
-    //                         <!-- Last Icon: Same for all -->
-    //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    //                         </svg>
-    //                     </div>
-    //                     <div class="scope-content">
-    //                         <ul>
-    //                             ${scope.tasks.map(task => `
-    //                                 <li>
-    //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-    //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    //                                     </svg>
-    //                                     ${task}
-    //                                 </li>`).join('')}
-    //                         </ul>
-    //                     </div>
-    //                 `;
-    //                 scopeContainer.appendChild(scopeItem);
-    //             });
+        //             // Populate Scope of Work
+        //             const scopeContainer = document.getElementById('scope-of-work');
+        //             proposal.scope_of_work.forEach((scope, index) => {
+        //                 const scopeItem = document.createElement('div');
+        //                 scopeItem.classList.add('scope-item');
+        //                 scopeItem.classList.add('active');
+        //                 scopeItem.innerHTML = `
+        //                     <div class="scope-header" onclick="toggleAccordion(event)">
+        //                         <!-- First Icon: Same for all -->
+        //                         <h3>
+        //                             <span class="scope-icon icon-planning">
+        //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                                     <path
+        //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
+        //                                         fill="currentColor" />
+        //                                 </svg>
+        //                             </span>
+        //                             ${scope.title}
+        //                         </h3>
+        //                         <!-- Last Icon: Same for all -->
+        //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        //                         </svg>
+        //                     </div>
+        //                     <div class="scope-content">
+        //                         <ul>
+        //                             ${scope.tasks.map(task => `
+        //                                 <li>
+        //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        //                                     </svg>
+        //                                     ${task}
+        //                                 </li>`).join('')}
+        //                         </ul>
+        //                     </div>
+        //                 `;
+        //                 scopeContainer.appendChild(scopeItem);
+        //             });
 
-    //             const outscopeContainer = document.getElementById('out-of-scope');
-    //             proposal?.out_of_scope ?
-    //                 proposal?.out_of_scope.forEach((scope, index) => {
-    //                     var scopeItem = document.createElement('div');
-    //                     scopeItem.classList.add('scope-item');
+        //             const outscopeContainer = document.getElementById('out-of-scope');
+        //             proposal?.out_of_scope ?
+        //                 proposal?.out_of_scope.forEach((scope, index) => {
+        //                     var scopeItem = document.createElement('div');
+        //                     scopeItem.classList.add('scope-item');
 
-    //                     // If this is the first item, set it as active
-    //                     if (index === 0) {
-    //                         scopeItem.classList.add('active');
-    //                     }
+        //                     // If this is the first item, set it as active
+        //                     if (index === 0) {
+        //                         scopeItem.classList.add('active');
+        //                     }
 
-    //                     scopeItem.innerHTML = `
-    //                     <div class="scope-header" onclick="toggleAccordion(event)">
-    //                         <!-- First Icon: Same for all -->
-    //                         <h3>
-    //                             <span class="scope-icon icon-planning">
-    //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                                     <path
-    //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-    //                                         fill="currentColor" />
-    //                                 </svg>
-    //                             </span>
-    //                             ${scope.title}
-    //                         </h3>
-    //                         <!-- Last Icon: Same for all -->
-    //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    //                         </svg>
-    //                     </div>
-    //                     <div class="scope-content">
-    //                         <ul>
-    //                             ${scope.tasks.map(task => `
-    //                                 <li>
-    //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-    //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    //                                     </svg>
-    //                                     ${task}
-    //                                 </li>`).join('')}
-    //                         </ul>
-    //                     </div>
-    //                 `;
-    //                     outscopeContainer.appendChild(scopeItem);
-    //                 }) : outscopeContainer.style.display = 'none';
+        //                     scopeItem.innerHTML = `
+        //                     <div class="scope-header" onclick="toggleAccordion(event)">
+        //                         <!-- First Icon: Same for all -->
+        //                         <h3>
+        //                             <span class="scope-icon icon-planning">
+        //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                                     <path
+        //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
+        //                                         fill="currentColor" />
+        //                                 </svg>
+        //                             </span>
+        //                             ${scope.title}
+        //                         </h3>
+        //                         <!-- Last Icon: Same for all -->
+        //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        //                         </svg>
+        //                     </div>
+        //                     <div class="scope-content">
+        //                         <ul>
+        //                             ${scope.tasks.map(task => `
+        //                                 <li>
+        //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        //                                     </svg>
+        //                                     ${task}
+        //                                 </li>`).join('')}
+        //                         </ul>
+        //                     </div>
+        //                 `;
+        //                     outscopeContainer.appendChild(scopeItem);
+        //                 }) : outscopeContainer.style.display = 'none';
 
-    //                 const dependenciesContainer = document.getElementById('dependencies');
-    //             proposal?.dependencies ?
-    //                 proposal?.dependencies.forEach((scope, index) => {
-    //                     var scopeItem = document.createElement('div');
-    //                     scopeItem.classList.add('scope-item');
+        //                 const dependenciesContainer = document.getElementById('dependencies');
+        //             proposal?.dependencies ?
+        //                 proposal?.dependencies.forEach((scope, index) => {
+        //                     var scopeItem = document.createElement('div');
+        //                     scopeItem.classList.add('scope-item');
 
-    //                     // If this is the first item, set it as active
-    //                     if (index === 0) {
-    //                         scopeItem.classList.add('active');
-    //                     }
+        //                     // If this is the first item, set it as active
+        //                     if (index === 0) {
+        //                         scopeItem.classList.add('active');
+        //                     }
 
-    //                     scopeItem.innerHTML = `
-    //                     <div class="scope-header" onclick="toggleAccordion(event)">
-    //                         <!-- First Icon: Same for all -->
-    //                         <h3>
-    //                             <span class="scope-icon icon-planning">
-    //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                                     <path
-    //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
-    //                                         fill="currentColor" />
-    //                                 </svg>
-    //                             </span>
-    //                             ${scope.title}
-    //                         </h3>
-    //                         <!-- Last Icon: Same for all -->
-    //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    //                         </svg>
-    //                     </div>
-    //                     <div class="scope-content">
-    //                         <ul>
-    //                             ${scope.tasks.map(task => `
-    //                                 <li>
-    //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-    //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    //                                     </svg>
-    //                                     ${task}
-    //                                 </li>`).join('')}
-    //                         </ul>
-    //                     </div>
-    //                 `;
-    //                 dependenciesContainer.appendChild(scopeItem);
-    //                 }) : dependenciesContainer.style.display = 'none';
+        //                     scopeItem.innerHTML = `
+        //                     <div class="scope-header" onclick="toggleAccordion(event)">
+        //                         <!-- First Icon: Same for all -->
+        //                         <h3>
+        //                             <span class="scope-icon icon-planning">
+        //                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                                     <path
+        //                                         d="M9.5 2H2.5C1.95 2 1.5 2.45 1.5 3V9C1.5 9.55 1.95 10 2.5 10H9.5C10.05 10 10.5 9.55 10.5 9V3C10.5 2.45 10.05 2 9.5 2ZM3.5 9H3V8.5H3.5V9ZM3.5 7.5H3V7H3.5V7.5ZM3.5 6H3V5.5H3.5V6ZM3.5 4.5H3V4H3.5V4.5ZM4.5 9H9V8.5H4.5V9ZM4.5 7.5H9V7H4.5V7.5ZM4.5 6H9V5.5H4.5V6ZM4.5 4.5H9V4H4.5V4.5Z"
+        //                                         fill="currentColor" />
+        //                                 </svg>
+        //                             </span>
+        //                             ${scope.title}
+        //                         </h3>
+        //                         <!-- Last Icon: Same for all -->
+        //                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        //                         </svg>
+        //                     </div>
+        //                     <div class="scope-content">
+        //                         <ul>
+        //                             ${scope.tasks.map(task => `
+        //                                 <li>
+        //                                     <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        //                                         <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        //                                     </svg>
+        //                                     ${task}
+        //                                 </li>`).join('')}
+        //                         </ul>
+        //                     </div>
+        //                 `;
+        //                 dependenciesContainer.appendChild(scopeItem);
+        //                 }) : dependenciesContainer.style.display = 'none';
 
-    //             // Populate Timeline
-    //             const timelineContainer = document.getElementById('timeline');
-    //             proposal.timeline.forEach((item, index) => {
-    //                 const timelineItem = document.createElement('div');
-    //                 timelineItem.classList.add('timeline-item');
-    //                 timelineItem.innerHTML = `
-    //                     <div class="timeline-week">${item.week}</div>
-    //                     <div class="timeline-marker">${index + 1}</div>  <!-- Dynamic marker starting from 1 -->
-    //                     <div class="timeline-content">
-    //                         <h3>
-    //                             <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                                 <!-- Same SVG for all markers -->
-    //                                 <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
-    //                                 <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5" stroke-linecap="round" />
-    //                             </svg>
-    //                             ${item.phase}
-    //                         </h3>
-    //                         <p>${item.description}</p>
-    //                     </div>
-    //                 `;
-    //                 timelineContainer.appendChild(timelineItem);
-    //             });
-
-
-    //             // Populate Technology Stack
-    //             const techGrid = document.getElementById('technology-stack');
-    //             proposal.technology_stack.forEach(tech => {
-    //                 const techCard = document.createElement('div');
-    //                 techCard.classList.add('tech-card');
-    //                 techCard.innerHTML = `
-    //                     <div class="tech-icon">
-    //                         <img width="40" height="40" src=${tech.icon} alt="technology"/>
-    //                     </div>
-    //                     <h3 class="tech-name">${tech.name}</h3>
-    //                     <p class="tech-role">${tech.role}</p>
-    //                 `;
-    //                 techGrid.appendChild(techCard);
-    //             });
+        //             // Populate Timeline
+        //             const timelineContainer = document.getElementById('timeline');
+        //             proposal.timeline.forEach((item, index) => {
+        //                 const timelineItem = document.createElement('div');
+        //                 timelineItem.classList.add('timeline-item');
+        //                 timelineItem.innerHTML = `
+        //                     <div class="timeline-week">${item.week}</div>
+        //                     <div class="timeline-marker">${index + 1}</div>  <!-- Dynamic marker starting from 1 -->
+        //                     <div class="timeline-content">
+        //                         <h3>
+        //                             <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //                                 <!-- Same SVG for all markers -->
+        //                                 <circle cx="8" cy="8" r="6" stroke="#5e43f3" stroke-width="1.5" />
+        //                                 <path d="M8 4.5V8L10.5 9.5" stroke="#5e43f3" stroke-width="1.5" stroke-linecap="round" />
+        //                             </svg>
+        //                             ${item.phase}
+        //                         </h3>
+        //                         <p>${item.description}</p>
+        //                     </div>
+        //                 `;
+        //                 timelineContainer.appendChild(timelineItem);
+        //             });
 
 
-    //             // Populate Pricing Breakdown
-    //             const pricingContainer = document.getElementById('pricing-breakdown');
-    //             let totalAmount = 0; // Initialize a variable to store the total amount
+        //             // Populate Technology Stack
+        //             const techGrid = document.getElementById('technology-stack');
+        //             proposal.technology_stack.forEach(tech => {
+        //                 const techCard = document.createElement('div');
+        //                 techCard.classList.add('tech-card');
+        //                 techCard.innerHTML = `
+        //                     <div class="tech-icon">
+        //                         <img width="40" height="40" src=${tech.icon} alt="technology"/>
+        //                     </div>
+        //                     <h3 class="tech-name">${tech.name}</h3>
+        //                     <p class="tech-role">${tech.role}</p>
+        //                 `;
+        //                 techGrid.appendChild(techCard);
+        //             });
 
-    //             proposal.pricing.forEach(pricing => {
-    //                 // Extract numeric value from the rate string
-    //                 const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
 
-    //                 // Calculate the amount by multiplying rate and hours
-    //                 const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
+        //             // Populate Pricing Breakdown
+        //             const pricingContainer = document.getElementById('pricing-breakdown');
+        //             let totalAmount = 0; // Initialize a variable to store the total amount
 
-    //                 // Add the calculated amount to the total amount
-    //                 totalAmount += parseFloat(amount);
+        //             proposal.pricing.forEach(pricing => {
+        //                 // Extract numeric value from the rate string
+        //                 const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
 
-    //                 const pricingItem = document.createElement('div');
-    //                 pricingItem.classList.add('pricing-item');
-    //                 pricingItem.innerHTML = `
-    //                     <div class="pricing-info">
-    //                         <h3>${pricing.title}</h3>
-    //                         <p>${pricing.hours} @ ${pricing.rate}/hr</p>
-    //                     </div>
-    //                     <div class="pricing-amount">$${amount}</div>
-    //                 `;
-    //                 pricingContainer.appendChild(pricingItem);
-    //             });
-    //             // Add the total amount section at the bottom
-    //             const pricingTotal = document.createElement('div');
-    //             pricingTotal.classList.add('pricing-total');
-    //             pricingTotal.innerHTML = `
-    //                 <div>Total</div>
-    //                 <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
-    //             `;
-    //             pricingContainer.appendChild(pricingTotal);
+        //                 // Calculate the amount by multiplying rate and hours
+        //                 const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
 
-    //             // Populate Client Testimonials
-    //             const testimonialsGrid = document.getElementById('testimonials');
-    //             proposal?.testimonials.length?
-    //             proposal?.testimonials?.forEach(testimonial => {
-    //                 const testimonialCard = document.createElement('div');
-    //                 testimonialCard.classList.add('testimonial-card');
-    //                 testimonialCard.innerHTML = `
-    //                     <div class="testimonial-stars">${'★'.repeat(testimonial.stars)}</div>
-    //                     <p class="testimonial-text">"${testimonial.text}"</p>
-    //                     <div class="testimonial-author">
-    //                         <img src="./images/person.png" class="testimonial-avatar">
-    //                         <div class="testimonial-info">
-    //                             <h4>${testimonial.author}</h4>
-    //                             <p>${testimonial.role}</p>
-    //                         </div>
-    //                     </div>
-    //                 `;
-    //                 testimonialsGrid.appendChild(testimonialCard);
-    //             }) :  testimonialsGrid.parentElement.classList.add('section-title3');
-    //         });
+        //                 // Add the calculated amount to the total amount
+        //                 totalAmount += parseFloat(amount);
 
-    //     // Accordion functionality for scope of work
-    //     function toggleAccordion(event) {
-    //         const scopeItem = event.currentTarget.closest('.scope-item');
+        //                 const pricingItem = document.createElement('div');
+        //                 pricingItem.classList.add('pricing-item');
+        //                 pricingItem.innerHTML = `
+        //                     <div class="pricing-info">
+        //                         <h3>${pricing.title}</h3>
+        //                         <p>${pricing.hours} @ ${pricing.rate}/hr</p>
+        //                     </div>
+        //                     <div class="pricing-amount">$${amount}</div>
+        //                 `;
+        //                 pricingContainer.appendChild(pricingItem);
+        //             });
+        //             // Add the total amount section at the bottom
+        //             const pricingTotal = document.createElement('div');
+        //             pricingTotal.classList.add('pricing-total');
+        //             pricingTotal.innerHTML = `
+        //                 <div>Total</div>
+        //                 <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
+        //             `;
+        //             pricingContainer.appendChild(pricingTotal);
 
-    //         // Toggle active class to show or hide content
-    //         scopeItem.classList.toggle('active');
+        //             // Populate Client Testimonials
+        //             const testimonialsGrid = document.getElementById('testimonials');
+        //             proposal?.testimonials.length?
+        //             proposal?.testimonials?.forEach(testimonial => {
+        //                 const testimonialCard = document.createElement('div');
+        //                 testimonialCard.classList.add('testimonial-card');
+        //                 testimonialCard.innerHTML = `
+        //                     <div class="testimonial-stars">${'★'.repeat(testimonial.stars)}</div>
+        //                     <p class="testimonial-text">"${testimonial.text}"</p>
+        //                     <div class="testimonial-author">
+        //                         <img src="./images/person.png" class="testimonial-avatar">
+        //                         <div class="testimonial-info">
+        //                             <h4>${testimonial.author}</h4>
+        //                             <p>${testimonial.role}</p>
+        //                         </div>
+        //                     </div>
+        //                 `;
+        //                 testimonialsGrid.appendChild(testimonialCard);
+        //             }) :  testimonialsGrid.parentElement.classList.add('section-title3');
+        //         });
 
-    //         // Close other items if they are open
-    //         const allScopeItems = document.querySelectorAll('.scope-item');
-    //         allScopeItems.forEach(item => {
-    //             if (item !== scopeItem && item.classList.contains('active')) {
-    //                 item.classList.remove('active');
-    //             }
-    //         });
-    //     }
+        //     // Accordion functionality for scope of work
+        //     function toggleAccordion(event) {
+        //         const scopeItem = event.currentTarget.closest('.scope-item');
+
+        //         // Toggle active class to show or hide content
+        //         scopeItem.classList.toggle('active');
+
+        //         // Close other items if they are open
+        //         const allScopeItems = document.querySelectorAll('.scope-item');
+        //         allScopeItems.forEach(item => {
+        //             if (item !== scopeItem && item.classList.contains('active')) {
+        //                 item.classList.remove('active');
+        //             }
+        //         });
+        //     }
     </script>
 
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64d531d8b3d556ea8480e670"
