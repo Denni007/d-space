@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Blog Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input, button { padding: 10px; margin: 5px; }
+    button { cursor: pointer; }
+    #previewBtn { display: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>AI Blog Generator</h1>
+
+  <form id="blogForm">
+    <input type="text" id="title" placeholder="Enter blog title" required />
+    <button type="submit">Generate Blog</button>
+  </form>
+
+  <button id="previewBtn">Preview Blog</button>
+
+  <script>
+    const form = document.getElementById("blogForm");
+    const previewBtn = document.getElementById("previewBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById("title").value;
+
+      const res = await fetch("http://localhost:4000/api/blogs/generate-blog", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title })
+      });
+
+      const data = await res.json();
+
+      if (data.previewUrl) {
+        previewBtn.style.display = "inline-block";
+        previewBtn.onclick = () => {
+          window.location.href = data.previewUrl;
+        };
+      } else {
+        alert("Failed to generate blog.");
+      }
+    });
+  </script>
+</body>
+</html>
