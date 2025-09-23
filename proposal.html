@@ -1070,10 +1070,10 @@
             let data = null;
             if (proposalId) {
                 try {
-                    const response = await fetch(apiUrl);
+                    const response = await fetch(apiUrl+"/"+proposalId);
                     if (response.ok) {
                         const apiData = await response.json();
-                        data = apiData.items.find(p => p.id === proposalId);
+                        data = apiData.items?apiData.items.find(p => p.id === proposalId): apiData;
                         console.log('done to fetch from API, falling back to local JSON:');
                     }
                 } catch (error) {
@@ -1313,32 +1313,42 @@
                     techGrid.appendChild(techCard);
                 });
 
-
                 // Populate Pricing Breakdown
                 const pricingContainer = document.getElementById('pricing-breakdown');
                 let totalAmount = 0; // Initialize a variable to store the total amount
 
                 proposal.pricing.forEach(pricing => {
-                    // Extract numeric value from the rate string
-                    const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
+                    let amount = 0;
+                    let displayText = "";
 
-                    // Calculate the amount by multiplying rate and hours
-                    const amount = (rateValue * parseFloat(pricing.hours)).toFixed(2); // Ensure two decimal places
+                    // Case 1: Fixed Cost
+                    if (pricing.hours.toLowerCase().includes("fixed")) {
+                        amount = parseFloat(pricing.rate.replace('$', '').trim()); 
+                        displayText = `${pricing.hours} @ ${pricing.rate}`;
+                    } 
+                    // Case 2: Hourly Rate
+                    else {
+                        const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
+                        const hoursValue = parseFloat(pricing.hours);
+                        amount = rateValue * hoursValue;
+                        displayText = `${pricing.hours} @ ${pricing.rate}`;
+                    }
 
                     // Add the calculated amount to the total amount
-                    totalAmount += parseFloat(amount);
+                    totalAmount += amount;
 
                     const pricingItem = document.createElement('div');
                     pricingItem.classList.add('pricing-item');
                     pricingItem.innerHTML = `
                         <div class="pricing-info">
                             <h3>${pricing.title}</h3>
-                            <p>${pricing.hours} @ ${pricing.rate}/hr</p>
+                            <p>${displayText}</p>
                         </div>
-                        <div class="pricing-amount">$${amount}</div>
+                        <div class="pricing-amount">$${amount.toFixed(2)}</div>
                     `;
                     pricingContainer.appendChild(pricingItem);
                 });
+
                 // Add the total amount section at the bottom
                 const pricingTotal = document.createElement('div');
                 pricingTotal.classList.add('pricing-total');
@@ -1347,6 +1357,7 @@
                     <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
                 `;
                 pricingContainer.appendChild(pricingTotal);
+                            
 
                 // Populate Client Testimonials
                 const testimonialsSection = document.getElementById('testimonials2'); // Assuming an outer div/section for testimonials

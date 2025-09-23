@@ -915,7 +915,6 @@
     </div>
 
     <div class="section" id="proposal-content">
-        
         <div class="container">
             <div id="proposal-list-container">
                 <h2>Proposals</h2>
@@ -933,137 +932,139 @@
                         <tr><td colspan="5">Loading...</td></tr>
                     </tbody>
                 </table>
+                <button class="button-small w-button" id="new-proposal-btn">New Proposal </button>
             </div>
-            <div class="proposal-header">
-                <div class="proposal-title">
-                  <button class="button-small w-button" id="new-proposal-btn">New Proposal </button>
-                  <label for="proposal-id-input" class="field-label">Project id</label>
-                  <input type="text" class="form-input form-input-small w-input" maxlength="256"
-                          name="project-name-input" id="proposal-id-input" value="" placeholder="id of Project">
-                    <label for="proposal-title-input" class="field-label">Project Name</label>
-                    <input type="text" class="form-input form-input-small w-input" id="proposal-title-input"
-                        placeholder="Name of Project">
-                    <label for="client-name-input" class="field-label">Client Name</label>
-                    <input type="text" class="form-input form-input-small w-input" id="client-name-input"
-                        placeholder="Client Name">
-                </div>
-            </div>
-            <div class="project-details">
-                <div class="detail-card">
-                    <h3><label for="submission-date-input" class="field-label">Submission Date</label></h3>
-                    <p><input type="date" class="form-input form-input-small w-input" id="submission-date-input"></p>
-                </div>
-                <div class="detail-card">
-                    <h3><label for="status-select" class="field-label">Status</label></h3>
-                    <p>
-                        <select class="form-input form-input-small w-select" id="status-select">
-                            <option value="Draft">Draft</option>
-                            <option value="In Review">In Review</option>
-                            <option value="Approved">Approved</option>
-                            <option value="Pending">Pending</option>
-                            <option value="Completed">Completed</option>
-                        </select>
-                    </p>
-                </div>
-                <div class="detail-card">
-                    <h3><label for="project-type-input" class="field-label">Project Type</label></h3>
-                    <p><input type="text" class="form-input form-input-small w-input" id="project-type-input"></p>
-                </div>
-                <div class="detail-card">
-                    <h3><label for="duration-input" class="field-label">Duration</label></h3>
-                    <p><input type="text" class="form-input form-input-small w-input" id="duration-input"></p>
-                </div>
-            </div>
-            <div class="section" id="scope-of-work">
-                <h2 class="section-title">Scope of Work</h2>
-                <div class="scope-item active">
-                    <div class="scope-header">
-                        <div class="accordion-head" onclick="toggleAccordion(event)">
-                            <span class=" w-form-label">Phase</span>
-                            <input type="text" class="phase-title-input form-input form-input-small  w-input"
-                                maxlength="746" name="phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
+            <div id="proposal-detail-container">
+              <section class="proposal-header">
+                  <div class="proposal-title">
+                   
+                    <label for="proposal-id-input" class="field-label">Project id</label>
+                    <input type="text" class="form-input form-input-small w-input" maxlength="256"
+                            name="project-name-input" id="proposal-id-input" value="" placeholder="id of Project">
+                      <label for="proposal-title-input" class="field-label">Project Name</label>
+                      <input type="text" class="form-input form-input-small w-input" id="proposal-title-input"
+                          placeholder="Name of Project">
+                      <label for="client-name-input" class="field-label">Client Name</label>
+                      <input type="text" class="form-input form-input-small w-input" id="client-name-input"
+                          placeholder="Client Name">
+                  </div>
+              </section>
+              <section class="project-details">
+                  <div class="detail-card">
+                      <h3><label for="submission-date-input" class="field-label">Submission Date</label></h3>
+                      <p><input type="date" class="form-input form-input-small w-input" id="submission-date-input"></p>
+                  </div>
+                  <div class="detail-card">
+                      <h3><label for="status-select" class="field-label">Status</label></h3>
+                      <p>
+                          <select class="form-input form-input-small w-select" id="status-select">
+                              <option value="Draft">Draft</option>
+                              <option value="In Review">In Review</option>
+                              <option value="Approved">Approved</option>
+                              <option value="Pending">Pending</option>
+                              <option value="Completed">Completed</option>
+                          </select>
+                      </p>
+                  </div>
+                  <div class="detail-card">
+                      <h3><label for="project-type-input" class="field-label">Project Type</label></h3>
+                      <p><input type="text" class="form-input form-input-small w-input" id="project-type-input"></p>
+                  </div>
+                  <div class="detail-card">
+                      <h3><label for="duration-input" class="field-label">Duration</label></h3>
+                      <p><input type="text" class="form-input form-input-small w-input" id="duration-input"></p>
+                  </div>
+                </section>
+              <section class="section" id="scope-of-work">
+                  <h2 class="section-title">Scope of Work</h2>
+                  <div class="scope-item active">
+                      <div class="scope-header">
+                          <div class="accordion-head" onclick="toggleAccordion(event)">
+                              <span class=" w-form-label">Phase</span>
+                              <input type="text" class="phase-title-input form-input form-input-small  w-input"
+                                  maxlength="746" name="phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
 
-                            <div class="icon-circle-small bg-gray-3"
-                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
-                                    alt="" class="icon-small">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scope-content">
-                        <ul>
-                            <li>
-                                <input type="text" class="scope-task-input  form-input form-input-small w-input"
-                                    value="Document tracking schema for future reference and alignment across teams.">
-                                <div class="circle-small remove-item-btn">
-                                    <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                        alt="" class="">
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="cw-accent-btn ">
-                            <a href="#" class="add-item-btn button-small w-button"
-                                data-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add List</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cw-accent-btn ">
-                    <a href="#" class="add-item-btn button-small w-button" id="add-new-scope-btn"
-                        ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
-                </div>
+                              <div class="icon-circle-small bg-gray-3"
+                                  style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                  <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
+                                      alt="" class="icon-small">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="scope-content">
+                          <ul>
+                              <li>
+                                  <input type="text" class="scope-task-input  form-input form-input-small w-input"
+                                      value="Document tracking schema for future reference and alignment across teams.">
+                                  <div class="circle-small remove-item-btn">
+                                      <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
+                                          alt="" class="">
+                                  </div>
+                              </li>
+                          </ul>
+                          <div class="cw-accent-btn ">
+                              <a href="#" class="add-item-btn button-small w-button"
+                                  data-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add List</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cw-accent-btn ">
+                      <a href="#" class="add-item-btn button-small w-button" id="add-new-scope-btn"
+                          ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
+                  </div>
 
-                <!-- <button class="button-small w-button" >Add New Phase</button> -->
+                  <!-- <button class="button-small w-button" >Add New Phase</button> -->
 
 
-            </div>
-            <div class="section">
-                <h2 class="section-title">Project Timeline</h2>
-                <div class="timeline" id="timeline">
-                    <button class="button-small justify-center w-button" id="add-timeline-item-btn">Add Timeline
-                        Item</button>
-                </div>
-            </div>
+              </section>
+              <section class="section" id="timeline-of-work">
+                  <h2 class="section-title">Project Timeline</h2>
+                  <div class="timeline" id="timeline">
+                      <button class="button-small justify-center w-button" id="add-timeline-item-btn">Add Timeline
+                          Item</button>
+                  </div>
+                </section>
 
-            <section class="section" id="out-of-scope">
-                <h2 class="section-title">Out of Scope</h2>
-                <button class="button-small w-button" id="add-new-out-of-scope-btn">Add Exclusion Section</button>
-            </section>
+              <section class="section" id="out-of-scope">
+                  <h2 class="section-title">Out of Scope</h2>
+                  <button class="button-small w-button" id="add-new-out-of-scope-btn">Add Exclusion Section</button>
+              </section>
 
-            <section class="section" id="dependencies">
-                <h2 class="section-title">Dependencies</h2>
-                <button class="button-small w-button" id="add-new-dependency-btn">Add Dependency</button>
-            </section>
+              <section class="section" id="dependencies">
+                  <h2 class="section-title">Dependencies</h2>
+                  <button class="button-small w-button" id="add-new-dependency-btn">Add Dependency</button>
+              </section>
 
-            <section class="section">
-                <h2 class="section-title">Technology Stack</h2>
-                <div class="tech-grid" id="technology-stack">
-                    <button class="button-small w-button" id="add-tech-item-btn">Add Technology</button>
-                </div>
-            </section>
+              <section class="section" id="tech-of-work">
+                  <h2 class="section-title">Technology Stack</h2>
+                  <div class="tech-grid" id="technology-stack">
+                      <button class="button-small w-button" id="add-tech-item-btn">Add Technology</button>
+                  </div>
+              </section>
 
-            <section class="section">
-                <h2 class="section-title">Pricing Breakdown</h2>
-                <div class="pricing-items-container">
-                </div>
-                <button class="button-small w-button" id="add-pricing-item-btn">Add Pricing Item</button>
-                <div class="pricing-total">
-                    <div>Total</div>
-                    <div class="pricing-total-amount">$0.00</div>
-                </div>
-            </section>
+              <section class="section" id="price-of-work">
+                  <h2 class="section-title">Pricing Breakdown</h2>
+                  <div class="pricing-items-container">
+                  </div>
+                  <button class="button-small w-button" id="add-pricing-item-btn">Add Pricing Item</button>
+                  <div class="pricing-total">
+                      <div>Total</div>
+                      <div class="pricing-total-amount">$0.00</div>
+                  </div>
+              </section>
 
-            <section class="section">
-                <h2 class="section-title">Client Testimonials</h2>
-                <div class="testimonials-grid" id="testimonials">
-                    <button class="button-small w-button" id="add-testimonial-item-btn">Add Testimonial</button>
-                </div>
-            </section>
- <button class="button-small w-button"id="generate-json-btn">Generated JSON</button>
-            <p>You can edit the JSON below to update the form fields directly.</p>
-            <button class="button-small w-button" id="save-proposal-btn">SAVE </button>
-            <textarea id="json-output" class="form-input w-input" rows="20"
-                style="font-family: monospace; display: none;"></textarea>
-
+              <section class="section" id="review-of-work">
+                  <h2 class="section-title">Client Testimonials</h2>
+                  <div class="testimonials-grid" id="testimonials">
+                      <button class="button-small w-button" id="add-testimonial-item-btn">Add Testimonial</button>
+                  </div>
+              </section>
+              <button class="button-small w-button"id="generate-json-btn">Generated JSON</button>
+              <p>You can edit the JSON below to update the form fields directly.</p>
+              <button class="button-small w-button" id="save-proposal-btn">SAVE </button>
+              <textarea id="json-output" class="form-input w-input" rows="20"
+                  style="font-family: monospace; display: none;"></textarea>
+              </div>
         </div>
     </div>
     <div class="footer">
@@ -1148,6 +1149,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const apiUrl = 'https://insider.starluxetech.com/api/proposals';
   const tableBody = document.querySelector('#proposal-list tbody') || document.querySelector('#proposal-list-body');
   const listContainer = document.getElementById('proposal-list-container');
+  const detailContainer = document.getElementById('proposal-detail-container');
+  detailContainer.style.display = 'none';
   document.getElementById('generate-json-btn')?.addEventListener('click', generateJson, { once: false });
   document.getElementById('save-proposal-btn')?.addEventListener('click', saveProposalFromGenerated);
 
@@ -1241,7 +1244,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function openNewProposal({ skipPush = false } = {}) {
   const proposal = defaultProposal();
   window.proposalId = null; // ensure generateJson treats this as new
-  if (listContainer) listContainer.style.display = 'none';
+  if (listContainer) {listContainer.style.display = 'none';
+detailContainer.style.display = "block";};
   clearDynamicSections();
   initializePage(proposal);
   if (!skipPush) setIdParam('new');
@@ -1295,7 +1299,11 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
     console.log(proposal)
     window.proposalId = String(id);
     // Hide list section if present
-    if (listContainer) listContainer.style.display = 'none';
+    if (listContainer) {
+      
+      listContainer.style.display = 'none';
+      detailContainer.style.display = "block";
+    };
     // Render editor
     clearDynamicSections();
     initializePage(proposal);
@@ -1308,7 +1316,10 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
   // Back to list (optional button)
   // ----------------------------
   document.getElementById('back-to-list-btn')?.addEventListener('click', () => {
-    if (listContainer) listContainer.style.display = 'block';
+    if (listContainer) {
+      listContainer.style.display = 'block'
+      detailContainer.style.display = "none";
+    };
     clearIdParam();     // remove ?id
     window.proposalId = null;
   });
@@ -1322,7 +1333,11 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
       console.log(id)
       openProposal(id, { skipPush: true });
     } else {
-      if (listContainer) listContainer.style.display = 'block';
+      if (listContainer) {
+        listContainer.style.display = 'block';
+        detailContainer.style.display = "none";
+      
+      };
       window.proposalId = null;
     }
   });
@@ -1576,25 +1591,30 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
     const title = data.title || "New Service";
     const hours = data.hours ?? 8;
     const rate = data.rate ?? 25;
-    const is_fixed = !!data.is_fixed;
+
+    const is_fixed = rate == 1? true: false;
 
     newItem.innerHTML = `
       <div class="pricing-info">
         <h3><span class="w-form-label">Description:</span>
           <input type="text" class="pricing-title-input form-input w-input" value="${escapeHtml(title)}">
         </h3>
-        <label class="checkbox-field switch w-checkbox">
-          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch"></div>
-          <input type="checkbox" class="fixed-cost-checkbox ${uniqueId}" style="opacity:0;position:absolute;z-index:-1" ${is_fixed ? 'checked' : ''}>
-          <span class="checkbox-label w-form-label">Fixed Cost</span>
-        </label>
+        <form id="email-form" name="email-form" data-name="Email Form" aria-label="Email Form">
+                                <label class="checkbox-field switch w-checkbox">
+                                    <div
+                                        class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-switch ${is_fixed ? 'w--redirected-checked' : ''}">
+                                    </div>
+                                    <input type="checkbox" id="checkbox-3" class="fixed-cost-checkbox checkbox-${uniqueId}" style="opacity:0;position:absolute;z-index:-1" ${is_fixed ? 'w--redirected-checked' : ''}>
+                                    <span class="checkbox-label w-form-label">Fixed Cost</span>
+                                </label>
+                            </form>
         <div class="row rate-based-row">
           <label class="radio-button-field w-radio">
-            <input type="number" class="pricing-hours-input form-input form-input-small w-input" value="${Number(hours)}">
+            <input type="number" class="pricing-hours-input form-input form-input-small w-input" value="${Number(hours)}" >
             <span class="radio-button-label w-form-label hours-label">Hours</span>
           </label>
           <label class="radio-button-field w-radio rate-label-wrapper">
-            <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${Number(rate)}">
+            <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${Number(rate)}" ${rate == 1 ? `disabled="true"`:''}">
             <span class="radio-button-label w-form-label">Rate</span>
           </label>
         </div>
@@ -1607,7 +1627,7 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
       </div>`;
     container.appendChild(newItem);
-
+      
     setupPricingCalculations(newItem);
     newItem.querySelector('.remove-pricing-btn')?.addEventListener('click', (e) => {
       e.currentTarget.closest('.pricing-item')?.remove();
@@ -2013,7 +2033,10 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
     }
 
     alert(isNew ? 'Created successfully.' : 'Updated successfully.');
-    if (listContainer) listContainer.style.display = 'block';
+    if (listContainer){
+      listContainer.style.display = 'block'
+      defaultProposal.style.display = "none";
+    };
       clearIdParam({ replace: true });   // remove id param
       window.proposalId = null;          // 
     // Refresh the table so list view is up to date
