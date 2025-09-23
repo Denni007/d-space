@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UTM Builder</title>
+
+  <!-- jQuery & Select2 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f8f8f8;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #utm_url {
+      background: #f0f0f0;
+      padding: 10px;
+      margin-top: 20px;
+      word-break: break-all;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__choice {
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      color: inherit !important;
+    }
+    .select2-container {
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>UTM Builder</h2>
+
+  <label for="ga4_channel">Select GA4 Channel (Optional)</label>
+  <select id="ga4_channel">
+    <option value="">-- None --</option>
+    <option value="search">Search</option>
+    <option value="social">Social</option>
+    <option value="shopping">Shopping</option>
+    <option value="video">Video</option>
+  </select>
+
+  <label for="website_url">Website URL</label>
+  <input type="text" id="website_url" placeholder="https://example.com" />
+
+  <label for="utm_source">Campaign Source (utm_source) *</label>
+  <select id="utm_source"></select>
+
+  <label for="utm_medium">Campaign Medium (utm_medium) *</label>
+  <input type="text" id="utm_medium" placeholder="e.g. cpc, organic, email" />
+
+  <label for="utm_campaign">Campaign Name (utm_campaign) *</label>
+  <input type="text" id="utm_campaign" placeholder="e.g. summer_sale" />
+
+  <div>
+    <label>Generated UTM URL</label>
+    <div id="utm_url">Your final URL will appear here...</div>
+  </div>
+
+  <script>
+    const sources = {
+      search: [
+        { id: '360.cn', text: '360.cn', platform: 'search platform' },
+        { id: 'alice', text: 'alice', platform: 'search platform' },
+        { id: 'aol', text: 'aol', platform: 'search platform' }
+        // Add remaining 126 items here if needed...
+      ],
+      social: [
+        { id: 'facebook', text: 'facebook', platform: 'social platform' },
+        { id: 'instagram', text: 'instagram', platform: 'social platform' },
+        { id: 'twitter', text: 'twitter', platform: 'social platform' }
+      ],
+      shopping: [
+        { id: 'amazon', text: 'amazon', platform: 'shopping platform' },
+        { id: 'ebay', text: 'ebay', platform: 'shopping platform' }
+      ],
+      video: [
+        { id: 'youtube', text: 'youtube', platform: 'video platform' },
+        { id: 'vimeo', text: 'vimeo', platform: 'video platform' }
+      ]
+    };
+
+    function formatSource(source) {
+      if (!source.id) return source.text;
+      return $(
+        `<div><strong>${source.text}</strong><br><small>${source.platform}</small></div>`
+      );
+    }
+
+    function formatSourceSelection(source) {
+      return source.id || source.text;
+    }
+
+    function updateSourceOptions(channel) {
+      const data = sources[channel] || [].concat(
+        sources.search, sources.social, sources.shopping, sources.video
+      );
+      $('#utm_source')
+        .empty()
+        .select2({
+          data: data,
+          placeholder: 'Select or search source...',
+          templateResult: formatSource,
+          templateSelection: formatSourceSelection,
+          allowClear: true
+        });
+    }
+
+    $('#ga4_channel').on('change', function () {
+      updateSourceOptions(this.value);
+    });
+
+    $('#utm_source').select2({
+      placeholder: 'Select or search source...',
+      templateResult: formatSource,
+      templateSelection: formatSourceSelection,
+      allowClear: true
+    });
+
+    function buildUTM() {
+      const base = $('#website_url').val();
+      const source = $('#utm_source').val();
+      const medium = $('#utm_medium').val();
+      const campaign = $('#utm_campaign').val();
+
+      if (!base || !source || !medium || !campaign) {
+        $('#utm_url').text('Please fill all required fields.');
+        return;
+      }
+
+      const url = new URL(base);
+      url.searchParams.set('utm_source', source);
+      url.searchParams.set('utm_medium', medium);
+      url.searchParams.set('utm_campaign', campaign);
+      $('#utm_url').text(url.toString());
+    }
+
+    $('input, select').on('change keyup', buildUTM);
+
+    // Default on load
+    updateSourceOptions('');
+  </script>
+</body>
+</html>
