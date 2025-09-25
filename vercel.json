@@ -39,7 +39,7 @@
     { "src": "/case-study/learning-roots", "dest": "/casestudy.html"},
     { "src": "/case-study/rangreli", "dest": "/casestudy2.html"},
     { "src": "/blog/customer-engagement-analytics-best-practices-metrics", "dest": "/blog-17.html" },
-    
+    { "src": "/blog/how-to-use-google-analytics-for-competitor-analysis", "dest": "/blog-18.html" },
 
     { "src": "/proposal", "dest": "/proposal.html"},
     { "src": "/proposaledit", "dest": "/proposaledit.html"},
