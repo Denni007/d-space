@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Architecture: AI‑Assisted Blog Publisher (React + Node.js + GitHub)</title>
+  <style>
+    :root{--bg:#0b0f14;--fg:#e8edf2;--muted:#98a2b3;--card:#11161d;--accent:#64b5f6;--ok:#12b886;--warn:#f59f00;--danger:#e03131;--border:#1f2630;--code:#0a1016}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:500 16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial}
+    header{padding:32px 24px 8px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0b0f14 0%, #0b0f14ee 60%, transparent 100%)}
+    h1{margin:0 0 8px;font-size:28px;letter-spacing:.2px}
+    h2{font-size:20px;margin:32px 0 8px}
+    h3{font-size:16px;margin:24px 0 8px;color:#d0d6dd}
+    p,li{color:#c9d3df}
+    code,kbd,samp{font:14px/1.5 ui-monospace,Menlo,Monaco,Consolas,monospace;background:var(--code);border:1px solid var(--border);border-radius:8px;padding:0 .35rem}
+    pre{background:var(--code);border:1px solid var(--border);border-radius:12px;padding:16px;overflow:auto}
+    pre>code{background:none;border:none;padding:0}
+    .container{max-width:1100px;margin:0 auto;padding:16px 24px 80px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#0f1720;border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:#cfe7ff}
+    .kbd{border-radius:6px;padding:2px 6px;background:#0f1720;border:1px solid var(--border)}
+    .hr{height:1px;background:var(--border);margin:24px 0}
+    .mono{font-family:ui-monospace,Menlo,Monaco,Consolas,monospace;font-size:14px}
+    details{background:#0e131b;border:1px solid var(--border);border-radius:12px;padding:12px}
+    summary{cursor:pointer;color:#dbe7f3;font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Architecture: AI‑Assisted Blog Publisher (React + Node.js + GitHub)</h1>
+    <p class="mono">Goal: Authors provide <em>title</em>, <em>hero image</em>, <em>top content</em>, and <em>references</em> in a React app. The server uses an LLM to draft clean HTML. Editors review a live preview; on approval, the system publishes to a GitHub production repo (e.g., GitHub Pages) via PR or direct commit.</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="badge">✅ Shipping constraints</div>
+        <ul>
+          <li>Frontend: React (TypeScript recommended)</li>
+          <li>Backend: Node.js + Express (TS)</li>
+          <li>Generation: OpenAI API</li>
+          <li>Storage: MongoDB (or Postgres)</li>
+          <li>Publishing: GitHub REST API (branch & PR)</li>
+          <li>Auth: GitHub OAuth (roles: author, approver)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="badge">🔐 Security defaults</div>
+        <ul>
+          <li>Sanitize HTML server‑side (DOMPurify via JSDOM)</li>
+          <li>URL allow‑list; reference validation</li>
+          <li>Rate limit + audit log on generate/publish</li>
+          <li>Secrets in <code>.env</code> / cloud secrets manager</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1) High‑Level System Diagram</h2>
+      <pre><code># Author        Reviewer/Approver         Node API                  GitHub
+#  ───────      ─────────────────         ────────                  ──────
+#  React UI  →  Preview & comments  →    /api/generate  →  LLM draft HTML
+#       │               │                 /api/validate  →  Lint/links/SEO
+#       └── save draft ─┴─ submit  →     /api/approve    →  create branch
+#                                     /api/publish       →  commit + PR → GH checks → merge → live
+#
+# Data: MongoDB stores posts, versions, approvals, GitHub PR metadata.
+</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>2) Repository Layout</h2>
+      <pre><code>ai-blog-publisher/
+├─ apps/
+│  ├─ web/                    # React (Vite/Next) admin & author UI
+│  └─ api/                    # Node/Express service
+├─ packages/
+│  ├─ prompts/                # Prompt templates & helpers
+│  └─ ui/                     # Shared UI bits (optional)
+├─ infra/
+│  ├─ github-workflows/       # PR checks (html-proofer, link-check)
+│  └─ terraform/              # (optional) managed secrets, DB
+└─ README.md
+</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>3) Data Model (MongoDB)</h2>
+      <pre><code>{
+  _id: ObjectId,
+  title: String,
+  slug: String,                // kebab-case; unique
+  heroImageUrl: String,
+  summary: String,             // short intro/top content
+  references: [String],        // URLs
+  keywords: [String],
+  audience: String,            // e.g. "developers, marketing"
+  tone: String,                // e.g. "professional, friendly"
+  wordCountTarget: Number,
+  contentHtml: String,         // sanitized HTML draft
+  outline: [String],
+  status: 'draft' | 'pending_approval' | 'approved' | 'published' | 'rejected',
+  author: { id: String, name: String },
+  approver: { id: String, name: String } | null,
+  github: {
+    repo: String,
+    owner: String,
+    branch: String,            // e.g. post/2025-08-18-my-title
+    prNumber: Number | null,
+    path: String,              // e.g. /posts/2025/08/my-title.html
+    url: String | null         // permalink after publish
+  },
+  createdAt: Date,
+  updatedAt: Date
+}
+</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>4) API Design</h2>
+      <pre><code>POST   /api/generate
+  body: { title, heroImageUrl, summary, references[], keywords[], audience, tone, wordCountTarget }
+  resp: { outline[], contentHtml, seo: { title, description }, warnings[] }
+
+POST   /api/save-draft
+  body: { postId?, ...same as above, contentHtml }
+  resp: { postId }
+
+POST   /api/submit-approval
+  body: { postId }
+
+POST   /api/approve
+  body: { postId, notes? }
+
+POST   /api/publish
+  body: { postId }
+  resp: { prUrl, branch, path }
+
+GET    /api/posts/:id
+GET    /api/posts?status=pending_approval
+</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>5) Prompting Strategy</h2>
+      <p>Two-pass generation improves quality and reduces corrections: first an outline, then the full HTML article.</p>
+      <details>
+        <summary>Outline prompt</summary>
+        <pre><code>System: You are an expert blog editor. Keep claims grounded in the provided references.
+User: Create an outline for an article with:
+- Title: {title}
+- Audience: {audience}
+- Tone: {tone}
+- Word count target: {wordCountTarget}
+- References (citations required): {references[]}
+- Top content to incorporate verbatim where appropriate: {summary}
+Return a bulleted outline with H2/H3 headings, and a list of key takeaways.
+</code></pre>
+      </details>
+      <details>
+        <summary>Draft HTML prompt</summary>
+        <pre><code>System: Produce valid, semantic HTML5 only. No inline CSS beyond simple emphasis.
+User: Using this outline: {outline}
+Write the full article with:
+- &lt;header&gt; with &lt;h1&gt; and hero image (alt text required)
+- &lt;article&gt; with h2/h3 sections, short paragraphs, lists, and code blocks where useful
+- A "References" section linking the provided citations; do not invent sources
+- Embed JSON-LD schema.org Article with author and date
+- Include basic SEO &lt;title&gt; and &lt;meta name="description"/&gt;
+- Avoid hallucinations; if unknown, say so and omit
+</code></pre>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>6) Node/Express Service (TypeScript) — Skeleton</h2>
+      <pre><code>// apps/api/src/index.ts
+import express from 'express'
+import { json } from 'body-parser'
+import cors from 'cors'
+import rateLimit from 'express-rate-limit'
+import { generateHandler } from './routes/generate'
+import { publishHandler } from './routes/publish'
+import { saveDraftHandler, approveHandler, submitApprovalHandler } from './routes/posts'
+
+const app = express()
+app.use(cors())
+app.use(json({ limit: '1mb' }))
+app.use(rateLimit({ windowMs: 60_000, max: 60 }))
+
+app.post('/api/generate', generateHandler)
+app.post('/api/save-draft', saveDraftHandler)
+app.post('/api/submit-approval', submitApprovalHandler)
+app.post('/api/approve', approveHandler)
+app.post('/api/publish', publishHandler)
+
+app.listen(process.env.PORT || 3001, () => console.log('API up'))
+</code></pre>
+      <h3>Generation route (OpenAI Responses API)</h3>
+      <pre><code>// apps/api/src/routes/generate.ts
+import type { Request, Response } from 'express'
+import OpenAI from 'openai'
+import DOMPurify from 'isomorphic-dompurify'
+import { JSDOM } from 'jsdom'
+
+const window = new JSDOM('').window as unknown as Window
+const purifier = DOMPurify(window as any)
+
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+
+export async function generateHandler(req: Request, res: Response){
+  const { title, heroImageUrl, summary, references = [], keywords = [], audience = 'general', tone = 'neutral', wordCountTarget = 1200 } = req.body
+
+  // 1) Ask for outline
+  const outlineResp = await client.responses.create({
+    model: process.env.LLM_MODEL || 'gpt-4o-mini',
+    input: [
+      { role: 'system', content: 'You are a precise blog editor. Keep claims grounded in provided references.' },
+      { role: 'user', content: `Create an outline with H2/H3 for title: "${title}"\nAudience: ${audience}\nTone: ${tone}\nWord target: ${wordCountTarget}\nReferences: ${references.join(', ')}\nTop content: ${summary}` }
+    ]
+  })
+
+  const outline = outlineResp.output_text
+
+  // 2) Draft HTML
+  const draftResp = await client.responses.create({
+    model: process.env.LLM_MODEL || 'gpt-4o-mini',
+    input: [
+      { role: 'system', content: 'Return only valid, semantic HTML5. Include JSON-LD Article.' },
+      { role: 'user', content: `Using this outline: ${outline}\nWrite the full article. Title: ${title}\nHero: ${heroImageUrl}\nSummary: ${summary}\nReferences: ${references.join(', ')}` }
+    ]
+  })
+
+  let html = draftResp.output_text || ''
+
+  // Sanitize server-side
+  html = purifier.sanitize(html, { ADD_TAGS: ['script','meta','link','img'] })
+
+  return res.json({ outline: outline?.split('\n'), contentHtml: html, seo: { title, description: summary?.slice(0, 150) }, warnings: [] })
+}
+</code></pre>
+
+      <h3>Publish to GitHub (branch → commit → PR)</h3>
+      <pre><code>// apps/api/src/routes/publish.ts
+import type { Request, Response } from 'express'
+import { Octokit } from 'octokit'
+import { Base64 } from 'js-base64'
+
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+
+export async function publishHandler(req: Request, res: Response){
+  const { postId } = req.body
+  // 1) load post from DB (omitted) → { slug, contentHtml, title }
+  const post = await loadPost(postId)
+  const owner = process.env.GH_OWNER!
+  const repo = process.env.GH_REPO!
+  const date = new Date()
+  const yyyy = date.getFullYear()
+  const mm = String(date.getMonth()+1).padStart(2,'0')
+  const dd = String(date.getDate()).padStart(2,'0')
+  const branch = `post/${yyyy}-${mm}-${dd}-${post.slug}`
+  const path = `posts/${yyyy}/${mm}/${post.slug}.html`
+
+  // 2) get default branch SHA
+  const repoInfo = await octokit.rest.repos.get({ owner, repo })
+  const baseBranch = repoInfo.data.default_branch
+  const { data: baseRef } = await octokit.rest.git.getRef({ owner, repo, ref: `heads/${baseBranch}` })
+
+  // 3) create branch
+  await octokit.rest.git.createRef({ owner, repo, ref: `refs/heads/${branch}`, sha: baseRef.object.sha })
+
+  // 4) commit file
+  await octokit.rest.repos.createOrUpdateFileContents({
+    owner, repo, path,
+    message: `feat(blog): publish ${post.title}`,
+    content: Base64.encode(post.contentHtml),
+    branch
+  })
+
+  // 5) open PR
+  const pr = await octokit.rest.pulls.create({
+    owner, repo, head: branch, base: baseBranch,
+    title: `Publish: ${post.title}`,
+    body: `Automated publish for **${post.title}**. Generated by AI, approved by @${req.user?.ghLogin}.`,
+    draft: false
+  })
+
+  // 6) save PR metadata back to DB (omitted)
+  await saveGithubMeta(postId, { branch, path, prNumber: pr.data.number, url: pr.data.html_url })
+
+  return res.json({ branch, path, prUrl: pr.data.html_url })
+}
+</code></pre>
+      <p class="muted">Notes: requires <code>repo</code> scope token; content must be Base64‑encoded. Path should match your site’s content folder (e.g., <code>public/posts/</code> for a static site or <code>_posts/</code> for Jekyll/Eleventy).</p>
+    </section>
+
+    <section class="card">
+      <h2>7) React Admin — Minimal Authoring UI</h2>
+      <pre><code>// apps/web/src/pages/NewPost.tsx
+import { useState } from 'react'
+
+export default function NewPost(){
+  const [form, setForm] = useState({ title:'', heroImageUrl:'', summary:'', references:'', keywords:'' })
+  const [html, setHtml] = useState('')
+
+  async function generate(){
+    const r = await fetch('/api/generate', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
+      ...form,
+      references: form.references.split('\n').map(s => s.trim()).filter(Boolean),
+      keywords: form.keywords.split(',').map(s => s.trim()).filter(Boolean)
+    })})
+    const data = await r.json()
+    setHtml(data.contentHtml)
+  }
+
+  async function submitForApproval(){
+    // call /api/save-draft then /api/submit-approval (omitted)
+  }
+
+  return (
+    &lt;div className="grid grid-cols-2 gap-6"&gt;
+      &lt;div&gt;
+        &lt;label&gt;Title&lt;/label&gt;
+        &lt;input value={form.title} onChange={e=>setForm(f=>({...f,title:e.target.value}))} /&gt;
+        &lt;label&gt;Hero Image URL&lt;/label&gt;
+        &lt;input value={form.heroImageUrl} onChange={e=>setForm(f=>({...f,heroImageUrl:e.target.value}))} /&gt;
+        &lt;label&gt;Top Content (summary)&lt;/label&gt;
+        &lt;textarea value={form.summary} onChange={e=>setForm(f=>({...f,summary:e.target.value}))} rows={6}/&gt;
+        &lt;label&gt;References (one per line)&lt;/label&gt;
+        &lt;textarea value={form.references} onChange={e=>setForm(f=>({...f,references:e.target.value}))} rows={6}/&gt;
+        &lt;label&gt;Keywords (comma‑sep)&lt;/label&gt;
+        &lt;input value={form.keywords} onChange={e=>setForm(f=>({...f,keywords:e.target.value}))} /&gt;
+        &lt;button onClick={generate}&gt;Generate Draft&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h3&gt;Live Preview&lt;/h3&gt;
+        &lt;iframe title="preview" srcDoc={html} style={{width:'100%',height:'70vh',background:'white'}} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+</code></pre>
+      <p>For safety, the server sanitizes HTML; the preview here is just a convenience sandbox via <code>srcDoc</code>.</p>
+    </section>
+
+    <section class="card">
+      <h2>8) Approvals & Governance</h2>
+      <ul>
+        <li>Only users with role <code>approver</code> can approve/publish. Use GitHub OAuth for SSO & identity.</li>
+        <li>Publishing always opens a PR; protected branch rules + checks (HTML lint, link checker) must pass before merge.</li>
+        <li>Audit log table: who generated, edited, approved, published; store prompt+model version for traceability.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>9) CI for Content PRs (GitHub Actions)</h2>
+      <details open>
+        <summary><code>.github/workflows/content-checks.yml</code></summary>
+        <pre><code>name: Content checks
+on:
+  pull_request:
+    paths:
+      - 'posts/**.html'
+      - 'public/posts/**.html'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HTML Proofer
+        uses: chabad360/htmlproofer@v1.1
+        with:
+          directory: '.'
+      - name: Link check
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress --exclude-mail --accept 200,429 .
+</code></pre>
+      </details>
+      <p>If your production site is GitHub Pages or a static site, either merge triggers deploy automatically, or add a second workflow to build and deploy.</p>
+    </section>
+
+    <section class="card">
+      <h2>10) Environment & Config</h2>
+      <pre><code># apps/api/.env
+OPENAI_API_KEY=sk-...
+LLM_MODEL=gpt-4o-mini
+MONGO_URI=mongodb+srv://...
+GH_OWNER=your-org-or-user
+GH_REPO=your-production-site-repo
+GITHUB_TOKEN=ghp_...    # repo scope, or use a GitHub App
+</code></pre>
+      <ul>
+        <li>Prefer a GitHub App for finer permissions; otherwise use a PAT stored in a cloud secret manager.</li>
+        <li>Protect <code>main</code> with required status checks; optionally auto‑merge after checks pass.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>11) Content Conventions</h2>
+      <ul>
+        <li>File path: <code>posts/YYYY/MM/&lt;slug&gt;.html</code></li>
+        <li>HTML includes OpenGraph/Twitter meta + JSON‑LD Article block.</li>
+        <li>All external links have <code>rel="nofollow noopener noreferrer"</code>.</li>
+        <li>Hero image: absolute URL; ensure alt text is not empty.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>12) Quickstart (Local)</h2>
+      <ol>
+        <li><span class="kbd">npm create vite@latest apps/web</span> (or Next.js), then scaffold the form and preview page.</li>
+        <li><span class="kbd">npm init -y</span> in <code>apps/api</code>, install <code>express openai octokit jsdom isomorphic-dompurify</code>.</li>
+        <li>Add the routes above; wire to MongoDB; configure <code>.env</code>.</li>
+        <li>Run API: <span class="kbd">node apps/api/dist/index.js</span>; Run Web: <span class="kbd">npm run dev</span>.</li>
+        <li>Create a test repo (or use your live one) and set <code>GH_OWNER</code>/<code>GH_REPO</code>/<code>GITHUB_TOKEN</code>.</li>
+        <li>Generate a draft → submit for approval → approve → publish → check the opened PR and merge.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>13) Future Enhancements</h2>
+      <ul>
+        <li>Image upload + optimization pipeline (Cloudinary/Imgix)</li>
+        <li>Automatic table of contents & anchor links</li>
+        <li>Internationalization: generate localized variants from same outline</li>
+        <li>Embeddings to check reference coverage & hallucination detector</li>
+        <li>Scheduled publishing (cron) after approval</li>
+      </ul>
+    </section>
+
+    <div class="hr"></div>
+    <p class="mono">This document gives you a production‑ready blueprint you can commit as <code>docs/architecture.html</code> and evolve as the system matures.</p>
+  </main>
+</body>
+</html>
