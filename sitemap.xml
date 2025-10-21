@@ -67,6 +67,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://www.starluxetech.com/case-study/hydratherma</loc>
+  <lastmod>2025-10-14T13:22:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://www.starluxetech.com/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story</loc>
   <lastmod>2025-02-14T13:22:49+00:00</lastmod>
   <priority>0.64</priority>
@@ -151,4 +156,5 @@
 <lastmod>2025-09-25T11:20:15+00:00</lastmod>
 <priority>0.64</priority>
 </url>
+
 </urlset>
