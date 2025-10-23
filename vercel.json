@@ -1,24 +1,26 @@
 {
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/3d", "dest": "/new-ar.html" },
 
+    { "src": "/", "dest": "/index.html" },
     { "src": "/contact-us", "dest": "/contact-us.html" },
+    { "src": "/our-team", "dest": "/our-team.html" },
     { "src": "/GDPR", "dest": "/gdpr.html" },
+    { "src": "/sitemap.xml", "dest": "/sitmap.xml" },
+
     { "src": "/ga4-migration", "dest": "/ga4-migration.html" },
     { "src": "/tracking", "dest": "/tracking.html" },
     { "src": "/s2s-gtm", "dest": "/s2s-gtm.html" },
     { "src": "/service/conversion-rate-optimization", "dest": "/cro-analytics.html" },
 
-    { "src": "/sitemap.xml", "dest": "/sitmap.xml" },
-    { "src": "/meet-with-us.html", "dest": "/contact-us.html" },
-    { "src": "/our-team", "dest": "/our-team.html" },
-    { "src": "/(.*)/js/(.*)", "dest": "/js/$2" },
-    { "src": "/(.*)/css/(.*)", "dest": "/css/$2" },
-    { "src": "/(.*)/images/(.*)", "dest": "/css/$2" },
+    { "src": "/case-studies", "dest": "/casestudylist.html" },
+    { "src": "/case-study/learning-roots", "dest": "/casestudy-1.html" },
+    { "src": "/case-study/rangreli", "dest": "/casestudy-2.html" },
+    { "src": "/case-study/hydratherma", "dest": "/casestudy-3.html" },
+
     { "src": "/blogs", "dest": "/blogslist.html" },
     { "src": "/blogs/(?<slug>.*)/(.*)", "dest": "/blogs/:slug/:splat" },
+
     { "src": "/blog/Understanding-Meme-Coin-Development", "dest": "/blog-1.html" },
     { "src": "/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story", "dest": "/blog-2.html" },
     { "src": "/blog/gtm-form-interact-event", "dest": "/blog-3.html" },
@@ -33,21 +35,20 @@
     { "src": "/blog/How-to-Use-Google-Analytics-to-Improve-Your-SEO-Strategy", "dest": "/blog-12.html" },
     { "src": "/blog/understanding-ga4-bigquery-schema-in-2025", "dest": "/blog-13.html" },
     { "src": "/blog/Why-Do-We-Need-Server-Side-Tagging", "dest": "/blog-14.html" },
-    { "src": "/blog/ga4-vs-shopify-analytics-fix", "dest": "/blog-16.html" },
     { "src": "/blog/What-Are-GA4-Annotations", "dest": "/blog-15.html" },
-    { "src": "/case-studies", "dest": "/casestudylist.html"},
-    { "src": "/case-study/learning-roots", "dest": "/casestudy.html"},
-    { "src": "/case-study/rangreli", "dest": "/casestudy2.html"},
-    { "src": "/case-study/hydratherma", "dest": "/casestudy3.html"},
-
+    { "src": "/blog/ga4-vs-shopify-analytics-fix", "dest": "/blog-16.html" },
     { "src": "/blog/customer-engagement-analytics-best-practices-metrics", "dest": "/blog-17.html" },
     { "src": "/blog/how-to-use-google-analytics-for-competitor-analysis", "dest": "/blog-18.html" },
     { "src": "/blog/future-proof-your-data-the-ga4-user-id-guide-measurement-strategy", "dest": "/blog-19.html" },
 
-    { "src": "/proposal", "dest": "/proposal.html"},
-    { "src": "/proposaledit", "dest": "/proposaledit.html"},
+    { "src": "/proposal", "dest": "/proposal.html" },
+    { "src": "/proposaledit", "dest": "/proposaledit.html" },
+
+    { "src": "/3d", "dest": "/new-ar.html" },
+    { "src": "/(.*)/js/(.*)", "dest": "/js/$2" },
+    { "src": "/(.*)/css/(.*)", "dest": "/css/$2" },
+    { "src": "/(.*)/images/(.*)", "dest": "/css/$2" },
 
     { "src": "/(.*)", "status": 404, "dest": "/coming-soon.html" }
-    
   ]
 }
