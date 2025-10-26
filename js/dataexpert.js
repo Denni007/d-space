@@ -352,7 +352,7 @@ urlcheck.test(document.location.href) ? (dspaceexpert.visits.create(),
    }
  }
  
- var devicecategory = lastvisit.deviceType != "desktop/laptop" ? `<div class="row  row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/iphone-x.svg" alt="" class="icon"></div></div>`:`<div class="row row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/desktop.svg" alt="" class="icon "></div></div>`;
+ var devicecategory = lastvisit.deviceType != "desktop/laptop" ? `<div class="row  row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/iphone-x.svg" alt="" class="icon"></div></div>`:`<div class="row row-justify-between"><div>${lastvisit.device}</div><div class="circle bg-primary-3"><img src="/images/desktop.svg" alt="Desktop" class="icon "></div></div>`;
  // profile
  // var profiling = '';
  // if (data.pageviews > 8) {

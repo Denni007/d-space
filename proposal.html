@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-page="64d531d8b3d556ea8480e6ba" data-wf-site="64d531d8b3d556ea8480e670">
+<html lang="en" data-wf-page="64d531d8b3d556ea8480e6ba" data-wf-site="64d531d8b3d556ea8480e670">
 
 <head>
     <meta charset="utf-8">
@@ -742,7 +742,7 @@
     <div id="Top" class="back-to-top-container">
         <div class="back-to-top-button-wrapper">
             <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
-                <img src="/images/icon-arrow-up.svg" alt="" class="button-circle-icon">
+                <img src="/images/icon-arrow-up.svg" alt="Up arrow" class="button-circle-icon">
             </a>
 
         </div>
@@ -769,7 +769,7 @@
                                     <div class="row row-align-center">
                                         <div>Services</div><img
                                             src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
-                                            alt="" class="dropdown-link-icon">
+                                            alt="Dropdown link icon" class="dropdown-link-icon">
                                     </div>
                                 </div>
                                 <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0"
@@ -901,7 +901,7 @@
                         <div class="navbar-buttons ">
                             <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
                         </div>
-                        <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt=""></div>
+                        <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt="Menu icon"></div>
                     </div>
                 </div>
             </div>
@@ -1043,14 +1043,14 @@
                         <div class="social-list"><a href="https://twitter.com/Starluxetech"
                                 class="social-link-item w-inline-block"><img
                                     src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
-                                    alt=""></a><a href="https://www.instagram.com/starluxetech/"
+                                    alt="Twitter"></a><a href="https://www.instagram.com/starluxetech/"
                                 class="social-link-item w-inline-block"><img
                                     src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
-                                    alt=""></a><a href="https://behance.net/starluxetech-"
+                                    alt="Instagram"></a><a href="https://behance.net/starluxetech-"
                                 class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg"
-                                    alt=""></a><a href="https://www.linkedin.com/company/starluxetech/"
-                                class="social-link-item w-inline-block"><img src="/images/linkedin.svg" alt=""></a>
-                        </div>
+                                    alt="Behance"></a><a href="https://www.linkedin.com/company/starluxetech/"
+                                class="social-link-item w-inline-block"><img src="/images/linkedin.svg"
+                                    alt="LinkedIn"></a></div>
                     </div>
                 </div>
             </div>
@@ -1070,31 +1070,31 @@
             let data = null;
             if (proposalId) {
                 try {
-                    const response = await fetch(apiUrl+"/"+proposalId);
+                    const response = await fetch(apiUrl + "/" + proposalId);
                     if (response.ok) {
                         const apiData = await response.json();
-                        data = apiData.items?apiData.items.find(p => p.id === proposalId): apiData;
+                        data = apiData.items ? apiData.items.find(p => p.id === proposalId) : apiData;
                         console.log('done to fetch from API, falling back to local JSON:');
                     }
                 } catch (error) {
                     console.warn('Failed to fetch from API, falling back to local JSON:', error);
                     try {
-                    const response = await fetch(localJsonUrl);
-                    if (response.ok) {
-                        const localData = await response.json();
-                        data = localData.proposals.find(p => p.id === proposalId);
-                        // If proposalId wasn't found in API or not present,
-                        // and it's also not found in local, this will remain null.
-                        // If proposalId wasn't present, we'd ideally load a default
-                        // or first proposal from local, but your current logic relies
-                        // on proposalId. Let's assume a match is expected.
-                        if (!proposalId && localData.proposals.length > 0) {
-                            data = localData.proposals[0]; // Load the first proposal if no ID is provided
+                        const response = await fetch(localJsonUrl);
+                        if (response.ok) {
+                            const localData = await response.json();
+                            data = localData.proposals.find(p => p.id === proposalId);
+                            // If proposalId wasn't found in API or not present,
+                            // and it's also not found in local, this will remain null.
+                            // If proposalId wasn't present, we'd ideally load a default
+                            // or first proposal from local, but your current logic relies
+                            // on proposalId. Let's assume a match is expected.
+                            if (!proposalId && localData.proposals.length > 0) {
+                                data = localData.proposals[0]; // Load the first proposal if no ID is provided
+                            }
                         }
+                    } catch (error) {
+                        console.error('Failed to fetch local JSON:', error);
                     }
-                } catch (error) {
-                    console.error('Failed to fetch local JSON:', error);
-                }
                 }
             }
 
@@ -1323,9 +1323,9 @@
 
                     // Case 1: Fixed Cost
                     if (pricing.hours.toLowerCase().includes("fixed")) {
-                        amount = parseFloat(pricing.rate.replace('$', '').trim()); 
+                        amount = parseFloat(pricing.rate.replace('$', '').trim());
                         displayText = `${pricing.hours} @ ${pricing.rate}`;
-                    } 
+                    }
                     // Case 2: Hourly Rate
                     else {
                         const rateValue = parseFloat(pricing.rate.replace('$', '').replace('/hr', '').trim());
@@ -1357,7 +1357,7 @@
                     <div class="pricing-total-amount">$${totalAmount.toFixed(2)}</div>
                 `;
                 pricingContainer.appendChild(pricingTotal);
-                            
+
 
                 // Populate Client Testimonials
                 const testimonialsSection = document.getElementById('testimonials2'); // Assuming an outer div/section for testimonials

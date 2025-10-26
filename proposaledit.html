@@ -1,557 +1,557 @@
 <!DOCTYPE html>
-<html data-wf-page="64d531d8b3d556ea8480e6ba" data-wf-site="64d531d8b3d556ea8480e670">
+<html lang="en" data-wf-page="64d531d8b3d556ea8480e6ba" data-wf-site="64d531d8b3d556ea8480e670">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
-    <link href="/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-    <link href="/css/dspace.css" rel="stylesheet" type="text/css">
-    <!-- <link href="/css/casestudy.css" rel="stylesheet" type="text/css"> -->
-
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <script
-        type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Inter:300,regular,500,600,700"] } });</script>
-    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-    <script
-        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <style>
-        #proposal-content {
-            background-color: #12141D !important;
-        }
-
-        body {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-
-            padding-bottom: 0px;
-            scroll-behavior: smooth !important
-        }
-
-        /* Main content */
-        main {
-            padding: 30px 0;
-        }
-
-        .proposal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-
-        }
-
-        .proposal-title {
-            flex: 1;
-        }
-
-        .proposal-title h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .proposal-title p {
-            color: #ffffff80;
-            font-size: 16px;
-        }
-
-        .proposal-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            padding: 10px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-outline {
-            background-color: white;
-            border: 1px solid #ddd;
-            color: #333;
-        }
-
-        .btn-primary {
-            background-color: #3C5CCE;
-            color: white;
-        }
-
-        /* Project details */
-        .project-details {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .detail-card {
-            background-color: #1E2029;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .detail-card h3 {
-            font-size: 18px;
-            color: #fffffff7;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .detail-card p {
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #22c55e;
-        }
-
-        /* Section styles */
-        .section {
-            background-color: #1E2029;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding-top: 0;
-        }
-
-        /* Scope of work */
-        .scope-item {
-            border: 1px solid #ffffffb1;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            overflow: hidden;
-
-        }
-
-        .scope-header {
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .scope-header h3 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px;
-            font-weight: 500;
-            color: #35373F;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-
-        .scope-header span {
-            padding: 10px;
-            gap: 20px;
-            font-weight: 500;
-        }
-
-        .scope-icon {
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-        }
-
-        /* Ensure content is hidden by default */
-        .scope-item .scope-content {
-            display: none;
-            padding: 0 15px;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            background-color: #ffffff0d;
-
-            transition: 0.4s ease-out, opacity 0.4s ease-out;
-        }
-
-        /* When active, make the content visible */
-        .scope-item.active .scope-content {
-            display: block;
-            max-height: 1000px;
-            opacity: 1;
-            background-color: #ffffff0d;
-
-        }
-
-        .icon-planning {
-            background-color: #e0e7ff;
-            color: #4f46e5;
-        }
-
-        .icon-design {
-            background-color: #fae8ff;
-            color: #a855f7;
-        }
-
-        .icon-development {
-            background-color: #e0f2fe;
-            color: #0ea5e9;
-        }
-
-        .scope-content ul {
-            list-style: none;
-        }
-
-        .scope-content ul li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #ffffff80;
-        }
-
-        .check-icon {
-            width: 15px !important;
-            height: 15px !important;
-            min-width: 15px !important;
-            min-height: 15px !important;
-            max-width: 15px !important;
-            max-height: 15px !important;
-            flex-shrink: 0;
-        }
-
-        .check-icon path {
-            stroke-width: 2 !important;
-        }
-
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: #e5e7eb;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: 2%;
-            border-radius: 20px;
-            background-color: #292b34;
-            margin-bottom: 25px;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: -35px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: #3C5CCE;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 10px;
-        }
-
-        .timeline-content h3 {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            line-height: 1.5;
-        }
-
-        .timeline-content p {
-            font-size: 14px;
-            color: #ffffff70;
-            margin-left: 24px;
-        }
-
-        .timeline-week {
-            font-size: 12px;
-            color: #ffffff70;
-            margin-bottom: 5px;
-        }
-
-        .timeline-phase {
-            margin-bottom: 5px;
-        }
-
-        .timeline-content {
-            margin-bottom: 5px;
-        }
-
-        .timeline-item svg {
-            width: 20px !important;
-            height: 20px !important;
-            min-width: 20px !important;
-            min-height: 20px !important;
-            max-width: 20px !important;
-            max-height: 20px !important;
-            flex-shrink: 0;
-        }
-
-        .timeline-item span {
-
-            font-size: 12px;
-        }
-
-        /* Technology stack */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .tech-card {
-            background-color: #292b34;
-            border-radius: 8px;
-            padding: 10px;
-            gap: 2px;
-            font-size: 12px;
-            text-align: center;
-        }
-
-        .tech-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto;
-            margin-bottom: 10px;
-        }
-
-        .tech-name {
-            font-weight: 500;
-            font-size: 18px;
-            margin-bottom: 5px;
-            line-height: 1.5;
-        }
-
-        .tech-role {
-            font-size: 14px;
-            color: #ffffff80;
-            margin-bottom: 8px;
-        }
-
-        /* Pricing */
-        .pricing-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        .pricing-info h3 {
-            font-size: 17px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .pricing-info p {
-            font-size: 15px;
-            color: #ffffff80;
-            margin-bottom: 0px;
-        }
-
-        .pricing-amount {
-            font-size: 16px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-
-        .pricing-total {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 20px;
-            font-weight: 600;
-        }
-
-        .pricing-total-amount {
-            font-size: 20px;
-            color: #3CCE90;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .testimonial-card {
-            /* background-color: #f9fafb; */
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .testimonial-stars {
-            color: #f59e0b;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-text {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #000000f8;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .testimonial-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .testimonial-info h4 {
-            font-size: 16px;
-            font-weight: 500;
-            color: #666;
-            margin-bottom: 0;
-            margin-bottom: -3px;
-        }
-
-        .testimonial-info p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 0;
-        }
-
-        /* CTA */
-        .cta-section {
-            background-color: #3C5CCE;
-            border-radius: 12px;
-            padding: 30px;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .cta-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cta-text h2 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .cta-text p {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-white {
-            background-color: white;
-            color: #5e43f3;
-        }
-
-        .btn-outline-white {
-            background-color: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-top: 1px solid #eaeaea;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        /* @media (max-width: 768px) {
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/css/dspace.css" rel="stylesheet" type="text/css">
+  <!-- <link href="/css/casestudy.css" rel="stylesheet" type="text/css"> -->
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script
+    type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Inter:300,regular,500,600,700"] } });</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    #proposal-content {
+      background-color: #12141D !important;
+    }
+
+    body {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+
+      padding-bottom: 0px;
+      scroll-behavior: smooth !important
+    }
+
+    /* Main content */
+    main {
+      padding: 30px 0;
+    }
+
+    .proposal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+
+    }
+
+    .proposal-title {
+      flex: 1;
+    }
+
+    .proposal-title h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .proposal-title p {
+      color: #ffffff80;
+      font-size: 16px;
+    }
+
+    .proposal-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline {
+      background-color: white;
+      border: 1px solid #ddd;
+      color: #333;
+    }
+
+    .btn-primary {
+      background-color: #3C5CCE;
+      color: white;
+    }
+
+    /* Project details */
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .detail-card {
+      background-color: #1E2029;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .detail-card h3 {
+      font-size: 18px;
+      color: #fffffff7;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .detail-card p {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #22c55e;
+    }
+
+    /* Section styles */
+    .section {
+      background-color: #1E2029;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-top: 0;
+    }
+
+    /* Scope of work */
+    .scope-item {
+      border: 1px solid #ffffffb1;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+
+    }
+
+    .scope-header {
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .scope-header h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #35373F;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+
+    .scope-header span {
+      padding: 10px;
+      gap: 20px;
+      font-weight: 500;
+    }
+
+    .scope-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    /* Ensure content is hidden by default */
+    .scope-item .scope-content {
+      display: none;
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      background-color: #ffffff0d;
+
+      transition: 0.4s ease-out, opacity 0.4s ease-out;
+    }
+
+    /* When active, make the content visible */
+    .scope-item.active .scope-content {
+      display: block;
+      max-height: 1000px;
+      opacity: 1;
+      background-color: #ffffff0d;
+
+    }
+
+    .icon-planning {
+      background-color: #e0e7ff;
+      color: #4f46e5;
+    }
+
+    .icon-design {
+      background-color: #fae8ff;
+      color: #a855f7;
+    }
+
+    .icon-development {
+      background-color: #e0f2fe;
+      color: #0ea5e9;
+    }
+
+    .scope-content ul {
+      list-style: none;
+    }
+
+    .scope-content ul li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #ffffff80;
+    }
+
+    .check-icon {
+      width: 15px !important;
+      height: 15px !important;
+      min-width: 15px !important;
+      min-height: 15px !important;
+      max-width: 15px !important;
+      max-height: 15px !important;
+      flex-shrink: 0;
+    }
+
+    .check-icon path {
+      stroke-width: 2 !important;
+    }
+
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #e5e7eb;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 2%;
+      border-radius: 20px;
+      background-color: #292b34;
+      margin-bottom: 25px;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -35px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #3C5CCE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 10px;
+    }
+
+    .timeline-content h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    .timeline-content p {
+      font-size: 14px;
+      color: #ffffff70;
+      margin-left: 24px;
+    }
+
+    .timeline-week {
+      font-size: 12px;
+      color: #ffffff70;
+      margin-bottom: 5px;
+    }
+
+    .timeline-phase {
+      margin-bottom: 5px;
+    }
+
+    .timeline-content {
+      margin-bottom: 5px;
+    }
+
+    .timeline-item svg {
+      width: 20px !important;
+      height: 20px !important;
+      min-width: 20px !important;
+      min-height: 20px !important;
+      max-width: 20px !important;
+      max-height: 20px !important;
+      flex-shrink: 0;
+    }
+
+    .timeline-item span {
+
+      font-size: 12px;
+    }
+
+    /* Technology stack */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .tech-card {
+      background-color: #292b34;
+      border-radius: 8px;
+      padding: 10px;
+      gap: 2px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .tech-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    .tech-name {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+
+    .tech-role {
+      font-size: 14px;
+      color: #ffffff80;
+      margin-bottom: 8px;
+    }
+
+    /* Pricing */
+    .pricing-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .pricing-info h3 {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .pricing-info p {
+      font-size: 15px;
+      color: #ffffff80;
+      margin-bottom: 0px;
+    }
+
+    .pricing-amount {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    .pricing-total {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      font-weight: 600;
+    }
+
+    .pricing-total-amount {
+      font-size: 20px;
+      color: #3CCE90;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      /* background-color: #f9fafb; */
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .testimonial-stars {
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #000000f8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-info h4 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 0;
+      margin-bottom: -3px;
+    }
+
+    .testimonial-info p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    /* CTA */
+    .cta-section {
+      background-color: #3C5CCE;
+      border-radius: 12px;
+      padding: 30px;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .cta-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cta-text h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .cta-text p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #5e43f3;
+    }
+
+    .btn-outline-white {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid #eaeaea;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    /* @media (max-width: 768px) {
             .project-details {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -599,678 +599,679 @@
         } */
 
 
-        /* Tablets (≤ 991px) */
-        @media (max-width: 991px) {
-            .project-details {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    /* Tablets (≤ 991px) */
+    @media (max-width: 991px) {
+      .project-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-            .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
 
-            .proposal-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
+      .proposal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
 
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
 
-            .btn1 {
-                padding: 5px 10px !important;
-                line-height: 1.3;
-            }
+      .btn1 {
+        padding: 5px 10px !important;
+        line-height: 1.3;
+      }
 
-            .proposal-actions {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                width: 100%;
-                justify-content: center;
-            }
-
-
+      .proposal-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+      }
 
 
-        }
-
-        /* Mobile (≤ 768px) */
-        @media (max-width: 768px) {
-            .project-details {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-
-            p {
-                margin-bottom: 10px;
-            }
 
 
-        }
+    }
 
-        /* Small devices (≤ 576px) */
-        @media (max-width: 576px) {
-            main {
-                padding: 20px 10px;
-            }
+    /* Mobile (≤ 768px) */
+    @media (max-width: 768px) {
+      .project-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-            .project-details,
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-            .timeline {
-                padding-left: 20px;
-            }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
 
-            .timeline-content p {
-                margin-left: 0;
-            }
+      .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
 
-            .timeline-marker {
-                left: -24px;
-            }
+      p {
+        margin-bottom: 10px;
+      }
 
-            .timeline-item {
-                padding-left: 15px;
 
-            }
+    }
 
-            .pricing-item,
-            .pricing-total {
-                flex-direction: column;
-                gap: 10px;
-            }
+    /* Small devices (≤ 576px) */
+    @media (max-width: 576px) {
+      main {
+        padding: 20px 10px;
+      }
 
-            .detail-card,
-            .tech-card,
-            .section {
-                padding: 15px;
-            }
+      .project-details,
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
 
-            .scope-header h3 {
-                font-size: 15px !important;
-            }
+      .timeline {
+        padding-left: 20px;
+      }
 
-            .scope-content ul {
-                padding-left: 0px;
-            }
+      .timeline-content p {
+        margin-left: 0;
+      }
 
-            .scope-content ul li {
-                font-size: 14px !important;
-            }
+      .timeline-marker {
+        left: -24px;
+      }
 
-            .tech-name {
-                font-size: 16px !important;
-            }
-        }
+      .timeline-item {
+        padding-left: 15px;
 
-        /* Extra small devices (≤ 480px) */
-        @media (max-width: 480px) {
-            .project-details {
-                grid-template-columns: 1fr;
-            }
+      }
 
-            .proposal-header {
-                flex-direction: column;
-                gap: 15px;
-            }
+      .pricing-item,
+      .pricing-total {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-            .proposal-actions {
-                width: 100%;
-            }
-        }
-    </style>
+      .detail-card,
+      .tech-card,
+      .section {
+        padding: 15px;
+      }
+
+      .scope-header h3 {
+        font-size: 15px !important;
+      }
+
+      .scope-content ul {
+        padding-left: 0px;
+      }
+
+      .scope-content ul li {
+        font-size: 14px !important;
+      }
+
+      .tech-name {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Extra small devices (≤ 480px) */
+    @media (max-width: 480px) {
+      .project-details {
+        grid-template-columns: 1fr;
+      }
+
+      .proposal-header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .proposal-actions {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="Top" class="back-to-top-container">
-        <div class="back-to-top-button-wrapper">
-            <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
-                <img src="/images/icon-arrow-up.svg" alt="" class="button-circle-icon">
+  <div id="Top" class="back-to-top-container">
+    <div class="back-to-top-button-wrapper">
+      <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
+        <img src="/images/icon-arrow-up.svg" alt="Up arrow" class="button-circle-icon">
+      </a>
+
+    </div>
+  </div>
+
+  <div class="navbar-wrapper sticky-top" style="">
+    <div class="container">
+      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+        <div class="navbar-row">
+          <div class="div-block-6">
+            <a href="#Top" class="navbar-1-brand w-nav-brand">
+              <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="">
             </a>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="/case-studies" class="nav-link w-nav-link">Case Study</a>
+              <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
 
-        </div>
-    </div>
+              <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+              <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
+                  aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                  <div class="row row-align-center">
+                    <div>Services</div><img
+                      src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                      alt="Dropdown link icon" class="dropdown-link-icon">
+                  </div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
 
-    <div class="navbar-wrapper sticky-top" style="">
-        <div class="container">
-            <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
-                <div class="navbar-row">
-                    <div class="div-block-6">
-                        <a href="#Top" class="navbar-1-brand w-nav-brand">
-                            <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89"
-                                alt="">
+                  <div class="dropdown-list-wrapper">
+                    <!-- EXPERTISE COLUMN -->
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">EXPERTISE</h3>
+
+                      <div class="dropdown-item">
+                        <a href="/expertises/tracking-analytics">
+                          Tracking & Analytics
+                          <p>The performance foundation for all your digital activities</p>
                         </a>
-                        <nav role="navigation" class="nav-menu w-nav-menu">
-                            <a href="/case-studies" class="nav-link w-nav-link">Case Study</a>
-                            <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
-
-                            <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
-                            <div data-delay="0" data-hover="1" class="w-dropdown" style="">
-                                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0"
-                                    aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false"
-                                    role="button" tabindex="0">
-                                    <div class="row row-align-center">
-                                        <div>Services</div><img
-                                            src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
-                                            alt="" class="dropdown-link-icon">
-                                    </div>
-                                </div>
-                                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0"
-                                    aria-labelledby="w-dropdown-toggle-0">
-
-                                    <div class="dropdown-list-wrapper">
-                                        <!-- EXPERTISE COLUMN -->
-                                        <div class="dropdown-column">
-                                            <h3 class="dropdown-title">EXPERTISE</h3>
-
-                                            <div class="dropdown-item">
-                                                <a href="/expertises/tracking-analytics">
-                                                    Tracking & Analytics
-                                                    <p>The performance foundation for all your digital activities</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/expertises/data-activation-growth">
-                                                    Data Activation & Growth
-                                                    <p>Harness the power of your 1st-party data to maximize your
-                                                        marketing campaigns</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/expertises/analytics-engineering-infrastructure">
-                                                    Analytics Engineering & Infrastructure
-                                                    <p>Accelerate towards a high-performance Data infrastructure</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/expertises/data-strategy-governance">
-                                                    Data Strategy & Governance
-                                                    <p>Unlock the full potential of your data through data governance
-                                                    </p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/expertises/recrutement-upskilling">
-                                                    Recruitment & Upskilling
-                                                    <p>We work with the best. Why shouldn't you?</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/en/expertises/data-science-ai">
-                                                    AI & Data Science
-                                                    <p>Develop advanced, practical AI strategies</p>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <!-- INDUSTRIES COLUMN -->
-                                        <div class="dropdown-column">
-                                            <h3 class="dropdown-title">INDUSTRIES</h3>
-
-                                            <div class="dropdown-item">
-                                                <a href="/industries/retail-e-commerce">
-                                                    Retail & E-Commerce
-                                                    <p>Retention & churn analysis, media analytics, segmentation,
-                                                        audience activation and attribution models</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/industries/luxe-cosmetiques">
-                                                    Luxury & Cosmetics
-                                                    <p>Leverage data to deliver customized customer experiences.</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/industries/banque-assurances">
-                                                    Banking & Insurance
-                                                    <p>Predictive modeling for risk management. Data governance and
-                                                        compliance.</p>
-                                                </a>
-                                            </div>
-
-                                            <div class="dropdown-item">
-                                                <a href="/industries/medias-divertissement">
-                                                    Media & Entertainment
-                                                    <p>Improve audience engagement and natural search engine
-                                                        optimization.</p>
-                                                </a>
-                                            </div>
-
-
-                                        </div>
-
-                                        <style>
-                                            @media (max-width: 768px) {
-                                                .dropdown-list-wrapper {
-                                                    flex-direction: column;
-                                                    width: 100%;
-                                                    max-width: 100%;
-                                                    overflow-y: auto;
-                                                    overflow-x: hidden;
-                                                    max-height: 100%;
-                                                    box-sizing: border-box;
-                                                    scrollbar-width: none;
-                                                    -ms-overflow-style: none;
-                                                }
-
-                                                .dropdown-list-wrapper::-webkit-scrollbar {
-                                                    display: none;
-                                                }
-
-                                                .dropdown-column {
-                                                    width: 100%;
-                                                }
-
-                                                .dropdown-item p {
-                                                    display: none;
-                                                }
-                                            }
-                                        </style>
-                                    </div>
-                                </nav>
-                            </div>
-                            <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
-                                class="nav-link w-nav-link">Team</a>
-                        </nav>
-                    </div>
-                    <div class="navbar-controls ">
-                        <div class="navbar-buttons ">
-                            <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
-                        </div>
-                        <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section" id="proposal-content">
-        <div class="container">
-            <div id="proposal-list-container">
-                <h2>Proposals</h2>
-                <table id="proposal-list" border="1" cellpadding="8" style="border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th>Project Name</th>
-                            <th>Client Name</th>
-                            <th>Status</th>
-                            <th>Submission Date</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td colspan="5">Loading...</td></tr>
-                    </tbody>
-                </table>
-                <button class="button-small w-button" id="new-proposal-btn">New Proposal </button>
-            </div>
-            <div id="proposal-detail-container">
-              <section class="proposal-header">
-                  <div class="proposal-title">
-                   
-                    <label for="proposal-id-input" class="field-label">Project id</label>
-                    <input type="text" class="form-input form-input-small w-input" maxlength="256"
-                            name="project-name-input" id="proposal-id-input" value="" placeholder="id of Project">
-                      <label for="proposal-title-input" class="field-label">Project Name</label>
-                      <input type="text" class="form-input form-input-small w-input" id="proposal-title-input"
-                          placeholder="Name of Project">
-                      <label for="client-name-input" class="field-label">Client Name</label>
-                      <input type="text" class="form-input form-input-small w-input" id="client-name-input"
-                          placeholder="Client Name">
-                  </div>
-              </section>
-              <section class="project-details">
-                  <div class="detail-card">
-                      <h3><label for="submission-date-input" class="field-label">Submission Date</label></h3>
-                      <p><input type="date" class="form-input form-input-small w-input" id="submission-date-input"></p>
-                  </div>
-                  <div class="detail-card">
-                      <h3><label for="status-select" class="field-label">Status</label></h3>
-                      <p>
-                          <select class="form-input form-input-small w-select" id="status-select">
-                              <option value="Draft">Draft</option>
-                              <option value="In Review">In Review</option>
-                              <option value="Approved">Approved</option>
-                              <option value="Pending">Pending</option>
-                              <option value="Completed">Completed</option>
-                          </select>
-                      </p>
-                  </div>
-                  <div class="detail-card">
-                      <h3><label for="project-type-input" class="field-label">Project Type</label></h3>
-                      <p><input type="text" class="form-input form-input-small w-input" id="project-type-input"></p>
-                  </div>
-                  <div class="detail-card">
-                      <h3><label for="duration-input" class="field-label">Duration</label></h3>
-                      <p><input type="text" class="form-input form-input-small w-input" id="duration-input"></p>
-                  </div>
-                </section>
-              <section class="section" id="scope-of-work">
-                  <h2 class="section-title">Scope of Work</h2>
-                  <div class="scope-item active">
-                      <div class="scope-header">
-                          <div class="accordion-head" onclick="toggleAccordion(event)">
-                              <span class=" w-form-label">Phase</span>
-                              <input type="text" class="phase-title-input form-input form-input-small  w-input"
-                                  maxlength="746" name="phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
-
-                              <div class="icon-circle-small bg-gray-3"
-                                  style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                  <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
-                                      alt="" class="icon-small">
-                              </div>
-                          </div>
                       </div>
-                      <div class="scope-content">
-                          <ul>
-                              <li>
-                                  <input type="text" class="scope-task-input  form-input form-input-small w-input"
-                                      value="Document tracking schema for future reference and alignment across teams.">
-                                  <div class="circle-small remove-item-btn">
-                                      <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
-                                          alt="" class="">
-                                  </div>
-                              </li>
-                          </ul>
-                          <div class="cw-accent-btn ">
-                              <a href="#" class="add-item-btn button-small w-button"
-                                  data-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add List</a>
-                          </div>
+
+                      <div class="dropdown-item">
+                        <a href="/expertises/data-activation-growth">
+                          Data Activation & Growth
+                          <p>Harness the power of your 1st-party data to maximize your
+                            marketing campaigns</p>
+                        </a>
                       </div>
+
+                      <div class="dropdown-item">
+                        <a href="/expertises/analytics-engineering-infrastructure">
+                          Analytics Engineering & Infrastructure
+                          <p>Accelerate towards a high-performance Data infrastructure</p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/expertises/data-strategy-governance">
+                          Data Strategy & Governance
+                          <p>Unlock the full potential of your data through data governance
+                          </p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/expertises/recrutement-upskilling">
+                          Recruitment & Upskilling
+                          <p>We work with the best. Why shouldn't you?</p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/en/expertises/data-science-ai">
+                          AI & Data Science
+                          <p>Develop advanced, practical AI strategies</p>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- INDUSTRIES COLUMN -->
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">INDUSTRIES</h3>
+
+                      <div class="dropdown-item">
+                        <a href="/industries/retail-e-commerce">
+                          Retail & E-Commerce
+                          <p>Retention & churn analysis, media analytics, segmentation,
+                            audience activation and attribution models</p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/industries/luxe-cosmetiques">
+                          Luxury & Cosmetics
+                          <p>Leverage data to deliver customized customer experiences.</p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/industries/banque-assurances">
+                          Banking & Insurance
+                          <p>Predictive modeling for risk management. Data governance and
+                            compliance.</p>
+                        </a>
+                      </div>
+
+                      <div class="dropdown-item">
+                        <a href="/industries/medias-divertissement">
+                          Media & Entertainment
+                          <p>Improve audience engagement and natural search engine
+                            optimization.</p>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                    <style>
+                      @media (max-width: 768px) {
+                        .dropdown-list-wrapper {
+                          flex-direction: column;
+                          width: 100%;
+                          max-width: 100%;
+                          overflow-y: auto;
+                          overflow-x: hidden;
+                          max-height: 100%;
+                          box-sizing: border-box;
+                          scrollbar-width: none;
+                          -ms-overflow-style: none;
+                        }
+
+                        .dropdown-list-wrapper::-webkit-scrollbar {
+                          display: none;
+                        }
+
+                        .dropdown-column {
+                          width: 100%;
+                        }
+
+                        .dropdown-item p {
+                          display: none;
+                        }
+                      }
+                    </style>
                   </div>
-                  <div class="cw-accent-btn ">
-                      <a href="#" class="add-item-btn button-small w-button" id="add-new-scope-btn"
-                          ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
-                  </div>
-
-                  <!-- <button class="button-small w-button" >Add New Phase</button> -->
-
-
-              </section>
-              <section class="section" id="timeline-of-work">
-                  <h2 class="section-title">Project Timeline</h2>
-                  <div class="timeline" id="timeline">
-                      <button class="button-small justify-center w-button" id="add-timeline-item-btn">Add Timeline
-                          Item</button>
-                  </div>
-                </section>
-
-              <section class="section" id="out-of-scope">
-                  <h2 class="section-title">Out of Scope</h2>
-                  <button class="button-small w-button" id="add-new-out-of-scope-btn">Add Exclusion Section</button>
-              </section>
-
-              <section class="section" id="dependencies">
-                  <h2 class="section-title">Dependencies</h2>
-                  <button class="button-small w-button" id="add-new-dependency-btn">Add Dependency</button>
-              </section>
-
-              <section class="section" id="tech-of-work">
-                  <h2 class="section-title">Technology Stack</h2>
-                  <div class="tech-grid" id="technology-stack">
-                      <button class="button-small w-button" id="add-tech-item-btn">Add Technology</button>
-                  </div>
-              </section>
-
-              <section class="section" id="price-of-work">
-                  <h2 class="section-title">Pricing Breakdown</h2>
-                  <div class="pricing-items-container">
-                  </div>
-                  <button class="button-small w-button" id="add-pricing-item-btn">Add Pricing Item</button>
-                  <div class="pricing-total">
-                      <div>Total</div>
-                      <div class="pricing-total-amount">$0.00</div>
-                  </div>
-              </section>
-
-              <section class="section" id="review-of-work">
-                  <h2 class="section-title">Client Testimonials</h2>
-                  <div class="testimonials-grid" id="testimonials">
-                      <button class="button-small w-button" id="add-testimonial-item-btn">Add Testimonial</button>
-                  </div>
-              </section>
-              <button class="button-small w-button"id="generate-json-btn">Generated JSON</button>
-              <p>You can edit the JSON below to update the form fields directly.</p>
-              <button class="button-small w-button" id="save-proposal-btn">SAVE </button>
-              <textarea id="json-output" class="form-input w-input" rows="20"
-                  style="font-family: monospace; display: none;"></textarea>
+                </nav>
               </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="panel">
-                <div class="panel-body footer-1-panel-body">
-                    <div class="footer-3-top-row">
-                        <div class="footer-3-left-column">
-                            <div class="footer-contact-methods">
-                                <div>
-                                    <h5>Contact</h5>
-                                    <div>
-                                        <div>
-                                            <a href="https://wa.me/447548003762">+44 7548003762</a>
-                                        </div>
-                                        <div>
-                                            <a href="https://wa.me/919824723865">+91 9824723865</a>
-                                        </div><br><a href="mailto:starluxetech@gmail.com">starluxetech@gmail.com</a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5>Visit</h5>
-                                    <div>
-                                        <div> Dunmurry, Belfast,<br> United Kingdom,<br>BT129BB</div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4
-                                    migration</a><a href="/tracking" class="text-link">Tracking & Audit</a><a
-                                    href="/service/conversion-rate-optimization" class="text-link">CRO Service</a><a
-                                    href="/gdpr" class="text-link">GDPR Consent Service</a>
-                                <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
-                            </div>
-
-                            <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a
-                                    href="/case-studies" class="text-link">Case Study</a> <a href="/blogs"
-                                    class="text-link">Blogs</a><a href="/pricing/pricing-1"
-                                    class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-body panel-body-small blog-small-panel-body">
-                                <div class="badge blog-small-badge">
-                                    <div>News</div>
-                                </div>
-                                <div class="w-dyn-list">
-                                    <div role="list" class="w-dyn-items">
-                                        <div role="listitem" class="w-dyn-item"><a
-                                                href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
-                                                class="blog-small-link w-inline-block">
-                                                <h5 class="blog-small-heading">How to Use Machine Learning and AI in
-                                                    Ecommerce</h5>
-                                                <div>October 01, 2024</div>
-                                            </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-1-bottom-row">
-                        <div class="text-small">© Copyright • StarLuxe Analytics 2024 <a href="https://www.webflow.com/"
-                                target="_blank"></a></div>
-                        <div class="social-list"><a href="https://twitter.com/Starluxetech"
-                                class="social-link-item w-inline-block"><img
-                                    src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
-                                    alt=""></a><a href="https://www.instagram.com/starluxetech/"
-                                class="social-link-item w-inline-block"><img
-                                    src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
-                                    alt=""></a><a href="https://behance.net/starluxetech-"
-                                class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg"
-                                    alt=""></a><a href="https://www.linkedin.com/company/starluxetech/"
-                                class="social-link-item w-inline-block"><img src="/images/linkedin.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
+              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                class="nav-link w-nav-link">Team</a>
+            </nav>
+          </div>
+          <div class="navbar-controls ">
+            <div class="navbar-buttons ">
+              <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
             </div>
+            <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt="Menu icon"></div>
+          </div>
         </div>
+      </div>
     </div>
-    <script>
-document.addEventListener('DOMContentLoaded', async () => {
-  const apiUrl = 'https://insider.starluxetech.com/api/proposals';
-  const tableBody = document.querySelector('#proposal-list tbody') || document.querySelector('#proposal-list-body');
-  const listContainer = document.getElementById('proposal-list-container');
-  const detailContainer = document.getElementById('proposal-detail-container');
-  detailContainer.style.display = 'none';
-  document.getElementById('generate-json-btn')?.addEventListener('click', generateJson, { once: false });
-  document.getElementById('save-proposal-btn')?.addEventListener('click', saveProposalFromGenerated);
+  </div>
 
-  let proposals = [];
-  window.proposalId = null;
+  <div class="section" id="proposal-content">
+    <div class="container">
+      <div id="proposal-list-container">
+        <h2>Proposals</h2>
+        <table id="proposal-list" border="1" cellpadding="8" style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Client Name</th>
+              <th>Status</th>
+              <th>Submission Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="button-small w-button" id="new-proposal-btn">New Proposal </button>
+      </div>
+      <div id="proposal-detail-container">
+        <section class="proposal-header">
+          <div class="proposal-title">
 
-  // guard flags to avoid rebinding listeners on repeated edits
-  let staticListenersBound = false;
-  let bodyDelegationBound = false;
-  let jsonSyncBound = false;
+            <label for="proposal-id-input" class="field-label">Project id</label>
+            <input type="text" class="form-input form-input-small w-input" maxlength="256" name="project-name-input"
+              id="proposal-id-input" value="" placeholder="id of Project">
+            <label for="proposal-title-input" class="field-label">Project Name</label>
+            <input type="text" class="form-input form-input-small w-input" id="proposal-title-input"
+              placeholder="Name of Project">
+            <label for="client-name-input" class="field-label">Client Name</label>
+            <input type="text" class="form-input form-input-small w-input" id="client-name-input"
+              placeholder="Client Name">
+          </div>
+        </section>
+        <section class="project-details">
+          <div class="detail-card">
+            <h3><label for="submission-date-input" class="field-label">Submission Date</label></h3>
+            <p><input type="date" class="form-input form-input-small w-input" id="submission-date-input"></p>
+          </div>
+          <div class="detail-card">
+            <h3><label for="status-select" class="field-label">Status</label></h3>
+            <p>
+              <select class="form-input form-input-small w-select" id="status-select">
+                <option value="Draft">Draft</option>
+                <option value="In Review">In Review</option>
+                <option value="Approved">Approved</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </p>
+          </div>
+          <div class="detail-card">
+            <h3><label for="project-type-input" class="field-label">Project Type</label></h3>
+            <p><input type="text" class="form-input form-input-small w-input" id="project-type-input"></p>
+          </div>
+          <div class="detail-card">
+            <h3><label for="duration-input" class="field-label">Duration</label></h3>
+            <p><input type="text" class="form-input form-input-small w-input" id="duration-input"></p>
+          </div>
+        </section>
+        <section class="section" id="scope-of-work">
+          <h2 class="section-title">Scope of Work</h2>
+          <div class="scope-item active">
+            <div class="scope-header">
+              <div class="accordion-head" onclick="toggleAccordion(event)">
+                <span class=" w-form-label">Phase</span>
+                <input type="text" class="phase-title-input form-input form-input-small  w-input" maxlength="746"
+                  name="phase-0-title" value="Phase 0: GA4 Event Hygiene & Audit">
 
-  // ----------------------------
-  // URL param helpers (routing)
-  // ----------------------------
-  function getIdParam() {
-    return new URLSearchParams(location.search).get('id');
-  }
-  function setIdParam(id, { replace = false } = {}) {
-    const url = new URL(location.href);
-    url.searchParams.set('id', id);
-    if (replace) history.replaceState({ id }, '', url);
-    else history.pushState({ id }, '', url);
-  }
-  function clearIdParam({ replace = false } = {}) {
-    const url = new URL(location.href);
-    url.searchParams.delete('id');
-    if (replace) history.replaceState({}, '', url);
-    else history.pushState({}, '', url);
-  }
-  function defaultProposal() {
-  return {
-    _id: null,
-    id: "default-proposal-" + Date.now(),
-    title: "New Project Proposal",
-    client_name: "Enter Client Name",
-    submission_date: new Date().toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }),
-    status: "In Review",
-    project_type: "New Project Type",
-    duration: "Enter Duration",
-    scope_of_work: [{
-        title: "Phase 1: Discovery & Planning",
-        tasks: ["Initial kickoff meeting", "Requirement gathering"]
-    }],
-    out_of_scope: [{
-        "title": "The following are excluded from this project.",
-        "tasks": [
-            "Document tracking schema for future reference and alignment across teams."
-        ]
-    }],
-    dependencies: [{
-        "title": "Phase 0: GA4 Event Hygiene & Audit",
-        "tasks": [
-            "Document tracking schema for future reference and alignment across teams."
-        ]
-    }],
-    timeline: [{
-        week: "Week 1-2",
-        phase: "Discovery & Planning",
-        description: "Define project goals, scope, and create a detailed roadmap."
-    }],
-    pricing: [{
-        title: "Project Setup & Consulting",
-        hours: "20 hours",
-        rate: "$75/hr"
-    }, {
-        title: "Monthly Retainer",
-        hours: "Fixed Cost",
-        rate: "$1500"
-    }],
-    technology_stack: [{
-      "name": "Shopify",
-      "role": "E-commerce Platform",
-      "icon": "/images/shopifycom.svg"
-    },],
-    testimonials: [
-    {
-      "stars": 5,
-      "text": "Outstanding work on our e-commerce platform.",
-      "author": "Michael Chen",
-      "role": "CTO"
-    },
-    ]
-  };
-}
+                <div class="icon-circle-small bg-gray-3"
+                  style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <img
+                    src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5de5ec9d264fd1b614a90674_icon-chevron-right-small-white.svg"
+                    alt="" class="icon-small">
+                </div>
+              </div>
+            </div>
+            <div class="scope-content">
+              <ul>
+                <li>
+                  <input type="text" class="scope-task-input  form-input form-input-small w-input"
+                    value="Document tracking schema for future reference and alignment across teams.">
+                  <div class="circle-small remove-item-btn">
+                    <img
+                      src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg"
+                      alt="" class="">
+                  </div>
+                </li>
+              </ul>
+              <div class="cw-accent-btn ">
+                <a href="#" class="add-item-btn button-small w-button"
+                  data-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add List</a>
+              </div>
+            </div>
+          </div>
+          <div class="cw-accent-btn ">
+            <a href="#" class="add-item-btn button-small w-button" id="add-new-scope-btn"
+              ata-target-ul="#scope-of-work .scope-item:nth-of-type(1) ul">Add New Phase</a>
+          </div>
 
-// --- Open NEW proposal with defaults ---
-async function openNewProposal({ skipPush = false } = {}) {
-  const proposal = defaultProposal();
-  window.proposalId = null; // ensure generateJson treats this as new
-  if (listContainer) {listContainer.style.display = 'none';
-detailContainer.style.display = "block";};
-  clearDynamicSections();
-  initializePage(proposal);
-  if (!skipPush) setIdParam('new');
-}
-document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
-  openNewProposal();
-});
-  // ----------------------------
-  // Fetch proposals & render list
-  // ----------------------------
-  async function loadProposals() {
-    if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Loading...</td></tr>`;
-    try {
-      const res = await fetch(apiUrl);
-      const data = await res.json();
-      // Expecting { items: [...] }
-      proposals = data.items || [];
+          <!-- <button class="button-small w-button" >Add New Phase</button> -->
 
-      if (!proposals.length) {
-        if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">No proposals found</td></tr>`;
-        return;
+
+        </section>
+        <section class="section" id="timeline-of-work">
+          <h2 class="section-title">Project Timeline</h2>
+          <div class="timeline" id="timeline">
+            <button class="button-small justify-center w-button" id="add-timeline-item-btn">Add Timeline
+              Item</button>
+          </div>
+        </section>
+
+        <section class="section" id="out-of-scope">
+          <h2 class="section-title">Out of Scope</h2>
+          <button class="button-small w-button" id="add-new-out-of-scope-btn">Add Exclusion Section</button>
+        </section>
+
+        <section class="section" id="dependencies">
+          <h2 class="section-title">Dependencies</h2>
+          <button class="button-small w-button" id="add-new-dependency-btn">Add Dependency</button>
+        </section>
+
+        <section class="section" id="tech-of-work">
+          <h2 class="section-title">Technology Stack</h2>
+          <div class="tech-grid" id="technology-stack">
+            <button class="button-small w-button" id="add-tech-item-btn">Add Technology</button>
+          </div>
+        </section>
+
+        <section class="section" id="price-of-work">
+          <h2 class="section-title">Pricing Breakdown</h2>
+          <div class="pricing-items-container">
+          </div>
+          <button class="button-small w-button" id="add-pricing-item-btn">Add Pricing Item</button>
+          <div class="pricing-total">
+            <div>Total</div>
+            <div class="pricing-total-amount">$0.00</div>
+          </div>
+        </section>
+
+        <section class="section" id="review-of-work">
+          <h2 class="section-title">Client Testimonials</h2>
+          <div class="testimonials-grid" id="testimonials">
+            <button class="button-small w-button" id="add-testimonial-item-btn">Add Testimonial</button>
+          </div>
+        </section>
+        <button class="button-small w-button" id="generate-json-btn">Generated JSON</button>
+        <p>You can edit the JSON below to update the form fields directly.</p>
+        <button class="button-small w-button" id="save-proposal-btn">SAVE </button>
+        <textarea id="json-output" class="form-input w-input" rows="20"
+          style="font-family: monospace; display: none;"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body footer-1-panel-body">
+          <div class="footer-3-top-row">
+            <div class="footer-3-left-column">
+              <div class="footer-contact-methods">
+                <div>
+                  <h5>Contact</h5>
+                  <div>
+                    <div>
+                      <a href="https://wa.me/447548003762">+44 7548003762</a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/919824723865">+91 9824723865</a>
+                    </div><br><a href="mailto:starluxetech@gmail.com">starluxetech@gmail.com</a>
+                  </div>
+                </div>
+                <div>
+                  <h5>Visit</h5>
+                  <div>
+                    <div> Dunmurry, Belfast,<br> United Kingdom,<br>BT129BB</div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4
+                  migration</a><a href="/tracking" class="text-link">Tracking & Audit</a><a
+                  href="/service/conversion-rate-optimization" class="text-link">CRO Service</a><a href="/gdpr"
+                  class="text-link">GDPR Consent Service</a>
+                <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
+              </div>
+
+              <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a> <a
+                  href="/case-studies" class="text-link">Case Study</a> <a href="/blogs" class="text-link">Blogs</a><a
+                  href="/pricing/pricing-1" class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-body panel-body-small blog-small-panel-body">
+                <div class="badge blog-small-badge">
+                  <div>News</div>
+                </div>
+                <div class="w-dyn-list">
+                  <div role="list" class="w-dyn-items">
+                    <div role="listitem" class="w-dyn-item"><a
+                        href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
+                        class="blog-small-link w-inline-block">
+                        <h5 class="blog-small-heading">How to Use Machine Learning and AI in
+                          Ecommerce</h5>
+                        <div>October 01, 2024</div>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-1-bottom-row">
+            <div class="text-small">© Copyright • StarLuxe Analytics 2024 <a href="https://www.webflow.com/"
+                target="_blank"></a></div>
+            <div class="social-list"><a href="https://twitter.com/Starluxetech"
+                class="social-link-item w-inline-block"><img
+                  src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
+                  alt="Twitter"></a><a href="https://www.instagram.com/starluxetech/"
+                class="social-link-item w-inline-block"><img
+                  src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
+                  alt="Instagram"></a><a href="https://behance.net/starluxetech-"
+                class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg" alt="Behance"></a><a
+                href="https://www.linkedin.com/company/starluxetech/" class="social-link-item w-inline-block"><img
+                  src="/images/linkedin.svg" alt="LinkedIn"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const apiUrl = 'https://insider.starluxetech.com/api/proposals';
+      const tableBody = document.querySelector('#proposal-list tbody') || document.querySelector('#proposal-list-body');
+      const listContainer = document.getElementById('proposal-list-container');
+      const detailContainer = document.getElementById('proposal-detail-container');
+      detailContainer.style.display = 'none';
+      document.getElementById('generate-json-btn')?.addEventListener('click', generateJson, { once: false });
+      document.getElementById('save-proposal-btn')?.addEventListener('click', saveProposalFromGenerated);
+
+      let proposals = [];
+      window.proposalId = null;
+
+      // guard flags to avoid rebinding listeners on repeated edits
+      let staticListenersBound = false;
+      let bodyDelegationBound = false;
+      let jsonSyncBound = false;
+
+      // ----------------------------
+      // URL param helpers (routing)
+      // ----------------------------
+      function getIdParam() {
+        return new URLSearchParams(location.search).get('id');
+      }
+      function setIdParam(id, { replace = false } = {}) {
+        const url = new URL(location.href);
+        url.searchParams.set('id', id);
+        if (replace) history.replaceState({ id }, '', url);
+        else history.pushState({ id }, '', url);
+      }
+      function clearIdParam({ replace = false } = {}) {
+        const url = new URL(location.href);
+        url.searchParams.delete('id');
+        if (replace) history.replaceState({}, '', url);
+        else history.pushState({}, '', url);
+      }
+      function defaultProposal() {
+        return {
+          _id: null,
+          id: "default-proposal-" + Date.now(),
+          title: "New Project Proposal",
+          client_name: "Enter Client Name",
+          submission_date: new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          }),
+          status: "In Review",
+          project_type: "New Project Type",
+          duration: "Enter Duration",
+          scope_of_work: [{
+            title: "Phase 1: Discovery & Planning",
+            tasks: ["Initial kickoff meeting", "Requirement gathering"]
+          }],
+          out_of_scope: [{
+            "title": "The following are excluded from this project.",
+            "tasks": [
+              "Document tracking schema for future reference and alignment across teams."
+            ]
+          }],
+          dependencies: [{
+            "title": "Phase 0: GA4 Event Hygiene & Audit",
+            "tasks": [
+              "Document tracking schema for future reference and alignment across teams."
+            ]
+          }],
+          timeline: [{
+            week: "Week 1-2",
+            phase: "Discovery & Planning",
+            description: "Define project goals, scope, and create a detailed roadmap."
+          }],
+          pricing: [{
+            title: "Project Setup & Consulting",
+            hours: "20 hours",
+            rate: "$75/hr"
+          }, {
+            title: "Monthly Retainer",
+            hours: "Fixed Cost",
+            rate: "$1500"
+          }],
+          technology_stack: [{
+            "name": "Shopify",
+            "role": "E-commerce Platform",
+            "icon": "/images/shopifycom.svg"
+          },],
+          testimonials: [
+            {
+              "stars": 5,
+              "text": "Outstanding work on our e-commerce platform.",
+              "author": "Michael Chen",
+              "role": "CTO"
+            },
+          ]
+        };
       }
 
-      if (tableBody) {
-        tableBody.innerHTML = proposals.map(p => `
+      // --- Open NEW proposal with defaults ---
+      async function openNewProposal({ skipPush = false } = {}) {
+        const proposal = defaultProposal();
+        window.proposalId = null; // ensure generateJson treats this as new
+        if (listContainer) {
+          listContainer.style.display = 'none';
+          detailContainer.style.display = "block";
+        };
+        clearDynamicSections();
+        initializePage(proposal);
+        if (!skipPush) setIdParam('new');
+      }
+      document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
+        openNewProposal();
+      });
+      // ----------------------------
+      // Fetch proposals & render list
+      // ----------------------------
+      async function loadProposals() {
+        if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Loading...</td></tr>`;
+        try {
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+          // Expecting { items: [...] }
+          proposals = data.items || [];
+
+          if (!proposals.length) {
+            if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">No proposals found</td></tr>`;
+            return;
+          }
+
+          if (tableBody) {
+            tableBody.innerHTML = proposals.map(p => `
           <tr>
             <td>${escapeHtml(p.title || 'Untitled')}</td>
             <td>${escapeHtml(p.client_name || '')}</td>
@@ -1281,277 +1282,277 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
             </td>
           </tr>
         `).join('');
+          }
+        } catch (err) {
+          console.error(err);
+          if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Error loading proposals</td></tr>`;
+        }
       }
-    } catch (err) {
-      console.error(err);
-      if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Error loading proposals</td></tr>`;
-    }
-  }
 
-  // ----------------------------
-  // Open proposal for editing
-  // ----------------------------
-  async function openProposal(id, { skipPush = false } = {}) {
-    const proposal = proposals.find(p =>
-      p._id === String(id)
-    );
-    if (!proposal) return;
-    console.log(proposal)
-    window.proposalId = String(id);
-    // Hide list section if present
-    if (listContainer) {
-      
-      listContainer.style.display = 'none';
-      detailContainer.style.display = "block";
-    };
-    // Render editor
-    clearDynamicSections();
-    initializePage(proposal);
-    generateJson()
-    // Update URL (?id=...)
-    if (!skipPush) setIdParam(id);
-  }
+      // ----------------------------
+      // Open proposal for editing
+      // ----------------------------
+      async function openProposal(id, { skipPush = false } = {}) {
+        const proposal = proposals.find(p =>
+          p._id === String(id)
+        );
+        if (!proposal) return;
+        console.log(proposal)
+        window.proposalId = String(id);
+        // Hide list section if present
+        if (listContainer) {
 
-  // ----------------------------
-  // Back to list (optional button)
-  // ----------------------------
-  document.getElementById('back-to-list-btn')?.addEventListener('click', () => {
-    if (listContainer) {
-      listContainer.style.display = 'block'
-      detailContainer.style.display = "none";
-    };
-    clearIdParam();     // remove ?id
-    window.proposalId = null;
-  });
+          listContainer.style.display = 'none';
+          detailContainer.style.display = "block";
+        };
+        // Render editor
+        clearDynamicSections();
+        initializePage(proposal);
+        generateJson()
+        // Update URL (?id=...)
+        if (!skipPush) setIdParam(id);
+      }
 
-  // ----------------------------
-  // Browser back/forward
-  // ----------------------------
-  window.addEventListener('popstate', () => {
-    const id = getIdParam();
-    if (id) {
-      console.log(id)
-      openProposal(id, { skipPush: true });
-    } else {
-      if (listContainer) {
-        listContainer.style.display = 'block';
-        detailContainer.style.display = "none";
-      
-      };
-      window.proposalId = null;
-    }
-  });
-
-  // ----------------------------
-  // Clear old dynamic elements
-  // ----------------------------
-  function clearDynamicSections() {
-    document.querySelectorAll('.scope-item').forEach(el => el.remove());
-    document.querySelectorAll('.timeline-item').forEach(el => el.remove());
-    document.querySelectorAll('.pricing-item').forEach(el => el.remove());
-    document.querySelectorAll('.tech-card').forEach(el => el.remove());
-    document.querySelectorAll('.testimonial-card').forEach(el => el.remove());
-  }
-
-  // ----------------------------
-  // Full initialization
-  // ----------------------------
-  function initializePage(proposal) {
-    populateFormWithData(proposal);
-    updateTotalPricing();
-    // Bind add buttons ONCE
-    if (!staticListenersBound) {
-      document.getElementById('add-pricing-item-btn')?.addEventListener('click', () => addPricingItem());
-      document.getElementById('add-timeline-item-btn')?.addEventListener('click', () => addTimelineItem());
-      document.getElementById('add-tech-item-btn')?.addEventListener('click', () => addTechnologyItem());
-      document.getElementById('add-testimonial-item-btn')?.addEventListener('click', () => addTestimonialItem());
-      document.getElementById('add-new-scope-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#scope-of-work', {}, { title: 'phase-title-input', task: 'scope-task-input' }, 'New Phase');
+      // ----------------------------
+      // Back to list (optional button)
+      // ----------------------------
+      document.getElementById('back-to-list-btn')?.addEventListener('click', () => {
+        if (listContainer) {
+          listContainer.style.display = 'block'
+          detailContainer.style.display = "none";
+        };
+        clearIdParam();     // remove ?id
+        window.proposalId = null;
       });
-      document.getElementById('add-new-out-of-scope-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#out-of-scope', {}, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, 'New Exclusion Section');
-      });
-      document.getElementById('add-new-dependency-btn')?.addEventListener('click', () => {
-        addFullScopeItem('#dependencies', {}, { title: 'dependency-title-input', task: 'dependency-task-input' }, 'New Dependency Section');
-      });
-      staticListenersBound = true;
-    }
 
-    // Event delegation for dynamic add/remove (bind once)
-    if (!bodyDelegationBound) {
-      document.body.addEventListener('click', function(event) {
-        if (event.target.matches('.add-task-btn')) {
-          event.preventDefault();
-          const scopeContent = event.target.closest('.scope-content');
-          if (scopeContent) {
-            const ul = scopeContent.querySelector('ul');
-            const titleInput = scopeContent.closest('.scope-item').querySelector('input[class*="-title-input"]');
-            let taskClass = 'scope-task-input';
-            if (titleInput?.className.includes('out-of-scope')) taskClass = 'out-of-scope-task-input';
-            if (titleInput?.className.includes('dependency')) taskClass = 'dependency-task-input';
-            addScopeTask(ul, taskClass);
-          }
-        }
-        const removeBtn = event.target.closest('.remove-item-btn');
-        if (removeBtn) {
-          const li = removeBtn.closest('li');
-          if (li) li.remove();
-          if (removeBtn.classList.contains('remove-pricing-btn')) {
-            updateTotalPricing();
-          }
+      // ----------------------------
+      // Browser back/forward
+      // ----------------------------
+      window.addEventListener('popstate', () => {
+        const id = getIdParam();
+        if (id) {
+          console.log(id)
+          openProposal(id, { skipPush: true });
+        } else {
+          if (listContainer) {
+            listContainer.style.display = 'block';
+            detailContainer.style.display = "none";
+
+          };
+          window.proposalId = null;
         }
       });
-      bodyDelegationBound = true;
-    }
 
-    // JSON textarea sync back to UI (bind once)
-    if (!jsonSyncBound) {
-      const jsonOutputTextarea = document.getElementById('json-output');
-      if (jsonOutputTextarea) {
-        const syncJsonToUi = debounce((event) => {
-          const jsonString = event.target.value;
-          try {
-            if (jsonString) {
-              const newProposalData = JSON.parse(jsonString);
-              event.target.style.borderColor = '';
-              populateFormWithData(newProposalData);
-              updateTotalPricing();
+      // ----------------------------
+      // Clear old dynamic elements
+      // ----------------------------
+      function clearDynamicSections() {
+        document.querySelectorAll('.scope-item').forEach(el => el.remove());
+        document.querySelectorAll('.timeline-item').forEach(el => el.remove());
+        document.querySelectorAll('.pricing-item').forEach(el => el.remove());
+        document.querySelectorAll('.tech-card').forEach(el => el.remove());
+        document.querySelectorAll('.testimonial-card').forEach(el => el.remove());
+      }
+
+      // ----------------------------
+      // Full initialization
+      // ----------------------------
+      function initializePage(proposal) {
+        populateFormWithData(proposal);
+        updateTotalPricing();
+        // Bind add buttons ONCE
+        if (!staticListenersBound) {
+          document.getElementById('add-pricing-item-btn')?.addEventListener('click', () => addPricingItem());
+          document.getElementById('add-timeline-item-btn')?.addEventListener('click', () => addTimelineItem());
+          document.getElementById('add-tech-item-btn')?.addEventListener('click', () => addTechnologyItem());
+          document.getElementById('add-testimonial-item-btn')?.addEventListener('click', () => addTestimonialItem());
+          document.getElementById('add-new-scope-btn')?.addEventListener('click', () => {
+            addFullScopeItem('#scope-of-work', {}, { title: 'phase-title-input', task: 'scope-task-input' }, 'New Phase');
+          });
+          document.getElementById('add-new-out-of-scope-btn')?.addEventListener('click', () => {
+            addFullScopeItem('#out-of-scope', {}, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, 'New Exclusion Section');
+          });
+          document.getElementById('add-new-dependency-btn')?.addEventListener('click', () => {
+            addFullScopeItem('#dependencies', {}, { title: 'dependency-title-input', task: 'dependency-task-input' }, 'New Dependency Section');
+          });
+          staticListenersBound = true;
+        }
+
+        // Event delegation for dynamic add/remove (bind once)
+        if (!bodyDelegationBound) {
+          document.body.addEventListener('click', function (event) {
+            if (event.target.matches('.add-task-btn')) {
+              event.preventDefault();
+              const scopeContent = event.target.closest('.scope-content');
+              if (scopeContent) {
+                const ul = scopeContent.querySelector('ul');
+                const titleInput = scopeContent.closest('.scope-item').querySelector('input[class*="-title-input"]');
+                let taskClass = 'scope-task-input';
+                if (titleInput?.className.includes('out-of-scope')) taskClass = 'out-of-scope-task-input';
+                if (titleInput?.className.includes('dependency')) taskClass = 'dependency-task-input';
+                addScopeTask(ul, taskClass);
+              }
             }
-          } catch (error) {
-            event.target.style.borderColor = 'red';
-            console.error("Invalid JSON format:", error);
+            const removeBtn = event.target.closest('.remove-item-btn');
+            if (removeBtn) {
+              const li = removeBtn.closest('li');
+              if (li) li.remove();
+              if (removeBtn.classList.contains('remove-pricing-btn')) {
+                updateTotalPricing();
+              }
+            }
+          });
+          bodyDelegationBound = true;
+        }
+
+        // JSON textarea sync back to UI (bind once)
+        if (!jsonSyncBound) {
+          const jsonOutputTextarea = document.getElementById('json-output');
+          if (jsonOutputTextarea) {
+            const syncJsonToUi = debounce((event) => {
+              const jsonString = event.target.value;
+              try {
+                if (jsonString) {
+                  const newProposalData = JSON.parse(jsonString);
+                  event.target.style.borderColor = '';
+                  populateFormWithData(newProposalData);
+                  updateTotalPricing();
+                }
+              } catch (error) {
+                event.target.style.borderColor = 'red';
+                console.error("Invalid JSON format:", error);
+              }
+            }, 500);
+            jsonOutputTextarea.addEventListener('input', syncJsonToUi);
           }
-        }, 500);
-        jsonOutputTextarea.addEventListener('input', syncJsonToUi);
+          jsonSyncBound = true;
+        }
       }
-      jsonSyncBound = true;
-    }
-  }
 
-  // ----------------------------
-  // Table Edit button -> open
-  // ----------------------------
-  if (tableBody) {
-    tableBody.addEventListener('click', e => {
-      const btn = e.target.closest('.edit-btn');
-      if (btn) {
-        const id = btn.getAttribute('data-id');
-        console.log(id)
-        openProposal(id); // pushes ?id=...
+      // ----------------------------
+      // Table Edit button -> open
+      // ----------------------------
+      if (tableBody) {
+        tableBody.addEventListener('click', e => {
+          const btn = e.target.closest('.edit-btn');
+          if (btn) {
+            const id = btn.getAttribute('data-id');
+            console.log(id)
+            openProposal(id); // pushes ?id=...
+          }
+        });
       }
-    });
-  }
 
-  // ----------------------------
-  // Start
-  // ----------------------------
-  await loadProposals();
+      // ----------------------------
+      // Start
+      // ----------------------------
+      await loadProposals();
 
-  // If URL has ?id=..., open that proposal without pushing history again
-  const initialId = getIdParam();
-  if (initialId === 'new') {
-    openNewProposal({ skipPush: true });
-  } else if (initialId) {
-    openProposal(initialId, { skipPush: true });
-  }
-
-  // -------------------------------------------------------
-  // Helpers & UI functions (populate/add/etc.) BELOW
-  // -------------------------------------------------------
-
-  // Populate Form with Proposal Data
-  function populateFormWithData(proposal) {
-    if (!proposal) return;
-    document.title = `Editing: ${proposal.title || ''} | StarLuxe Tech`;
-    setVal('proposal-id-input', proposal.id || '');
-    setVal('proposal-title-input', proposal.title || '');
-    setVal('client-name-input', proposal.client_name || '');
-    setVal('status-select', proposal.status || 'Draft');
-    setVal('project-type-input', proposal.project_type || '');
-    setVal('duration-input', proposal.duration || '');
-
-    if (proposal.submission_date) {
-      try {
-        const date = new Date(proposal.submission_date);
-        date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-        setVal('submission-date-input', date.toISOString().split('T')[0]);
-      } catch (e) {
-        setVal('submission-date-input', '');
+      // If URL has ?id=..., open that proposal without pushing history again
+      const initialId = getIdParam();
+      if (initialId === 'new') {
+        openNewProposal({ skipPush: true });
+      } else if (initialId) {
+        openProposal(initialId, { skipPush: true });
       }
-    }
 
-    populateListSection('#scope-of-work', proposal.scope_of_work, { title: 'phase-title-input', task: 'scope-task-input' }, "New Phase");
-    populateListSection('#out-of-scope', proposal.out_of_scope, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, "New Exclusion Section");
-    populateListSection('#dependencies', proposal.dependencies, { title: 'dependency-title-input', task: 'dependency-task-input' }, "New Dependency Section");
-    populateTimeline(proposal.timeline);
-    populatePricing(proposal.pricing);
-    populateTechnologyStack(proposal.technology_stack);
-    populateTestimonials(proposal.testimonials);
-  }
+      // -------------------------------------------------------
+      // Helpers & UI functions (populate/add/etc.) BELOW
+      // -------------------------------------------------------
 
-  function populateListSection(containerSelector, items, classNames, titlePrefix) {
-    const container = document.querySelector(containerSelector);
-    if (!container || !items) return;
-    container.querySelectorAll('.scope-item').forEach(item => item.remove());
-    items.forEach(itemData => addFullScopeItem(containerSelector, itemData, classNames, titlePrefix));
-  }
+      // Populate Form with Proposal Data
+      function populateFormWithData(proposal) {
+        if (!proposal) return;
+        document.title = `Editing: ${proposal.title || ''} | StarLuxe Tech`;
+        setVal('proposal-id-input', proposal.id || '');
+        setVal('proposal-title-input', proposal.title || '');
+        setVal('client-name-input', proposal.client_name || '');
+        setVal('status-select', proposal.status || 'Draft');
+        setVal('project-type-input', proposal.project_type || '');
+        setVal('duration-input', proposal.duration || '');
 
-  function populateTimeline(timelineItems) {
-    const container = document.getElementById('timeline');
-    if (!container || !timelineItems) return;
-    container.querySelectorAll('.timeline-item').forEach(item => item.remove());
-    timelineItems.forEach(itemData => addTimelineItem(itemData));
-  }
+        if (proposal.submission_date) {
+          try {
+            const date = new Date(proposal.submission_date);
+            date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+            setVal('submission-date-input', date.toISOString().split('T')[0]);
+          } catch (e) {
+            setVal('submission-date-input', '');
+          }
+        }
 
-  function populatePricing(pricingItems) {
-    const container = document.querySelector('.pricing-items-container');
-    if (!container || !pricingItems) return;
-    container.innerHTML = '';
-    pricingItems.forEach(itemData => {
-      let preparedData = { ...itemData, is_fixed: false };
-      if (String(itemData.hours).toLowerCase().includes('fixed')) {
-        preparedData.is_fixed = true;
-        preparedData.hours = parseFloat(String(itemData.rate).replace(/[^0-9.-]+/g, '')) || 0;
-        preparedData.rate = 1;
-      } else {
-        preparedData.hours = parseFloat(String(itemData.hours).replace(/ hours/i, '')) || 0;
-        preparedData.rate = parseFloat(String(itemData.rate).replace(/[$\/hr]/g, '')) || 0;
+        populateListSection('#scope-of-work', proposal.scope_of_work, { title: 'phase-title-input', task: 'scope-task-input' }, "New Phase");
+        populateListSection('#out-of-scope', proposal.out_of_scope, { title: 'out-of-scope-title-input', task: 'out-of-scope-task-input' }, "New Exclusion Section");
+        populateListSection('#dependencies', proposal.dependencies, { title: 'dependency-title-input', task: 'dependency-task-input' }, "New Dependency Section");
+        populateTimeline(proposal.timeline);
+        populatePricing(proposal.pricing);
+        populateTechnologyStack(proposal.technology_stack);
+        populateTestimonials(proposal.testimonials);
       }
-      addPricingItem(preparedData);
-    });
-    updateTotalPricing();
-  }
 
-  function populateTechnologyStack(techItems) {
-    const grid = document.getElementById('technology-stack');
-    if (!grid || !techItems) return;
-    grid.querySelectorAll('.tech-card').forEach(card => card.remove());
-    techItems.forEach(techData => addTechnologyItem(techData));
-  }
+      function populateListSection(containerSelector, items, classNames, titlePrefix) {
+        const container = document.querySelector(containerSelector);
+        if (!container || !items) return;
+        container.querySelectorAll('.scope-item').forEach(item => item.remove());
+        items.forEach(itemData => addFullScopeItem(containerSelector, itemData, classNames, titlePrefix));
+      }
 
-  function populateTestimonials(testimonialItems) {
-    const grid = document.getElementById('testimonials');
-    if (!grid || !testimonialItems) return;
-    grid.querySelectorAll('.testimonial-card').forEach(card => card.remove());
-    testimonialItems.forEach(itemData => addTestimonialItem(itemData));
-  }
+      function populateTimeline(timelineItems) {
+        const container = document.getElementById('timeline');
+        if (!container || !timelineItems) return;
+        container.querySelectorAll('.timeline-item').forEach(item => item.remove());
+        timelineItems.forEach(itemData => addTimelineItem(itemData));
+      }
 
-  // Builders
-  function addFullScopeItem(containerSelector, data = {}, classNames, titlePrefix) {
-    const container = document.querySelector(containerSelector);
-    if (!container) return;
-    const title = data.title || titlePrefix;
-    const tasks = data.tasks || [];
-    const tasksHtml = tasks.map(task => `
+      function populatePricing(pricingItems) {
+        const container = document.querySelector('.pricing-items-container');
+        if (!container || !pricingItems) return;
+        container.innerHTML = '';
+        pricingItems.forEach(itemData => {
+          let preparedData = { ...itemData, is_fixed: false };
+          if (String(itemData.hours).toLowerCase().includes('fixed')) {
+            preparedData.is_fixed = true;
+            preparedData.hours = parseFloat(String(itemData.rate).replace(/[^0-9.-]+/g, '')) || 0;
+            preparedData.rate = 1;
+          } else {
+            preparedData.hours = parseFloat(String(itemData.hours).replace(/ hours/i, '')) || 0;
+            preparedData.rate = parseFloat(String(itemData.rate).replace(/[$\/hr]/g, '')) || 0;
+          }
+          addPricingItem(preparedData);
+        });
+        updateTotalPricing();
+      }
+
+      function populateTechnologyStack(techItems) {
+        const grid = document.getElementById('technology-stack');
+        if (!grid || !techItems) return;
+        grid.querySelectorAll('.tech-card').forEach(card => card.remove());
+        techItems.forEach(techData => addTechnologyItem(techData));
+      }
+
+      function populateTestimonials(testimonialItems) {
+        const grid = document.getElementById('testimonials');
+        if (!grid || !testimonialItems) return;
+        grid.querySelectorAll('.testimonial-card').forEach(card => card.remove());
+        testimonialItems.forEach(itemData => addTestimonialItem(itemData));
+      }
+
+      // Builders
+      function addFullScopeItem(containerSelector, data = {}, classNames, titlePrefix) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+        const title = data.title || titlePrefix;
+        const tasks = data.tasks || [];
+        const tasksHtml = tasks.map(task => `
       <li>
         <input type="text" class="${classNames.task} form-input form-input-small w-input" value="${escapeHtml(task)}">
         <div class="circle-small remove-item-btn">
           <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
         </div>
       </li>`).join('');
-    const scopeItem = document.createElement('div');
-    scopeItem.className = 'scope-item active';
-    scopeItem.innerHTML = `
+        const scopeItem = document.createElement('div');
+        scopeItem.className = 'scope-item active';
+        scopeItem.innerHTML = `
       <div class="scope-header" >
         <div class="accordion-head" onclick="toggleAccordion(event)">
           <input type="text" class="${classNames.title} form-input w-input" value="${escapeHtml(title)}">
@@ -1566,35 +1567,35 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
           <a href="#" class="add-task-btn button-small w-button">Add List</a>
         </div>
       </div>`;
-    const lastChild = container.lastElementChild;
-    container.insertBefore(scopeItem, lastChild);
-  }
+        const lastChild = container.lastElementChild;
+        container.insertBefore(scopeItem, lastChild);
+      }
 
-  function addScopeTask(ulElement, inputClass) {
-    if (!ulElement) return;
-    const li = document.createElement('li');
-    li.innerHTML = `
+      function addScopeTask(ulElement, inputClass) {
+        if (!ulElement) return;
+        const li = document.createElement('li');
+        li.innerHTML = `
       <input type="text" class="${inputClass} form-input form-input-small w-input" value="">
       <div class="circle-small remove-item-btn">
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
       </div>`;
-    ulElement.appendChild(li);
-    li.querySelector('input')?.focus();
-  }
+        ulElement.appendChild(li);
+        li.querySelector('input')?.focus();
+      }
 
-  function addPricingItem(data = {}) {
-    const container = document.querySelector('.pricing-items-container');
-    if (!container) return;
-    const newItem = document.createElement('div');
-    newItem.classList.add('pricing-item', 'w-form');
-    const uniqueId = "checkbox-" + Date.now();
-    const title = data.title || "New Service";
-    const hours = data.hours ?? 8;
-    const rate = data.rate ?? 25;
+      function addPricingItem(data = {}) {
+        const container = document.querySelector('.pricing-items-container');
+        if (!container) return;
+        const newItem = document.createElement('div');
+        newItem.classList.add('pricing-item', 'w-form');
+        const uniqueId = "checkbox-" + Date.now();
+        const title = data.title || "New Service";
+        const hours = data.hours ?? 8;
+        const rate = data.rate ?? 25;
 
-    const is_fixed = rate == 1? true: false;
+        const is_fixed = rate == 1 ? true : false;
 
-    newItem.innerHTML = `
+        newItem.innerHTML = `
       <div class="pricing-info">
         <h3><span class="w-form-label">Description:</span>
           <input type="text" class="pricing-title-input form-input w-input" value="${escapeHtml(title)}">
@@ -1614,7 +1615,7 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
             <span class="radio-button-label w-form-label hours-label">Hours</span>
           </label>
           <label class="radio-button-field w-radio rate-label-wrapper">
-            <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${Number(rate)}" ${rate == 1 ? `disabled="true"`:''}">
+            <input type="number" class="pricing-rate-input form-input form-input-small w-input" value="${Number(rate)}" ${rate == 1 ? `disabled="true"` : ''}">
             <span class="radio-button-label w-form-label">Rate</span>
           </label>
         </div>
@@ -1626,25 +1627,25 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
       <div class="circle-small remove-item-btn remove-pricing-btn justify-center">
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
       </div>`;
-    container.appendChild(newItem);
-      
-    setupPricingCalculations(newItem);
-    newItem.querySelector('.remove-pricing-btn')?.addEventListener('click', (e) => {
-      e.currentTarget.closest('.pricing-item')?.remove();
-      updateTotalPricing();
-    });
-  }
+        container.appendChild(newItem);
 
-  function addTimelineItem(data = {}) {
-    const container = document.getElementById('timeline');
-    if (!container) return;
-    const newItem = document.createElement('div');
-    newItem.classList.add('timeline-item');
-    const count = container.querySelectorAll('.timeline-item').length + 1;
-    const week = data.week || `Week ${count}`;
-    const phase = data.phase || `Phase ${count}: New Title`;
-    const description = data.description || "Description for the new phase.";
-    newItem.innerHTML = `
+        setupPricingCalculations(newItem);
+        newItem.querySelector('.remove-pricing-btn')?.addEventListener('click', (e) => {
+          e.currentTarget.closest('.pricing-item')?.remove();
+          updateTotalPricing();
+        });
+      }
+
+      function addTimelineItem(data = {}) {
+        const container = document.getElementById('timeline');
+        if (!container) return;
+        const newItem = document.createElement('div');
+        newItem.classList.add('timeline-item');
+        const count = container.querySelectorAll('.timeline-item').length + 1;
+        const week = data.week || `Week ${count}`;
+        const phase = data.phase || `Phase ${count}: New Title`;
+        const description = data.description || "Description for the new phase.";
+        newItem.innerHTML = `
       <div class="timeline-week">
         <span class="w-form-label">Time</span>
         <input type="text" class="timeline-week-input form-input form-input-small w-input" value="${escapeHtml(week)}">
@@ -1660,19 +1661,19 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
         <span class="w-form-label">Description:</span>
         <textarea class="timeline-description-input form-input w-input">${escapeHtml(description)}</textarea>
       </div>`;
-    container.insertBefore(newItem, document.getElementById('add-timeline-item-btn'));
-    newItem.querySelector('.timeline-remove-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.timeline-item')?.remove());
-  }
+        container.insertBefore(newItem, document.getElementById('add-timeline-item-btn'));
+        newItem.querySelector('.timeline-remove-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.timeline-item')?.remove());
+      }
 
-  function addTechnologyItem(data = {}) {
-    const grid = document.getElementById('technology-stack');
-    if (!grid) return;
-    const newItem = document.createElement('div');
-    newItem.classList.add('tech-card');
-    const name = data.name || "New Tech";
-    const role = data.role || "Role";
-    const icon = data.icon || "https://via.placeholder.com/40";
-    newItem.innerHTML = `
+      function addTechnologyItem(data = {}) {
+        const grid = document.getElementById('technology-stack');
+        if (!grid) return;
+        const newItem = document.createElement('div');
+        newItem.classList.add('tech-card');
+        const name = data.name || "New Tech";
+        const role = data.role || "Role";
+        const icon = data.icon || "https://via.placeholder.com/40";
+        newItem.innerHTML = `
       <img class="tech-icon-img" width="40" height="40" src="${escapeHtml(icon)}" alt="tech icon">
       <div>
         <span class="w-form-label">Name</span>
@@ -1689,23 +1690,23 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
       <div class="circle-small remove-item-btn remove-tech-btn justify-center">
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
       </div>`;
-    grid.insertBefore(newItem, document.getElementById('add-tech-item-btn'));
-    newItem.querySelector('.remove-tech-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.tech-card')?.remove());
-    newItem.querySelector('.tech-icon-url-input')?.addEventListener('input', (e) => {
-      newItem.querySelector('.tech-icon-img').src = e.target.value;
-    });
-  }
+        grid.insertBefore(newItem, document.getElementById('add-tech-item-btn'));
+        newItem.querySelector('.remove-tech-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.tech-card')?.remove());
+        newItem.querySelector('.tech-icon-url-input')?.addEventListener('input', (e) => {
+          newItem.querySelector('.tech-icon-img').src = e.target.value;
+        });
+      }
 
-  function addTestimonialItem(data = {}) {
-    const grid = document.getElementById('testimonials');
-    if (!grid) return;
-    const newItem = document.createElement('div');
-    newItem.classList.add('testimonial-card');
-    const stars = '★'.repeat(data.stars || 5);
-    const text = data.text || "A great testimonial about our work.";
-    const author = data.author || "John Doe";
-    const role = data.role || "CEO, Company";
-    newItem.innerHTML = `
+      function addTestimonialItem(data = {}) {
+        const grid = document.getElementById('testimonials');
+        if (!grid) return;
+        const newItem = document.createElement('div');
+        newItem.classList.add('testimonial-card');
+        const stars = '★'.repeat(data.stars || 5);
+        const text = data.text || "A great testimonial about our work.";
+        const author = data.author || "John Doe";
+        const role = data.role || "CEO, Company";
+        newItem.innerHTML = `
       <input type="text" class="testimonial-stars-input form-input form-input-small w-input" value="${stars}">
       <textarea class="testimonial-text-input form-input w-input">${escapeHtml(text)}</textarea>
       <div class="testimonial-author">
@@ -1717,453 +1718,453 @@ document.getElementById('new-proposal-btn')?.addEventListener('click', () => {
       <div class="circle-small remove-item-btn remove-testimonial-btn justify-center">
         <img src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eec5a7ed3ca460a75c_icon-x.svg" alt="Remove">
       </div>`;
-    grid.insertBefore(newItem, document.getElementById('add-testimonial-item-btn'));
-    newItem.querySelector('.remove-testimonial-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.testimonial-card')?.remove());
-  }
-
-  // Interactivity & Calculations
-  window.toggleAccordion = function(event) {
-    if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') return;
-    event.currentTarget.closest('.scope-item')?.classList.toggle('active');
-  };
-
-  function setupPricingCalculations(item) {
-    const checkbox = item.querySelector('.fixed-cost-checkbox');
-    const hoursInput = item.querySelector('.pricing-hours-input');
-    const rateInput = item.querySelector('.pricing-rate-input');
-    const calculatedAmountSpan = item.querySelector('.calculated-amount');
-    const rateWrapper = item.querySelector('.rate-label-wrapper');
-    const hoursLabel = item.querySelector('.hours-label');
-
-    const updateAmount = () => {
-      let amount = 0;
-      const hours = parseFloat(hoursInput.value) || 0;
-      if (checkbox.checked) {
-        amount = hours; // fixed amount stored in hours input
-      } else {
-        const rate = parseFloat(rateInput.value) || 0;
-        amount = hours * rate;
+        grid.insertBefore(newItem, document.getElementById('add-testimonial-item-btn'));
+        newItem.querySelector('.remove-testimonial-btn')?.addEventListener('click', (e) => e.currentTarget.closest('.testimonial-card')?.remove());
       }
-      calculatedAmountSpan.textContent = amount.toFixed(2);
-      updateTotalPricing();
-    };
 
-    const togglePricingType = () => {
-      if (checkbox.checked) {
-        rateWrapper.children[0]?.setAttribute("disabled", "true");
-        hoursLabel.textContent = 'Fixed Amount';
-      } else {
-        rateWrapper.children[0]?.removeAttribute("disabled");
-        hoursLabel.textContent = 'Hours';
+      // Interactivity & Calculations
+      window.toggleAccordion = function (event) {
+        if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') return;
+        event.currentTarget.closest('.scope-item')?.classList.toggle('active');
+      };
+
+      function setupPricingCalculations(item) {
+        const checkbox = item.querySelector('.fixed-cost-checkbox');
+        const hoursInput = item.querySelector('.pricing-hours-input');
+        const rateInput = item.querySelector('.pricing-rate-input');
+        const calculatedAmountSpan = item.querySelector('.calculated-amount');
+        const rateWrapper = item.querySelector('.rate-label-wrapper');
+        const hoursLabel = item.querySelector('.hours-label');
+
+        const updateAmount = () => {
+          let amount = 0;
+          const hours = parseFloat(hoursInput.value) || 0;
+          if (checkbox.checked) {
+            amount = hours; // fixed amount stored in hours input
+          } else {
+            const rate = parseFloat(rateInput.value) || 0;
+            amount = hours * rate;
+          }
+          calculatedAmountSpan.textContent = amount.toFixed(2);
+          updateTotalPricing();
+        };
+
+        const togglePricingType = () => {
+          if (checkbox.checked) {
+            rateWrapper.children[0]?.setAttribute("disabled", "true");
+            hoursLabel.textContent = 'Fixed Amount';
+          } else {
+            rateWrapper.children[0]?.removeAttribute("disabled");
+            hoursLabel.textContent = 'Hours';
+          }
+          updateAmount();
+        };
+
+        checkbox.addEventListener('change', togglePricingType);
+        hoursInput.addEventListener('input', updateAmount);
+        rateInput.addEventListener('input', updateAmount);
+        togglePricingType();
       }
-      updateAmount();
-    };
 
-    checkbox.addEventListener('change', togglePricingType);
-    hoursInput.addEventListener('input', updateAmount);
-    rateInput.addEventListener('input', updateAmount);
-    togglePricingType();
-  }
+      function updateTotalPricing() {
+        let totalAmount = 0;
+        document.querySelectorAll('.pricing-item .calculated-amount').forEach(span => {
+          totalAmount += parseFloat(span.textContent) || 0;
+        });
+        const totalEl = document.querySelector('.pricing-total-amount');
+        if (totalEl) totalEl.textContent = `$${totalAmount.toFixed(2)}`;
+      }
+      function buildProposalFromForm() {
+        const rawDateValue = getVal('submission-date-input');
+        let formattedDate = "";
+        if (rawDateValue) {
+          try {
+            const [year, month, day] = rawDateValue.split('-');
+            const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+            formattedDate = new Intl.DateTimeFormat('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+            }).format(dateObj);
+          } catch (e) {
+            formattedDate = rawDateValue;
+          }
+        }
 
-  function updateTotalPricing() {
-    let totalAmount = 0;
-    document.querySelectorAll('.pricing-item .calculated-amount').forEach(span => {
-      totalAmount += parseFloat(span.textContent) || 0;
+        const proposal = {
+          // For NEW → client id; for EDIT → keep semantic id if you have it
+          id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
+          _id: window.proposalId || null, // Mongo doc id when editing
+          title: getVal('proposal-title-input'),
+          client_name: getVal('client-name-input'),
+          submission_date: formattedDate,
+          status: getVal('status-select') || 'Draft',
+          project_type: getVal('project-type-input'),
+          duration: getVal('duration-input'),
+          scope_of_work: [],
+          out_of_scope: [],
+          dependencies: [],
+          timeline: [],
+          pricing: [],
+          technology_stack: [],
+          testimonials: []
+        };
+
+        // Pricing
+        document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+          const checkbox = item.querySelector('.fixed-cost-checkbox');
+          if (checkbox?.checked) {
+            proposal.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: "Fixed Cost",
+              rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+            });
+          } else {
+            proposal.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+              rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+            });
+          }
+        });
+
+        // Scope-like sections
+        const collectScope = (selector, titleClass, taskClass) => {
+          const items = [];
+          document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+            const title = item.querySelector(`.${titleClass}`)?.value || '';
+            const tasks = [];
+            item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
+            if (title) items.push({ title, tasks });
+          });
+          return items;
+        };
+        proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
+        proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+        proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+        // Timeline
+        document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+          proposal.timeline.push({
+            week: item.querySelector('.timeline-week-input')?.value || '',
+            phase: item.querySelector('.timeline-phase-input')?.value || '',
+            description: item.querySelector('.timeline-description-input')?.value || ''
+          });
+        });
+
+        // Tech stack
+        document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+          proposal.technology_stack.push({
+            name: item.querySelector('.tech-name-input')?.value || '',
+            role: item.querySelector('.tech-role-input')?.value || '',
+            icon: item.querySelector('.tech-icon-url-input')?.value || ''
+          });
+        });
+
+        // Testimonials
+        document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+          proposal.testimonials.push({
+            stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+            text: item.querySelector('.testimonial-text-input')?.value || '',
+            author: item.querySelector('.testimonial-author-input')?.value || '',
+            role: item.querySelector('.testimonial-role-input')?.value || ''
+          });
+        });
+
+        return proposal;
+      }
+      // JSON generation (kept as-is except id comes from window.proposalId when present)
+      function generateJson() {
+        const rawDateValue = getVal('submission-date-input');
+        console.log(rawDateValue)
+        let formattedDate = "";
+        if (rawDateValue) {
+          try {
+            const [year, month, day] = rawDateValue.split('-');
+            const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+            formattedDate = new Intl.DateTimeFormat('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+            }).format(dateObj);
+          } catch (e) {
+            formattedDate = rawDateValue;
+          }
+        }
+
+        const idParam = getIdParam();                    // "new" or actual _id when editing
+        const isEditing = !!(idParam && idParam !== 'new');
+
+        const proposalData = {
+          _id: isEditing ? idParam : null,               // carry Mongo _id when editing
+          id: isEditing ? getVal('proposal-id-input') : ("new-proposal-" + Date.now()),  // optional client-side id for new
+          title: getVal('proposal-title-input'),
+          client_name: getVal('client-name-input'),
+          submission_date: formattedDate,
+          status: getVal('status-select'),
+          project_type: getVal('project-type-input'),
+          duration: getVal('duration-input'),
+          scope_of_work: [],
+          out_of_scope: [],
+          dependencies: [],
+          timeline: [],
+          pricing: [],
+          technology_stack: [],
+          testimonials: []
+        };
+
+        // Pricing
+        document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+          const checkbox = item.querySelector('.fixed-cost-checkbox');
+          if (checkbox?.checked) {
+            proposalData.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: "Fixed Cost",
+              rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+            });
+          } else {
+            proposalData.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+              rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+            });
+          }
+        });
+
+        // Generic collector
+        const getScopeData = (selector, titleClass, taskClass) => {
+          const items = [];
+          document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+            const title = item.querySelector(`.${titleClass}`)?.value || '';
+            const tasks = [];
+            item.querySelectorAll(`.${taskClass}`).forEach(taskInput => {
+              if (taskInput.value) tasks.push(taskInput.value);
+            });
+            if (title) items.push({ title, tasks });
+          });
+          return items;
+        };
+
+        proposalData.scope_of_work = getScopeData('#scope-of-work', 'phase-title-input', 'scope-task-input');
+        proposalData.out_of_scope = getScopeData('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+        proposalData.dependencies = getScopeData('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+        document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+          proposalData.timeline.push({
+            week: item.querySelector('.timeline-week-input')?.value || '',
+            phase: item.querySelector('.timeline-phase-input')?.value || '',
+            description: item.querySelector('.timeline-description-input')?.value || ''
+          });
+        });
+
+        document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+          proposalData.technology_stack.push({
+            name: item.querySelector('.tech-name-input')?.value || '',
+            role: item.querySelector('.tech-role-input')?.value || '',
+            icon: item.querySelector('.tech-icon-url-input')?.value || ''
+          });
+        });
+
+        document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+          proposalData.testimonials.push({
+            stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+            text: item.querySelector('.testimonial-text-input')?.value || '',
+            author: item.querySelector('.testimonial-author-input')?.value || '',
+            role: item.querySelector('.testimonial-role-input')?.value || ''
+          });
+        });
+
+        // Cache for Save button
+        window.generatedProposal = proposalData;
+
+        // Preview
+        const outputElement = document.getElementById('json-output');
+        if (outputElement) {
+          outputElement.value = JSON.stringify(proposalData, null, 2);
+          outputElement.style.display = 'block';
+        } else {
+          console.log('Generated JSON:', proposalData);
+        }
+      }
+
+
+      // Utilities
+      function debounce(func, delay) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), delay);
+        };
+      }
+      async function saveProposalFromGenerated(e) {
+        e?.preventDefault?.();
+
+        // Ensure we have the latest JSON from the form
+        generateJson();
+        const payload = window.generatedProposal;
+        console.log(payload)
+        const idParam = getIdParam();
+        const isNew = !idParam || idParam === 'new';
+
+        const btn = document.getElementById('save-proposal-btn');
+        btn?.setAttribute('disabled', 'true');
+        btn?.classList?.add('is-loading');
+
+        try {
+          const url = isNew
+            ? `${apiUrl}`
+            : `${apiUrl}/${encodeURIComponent(idParam)}`;
+
+          const method = isNew ? 'POST' : 'PUT';
+
+          const res = await fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(data?.error || `${res.status} ${res.statusText}`);
+
+          const saved = data?.item || data?.data || data;
+          const newId = saved?._id;
+
+          // If created, switch URL from ?id=new to the real id
+          if (isNew && newId) {
+            const urlReplace = new URL(location.href);
+            urlReplace.searchParams.set('id', newId);
+            history.replaceState({ id: newId }, '', urlReplace);
+            window.proposalId = newId; // now in edit mode
+          }
+
+          alert(isNew ? 'Created successfully.' : 'Updated successfully.');
+          if (listContainer) {
+            listContainer.style.display = 'block'
+            defaultProposal.style.display = "none";
+          };
+          clearIdParam({ replace: true });   // remove id param
+          window.proposalId = null;          // 
+          // Refresh the table so list view is up to date
+          await loadProposals();
+        } catch (err) {
+          console.error(err);
+          alert(`Save failed: ${err.message}`);
+        } finally {
+          btn?.removeAttribute('disabled');
+          btn?.classList?.remove('is-loading');
+        }
+      }
+
+      function buildProposalFromForm() {
+        const rawDateValue = getVal('submission-date-input');
+        let formattedDate = "";
+        if (rawDateValue) {
+          try {
+            const [year, month, day] = rawDateValue.split('-');
+            const dateObj = new Date(year, parseInt(month, 10) - 1, day);
+            formattedDate = new Intl.DateTimeFormat('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+            }).format(dateObj);
+          } catch (e) {
+            formattedDate = rawDateValue;
+          }
+        }
+
+        const proposal = {
+          // For NEW → client id; for EDIT → keep semantic id if you have it
+          id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
+          _id: window.proposalId || null, // Mongo doc id when editing
+          title: getVal('proposal-title-input'),
+          client_name: getVal('client-name-input'),
+          submission_date: formattedDate,
+          status: getVal('status-select') || 'Draft',
+          project_type: getVal('project-type-input'),
+          duration: getVal('duration-input'),
+          scope_of_work: [],
+          out_of_scope: [],
+          dependencies: [],
+          timeline: [],
+          pricing: [],
+          technology_stack: [],
+          testimonials: []
+        };
+
+        // Pricing
+        document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
+          const checkbox = item.querySelector('.fixed-cost-checkbox');
+          if (checkbox?.checked) {
+            proposal.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: "Fixed Cost",
+              rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
+            });
+          } else {
+            proposal.pricing.push({
+              title: item.querySelector('.pricing-title-input')?.value || '',
+              hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
+              rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
+            });
+          }
+        });
+
+        // Scope-like sections
+        const collectScope = (selector, titleClass, taskClass) => {
+          const items = [];
+          document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
+            const title = item.querySelector(`.${titleClass}`)?.value || '';
+            const tasks = [];
+            item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
+            if (title) items.push({ title, tasks });
+          });
+          return items;
+        };
+        proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
+        proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
+        proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
+
+        // Timeline
+        document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+          proposal.timeline.push({
+            week: item.querySelector('.timeline-week-input')?.value || '',
+            phase: item.querySelector('.timeline-phase-input')?.value || '',
+            description: item.querySelector('.timeline-description-input')?.value || ''
+          });
+        });
+
+        // Tech stack
+        document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
+          proposal.technology_stack.push({
+            name: item.querySelector('.tech-name-input')?.value || '',
+            role: item.querySelector('.tech-role-input')?.value || '',
+            icon: item.querySelector('.tech-icon-url-input')?.value || ''
+          });
+        });
+
+        // Testimonials
+        document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
+          proposal.testimonials.push({
+            stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
+            text: item.querySelector('.testimonial-text-input')?.value || '',
+            author: item.querySelector('.testimonial-author-input')?.value || '',
+            role: item.querySelector('.testimonial-role-input')?.value || ''
+          });
+        });
+
+        return proposal;
+      }
+
+      function setVal(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+      function getVal(id) { const el = document.getElementById(id); return el ? el.value : ''; }
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
     });
-    const totalEl = document.querySelector('.pricing-total-amount');
-    if (totalEl) totalEl.textContent = `$${totalAmount.toFixed(2)}`;
-  }
-  function buildProposalFromForm() {
-  const rawDateValue = getVal('submission-date-input');
-  let formattedDate = "";
-  if (rawDateValue) {
-    try {
-      const [year, month, day] = rawDateValue.split('-');
-      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
-      formattedDate = new Intl.DateTimeFormat('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
-      }).format(dateObj);
-    } catch (e) {
-      formattedDate = rawDateValue;
-    }
-  }
-
-  const proposal = {
-    // For NEW → client id; for EDIT → keep semantic id if you have it
-    id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
-    _id: window.proposalId || null, // Mongo doc id when editing
-    title: getVal('proposal-title-input'),
-    client_name: getVal('client-name-input'),
-    submission_date: formattedDate,
-    status: getVal('status-select') || 'Draft',
-    project_type: getVal('project-type-input'),
-    duration: getVal('duration-input'),
-    scope_of_work: [],
-    out_of_scope: [],
-    dependencies: [],
-    timeline: [],
-    pricing: [],
-    technology_stack: [],
-    testimonials: []
-  };
-
-  // Pricing
-  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
-    const checkbox = item.querySelector('.fixed-cost-checkbox');
-    if (checkbox?.checked) {
-      proposal.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: "Fixed Cost",
-        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
-      });
-    } else {
-      proposal.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
-        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
-      });
-    }
-  });
-
-  // Scope-like sections
-  const collectScope = (selector, titleClass, taskClass) => {
-    const items = [];
-    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
-      const title = item.querySelector(`.${titleClass}`)?.value || '';
-      const tasks = [];
-      item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
-      if (title) items.push({ title, tasks });
-    });
-    return items;
-  };
-  proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
-  proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
-  proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
-
-  // Timeline
-  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
-    proposal.timeline.push({
-      week: item.querySelector('.timeline-week-input')?.value || '',
-      phase: item.querySelector('.timeline-phase-input')?.value || '',
-      description: item.querySelector('.timeline-description-input')?.value || ''
-    });
-  });
-
-  // Tech stack
-  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
-    proposal.technology_stack.push({
-      name: item.querySelector('.tech-name-input')?.value || '',
-      role: item.querySelector('.tech-role-input')?.value || '',
-      icon: item.querySelector('.tech-icon-url-input')?.value || ''
-    });
-  });
-
-  // Testimonials
-  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
-    proposal.testimonials.push({
-      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
-      text: item.querySelector('.testimonial-text-input')?.value || '',
-      author: item.querySelector('.testimonial-author-input')?.value || '',
-      role: item.querySelector('.testimonial-role-input')?.value || ''
-    });
-  });
-
-  return proposal;
-}
-  // JSON generation (kept as-is except id comes from window.proposalId when present)
-  function generateJson() {
-  const rawDateValue = getVal('submission-date-input');
-  console.log(rawDateValue)
-  let formattedDate = "";
-  if (rawDateValue) {
-    try {
-      const [year, month, day] = rawDateValue.split('-');
-      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
-      formattedDate = new Intl.DateTimeFormat('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
-      }).format(dateObj);
-    } catch (e) {
-      formattedDate = rawDateValue;
-    }
-  }
-
-  const idParam = getIdParam();                    // "new" or actual _id when editing
-  const isEditing = !!(idParam && idParam !== 'new');
-
-  const proposalData = {
-    _id: isEditing ? idParam : null,               // carry Mongo _id when editing
-    id: isEditing ?  getVal('proposal-id-input') : ("new-proposal-" + Date.now()),  // optional client-side id for new
-    title: getVal('proposal-title-input'),
-    client_name: getVal('client-name-input'),
-    submission_date: formattedDate,
-    status: getVal('status-select'),
-    project_type: getVal('project-type-input'),
-    duration: getVal('duration-input'),
-    scope_of_work: [],
-    out_of_scope: [],
-    dependencies: [],
-    timeline: [],
-    pricing: [],
-    technology_stack: [],
-    testimonials: []
-  };
-
-  // Pricing
-  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
-    const checkbox = item.querySelector('.fixed-cost-checkbox');
-    if (checkbox?.checked) {
-      proposalData.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: "Fixed Cost",
-        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
-      });
-    } else {
-      proposalData.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
-        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
-      });
-    }
-  });
-
-  // Generic collector
-  const getScopeData = (selector, titleClass, taskClass) => {
-    const items = [];
-    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
-      const title = item.querySelector(`.${titleClass}`)?.value || '';
-      const tasks = [];
-      item.querySelectorAll(`.${taskClass}`).forEach(taskInput => {
-        if (taskInput.value) tasks.push(taskInput.value);
-      });
-      if (title) items.push({ title, tasks });
-    });
-    return items;
-  };
-
-  proposalData.scope_of_work = getScopeData('#scope-of-work', 'phase-title-input', 'scope-task-input');
-  proposalData.out_of_scope = getScopeData('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
-  proposalData.dependencies = getScopeData('#dependencies', 'dependency-title-input', 'dependency-task-input');
-
-  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
-    proposalData.timeline.push({
-      week: item.querySelector('.timeline-week-input')?.value || '',
-      phase: item.querySelector('.timeline-phase-input')?.value || '',
-      description: item.querySelector('.timeline-description-input')?.value || ''
-    });
-  });
-
-  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
-    proposalData.technology_stack.push({
-      name: item.querySelector('.tech-name-input')?.value || '',
-      role: item.querySelector('.tech-role-input')?.value || '',
-      icon: item.querySelector('.tech-icon-url-input')?.value || ''
-    });
-  });
-
-  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
-    proposalData.testimonials.push({
-      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
-      text: item.querySelector('.testimonial-text-input')?.value || '',
-      author: item.querySelector('.testimonial-author-input')?.value || '',
-      role: item.querySelector('.testimonial-role-input')?.value || ''
-    });
-  });
-
-  // Cache for Save button
-  window.generatedProposal = proposalData;
-
-  // Preview
-  const outputElement = document.getElementById('json-output');
-  if (outputElement) {
-    outputElement.value = JSON.stringify(proposalData, null, 2);
-    outputElement.style.display = 'block';
-  } else {
-    console.log('Generated JSON:', proposalData);
-  }
-}
 
 
-  // Utilities
-  function debounce(func, delay) {
-    let timeout;
-    return function(...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), delay);
-    };
-  }
-  async function saveProposalFromGenerated(e) {
-  e?.preventDefault?.();
+  </script>
 
-  // Ensure we have the latest JSON from the form
-  generateJson();
-  const payload = window.generatedProposal;
-  console.log(payload)
-  const idParam = getIdParam();
-  const isNew = !idParam || idParam === 'new';
-
-  const btn = document.getElementById('save-proposal-btn');
-  btn?.setAttribute('disabled', 'true');
-  btn?.classList?.add('is-loading');
-
-  try {
-    const url = isNew
-      ? `${apiUrl}`
-      : `${apiUrl}/${encodeURIComponent(idParam)}`;
-
-    const method = isNew ? 'POST' : 'PUT';
-
-    const res = await fetch(url, {
-      method,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw new Error(data?.error || `${res.status} ${res.statusText}`);
-
-    const saved = data?.item || data?.data || data;
-    const newId = saved?._id;
-
-    // If created, switch URL from ?id=new to the real id
-    if (isNew && newId) {
-      const urlReplace = new URL(location.href);
-      urlReplace.searchParams.set('id', newId);
-      history.replaceState({ id: newId }, '', urlReplace);
-      window.proposalId = newId; // now in edit mode
-    }
-
-    alert(isNew ? 'Created successfully.' : 'Updated successfully.');
-    if (listContainer){
-      listContainer.style.display = 'block'
-      defaultProposal.style.display = "none";
-    };
-      clearIdParam({ replace: true });   // remove id param
-      window.proposalId = null;          // 
-    // Refresh the table so list view is up to date
-    await loadProposals();
-  } catch (err) {
-    console.error(err);
-    alert(`Save failed: ${err.message}`);
-  } finally {
-    btn?.removeAttribute('disabled');
-    btn?.classList?.remove('is-loading');
-  }
-}
-
-  function buildProposalFromForm() {
-  const rawDateValue = getVal('submission-date-input');
-  let formattedDate = "";
-  if (rawDateValue) {
-    try {
-      const [year, month, day] = rawDateValue.split('-');
-      const dateObj = new Date(year, parseInt(month, 10) - 1, day);
-      formattedDate = new Intl.DateTimeFormat('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
-      }).format(dateObj);
-    } catch (e) {
-      formattedDate = rawDateValue;
-    }
-  }
-
-  const proposal = {
-    // For NEW → client id; for EDIT → keep semantic id if you have it
-    id: window.proposalId ? undefined : ('new-proposal-' + Date.now()),
-    _id: window.proposalId || null, // Mongo doc id when editing
-    title: getVal('proposal-title-input'),
-    client_name: getVal('client-name-input'),
-    submission_date: formattedDate,
-    status: getVal('status-select') || 'Draft',
-    project_type: getVal('project-type-input'),
-    duration: getVal('duration-input'),
-    scope_of_work: [],
-    out_of_scope: [],
-    dependencies: [],
-    timeline: [],
-    pricing: [],
-    technology_stack: [],
-    testimonials: []
-  };
-
-  // Pricing
-  document.querySelectorAll('.pricing-items-container .pricing-item').forEach(item => {
-    const checkbox = item.querySelector('.fixed-cost-checkbox');
-    if (checkbox?.checked) {
-      proposal.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: "Fixed Cost",
-        rate: `$${item.querySelector('.pricing-hours-input')?.value || ''}`
-      });
-    } else {
-      proposal.pricing.push({
-        title: item.querySelector('.pricing-title-input')?.value || '',
-        hours: `${item.querySelector('.pricing-hours-input')?.value || ''} hours`,
-        rate: `$${item.querySelector('.pricing-rate-input')?.value || ''}/hr`
-      });
-    }
-  });
-
-  // Scope-like sections
-  const collectScope = (selector, titleClass, taskClass) => {
-    const items = [];
-    document.querySelectorAll(`${selector} .scope-item`).forEach(item => {
-      const title = item.querySelector(`.${titleClass}`)?.value || '';
-      const tasks = [];
-      item.querySelectorAll(`.${taskClass}`).forEach(t => { if (t.value) tasks.push(t.value); });
-      if (title) items.push({ title, tasks });
-    });
-    return items;
-  };
-  proposal.scope_of_work = collectScope('#scope-of-work', 'phase-title-input', 'scope-task-input');
-  proposal.out_of_scope = collectScope('#out-of-scope', 'out-of-scope-title-input', 'out-of-scope-task-input');
-  proposal.dependencies = collectScope('#dependencies', 'dependency-title-input', 'dependency-task-input');
-
-  // Timeline
-  document.querySelectorAll('#timeline .timeline-item').forEach(item => {
-    proposal.timeline.push({
-      week: item.querySelector('.timeline-week-input')?.value || '',
-      phase: item.querySelector('.timeline-phase-input')?.value || '',
-      description: item.querySelector('.timeline-description-input')?.value || ''
-    });
-  });
-
-  // Tech stack
-  document.querySelectorAll('#technology-stack .tech-card').forEach(item => {
-    proposal.technology_stack.push({
-      name: item.querySelector('.tech-name-input')?.value || '',
-      role: item.querySelector('.tech-role-input')?.value || '',
-      icon: item.querySelector('.tech-icon-url-input')?.value || ''
-    });
-  });
-
-  // Testimonials
-  document.querySelectorAll('#testimonials .testimonial-card').forEach(item => {
-    proposal.testimonials.push({
-      stars: (item.querySelector('.testimonial-stars-input')?.value.match(/★/g) || []).length,
-      text: item.querySelector('.testimonial-text-input')?.value || '',
-      author: item.querySelector('.testimonial-author-input')?.value || '',
-      role: item.querySelector('.testimonial-role-input')?.value || ''
-    });
-  });
-
-  return proposal;
-}
-
-  function setVal(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
-  function getVal(id) { const el = document.getElementById(id); return el ? el.value : ''; }
-  function escapeHtml(s) {
-    return String(s)
-      .replace(/&/g,'&amp;')
-      .replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;')
-      .replace(/'/g,'&#039;');
-  }
-});
-
-
-        </script>
-        
-    <!-- <script>
+  <!-- <script>
         async function getSiloData(siloId, apiKey) {
   const url = `https://api.jsonsilo.com/api/v1/manage/${siloId}`;
 
@@ -2312,15 +2313,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
     </script> -->
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64d531d8b3d556ea8480e670"
-        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64d531d8b3d556ea8480e670"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
 
 
-    <!-- <script src="js/webflow.js" type="text/javascript"></script> -->
-    <script src="/js/dataexpert.js" type="text/javascript"></script>
+  <!-- <script src="js/webflow.js" type="text/javascript"></script> -->
+  <script src="/js/dataexpert.js" type="text/javascript"></script>
 
-    <script src="/js/data.js" type="text/javascript"></script>
+  <script src="/js/data.js" type="text/javascript"></script>
 </body>
 
 </html>
