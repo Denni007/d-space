@@ -40,6 +40,7 @@
     { "src": "/blog/customer-engagement-analytics-best-practices-metrics", "dest": "/blog-17.html" },
     { "src": "/blog/how-to-use-google-analytics-for-competitor-analysis", "dest": "/blog-18.html" },
     { "src": "/blog/future-proof-your-data-the-ga4-user-id-guide-measurement-strategy", "dest": "/blog-19.html" },
+    { "src": "/blog/how-to-track-qr-codes-with-ga4", "dest": "/blog-20.html" },
 
     { "src": "/proposal", "dest": "/proposal.html" },
     { "src": "/proposaledit", "dest": "/proposaledit.html" },
