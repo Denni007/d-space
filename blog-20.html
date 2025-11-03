@@ -6,26 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="canonical" href="https://starluxetech.com/blog/how-to-track-qr-codes-with-ga4">
-    
-    <title>How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)</title>
 
-    <meta name="title" content="How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)">
-    <meta name="description"
-        content="Actionable guide on tracking QR codes in Google Analytics 4 (GA4) using UTM parameters, URL shorteners, and Custom Dimensions. Measure your offline ROI effectively.">
-    
-    <meta name="keywords"
-        content="GA4 QR code tracking, UTM parameters, QR code analytics, GA4 custom dimensions, offline marketing ROI, URL shortener, qrcode_scan, Google Analytics 4">
+  <title>How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)</title>
 
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
+  <meta name="title" content="How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)">
+  <meta name="description"
+    content="Actionable guide on tracking QR codes in Google Analytics 4 (GA4) using UTM parameters, URL shorteners, and Custom Dimensions. Measure your offline ROI effectively.">
 
-    <meta property="og:title" content="How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)">
-    <meta property="og:description"
-        content="Master the technical setup for measuring QR code ROI in Google Analytics 4. Use UTMs and custom dimensions to accurately track every physical marketing touchpoint.">
-    <meta property="og:image" content="https://framerusercontent.com/images/GBVy7q3endyajstZphl3qbb0i20.png"> <meta property="og:url" content="https://starluxetech.com/blog/how-to-track-qr-codes-with-ga4">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="StarLuxe Tech">
+  <meta name="keywords"
+    content="GA4 QR code tracking, UTM parameters, QR code analytics, GA4 custom dimensions, offline marketing ROI, URL shortener, qrcode_scan, Google Analytics 4">
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+
+  <meta property="og:title" content="How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)">
+  <meta property="og:description"
+    content="Master the technical setup for measuring QR code ROI in Google Analytics 4. Use UTMs and custom dimensions to accurately track every physical marketing touchpoint.">
+  <meta property="og:image" content="https://framerusercontent.com/images/GBVy7q3endyajstZphl3qbb0i20.png">
+  <meta property="og:url" content="https://starluxetech.com/blog/how-to-track-qr-codes-with-ga4">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="StarLuxe Tech">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Track QR Codes with GA4: Implementation Guide (UTM & Custom Dimensions)">
@@ -44,7 +45,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
   <meta name="theme-color" content="#ffffff">
 
- <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -68,7 +69,10 @@
           "@type": "WebPage",
           "@id": "https://starluxetech.com/blog/how-to-track-qr-codes-with-ga4"
         },
-        "image": "https://framerusercontent.com/images/GBVy7q3endyajstZphl3qbb0i20.png",
+        "image": [
+          "https://framerusercontent.com/images/GBVy7q3endyajstZphl3qbb0i20.png",
+          "https://framerusercontent.com/images/T5iXz85E3PnWUBIw1940NI72Sg.png"
+        ],
         "keywords": [
           "GA4 QR code tracking",
           "UTM parameters",
@@ -409,12 +413,16 @@ Tagged URL: https://www.yourbrand.com/special-offer?utm_source=flyer_jan_2025&ut
           </li>
           <li><strong>Explorations:</strong> Use your custom dimensions (QR Source, QR Campaign) to build
             funnel or free-form reports.</li>
+          <img src="https://framerusercontent.com/images/T5iXz85E3PnWUBIw1940NI72Sg.png?width=866&height=614"
+            alt="Example of a GA4 tagged URL creation"
+            style="display: block; width: 100%; height: auto; border-bottom: 1px solid #e5e7eb;">
         </ul>
 
         <h4>Section 5: Key Best Practices Checklist</h4>
         <ul>
           <li><strong>Consistency:</strong> Always use one value for <code>utm_medium</code> (e.g.,
-            <code>qrcode_scan</code>).</li>
+            <code>qrcode_scan</code>).
+          </li>
           <li><strong>URL Shortener:</strong> Mandatory for scannability.</li>
           <li><strong>No PII:</strong> Never include personal data (emails, names) in URLs.</li>
           <li><strong>Test on Mobile:</strong> Always test code scannability and landing page responsiveness.</li>
