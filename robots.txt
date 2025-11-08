@@ -1,0 +1,21 @@
+# robots.txt for https://www.starluxetech.com/
+# Optimized for Google, Bing, and other major crawlers
+
+User-agent: *
+Allow: /
+
+# Disallow admin or system directories if applicable
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Prevent duplicate content or staging environments
+Disallow: /?s=
+Disallow: /search
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?ref=*
+
+# Sitemap reference
+Sitemap: https://www.starluxetech.com/sitemap.xml

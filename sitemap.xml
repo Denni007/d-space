@@ -1,162 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://www.starluxetech.com/</loc>
-  <lastmod>2025-02-14T13:22:45+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/case-studies</loc>
-  <lastmod>2025-02-14T13:22:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blogs</loc>
-  <lastmod>2025-02-14T13:22:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/ga4-migration</loc>
-  <lastmod>2025-02-14T13:22:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/tracking</loc>
-  <lastmod>2025-02-14T13:22:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/service/conversion-rate-optimization</loc>
-  <lastmod>2025-02-14T13:22:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/gdpr</loc>
-  <lastmod>2025-02-14T13:22:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/s2s-gtm</loc>
-  <lastmod>2025-02-14T13:22:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/contact-us</loc>
-  <lastmod>2025-02-14T13:22:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/our-team</loc>
-  <lastmod>2025-02-14T13:22:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/case-study/learning-roots</loc>
-  <lastmod>2025-02-14T13:22:48+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/case-study/rangreli</loc>
-  <lastmod>2025-02-14T13:22:48+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/case-study/hydratherma</loc>
-  <lastmod>2025-10-14T13:22:48+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story</loc>
-  <lastmod>2025-02-14T13:22:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/Understanding-Meme-Coin-Development</loc>
-  <lastmod>2025-02-14T13:22:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/gtm-form-interact-event</loc>
-  <lastmod>2025-02-14T13:22:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/iFrame-Tracking-GTM</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/top-Pages-Using-Google-Analytics</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/Hide-UTM-Parameters</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/Successful-CRO-Audits-and-A/B-Testing</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/AI-Powered-Google-Analytics-4-Insights</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/Fix-Google-Analytics-4-DebugView</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/Understanding-Acquisition-Reports</loc>
-  <lastmod>2025-02-14T13:22:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/How-To-Fix-Not-Set-in-GA4-Landing-Page-Reports</loc>
-  <lastmod>2025-02-14T13:22:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/How-to-Use-Google-Analytics-to-Improve-Your-SEO-Strategy</loc>
-  <lastmod>2025-02-14T13:22:51+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.starluxetech.com/blog/future-proof-your-data-the-ga4-user-id-guide-measurement-strategy</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://starluxetech.com/blog/how-to-track-qr-codes-with-ga4</loc>
-  <lastmod>2025-02-14T13:22:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-<loc>https://starluxetech.com/blog/Why-Do-We-Need-Server-Side-Tagging</loc>
-<lastmod>2025-03-26T08:51:15+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://starluxetech.com//blog/ga4-vs-shopify-analytics-fix</loc>
-<lastmod>2025-06-10T08:51:15+00:00</lastmod>
-<priority>0.84</priority>
-</url>
-<url>
-<loc>https://www.starluxetech.com/blog/customer-engagement-analytics-best-practices-metrics</loc>
-<lastmod>2025-09-25T11:20:15+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://www.starluxetech.com/blog/how-to-use-google-analytics-for-competitor-analysis</loc>
-<lastmod>2025-09-25T11:20:15+00:00</lastmod>
-<priority>0.64</priority>
-</url>
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ========================= -->
+  <!-- Core Pages -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.starluxetech.com/</loc>
+    <lastmod>2025-11-08T13:22:45+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/case-studies</loc>
+    <lastmod>2025-11-08T13:22:45+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blogs</loc>
+    <lastmod>2025-11-08T13:22:46+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- ========================= -->
+  <!-- Service Pages -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.starluxetech.com/ga4-migration</loc>
+    <lastmod>2025-11-08T13:22:46+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/tracking</loc>
+    <lastmod>2025-11-08T13:22:46+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/service/conversion-rate-optimization</loc>
+    <lastmod>2025-11-08T13:22:47+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/s2s-gtm</loc>
+    <lastmod>2025-11-08T13:22:47+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/gdpr</loc>
+    <lastmod>2025-11-08T13:22:47+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- ========================= -->
+  <!-- Contact & About -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.starluxetech.com/contact-us</loc>
+    <lastmod>2025-11-08T13:22:47+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/our-team</loc>
+    <lastmod>2025-11-08T13:22:48+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- ========================= -->
+  <!-- Case Studies -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.starluxetech.com/case-study/learning-roots</loc>
+    <lastmod>2025-11-01T13:22:48+00:00</lastmod>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/case-study/rangreli</loc>
+    <lastmod>2025-11-01T13:22:48+00:00</lastmod>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/case-study/hydratherma</loc>
+    <lastmod>2025-10-14T13:22:48+00:00</lastmod>
+    <priority>0.84</priority>
+  </url>
+
+  <!-- ========================= -->
+  <!-- Blogs (Performance Level: 0.80) -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.starluxetech.com/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story</loc>
+    <lastmod>2025-11-01T13:22:49+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Understanding-Meme-Coin-Development</loc>
+    <lastmod>2025-11-01T13:22:49+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/gtm-form-interact-event</loc>
+    <lastmod>2025-11-01T13:22:49+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/iFrame-Tracking-GTM</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/top-Pages-Using-Google-Analytics</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Hide-UTM-Parameters</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Successful-CRO-Audits-and-A-B-Testing</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/AI-Powered-Google-Analytics-4-Insights</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Fix-Google-Analytics-4-DebugView</loc>
+    <lastmod>2025-11-01T13:22:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Understanding-Acquisition-Reports</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/How-To-Fix-Not-Set-in-GA4-Landing-Page-Reports</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/How-to-Use-Google-Analytics-to-Improve-Your-SEO-Strategy</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/future-proof-your-data-the-ga4-user-id-guide-measurement-strategy</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/how-to-track-qr-codes-with-ga4</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/ga4-user-data-attribution-update</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/Why-Do-We-Need-Server-Side-Tagging</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/ga4-vs-shopify-analytics-fix</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/customer-engagement-analytics-best-practices-metrics</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.starluxetech.com/blog/how-to-use-google-analytics-for-competitor-analysis</loc>
+    <lastmod>2025-11-01T13:22:51+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
