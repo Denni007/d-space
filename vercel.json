@@ -43,6 +43,7 @@
     { "src": "/blog/how-to-track-qr-codes-with-ga4", "dest": "/blog-20.html" },
     { "src": "/blog/ga4-user-data-attribution-update", "dest": "/blog-21.html" },
     { "src": "/blog/how-to-import-meta-ads-cost-data-into-ga4", "dest": "/blog-22.html" },
+    { "src": "/blog/how-to-import-tiktok-ads-cost-data-into-ga4", "dest": "/blog-23.html" },
 
     { "src": "/proposal", "dest": "/proposal.html" },
     { "src": "/proposaledit", "dest": "/proposaledit.html" },
