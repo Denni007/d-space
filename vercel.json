@@ -42,6 +42,7 @@
     { "src": "/blog/future-proof-your-data-the-ga4-user-id-guide-measurement-strategy", "dest": "/blog-19.html" },
     { "src": "/blog/how-to-track-qr-codes-with-ga4", "dest": "/blog-20.html" },
     { "src": "/blog/ga4-user-data-attribution-update", "dest": "/blog-21.html" },
+    { "src": "/blog/how-to-import-meta-ads-cost-data-into-ga4", "dest": "/blog-22.html" },
 
     { "src": "/proposal", "dest": "/proposal.html" },
     { "src": "/proposaledit", "dest": "/proposaledit.html" },
