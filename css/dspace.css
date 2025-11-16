@@ -515,7 +515,7 @@ figcaption {
   justify-content: space-between;
   align-items: flex-start;
   display: flex;
- 
+
 }
 
 .panel.style-guide-color-swatch {
@@ -555,6 +555,7 @@ figcaption {
   background-size: 90%;
   background-position: center;
 }
+
 .text-small {
   color: rgba(255, 255, 255, .5);
   letter-spacing: 0;
@@ -564,6 +565,7 @@ figcaption {
   line-height: 22px;
   text-decoration: none;
 }
+
 .panel.section {
   position: static;
   top: -67px;
@@ -1226,6 +1228,7 @@ figcaption {
   letter-spacing: 0em;
   text-decoration: none;
 }
+
 .text-small {
   color: rgba(255, 255, 255, .5);
   letter-spacing: 0;
@@ -1383,7 +1386,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 6px;
-  
+
   background-color: #FF934F;
   box-shadow: inset 0 0 20px 20px transparent;
   -webkit-transition: box-shadow 200ms ease;
@@ -1667,6 +1670,7 @@ figcaption {
   height: 5px;
   margin-left: 6px;
 }
+
 .dropdown-title {
   font-size: 15px;
   font-weight: bold;
@@ -1676,9 +1680,11 @@ figcaption {
   margin-bottom: 0px;
   padding-left: 10px;
 }
+
 .dropdown-column {
   flex: 1;
 }
+
 .form-input {
   height: 48px;
   margin-bottom: 0px;
@@ -2007,13 +2013,14 @@ figcaption {
   padding: 36px;
   display: flex;
   position: relative;
-  border-radius: 12px; /* Adjust as preferred */
-  
+  border-radius: 12px;
+  /* Adjust as preferred */
+
   /* Optional: Subtle vertical gradient for a more "glossy", reflective look */
   /* Adjust colors and direction as needed for desired effect */
   /* background: linear-gradient(145deg, #333333, #222222); */
   /* 3. Subtle Box Shadow: This is key for the "lifted" effect. Use a LIGHT color with low opacity. */
-  
+
 
 }
 
@@ -2048,8 +2055,9 @@ figcaption {
 .panel-body.panel-body-large.align-content-center.no-padding {
   padding: 0px;
 }
+
 .panel-body:hover {
- 
+
   /* transform: translateY(-3px); Optional: Lift the card slightly */
   /* background: linear-gradient(145deg, #3a3a3a, #2a2a2a); /* Slightly lighter gradient on hover */
 }
@@ -3006,7 +3014,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  
+
 }
 
 .navbar-controls {
@@ -3042,19 +3050,22 @@ figcaption {
   bottom: 0%;
   background-color: hsla(0, 0%, 100%, 0.05);
 }
+
 .dropdown-item a {
   text-decoration: none;
   /* font-size: 12px; */
   color: #ffffff;
   font-weight: 500;
 }
+
 .dropdown-item p {
   font-size: 11px;
   color: #bbbbbb;
   margin: 0;
-  padding-bottom:3px ;
+  padding-bottom: 3px;
   line-height: normal;
 }
+
 .cta-box {
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -3077,7 +3088,7 @@ figcaption {
 .dropdown-item:hover {
   background-color: hsla(0, 0%, 100%, 0.05);
   color: #fff;
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }
 
 .dropdown-item.w--current {
@@ -3102,7 +3113,7 @@ figcaption {
   width: 100%;
   background: rgba(255, 255, 255, .05);
   backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   /* background-color: #12141d; */
 }
 
@@ -3111,11 +3122,10 @@ figcaption {
   position: sticky;
   top: 0px;
   z-index: 99;
- 
+
 }
-.navbar-wrapper.container {
-  
-}
+
+.navbar-wrapper.container {}
 
 .nav-menu {
   display: -webkit-box;
@@ -3126,7 +3136,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  
+
 }
 
 .dropdown-link-icon {
@@ -3489,6 +3499,7 @@ figcaption {
   bottom: 0%;
   z-index: 0;
 }
+
 .hero-bg-2 {
   opacity: .2;
   background-image: url('../images/rectangle-6.jpg');
@@ -3501,6 +3512,7 @@ figcaption {
   left: 0%;
   right: 0%;
 }
+
 .hero-bg-1 {
   position: absolute;
   left: 0%;
@@ -7578,6 +7590,7 @@ figcaption {
     left: 0%;
     right: 0%;
   }
+
   .hero-bg-1 {
     position: relative;
     left: 0%;
@@ -8496,4 +8509,21 @@ ul {
   .mobile-text {
     display: inline;
   }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  /* 16:9 ratio */
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
