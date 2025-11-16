@@ -1,9 +1,55 @@
 Options +ExecCGI +FollowSymLinks -MultiViews
 
-RewriteEngine on
+RewriteEngine On
 RewriteBase /
 
+# HTML routing
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ /$1.html [L]
+
+############################################
+# GZIP COMPRESSION
+############################################
+<IfModule mod_deflate.c>
+ AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript application/javascript application/x-javascript application/json image/svg+xml
+</IfModule>
+
+############################################
+# CACHING (Major Boost)
+############################################
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault "access plus 1 month"
+ ExpiresByType text/css "access plus 1 year"
+ ExpiresByType application/javascript "access plus 1 year"
+ ExpiresByType text/javascript "access plus 1 year"
+ ExpiresByType image/jpeg "access plus 1 year"
+ ExpiresByType image/png "access plus 1 year"
+ ExpiresByType image/webp "access plus 1 year"
+ ExpiresByType image/svg+xml "access plus 1 year"
+ ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+############################################
+# SECURITY HEADERS (Best Practices Score++)
+############################################
+Header set Strict-Transport-Security "max-age=31536000"
+Header set X-Frame-Options "DENY"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+############################################
+# CONTENT SECURITY POLICY (Safe)
+############################################
+Header set Content-Security-Policy "default-src 'self' https: data: blob:; img-src 'self' https: data:; media-src https: data:; frame-src https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';"
+
+############################################
+# CORS for fonts
+############################################
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+ Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
