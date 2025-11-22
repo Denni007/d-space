@@ -45,6 +45,7 @@
     { "src": "/blog/how-to-import-meta-ads-cost-data-into-ga4", "dest": "/blog-22.html" },
     { "src": "/blog/how-to-import-tiktok-ads-cost-data-into-ga4", "dest": "/blog-23.html" },
     { "src": "/blog/ga4-consent-mode-v2-setup-guide", "dest": "/blog-24.html" },
+    { "src": "/blog/ga4-traffic-source-analysis-guide", "dest": "/blog-25.html" },
 
     { "src": "/proposal", "dest": "/proposal.html" },
     { "src": "/proposaledit", "dest": "/proposaledit.html" },

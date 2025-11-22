@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-page="64d531d8b3d556ea8480e6be" data-wf-site="64d531d8b3d556ea8480e670">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to Analyze Traffic Sources in GA4: Complete Guide to Acquisition, UTMs & User Behavior</title>
+
+  <meta name="description"
+    content="Learn how to analyze traffic sources in GA4 with this complete guide. Understand acquisition reports, session vs user scope, UTMs, channel groups, engagement metrics, and how to interpret user behavior for growth.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.starluxetech.com/blog/ga4-traffic-source-analysis-guide">
+
+  <meta name="keywords"
+    content="GA4 traffic sources, GA4 acquisition report, GA4 user acquisition, GA4 session acquisition, GA4 source medium, GA4 UTMs, GA4 channel groups, GA4 traffic analysis, GA4 marketing analytics, how to read GA4 reports">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How to Analyze Traffic Sources in GA4: Complete Traffic & Acquisition Guide">
+  <meta property="og:description"
+    content="Master GA4 traffic source analysis with this practical guide covering acquisition reports, UTMs, scope differences, Explorations, and channel performance insights.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.starluxetech.com/blog/ga4-traffic-source-analysis-guide">
+  <meta property="og:image" content="https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Analyze Traffic Sources in GA4: Full Practical Breakdown">
+  <meta name="twitter:description"
+    content="A complete guide to GA4 traffic source analysis—acquisition reports, UTMs, scopes, engagement metrics and Explorations. Learn how to interpret and act on GA4 data.">
+  <meta name="twitter:image" content="https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Analyze Traffic Sources in GA4: Complete Guide to Acquisition, UTMs & User Behavior",
+  "description": "A complete practical guide to analyzing traffic sources in GA4. Includes how to use User Acquisition, Session Acquisition, Default Channel Groups, UTMs, Explorations, and engagement metrics to understand website traffic and user behavior.",
+  "author": { "@type": "Person", "name": "Ravi Patel" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "StarLuxe Tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png"
+    }
+  },
+  "datePublished": "2025-11-22",
+  "dateModified": "2025-11-22",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.starluxetech.com/blog/ga4-traffic-source-analysis-guide"
+  },
+
+  "image": [
+    "https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png",
+    "https://framerusercontent.com/images/kOkrBwfMnNlQSwnzC2OixCWkbAg.png",
+    "https://framerusercontent.com/images/J5EcLh5d5EYoxiEG0nGlnPdGf0.png",
+    "https://framerusercontent.com/images/yr0Q9CHv8khU2fGESaCdqDtzQKY.png",
+    "https://framerusercontent.com/images/Qb73CLWBsrSYhtycCsqhp85gLY.png",
+    "https://framerusercontent.com/images/e551QZcIzts1rLM8aOyTN7AXwM.png",
+    "https://framerusercontent.com/images/I8RkY5amu9rOWlruUx2HzVVnAU.png",
+    "https://framerusercontent.com/images/nVKRkMUOQw8l9IC08DIFNTegOg.png"
+  ],
+
+  "url": "https://www.starluxetech.com/blog/ga4-traffic-source-analysis-guide",
+
+  "keywords": [
+    "GA4 traffic sources",
+    "GA4 acquisition analysis",
+    "GA4 source medium",
+    "GA4 user acquisition",
+    "GA4 session acquisition",
+    "UTM tracking GA4",
+    "Default channel grouping",
+    "GA4 Explorations"
+  ]
+}
+  </script>
+
+
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="/css/normalize.css" as="style">
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <link rel="preload" href="/css/webflow.css" as="style">
+  <link rel="stylesheet" href="/css/webflow.css">
+
+  <link rel="preload" href="/css/dspace.css" as="style">
+  <link rel="stylesheet" href="/css/dspace.css">
+
+  <!-- Optimized Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap">
+
+  <!-- Minimal Favicons -->
+  <link rel="icon" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vimeo API -->
+  <script defer src="https://player.vimeo.com/api/player.js"></script>
+
+  <!-- Smooth Rendering -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .body {
+      scroll-behavior: smooth !important;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+<body>
+
+  <div id="Top" class="back-to-top-container">
+    <div class="back-to-top-button-wrapper">
+      <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
+        <img src="/images/icon-arrow-up.svg" alt="Up arrow" class="button-circle-icon">
+      </a>
+
+    </div>
+  </div>
+
+  <div class="navbar-wrapper sticky-top">
+    <div class="container">
+      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navbar w-nav">
+        <div class="navbar-row">
+          <div class="div-block-6">
+            <a href="/" class="navbar-1-brand w-nav-brand">
+              <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="Logo">
+            </a>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="/case-studies" class="text-link">Case Study</a>
+              <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
+
+              <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+              <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
+                  aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                  <div class="row row-align-center">
+                    <div>Services</div><img
+                      src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                      alt="Dropdown link icon" class="dropdown-link-icon">
+                  </div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                  <div class="dropdown-list-wrapper">
+                    <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
+                    <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
+                    <a href="/service/conversion-rate-optimization" class="dropdown-item w-dropdown-link"
+                      tabindex="0">CRO Service</a><a href="/gdpr" class="dropdown-item w-dropdown-link"
+                      tabindex="0">GDPR Consent Service</a> <a href="/s2s-gtm" class="dropdown-item w-dropdown-link"
+                      tabindex="0">Server Side
+                      Tracking</a>
+                    <div class="dropdown-bg"></div>
+                  </div>
+                </nav>
+              </div>
+              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                class="nav-link w-nav-link">Team</a>
+            </nav>
+          </div>
+          <div class="navbar-controls ">
+            <div class="navbar-buttons ">
+              <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
+            </div>
+            <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt="Menu icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-small">
+    <div class="container">
+      <div class="content-width-medium article-title-wrapper">
+        <a style="background-color:#cf523c" href="/blog-categories/data-analytics"
+          class="badge space-bottom w-inline-block">
+          <div>Data Analytics</div>
+        </a>
+        <h1 class="display-heading-3">How to Analyze Traffic Sources in GA4: Complete Guide to Acquisition, UTMs & User
+          Behavior
+        </h1>
+        <div class="post-meta-wrapper">
+          <a href="/our-team" class="w-inline-block">
+            <img alt="Ravi Patel"
+              src="https://assets.website-files.com/5de1e0c359d27b3ceb1dcd8b/5de1e3505f1762e0102e54fe_team-avatar-4.jpg"
+              class="avatar">
+          </a>
+          <div class="space-left">
+            <div>Nov 22, 2025</div>
+            <div class="row">
+              <div>By </div><a href="/our-team" class="blog-post-panel-author">&nbsp; Ravi Patel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-width-extra-large">
+        <img alt="How to Import TikTok Ads Cost Data into GA4"
+          src="https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png?scale-down-to=1024&width=1498&height=842"
+          sizes="(max-width: 479px) 95vw, (max-width: 767px) 94vw, (max-width: 1919px) 95vw, 964px" style="width: 100%;"
+          class="rounded-image">
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="article-container">
+      <div class="article w-richtext">
+
+        <h3>Mastering Your Audience: How to Analyze Traffic Sources in GA4 for Your Website</h3>
+
+        <p>Understanding where your users come from is the single most critical task in digital marketing. Without
+          accurate
+          traffic source analysis, optimizing your marketing budget, content strategy, and website conversion paths is
+          impossible.</p>
+
+        <p>Google Analytics 4 (GA4) moves beyond the static "Source / Medium" world of Universal Analytics (UA). Its
+          event-driven model offers a far more flexible, granular, and powerful way to understand user journeys.</p>
+
+        <p>This guide is your practical roadmap to navigating GA4's Acquisition reports, customizing your data views,
+          and
+          turning raw traffic numbers into actionable growth insights for your website.</p>
+
+        <h4>GA4's Approach to Traffic Sources: The Core Concepts</h4>
+        <p>GA4's approach is built on flexibility, defined by how metrics and dimensions are measured across the
+          customer
+          lifecycle.</p>
+
+        <h4>Dimension Scopes: User, Session, and Event</h4>
+        <p>The first concept to master is scope. In GA4, every dimension belongs to one of three scopes, which
+          determines
+          the data shown in reports:</p>
+
+        <ul>
+          <li><strong>User-scoped:</strong> Attributes that stick with the user across all sessions and interactions.
+            Example: <em>First user default channel group</em>.</li>
+          <li><strong>Session-scoped:</strong> Attributes related to a single visit or session on your site. This is
+            often
+            the most relevant scope for initial traffic analysis. Example: <em>Session source / medium</em>.</li>
+          <li><strong>Event-scoped:</strong> Attributes tied only to a specific event action. Example: <em>Page
+              location</em>
+            tied only to the <code>page_view</code> event.</li>
+        </ul>
+
+        <p>For most traffic analysis, you will focus on Session-scoped dimensions (for comparing current marketing
+          effectiveness) and User-scoped dimensions (for understanding initial customer discovery).</p>
+
+        <!-- SCOPE COMPARISON TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Scope</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">What It Describes</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Example Dimensions</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Best Use Case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">User-scoped</td>
+                <td style="padding: 14px 16px; color: #374151;">Sticks with the user across all sessions and devices.
+                </td>
+                <td style="padding: 14px 16px; color: #374151;">First user default channel group, First user source /
+                  medium</td>
+                <td style="padding: 14px 16px; color: #374151;">Understanding initial discovery and long-term value of
+                  acquisition channels.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Session-scoped</td>
+                <td style="padding: 14px 16px; color: #374151;">Describes a single visit from entry to timeout.</td>
+                <td style="padding: 14px 16px; color: #374151;">Session default channel group, Session source / medium
+                </td>
+                <td style="padding: 14px 16px; color: #374151;">Evaluating current campaign performance and traffic
+                  quality.</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color: #374151;">Event-scoped</td>
+                <td style="padding: 14px 16px; color: #374151;">Tied to a single interaction or event.</td>
+                <td style="padding: 14px 16px; color: #374151;">Page location, Event name, Page referrer</td>
+                <td style="padding: 14px 16px; color: #374151;">Micro-analysis of behaviours on a specific page or
+                  funnel step.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Default Channel Group</h4>
+        <p>The Default Channel Group is a simplified, pre-defined dimension that automatically buckets your traffic into
+          high-level categories based on how GA4 interprets the source and medium parameters (including those from your
+          UTM
+          tags).</p>
+
+        <p>Common Default Channel Groups include:</p>
+
+        <!-- DEFAULT CHANNEL GROUP TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Default Channel Group</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Typical Example</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Organic Search</td>
+                <td style="padding: 14px 16px; color: #374151;">source=google, medium=organic</td>
+                <td style="padding: 14px 16px; color: #374151;">Users who found your site via unpaid search engine
+                  results.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Paid Search</td>
+                <td style="padding: 14px 16px; color: #374151;">source=google, medium=cpc</td>
+                <td style="padding: 14px 16px; color: #374151;">Traffic from paid search ads such as Google Ads.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Referral</td>
+                <td style="padding: 14px 16px; color: #374151;">source=linkedin.com, medium=referral</td>
+                <td style="padding: 14px 16px; color: #374151;">Clicks from other websites linking to yours.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Direct</td>
+                <td style="padding: 14px 16px; color: #374151;">No source / medium (not set)</td>
+                <td style="padding: 14px 16px; color: #374151;">Users typing your URL, using bookmarks, or missing
+                  attribution data.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Organic Social</td>
+                <td style="padding: 14px 16px; color: #374151;">source=twitter.com, medium=social</td>
+                <td style="padding: 14px 16px; color: #374151;">Unpaid social media traffic from social platforms.</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color: #374151;">Email</td>
+                <td style="padding: 14px 16px; color: #374151;">source=mailchimp, medium=email</td>
+                <td style="padding: 14px 16px; color: #374151;">Traffic from email newsletters and campaigns.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>UTM Parameters Revisited: The Backbone of Accuracy</h4>
+        <p>GA4 cannot accurately categorize paid social, email, or specific partner campaigns without correct UTM
+          tagging.
+          Your UTMs feed directly into the source and medium dimensions that GA4 uses to populate the Default Channel
+          Group.</p>
+
+        <p><strong>Rule:</strong> Every non-Google marketing link should include:</p>
+
+        <ul>
+          <li><code>utm_source</code> (e.g., <em>tiktok</em>)</li>
+          <li><code>utm_medium</code> (e.g., <em>cpc</em> or <em>paid_social</em>)</li>
+          <li><code>utm_campaign</code> (e.g., <em>Q4_Retargeting_Sale</em>)</li>
+        </ul>
+
+        <!-- UTM PARAMETER TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Parameter</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Function</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Example Values</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;"><code>utm_source</code></td>
+                <td style="padding: 14px 16px; color: #374151;">Identifies where the user came from.</td>
+                <td style="padding: 14px 16px; color: #374151;">facebook, tiktok, newsletter_tool</td>
+                <td style="padding: 14px 16px; color: #374151;">Required. Keep naming consistent and lowercase.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;"><code>utm_medium</code></td>
+                <td style="padding: 14px 16px; color: #374151;">Describes the marketing channel or vehicle.</td>
+                <td style="padding: 14px 16px; color: #374151;">cpc, email, social, paid_social</td>
+                <td style="padding: 14px 16px; color: #374151;">Required. Must align with GA4 channel definitions.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;"><code>utm_campaign</code></td>
+                <td style="padding: 14px 16px; color: #374151;">Names a specific promotion or initiative.</td>
+                <td style="padding: 14px 16px; color: #374151;">Summer_Promo_2025, Q4_Retargeting_Sale</td>
+                <td style="padding: 14px 16px; color: #374151;">Recommended. Use human-readable naming.</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color: #374151;"><code>utm_content</code></td>
+                <td style="padding: 14px 16px; color: #374151;">Differentiates ad versions or placements.</td>
+                <td style="padding: 14px 16px; color: #374151;">blue_banner_v2, sidebar_link</td>
+                <td style="padding: 14px 16px; color: #374151;">Optional. Helps with A/B creative testing.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Navigating the Key GA4 Traffic Acquisition Reports</h4>
+        <p>GA4 provides two primary acquisition reports: one for how users arrived (<strong>User Acquisition</strong>)
+          and
+          one for how sessions started (<strong>Traffic Acquisition</strong>).</p>
+
+        <h5>Overview Report</h5>
+        <img src="https://framerusercontent.com/images/kOkrBwfMnNlQSwnzC2OixCWkbAg.png"
+          alt="GA4 acquisition overview dashboard showing user and session channel performance" loading="lazy"
+          style="width:100%; border-radius:12px; margin:24px 0;">
+        <p><strong>Navigation:</strong> <em>Reports &gt; Acquisition &gt; Overview</em></p>
+        <p><strong>Purpose:</strong> Provides a high-level summary of traffic and engagement performance.</p>
+        <p><strong>Key Cards:</strong> Look at the <em>Users by Session default channel group</em> card for a quick
+          performance snapshot of your current marketing efforts, and the <em>New users by first user default channel
+            group</em>
+          for insight into how new users are discovering your site.</p>
+
+        <h5>Traffic Acquisition Report (Session-scoped)</h5>
+        <img src="https://framerusercontent.com/images/J5EcLh5d5EYoxiEG0nGlnPdGf0.png"
+          alt="GA4 traffic acquisition report showing session source medium and engagement metrics" loading="lazy"
+          style="width:100%; border-radius:12px; margin:24px 0;">
+        <p><strong>Navigation:</strong> <em>Reports &gt; Acquisition &gt; Traffic Acquisition</em></p>
+        <p><strong>Purpose:</strong> Analyzes the performance of the session—how did the user arrive in this specific
+          visit?
+          This is the most comparable report to the Source/Medium report in UA.</p>
+        <p><strong>Primary Dimension:</strong> By default, this report uses <em>Session default channel group</em>.</p>
+
+        <h5>1. Customize the Primary Dimension</h5>
+        <p>This is the first action item for deep analysis:</p>
+        <img src="https://framerusercontent.com/images/yr0Q9CHv8khU2fGESaCdqDtzQKY.png"
+          alt="GA4 primary dimension dropdown showing option to select session source medium" loading="lazy"
+          style="width:100%; border-radius:12px; margin:24px 0;">
+        <ol>
+          <li>Click the dropdown menu above the table header (<em>Session default channel group</em>).</li>
+          <li>Change the primary dimension to <strong>Session source / medium</strong>. This provides the raw, granular
+            data needed to debug UTM issues or compare specific platforms (e.g., <em>google / organic</em> vs.
+            <em>bing / organic</em>).
+          </li>
+        </ol>
+
+        <h5>2. Add a Secondary Dimension</h5>
+        <p>To connect source data to specific initiatives:</p>
+        <img src="https://framerusercontent.com/images/Qb73CLWBsrSYhtycCsqhp85gLY.png"
+          alt="GA4 interface showing how to add a secondary dimension like session campaign or landing page"
+          loading="lazy" style="width:100%; border-radius:12px; margin:24px 0;">
+        <ol>
+          <li>Click the plus sign (+) next to the primary dimension header.</li>
+          <li>Add <strong>Session campaign</strong> to see performance broken down by your UTM campaigns, or add
+            <strong>Landing page</strong> to understand which pages channels are driving traffic to.
+          </li>
+        </ol>
+
+        <h5>3. Emphasize Key Metrics</h5>
+        <p>Focus on these metrics to assess channel quality, not just volume:</p>
+
+        <!-- KEY METRICS TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Metric</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">What It Represents</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">How to Interpret</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Sessions</td>
+                <td style="padding: 14px 16px; color: #374151;">Total number of visits from a source or channel.</td>
+                <td style="padding: 14px 16px; color: #374151;">Good for scale, but must be paired with engagement and
+                  conversions.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Engaged Sessions</td>
+                <td style="padding: 14px 16px; color: #374151;">Sessions with meaningful interaction such as 10+
+                  seconds, 2+ pageviews, or conversion.</td>
+                <td style="padding: 14px 16px; color: #374151;">Higher values indicate traffic interest and relevance.
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Engagement Rate</td>
+                <td style="padding: 14px 16px; color: #374151;">Percentage of sessions considered engaged.</td>
+                <td style="padding: 14px 16px; color: #374151;">Major quality signal. Low rate suggests expectation
+                  mismatch.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">Conversions</td>
+                <td style="padding: 14px 16px; color: #374151;">Number of completed key actions.</td>
+                <td style="padding: 14px 16px; color: #374151;">Essential for channel performance evaluation.</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color: #374151;">Total Revenue</td>
+                <td style="padding: 14px 16px; color: #374151;">Monetary value attributed to a channel or session.</td>
+                <td style="padding: 14px 16px; color: #374151;">Crucial for ROAS and budget decisions.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5>User Acquisition Report (User-scoped)</h5>
+        <img src="https://framerusercontent.com/images/e551QZcIzts1rLM8aOyTN7AXwM.png"
+          alt="GA4 user acquisition report showing first user channel group and new user performance metrics"
+          loading="lazy" style="width:100%; border-radius:12px; margin:24px 0;">
+        <p><strong>Navigation:</strong> <em>Reports &gt; Acquisition &gt; User Acquisition</em></p>
+        <p><strong>Purpose:</strong> Analyzes the performance of the user—how did the user arrive on their very first
+          visit?
+          This is essential for understanding initial discovery and the ROI of top-of-funnel marketing.</p>
+        <p><strong>Primary Dimension:</strong> By default, this report uses <em>First user default channel group</em>.
+        </p>
+        <p><strong>Value:</strong> If a user first came from a Paid Search ad, but later returns directly, the User
+          Acquisition report still credits Paid Search. This gives a more accurate picture of acquisition impact.</p>
+
+        <!-- USER VS SESSION ACQUISITION TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Report</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Scope</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Primary Question Answered</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color: #374151;">User Acquisition</td>
+                <td style="padding: 14px 16px; color: #374151;">User-scoped</td>
+                <td style="padding: 14px 16px; color: #374151;">“How did this user first discover us?”</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color: #374151;">Traffic Acquisition</td>
+                <td style="padding: 14px 16px; color: #374151;">Session-scoped</td>
+                <td style="padding: 14px 16px; color: #374151;">“How did this specific session arrive on the site?”</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Deep Dive: Customizing for Deeper Insights</h4>
+        <p>Standard reports provide a good overview, but <strong>Explorations</strong> are where truly advanced analysis
+          happens in GA4. They allow you to build custom tables, funnels, and segments tailored to your business needs.
+        </p>
+
+        <h5>Custom Reports with Explorations</h5>
+        <p>Explorations allow you to build custom tables and charts from scratch, giving you full control over
+          dimensions,
+          metrics, and filtering logic.</p>
+        <p><strong>Navigate:</strong> Click <em>Explore</em> in the GA4 left-hand navigation.</p>
+        <p><strong>Create:</strong> Select <em>Free-form Exploration</em>.</p>
+
+        <img src="https://framerusercontent.com/images/I8RkY5amu9rOWlruUx2HzVVnAU.png"
+          alt="GA4 exploration interface showing free-form analysis setup with dimensions and metrics" loading="lazy"
+          style="width:100%; border-radius:12px; margin:24px 0;">
+
+        <p><strong>Variables Setup:</strong></p>
+        <ul>
+          <li><strong>Dimensions (Rows):</strong> Import and set <em>Session source / medium</em> or
+            <em>Session default channel group</em>.
+          </li>
+          <li><strong>Metrics (Values):</strong> Import and set <em>Sessions</em>, <em>Conversions</em>, and
+            <em>Total Revenue</em>.
+          </li>
+          <li><strong>Filters:</strong> Define your segments here (e.g., filter where
+            <em>Session default channel group</em> = <em>Paid Social</em>).
+          </li>
+        </ul>
+
+        <p><strong>Drag and Drop:</strong></p>
+        <ul>
+          <li>Drag your chosen <strong>Dimensions</strong> into the <em>Rows</em> area.</li>
+          <li>Drag your chosen <strong>Metrics</strong> into the <em>Values</em> area.</li>
+        </ul>
+
+        <!-- EXPLORATIONS SETUP TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Exploration Area</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Recommended Configuration</th>
+                <th style="padding: 14px 16px; font-weight: 600; color: #111827;">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">Dimensions</td>
+                <td style="padding: 14px 16px; color:#374151;">Session source / medium, Session default channel group,
+                  Landing page</td>
+                <td style="padding: 14px 16px; color:#374151;">Compare <em>facebook / paid_social</em> vs
+                  <em>google / cpc</em> by landing page.
+                </td>
+              </tr>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">Metrics</td>
+                <td style="padding: 14px 16px; color:#374151;">Sessions, Engaged sessions, Conversions, Total Revenue
+                </td>
+                <td style="padding: 14px 16px; color:#374151;">See which campaigns drive both engagement and revenue.
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color:#374151;">Filters / Segments</td>
+                <td style="padding: 14px 16px; color:#374151;">Filter to Paid Social, specific campaigns, or Landing
+                  pages.</td>
+                <td style="padding: 14px 16px; color:#374151;">Filter where Session default channel group = “Paid
+                  Social”.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5>Path Exploration for User Journeys</h5>
+        <p><strong>Path Exploration</strong> visually maps how users navigate from one page or event to another. This is
+          extremely useful for diagnosing funnel drop-offs and understanding how users behave after landing on your
+          site.</p>
+
+        <img src="https://framerusercontent.com/images/nVKRkMUOQw8l9IC08DIFNTegOg.png"
+          alt="GA4 path exploration report showing user journey flows and event sequences" loading="lazy"
+          style="width:100%; border-radius:12px; margin:24px 0;">
+
+        <p><strong>Example:</strong> Start a path exploration with <em>Session source = linkedin.com</em> to see how
+          LinkedIn users navigate your funnel and where they exit.</p>
+
+        <h5>Custom Dimensions &amp; Metrics (Advanced)</h5>
+        <p>If you use non-standard tracking (like an internal campaign ID not covered by UTM parameters), you can create
+          <strong>Custom Dimensions</strong>.
+        </p>
+        <p><strong>Example:</strong> If each pageview event contains an <code>internal_tracking_id</code> parameter,
+          register it as a Custom Dimension and use it in Explorations alongside <em>Session source / medium</em> for
+          deeper segmentation.</p>
+
+        <h4>Interpreting Your Data: What the Numbers Mean</h4>
+        <p>Knowing where to look is only half the battle. Interpreting the numbers is what drives real action.</p>
+
+        <h5>1. Identifying Top Performers</h5>
+        <p>A channel is considered a top performer if it ranks high in <strong>Conversions</strong> and
+          <strong>Total Revenue</strong> while also showing a strong <strong>Engagement Rate</strong>.
+        </p>
+        <p><strong>Action:</strong> Allocate more budget to high-performing channels and examine their landing pages to
+          replicate success across weaker channels.</p>
+
+        <h5>2. Underperforming Channels</h5>
+        <p>High traffic with low engagement or zero conversions indicates underperformance.</p>
+        <p><strong>Action:</strong> Review ad messaging, targeting, and landing page alignment.</p>
+
+        <h5>3. Audience Behavior Differences</h5>
+        <p>Compare <strong>Average Engagement Time</strong> and <strong>Events per Session</strong> across channels to
+          understand user intent.</p>
+
+        <h5>4. Conversion Paths</h5>
+        <p>Use the <strong>Conversion Paths</strong> report in the Advertising section to see which channels assist
+          conversions rather than directly close them.</p>
+        <p><strong>Insight:</strong> A channel like Paid Social might rarely be the final click, but could still be the
+          first touchpoint for most customers.</p>
+
+        <!-- CHANNEL PERFORMANCE SIGNALS TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color:#f9fafb; border-bottom:1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Signal</th>
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Healthy Channel</th>
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Underperforming Channel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">Sessions vs. Conversions</td>
+                <td style="padding: 14px 16px; color:#374151;">Both sessions and conversions increase together.</td>
+                <td style="padding: 14px 16px; color:#374151;">High traffic but few/no conversions.</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">Engagement Rate</td>
+                <td style="padding: 14px 16px; color:#374151;">Consistently high relative to site average.</td>
+                <td style="padding: 14px 16px; color:#374151;">Significantly below average.</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color:#374151;">Average Engagement Time</td>
+                <td style="padding: 14px 16px; color:#374151;">Users spend meaningful time exploring content.</td>
+                <td style="padding: 14px 16px; color:#374151;">Users bounce or leave quickly.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Best Practices for Accurate Traffic Source Analysis</h4>
+        <p>Data quality determines the accuracy of your insights. Follow these best practices to ensure clean
+          attribution:</p>
+
+        <h5>1. Consistent UTM Tagging (The Golden Rule)</h5>
+        <p>If you manage paid media, emails, or social posts, ensure consistent UTM structures for all campaign links.
+        </p>
+
+        <!-- UTM BEST PRACTICE SUMMARY TABLE -->
+        <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+            <thead>
+              <tr style="background-color:#f9fafb; border-bottom:1px solid #e5e7eb;">
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Parameter</th>
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Required?</th>
+                <th style="padding: 14px 16px; font-weight:600; color:#111827;">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">utm_source</td>
+                <td style="padding: 14px 16px; color:#374151;">Yes</td>
+                <td style="padding: 14px 16px; color:#374151;">facebook.com, newsletter_tool</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">utm_medium</td>
+                <td style="padding: 14px 16px; color:#374151;">Yes</td>
+                <td style="padding: 14px 16px; color:#374151;">cpc, email, social</td>
+              </tr>
+              <tr style="border-bottom:1px solid #f3f4f6;">
+                <td style="padding: 14px 16px; color:#374151;">utm_campaign</td>
+                <td style="padding: 14px 16px; color:#374151;">Recommended</td>
+                <td style="padding: 14px 16px; color:#374151;">Summer_Promo_2025</td>
+              </tr>
+              <tr>
+                <td style="padding: 14px 16px; color:#374151;">utm_content</td>
+                <td style="padding: 14px 16px; color:#374151;">Optional</td>
+                <td style="padding: 14px 16px; color:#374151;">blue_banner_v2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5>2. Exclude Self-Referrals</h5>
+        <p>A “self-referral” occurs when your own domain or payment gateway shows up as the traffic source, breaking
+          session continuity.</p>
+        <p><strong>Action:</strong> Add your domain (and gateways like <em>paypal.com</em>) to the <em>Unwanted
+            Referrals</em> list in your GA4 Data Stream settings.</p>
+
+        <h5>3. Clean Up Unwanted Referrals</h5>
+        <p>Remove spammy or irrelevant referral traffic to keep your data clean.</p>
+
+        <h5>4. Data Freshness</h5>
+        <p>GA4 can take 24–48 hours to update certain metrics like conversions and cost imports. Always consider this
+          delay when reviewing recent data.</p>
+
+        <h4>Conclusion: Empowering Data-Driven Decisions</h4>
+        <p>Mastering GA4 Acquisition reports enables you to understand exactly where users come from, how they behave,
+          and which channels drive the most value. By leveraging scopes, UTMs, Explorations, and attribution reports,
+          you unlock the insights needed to grow your business with confidence.</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container">
+    <div class="panel">
+      <div class="panel-body footer-1-panel-body">
+        <div class="footer-3-top-row">
+          <div class="footer-3-left-column">
+            <div class="footer-contact-methods">
+              <div>
+                <h5>Contact</h5>
+                <div>
+                  <div>
+                    <a href="https://wa.me/447548003762">+44 7548003762</a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/919824723865">+91 9824723865</a>
+                  </div>
+                  <br><a href="mailto:starluxetech@gmail.com">starluxetech@gmail.com</a>
+                </div>
+              </div>
+              <div>
+                <h5>Visit</h5>
+                <div>
+                  <div> Dunmurry, Belfast,<br> United Kingdom,<br>BT129BB</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4 migration</a><a
+                href="/tracking" class="text-link">Tracking & Audit</a><a href="/service/conversion-rate-optimization"
+                class="text-link">CRO Service</a><a href="/gdpr" class="text-link">GDPR Consent Service</a>
+              <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
+            </div>
+
+            <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a><a href="/case-studies"
+                class="text-link">Case Study</a><a href="/blogs" class="text-link">Blogs</a><a href="/pricing/pricing-1"
+                class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-body panel-body-small blog-small-panel-body">
+              <div class="badge blog-small-badge">
+                <div>News</div>
+              </div>
+              <div class="w-dyn-list">
+                <div role="list" class="w-dyn-items">
+                  <div role="listitem" class="w-dyn-item"><a
+                      href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
+                      class="blog-small-link w-inline-block">
+                      <h5 class="blog-small-heading">How to Use Machine Learning and AI in Ecommerce</h5>
+                      <div>October 01, 2024</div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-1-bottom-row">
+          <div class="text-small">© Copyright • StarLuxe Analytics 2024 <a href="https://www.webflow.com/"
+              target="_blank"></a></div>
+          <div class="social-list"><a href="https://twitter.com/Starluxetech"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
+                alt="Twitter"></a><a href="https://www.instagram.com/starluxetech/"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
+                alt="Instagram"></a><a href="https://behance.net/starluxetech-"
+              class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg" alt="Behance"></a><a
+              href="https://www.linkedin.com/company/starluxetech/" class="social-link-item w-inline-block"><img
+                src="/images/linkedin.svg" alt="LinkedIn"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightweight jQuery -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-3gJwYp2uQd64cc6Y8JaF4W3C4zod8tTZ8Zj1szK7wJ7Cq4OGt1tHhiEE0ajHc5JDHa4yI2zR+j4Uy/7r4CgeQw=="
+    crossorigin="anonymous"></script>
+
+  <!-- Typed.js (Lazy Load Only If Needed) -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!document.querySelector(".typed")) return;
+
+      const typedScript = document.createElement("script");
+      typedScript.src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js";
+      typedScript.defer = true;
+
+      typedScript.onload = () => {
+        new Typed(".typed", {
+          strings: ["Analytics Experts", "CRO Specialists", "Tracking Engineers"],
+          typeSpeed: 65,
+          backSpeed: 25,
+          loop: true
+        });
+      };
+
+      document.body.appendChild(typedScript);
+    });
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233022559905658"
+    crossorigin="anonymous"></script>
+
+  <!-- Webflow Core -->
+  <script defer src="/js/webflow.js"></script>
+
+  <!-- Project Scripts -->
+  <script defer src="/js/data.js"></script>
+  <script defer src="/js/dataexpert.js"></script>
+
+  <!-- Avoid duplicate logos -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoList = document.querySelector(".logo-list");
+      if (logoList && !logoList.dataset.cloned) {
+        logoList.insertAdjacentHTML("beforeend", logoList.innerHTML);
+        logoList.dataset.cloned = "true";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
