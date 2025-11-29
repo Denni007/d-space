@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-page="64d531d8b3d556ea8480e6be" data-wf-site="64d531d8b3d556ea8480e670">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GA4 Update: “Cost Data Import” is Now “Campaign Data Import”</title>
+
+  <meta name="description"
+    content="Google Analytics 4 has renamed 'Cost Data Import' to 'Campaign Data Import'. Nothing functionally changes — the schema, process, and reporting remain identical. Here's what marketers need to know.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.starluxetech.com/blog/ga4-campaign-data-import-update">
+
+  <meta name="keywords"
+    content="GA4 campaign data import, GA4 cost data import update, Google Analytics import marketing data, GA4 non Google ads import, GA4 offline campaign import">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GA4 Update: Cost Data Import Is Now Campaign Data Import">
+  <meta property="og:description"
+    content="Google updated the GA4 interface: 'Cost Data Import' is now called 'Campaign Data Import'. No setup changes are required — only the label changed.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.starluxetech.com/blog/ga4-campaign-data-import-update">
+  <meta property="og:image" content="https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GA4 Update: Cost Data Import Renamed — What Changed?">
+  <meta name="twitter:description"
+    content="Small name update in GA4 — big clarity win. The 'Cost Data Import' feature is now 'Campaign Data Import', and everything still works the same.">
+  <meta name="twitter:image" content="https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GA4 Update: Cost Data Import Is Now Campaign Data Import",
+  "description": "Google Analytics 4 renamed its cost import feature to Campaign Data Import — functionality remains unchanged.",
+  "author": { "@type": "Person", "name": "Ravi Patel" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "StarLuxe Tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png"
+    }
+  },
+  "datePublished": "2025-11-25",
+  "dateModified": "2025-11-25",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.starluxetech.com/blog/ga4-campaign-data-import-update"
+  },
+
+  "image": [
+    "https://framerusercontent.com/images/c7gw6oilANoAUux8KBYRJVbtcx8.png"
+  ],
+
+  "url": "https://www.starluxetech.com/blog/ga4-campaign-data-import-update",
+
+  "keywords": [
+    "GA4 campaign data import",
+    "Google Analytics cost import rename",
+    "GA4 offline campaign upload",
+    "GA4 non-Google ads integration"
+  ]
+}
+  </script>
+
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="/css/normalize.css" as="style">
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <link rel="preload" href="/css/webflow.css" as="style">
+  <link rel="stylesheet" href="/css/webflow.css">
+
+  <link rel="preload" href="/css/dspace.css" as="style">
+  <link rel="stylesheet" href="/css/dspace.css">
+
+  <!-- Optimized Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap">
+
+  <!-- Minimal Favicons -->
+  <link rel="icon" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vimeo API -->
+  <script defer src="https://player.vimeo.com/api/player.js"></script>
+
+  <!-- Smooth Rendering -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .body {
+      scroll-behavior: smooth !important;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+<body>
+
+  <div id="Top" class="back-to-top-container">
+    <div class="back-to-top-button-wrapper">
+      <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
+        <img src="/images/icon-arrow-up.svg" alt="Up arrow" class="button-circle-icon">
+      </a>
+
+    </div>
+  </div>
+
+  <div class="navbar-wrapper sticky-top">
+    <div class="container">
+      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navbar w-nav">
+        <div class="navbar-row">
+          <div class="div-block-6">
+            <a href="/" class="navbar-1-brand w-nav-brand">
+              <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="Logo">
+            </a>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="/case-studies" class="text-link">Case Study</a>
+              <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
+
+              <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+              <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
+                  aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                  <div class="row row-align-center">
+                    <div>Services</div><img
+                      src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                      alt="Dropdown link icon" class="dropdown-link-icon">
+                  </div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                  <div class="dropdown-list-wrapper">
+                    <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
+                    <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
+                    <a href="/service/conversion-rate-optimization" class="dropdown-item w-dropdown-link"
+                      tabindex="0">CRO Service</a><a href="/gdpr" class="dropdown-item w-dropdown-link"
+                      tabindex="0">GDPR Consent Service</a> <a href="/s2s-gtm" class="dropdown-item w-dropdown-link"
+                      tabindex="0">Server Side
+                      Tracking</a>
+                    <div class="dropdown-bg"></div>
+                  </div>
+                </nav>
+              </div>
+              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                class="nav-link w-nav-link">Team</a>
+            </nav>
+          </div>
+          <div class="navbar-controls ">
+            <div class="navbar-buttons ">
+              <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
+            </div>
+            <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt="Menu icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="section section-small">
+  <div class="container">
+    <div class="content-width-medium article-title-wrapper">
+      <a style="background-color:#cf523c" href="/blog-categories/data-analytics"
+        class="badge space-bottom w-inline-block">
+        <div>Data Analytics</div>
+      </a>
+
+      <h1 class="display-heading-3">
+        GA4 Update: “Cost Data Import” Is Now “Campaign Data Import” — Here’s What You Need to Know
+      </h1>
+
+      <div class="post-meta-wrapper">
+        <a href="/our-team" class="w-inline-block">
+          <img alt="Ravi Patel"
+            src="https://assets.website-files.com/5de1e0c359d27b3ceb1dcd8b/5de1e3505f1762e0102e54fe_team-avatar-4.jpg"
+            class="avatar">
+        </a>
+        <div class="space-left">
+          <div>Nov 25, 2025</div>
+          <div class="row">
+            <div>By</div><a href="/our-team" class="blog-post-panel-author">&nbsp; Ravi Patel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-width-extra-large">
+      <img 
+        alt="Google Analytics Update: Cost Data Import Renamed to Campaign Data Import"
+        src="https://framerusercontent.com/images/cx7C56j8qjA4jX8XrFxbxhnps4.png?scale-down-to=1024&width=1498&height=842"
+        sizes="(max-width: 479px) 95vw, (max-width: 767px) 94vw, (max-width: 1919px) 95vw, 964px"
+        style="width: 100%;" 
+        class="rounded-image">
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="article-container">
+    <div class="article w-richtext">
+
+      <h3>Heads Up, GA4 Users: ‘Cost Data Import’ Is Now ‘Campaign Data Import’ (No Action Needed!)</h3>
+      <p>Google has introduced a terminology update inside Google Analytics 4 (GA4). The feature previously called <strong>Cost data import</strong> has officially been renamed to <strong>Campaign data import</strong>.</p>
+
+      <p>The important part: <strong>nothing functionally has changed.</strong> The feature works the same way, uses the same schema, and continues to populate the same GA4 reports. No setup changes or reconfiguration are required.</p>
+
+      <h4>Why Rename It? A More Accurate Definition</h4>
+      <p>The original name implied that the feature was only for uploading advertising cost. In reality, GA4 uses this import to bring in <strong>campaign-level marketing metrics</strong> from platforms such as:</p>
+
+      <ul>
+        <li>TikTok Ads</li>
+        <li>Meta Ads (Facebook & Instagram)</li>
+        <li>LinkedIn Ads</li>
+        <li>Microsoft Ads</li>
+        <li>Snapchat Ads</li>
+      </ul>
+
+      <p>The new name better reflects its true purpose: combining external advertising performance with GA4 behavioral and revenue tracking for full attribution and ROI measurement.</p>
+
+      <h4>Mandatory Merge Keys: The 3 Rules of Matching Data</h4>
+      <p>GA4 merges your imported file with on-site behavior using three key identifiers. If these do not match your campaign UTM structure, data will not link.</p>
+
+      <div style="max-width: 100%; overflow-x: auto; margin: 24px 0;">
+  <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12); overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+
+    <thead>
+      <tr style="background-color: #f3f4f6; border-bottom: 1px solid #e5e7eb;">
+        <th style="padding: 14px 16px; font-size: 14px; font-weight: 600; color:#1f2937 !important;">
+          Required GA4 Header
+        </th>
+        <th style="padding: 14px 16px; font-size: 14px; font-weight: 600; color:#1f2937 !important;">
+          Function / Source Match
+        </th>
+        <th style="padding: 14px 16px; font-size: 14px; font-weight: 600; color:#1f2937 !important;">
+          Format Mandate
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:date</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Date of cost attribution</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">YYYYMMDD format</td>
+      </tr>
+
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:source</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Matches <code>utm_source</code></td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Example: <code>tiktok</code></td>
+      </tr>
+
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:medium</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Matches <code>utm_medium</code></td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Example: <code>cpc</code></td>
+      </tr>
+
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:adCost</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Total spend for that date/source/medium</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Decimal: <code>150.55</code></td>
+      </tr>
+
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:impressions</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Imported impressions count</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Integer: <code>65000</code></td>
+      </tr>
+
+      <tr>
+        <td style="padding: 14px 16px; font-weight: 500; color:#111827 !important;">ga:clicks</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Imported clicks count</td>
+        <td style="padding: 14px 16px; color:#374151 !important;">Integer: <code>420</code></td>
+      </tr>
+
+    </tbody>
+  </table>
+      </div>
+
+
+      <p><strong>Pro Tip:</strong> If your UTMs do not match the CSV import values exactly, GA4 will show zero cost data.</p>
+
+      <h4>File Format Example (Minimum Required Fields)</h4>
+      <pre style="
+  background:#f9fafb; 
+  padding:16px; 
+  border-radius:8px; 
+  overflow-x:auto; 
+  font-family:monospace;
+  color:#111827 !important;
+  line-height:1.5;
+  border:1px solid #e5e7eb;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+">
+ga:date,ga:source,ga:medium,ga:adCost,ga:impressions,ga:clicks
+20241120,tiktok,cpc,150.55,65000,420
+20241121,tiktok,cpc,145.00,62100,398
+</pre>
+
+      <h4>Update Timing & Frequency</h4>
+      <ul>
+        <li><strong>Processing time:</strong> ≈ 24 hours</li>
+        <li><strong>Recommended upload cadence:</strong> daily or weekly</li>
+        <li><strong>Overwrite rule:</strong> GA4 replaces earlier records using <code>ga:date</code> as key</li>
+      </ul>
+
+      <h4>What Hasn’t Changed</h4>
+      <ul>
+        <li>The schema</li>
+        <li>The import workflow</li>
+        <li>The reporting location: <strong>Advertising → Acquisition → Cost Analysis</strong></li>
+      </ul>
+
+      <h4>What Has Changed</h4>
+      <ul>
+        <li>Only the name inside GA4: <strong>Campaign Data Import</strong></li>
+      </ul>
+
+      <h4>Final Thoughts</h4>
+      <p>This update improves clarity and aligns better with how marketers use GA4 today — merging external campaign performance with on-site behavior for complete ROI visibility.</p>
+      <p>If you're merging advertising data from non-Google platforms, just look for the updated option: <strong>Campaign Data Import</strong>.</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="panel">
+      <div class="panel-body footer-1-panel-body">
+        <div class="footer-3-top-row">
+          <div class="footer-3-left-column">
+            <div class="footer-contact-methods">
+              <div>
+                <h5>Contact</h5>
+                <div>
+                  <div>
+                    <a href="https://wa.me/447548003762">+44 7548003762</a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/919824723865">+91 9824723865</a>
+                  </div>
+                  <br><a href="mailto:starluxetech@gmail.com">starluxetech@gmail.com</a>
+                </div>
+              </div>
+              <div>
+                <h5>Visit</h5>
+                <div>
+                  <div> Dunmurry, Belfast,<br> United Kingdom,<br>BT129BB</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4 migration</a><a
+                href="/tracking" class="text-link">Tracking & Audit</a><a href="/service/conversion-rate-optimization"
+                class="text-link">CRO Service</a><a href="/gdpr" class="text-link">GDPR Consent Service</a>
+              <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
+            </div>
+
+            <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a><a href="/case-studies"
+                class="text-link">Case Study</a><a href="/blogs" class="text-link">Blogs</a><a href="/pricing/pricing-1"
+                class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-body panel-body-small blog-small-panel-body">
+              <div class="badge blog-small-badge">
+                <div>News</div>
+              </div>
+              <div class="w-dyn-list">
+                <div role="list" class="w-dyn-items">
+                  <div role="listitem" class="w-dyn-item"><a
+                      href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
+                      class="blog-small-link w-inline-block">
+                      <h5 class="blog-small-heading">How to Use Machine Learning and AI in Ecommerce</h5>
+                      <div>October 01, 2024</div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-1-bottom-row">
+          <div class="text-small">© Copyright • StarLuxe Analytics 2024 <a href="https://www.webflow.com/"
+              target="_blank"></a></div>
+          <div class="social-list"><a href="https://twitter.com/Starluxetech"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
+                alt="Twitter"></a><a href="https://www.instagram.com/starluxetech/"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
+                alt="Instagram"></a><a href="https://behance.net/starluxetech-"
+              class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg" alt="Behance"></a><a
+              href="https://www.linkedin.com/company/starluxetech/" class="social-link-item w-inline-block"><img
+                src="/images/linkedin.svg" alt="LinkedIn"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightweight jQuery -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-3gJwYp2uQd64cc6Y8JaF4W3C4zod8tTZ8Zj1szK7wJ7Cq4OGt1tHhiEE0ajHc5JDHa4yI2zR+j4Uy/7r4CgeQw=="
+    crossorigin="anonymous"></script>
+
+  <!-- Typed.js (Lazy Load Only If Needed) -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!document.querySelector(".typed")) return;
+
+      const typedScript = document.createElement("script");
+      typedScript.src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js";
+      typedScript.defer = true;
+
+      typedScript.onload = () => {
+        new Typed(".typed", {
+          strings: ["Analytics Experts", "CRO Specialists", "Tracking Engineers"],
+          typeSpeed: 65,
+          backSpeed: 25,
+          loop: true
+        });
+      };
+
+      document.body.appendChild(typedScript);
+    });
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233022559905658"
+    crossorigin="anonymous"></script>
+
+  <!-- Webflow Core -->
+  <script defer src="/js/webflow.js"></script>
+
+  <!-- Project Scripts -->
+  <script defer src="/js/data.js"></script>
+  <script defer src="/js/dataexpert.js"></script>
+
+  <!-- Avoid duplicate logos -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoList = document.querySelector(".logo-list");
+      if (logoList && !logoList.dataset.cloned) {
+        logoList.insertAdjacentHTML("beforeend", logoList.innerHTML);
+        logoList.dataset.cloned = "true";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
