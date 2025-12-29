@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-page="64d531d8b3d556ea8480e6be" data-wf-site="64d531d8b3d556ea8480e670">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Complete Guide to Display Dynamic Remarketing with GA4</title>
+
+  <meta name="description"
+    content="Learn how to implement Display Dynamic Remarketing using GA4 and Google Ads. Step-by-step setup for eCommerce, travel, and listings—events, item IDs, Merchant Center, and ROAS optimization.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.starluxetech.com/blog/display-dynamic-remarketing-ga4">
+
+  <meta name="keywords"
+    content="GA4 dynamic remarketing, display dynamic remarketing GA4, GA4 view_item event, GA4 add_to_cart, GA4 purchase event, Google Ads dynamic remarketing, Merchant Center GA4, GA4 ecommerce events, dynamic ads Google Ads">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Complete Guide to Display Dynamic Remarketing with GA4">
+  <meta property="og:description"
+    content="A practical, end-to-end guide to setting up Display Dynamic Remarketing using GA4 as the data engine for Google Ads. Covers events, parameters, Merchant Center, and common mistakes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.starluxetech.com/blog/display-dynamic-remarketing-ga4">
+  <meta property="og:image" content="https://framerusercontent.com/images/02bwo1bAZYcppodWwkq72VfK1vM.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Display Dynamic Remarketing with GA4 – Complete Setup Guide">
+  <meta name="twitter:description"
+    content="Stop showing generic ads. Learn how to use GA4 events and product feeds to power high-ROAS dynamic remarketing campaigns in Google Ads.">
+  <meta name="twitter:image" content="https://framerusercontent.com/images/02bwo1bAZYcppodWwkq72VfK1vM.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Complete Guide to Display Dynamic Remarketing with GA4",
+  "description": "Step-by-step guide to implementing Display Dynamic Remarketing using GA4 and Google Ads, including required events, item IDs, Merchant Center setup, and ROAS optimization.",
+  "author": {
+    "@type": "Person",
+    "name": "Ravi Patel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "StarLuxe Tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png"
+    }
+  },
+  "datePublished": "2025-12-12",
+  "dateModified": "2025-12-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.starluxetech.com/blog/display-dynamic-remarketing-ga4"
+  },
+  "image": [
+    "https://framerusercontent.com/images/02bwo1bAZYcppodWwkq72VfK1vM.png",
+    "https://framerusercontent.com/images/zCZ3OoLDlZdfzgjL4EZJ8ATfyk.png",
+    "https://framerusercontent.com/images/BNvkC6p8h3yJIYhln9sZV1j9JAw.png"
+  ],
+  "url": "https://www.starluxetech.com/blog/display-dynamic-remarketing-ga4",
+  "keywords": [
+    "GA4 dynamic remarketing",
+    "display dynamic remarketing",
+    "GA4 ecommerce events",
+    "Google Ads dynamic ads",
+    "Merchant Center GA4",
+    "view_item GA4",
+    "add_to_cart GA4",
+    "purchase event GA4"
+  ]
+}
+  </script>
+
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="/css/normalize.css" as="style">
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <link rel="preload" href="/css/webflow.css" as="style">
+  <link rel="stylesheet" href="/css/webflow.css">
+
+  <link rel="preload" href="/css/dspace.css" as="style">
+  <link rel="stylesheet" href="/css/dspace.css">
+
+  <!-- Optimized Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap">
+
+  <!-- Minimal Favicons -->
+  <link rel="icon" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vimeo API -->
+  <script defer src="https://player.vimeo.com/api/player.js"></script>
+
+  <!-- Smooth Rendering -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .body {
+      scroll-behavior: smooth !important;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+  <div id="Top" class="back-to-top-container">
+    <div class="back-to-top-button-wrapper">
+      <a href="#Top" class="button-circle bg-gray-3 w-inline-block">
+        <img src="/images/icon-arrow-up.svg" alt="Up arrow" class="button-circle-icon">
+      </a>
+
+    </div>
+  </div>
+
+  <div class="navbar-wrapper sticky-top">
+    <div class="container">
+      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navbar w-nav">
+        <div class="navbar-row">
+          <div class="div-block-6">
+            <a href="/" class="navbar-1-brand w-nav-brand">
+              <img src="https://framerusercontent.com/images/H6RRGr6UHvZqqmCJoDnHrRqi9g.png" size="89" alt="Logo">
+            </a>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="/case-studies" class="text-link">Case Study</a>
+              <a href="/blogs" class="nav-link w-nav-link">Blogs</a>
+
+              <!-- <a href="#service" class="nav-link w-nav-link">Services</a> -->
+              <div data-delay="0" data-hover="1" class="w-dropdown" style="">
+                <div class="nav-link w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0"
+                  aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                  <div class="row row-align-center">
+                    <div>Services</div><img
+                      src="https://assets.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd224eeb88d0076b74fe33e_icon-caret-down.svg"
+                      alt="Dropdown link icon" class="dropdown-link-icon">
+                  </div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                  <div class="dropdown-list-wrapper">
+                    <a href="/ga4-migration" class="dropdown-item w-dropdown-link" tabindex="0">GA4 migration</a>
+                    <a href="/tracking" class="dropdown-item w-dropdown-link" tabindex="0">Tracking & Audit </a>
+                    <a href="/service/conversion-rate-optimization" class="dropdown-item w-dropdown-link"
+                      tabindex="0">CRO Service</a><a href="/gdpr" class="dropdown-item w-dropdown-link"
+                      tabindex="0">GDPR Consent Service</a> <a href="/s2s-gtm" class="dropdown-item w-dropdown-link"
+                      tabindex="0">Server Side
+                      Tracking</a>
+                    <div class="dropdown-bg"></div>
+                  </div>
+                </nav>
+              </div>
+              <a href="/contact-us" class="nav-link w-nav-link">Contact Us</a><a href="/our-team"
+                class="nav-link w-nav-link">Team</a>
+            </nav>
+          </div>
+          <div class="navbar-controls ">
+            <div class="navbar-buttons ">
+              <a href="/contact-us" target="_blank" class="button w-button"> Meet With US</a>
+            </div>
+            <div class="menu-button w-nav-button"><img src="/images/icon-menu.svg" alt="Menu icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-small">
+    <div class="container">
+      <div class="content-width-medium article-title-wrapper">
+        <a style="background-color:#cf523c" href="/blog-categories/data-analytics"
+          class="badge space-bottom w-inline-block">
+          <div>Data Analytics</div>
+        </a>
+
+        <h1 class="display-heading-3">
+          The Complete Guide to Display Dynamic Remarketing with GA4
+        </h1>
+
+        <div class="post-meta-wrapper">
+          <a href="/our-team" class="w-inline-block">
+            <img alt="Ravi Patel"
+              src="https://assets.website-files.com/5de1e0c359d27b3ceb1dcd8b/5de1e3505f1762e0102e54fe_team-avatar-4.jpg"
+              class="avatar">
+          </a>
+          <div class="space-left">
+            <div>Dec 12, 2025</div>
+            <div class="row">
+              <div>By</div><a href="/our-team" class="blog-post-panel-author">&nbsp; Ravi Patel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-width-extra-large">
+        <img alt="Google Analytics Update: Cost Data Import Renamed to Campaign Data Import"
+          src="https://framerusercontent.com/images/02bwo1bAZYcppodWwkq72VfK1vM.png?scale-down-to=1024&width=1498&height=842"
+          sizes="(max-width: 479px) 95vw, (max-width: 767px) 94vw, (max-width: 1919px) 95vw, 964px" style="width: 100%;"
+          class="rounded-image">
+      </div>
+
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="article-container">
+    <div class="article w-richtext">
+
+      <h3>The Complete Guide to Display Dynamic Remarketing with GA4</h3>
+
+      <p>Dynamic remarketing is the difference between showing a generic brand ad to everyone and showing the exact pair of
+        running shoes a user left in their cart five minutes ago.</p>
+
+      <p>For eCommerce brands, travel sites, and listing businesses, this is often the highest-ROI campaign type available.
+        It closes the loop on abandoned intent by automatically generating ads based on the specific products or services a
+        user interacted with on your site.</p>
+
+      <p>This guide is a practical, step-by-step manual on implementing Display Dynamic Remarketing using Google Analytics 4 (GA4) as your data engine for Google Ads.</p>
+
+      <h4>What Display Dynamic Remarketing in GA4 Really Means</h4>
+
+      <p>Standard remarketing targets users who visited your site. Dynamic remarketing targets users based on what they
+        saw.</p>
+
+      <p>When implemented correctly, GA4 sends specific event data (like <em>User X viewed Product ID 123</em>) to Google
+        Ads. Google Ads then matches that ID against your product or business feed to automatically populate the ad with
+        the right image, title, and price.</p>
+
+      <p><strong>The Workflow:</strong></p>
+
+      <ol>
+        <li>User views a product (GA4 captures <code>view_item</code> with <code>item_id</code>).</li>
+        <li>GA4 passes this data to Google Ads.</li>
+        <li>Google Ads matches <code>item_id</code> to your product feed.</li>
+        <li>An ad is dynamically generated for that exact product.</li>
+      </ol>
+
+      <h4>Prerequisites Checklist</h4>
+
+      <p>Before building campaigns, make sure these foundations are in place:</p>
+
+      <ul>
+        <li>GA4 property installed and collecting data</li>
+        <li>Active Google Ads account</li>
+        <li>GA4 ↔ Google Ads account linking completed</li>
+        <li>Ads personalization enabled in GA4 link settings</li>
+        <li>Supported vertical selected (Retail, Travel, Jobs, Real Estate, Education, Custom)</li>
+        <li>Product IDs on your site match feed IDs exactly</li>
+      </ul>
+
+      <h4>Required GA4 Events for Dynamic Remarketing</h4>
+
+      <p>Dynamic ads depend on funnel-level signals. These events are mandatory:</p>
+
+      <h4>1. view_item</h4>
+      <p><strong>Trigger:</strong> Product detail page view</p>
+      <p><strong>Why it matters:</strong> Core signal that tells Google which product to show in ads.</p>
+
+      <h4>2. add_to_cart</h4>
+      <p><strong>Trigger:</strong> Item added to cart</p>
+      <p><strong>Why it matters:</strong> Indicates high intent and powers aggressive remarketing.</p>
+
+      <h4>3. view_item_list</h4>
+      <p><strong>Trigger:</strong> Category or search results page view</p>
+      <p><strong>Why it matters:</strong> Captures category-level interest.</p>
+
+      <h4>4. purchase</h4>
+      <p><strong>Trigger:</strong> Successful transaction</p>
+      <p><strong>Why it matters:</strong> Used for exclusions and cross-sell logic.</p>
+
+      <h4>Required Parameters (With Examples)</h4>
+
+      <p>Events must include contextual parameters to work dynamically.</p>
+
+      <ul>
+        <li><strong>item_id</strong> – Must exactly match the product ID in your feed</li>
+        <li><strong>item_location_id</strong> – Used for non-retail verticals</li>
+        <li><strong>value</strong> – Product or order value</li>
+        <li><strong>currency</strong> – ISO currency code (USD, GBP, INR)</li>
+      </ul>
+
+      <h4>Implementation Example (JavaScript / GTM)</h4>
+
+        <!--  UNIVERSAL CODE SNIPPET WITH TABS + DARK MODE + COPY BUTTON  -->
+      <style>
+:root { --bg-light:#f9fafb; --bg-dark:#1a1c1e; --text-light:#111827; --text-dark:#e5e7eb; --border-light:#e5e7eb; --border-dark:#374151; --tab-active-light:#fff; --tab-active-dark:#111; --tab-inactive-light:#f3f4f6; --tab-inactive-dark:#2a2d2f; }
+.snippet-container { border:1px solid var(--border-light); border-radius:10px; overflow:hidden; background:var(--bg-light); font-family:"Inter",sans-serif; margin:30px 0; transition:.3s; position:relative; }
+.snippet-container.dark { background:var(--bg-dark); border-color:var(--border-dark); }
+.snippet-tabs { display:flex; background:var(--tab-inactive-light); border-bottom:1px solid var(--border-light); }
+.snippet-container.dark .snippet-tabs { background:var(--tab-inactive-dark); border-bottom-color:var(--border-dark); }
+.snippet-tab { padding:10px 20px; cursor:pointer; border:none; font-weight:600; background:transparent; color:var(--text-light); transition:.2s; }
+.snippet-container.dark .snippet-tab { color:var(--text-dark); }
+.snippet-tab.active { background:var(--tab-active-light); border-bottom:2px solid #2563eb; color:var(--text-light); }
+.snippet-container.dark .snippet-tab.active { background:var(--tab-active-dark); color:var(--text-dark); }
+.snippet-block { display:none; padding:20px; font-size:14px; overflow-x:auto; color:var(--text-light); background:var(--bg-light); }
+.snippet-container.dark .snippet-block { background:var(--bg-dark); color:var(--text-dark); }
+.snippet-block.active { display:block; }
+pre { margin:0; white-space:pre; }
+.copy-btn { position:absolute; top:10px; right:55px; background:#2563eb; color:#fff; border:none; padding:6px 14px; border-radius:6px; font-size:12px; cursor:pointer; transition:.2s; }
+.copy-btn:hover { background:#1e4ed8; }
+.mode-btn { position:absolute; top:10px; right:10px; background:#6b7280; color:#fff; border:none; padding:6px 12px; border-radius:6px; font-size:12px; cursor:pointer; transition:.2s; }
+.mode-btn:hover { background:#4b5563; }
+</style>
+
+        <div class="snippet-container" id="consentSnippet">
+
+          <!-- 🔘 COPY + DARK MODE BUTTONS -->
+          <button class="copy-btn" onclick="copySnippet('#consentSnippet')">Copy</button>
+          <button class="mode-btn" onclick="toggleSnippetMode('#consentSnippet')">Dark</button>
+
+          <!-- ⭐ TABS -->
+          <div class="snippet-tabs">
+            <button class="snippet-tab active" data-target="#gtagBlock">gtag.js</button>
+            <button class="snippet-tab" data-target="#gtmBlock">Tag Manager</button>
+          </div>
+
+          <!-- ⭐ CODE BLOCK: GTAG -->
+          <pre id="gtagBlock" class="snippet-block active"><code>
+// Using gtag.js (JavaScript snippet)
+gtag("event", "view_item", {
+  currency: "USD",
+  value: 99.99,
+  items: [
+    {
+      item_id: "SKU_12345",
+      item_name: "Stan Smith Sneakers",
+      item_category: "Shoes",
+      price: 99.99,
+      quantity: 1
+    }
+  ]
+});
+
+  </code></pre>
+
+          <!-- ⭐ CODE BLOCK: GTM -->
+          <pre id="gtmBlock" class="snippet-block"><code>
+// Using Google Tag Manager (Recommended)
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "view_item",
+  ecommerce: {
+    currency: "USD",
+    value: 99.99,
+    items: [
+      {
+        item_id: "SKU_12345",
+        item_name: "Stan Smith Sneakers",
+        item_category: "Shoes",
+        price: 99.99,
+        quantity: 1
+      }
+    ]
+  }
+});
+  </code></pre>
+        </div>
+
+        <script>
+          /* ⭐ TAB LOGIC */
+          document.querySelectorAll('.snippet-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+              const container = this.closest('.snippet-container');
+              container.querySelectorAll('.snippet-tab').forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              container.querySelectorAll('.snippet-block').forEach(block => block.classList.remove('active'));
+              container.querySelector(this.dataset.target).classList.add('active');
+            });
+          });
+
+          /* ⭐ DARK MODE */
+          function toggleSnippetMode(snippetId) {
+            const box = document.querySelector(snippetId);
+            box.classList.toggle('dark');
+          }
+
+          /* ⭐ COPY FUNCTION */
+          function copySnippet(snippetId) {
+            const code = document.querySelector(snippetId).querySelector('.snippet-block.active code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+              alert("Copied to clipboard!");
+            });
+          }
+        </script>
+
+        <!--  END OF SNIPPET  -->
+
+      <p><strong>Common Mistake:</strong> Using mismatched IDs (e.g., <code>123</code> in GA4 and
+        <code>US-123</code> in the feed). These must be identical.</p>
+
+      <h4>How GA4 Shares Data with Google Ads</h4>
+
+      <p>You do not need manual exports or complex audience rules.</p>
+
+      <p>Once GA4 is linked to Google Ads and Ads Personalization is enabled, GA4 automatically shares event-level data.
+        Google Ads uses this to build auto-generated dynamic remarketing lists.</p>
+
+      <ul>
+        <li><strong>GA4 Audiences:</strong> Manual segmentation (e.g., High-Value Users)</li>
+        <li><strong>Dynamic Attributes:</strong> Raw product data used to render ads</li>
+      </ul>
+
+      <h4>Step-by-Step: Enable Display Dynamic Remarketing</h4>
+
+      <h4>1. Link GA4 to Google Ads</h4>
+
+      <ol>
+        <li>Admin → Product Links → Google Ads Links</li>
+        <li>Link your Google Ads account</li>
+        <li>Enable <strong>Personalized Advertising</strong></li>
+      </ol>
+
+      <img src="https://framerusercontent.com/images/zCZ3OoLDlZdfzgjL4EZJ8ATfyk.png" alt="GA4 Audience Builder"
+          style="margin:10px 0; border-radius:8px; width:100%; height:auto;">
+
+      <h4>2. Enable Google Signals</h4>
+
+      <ol>
+        <li>Admin → Data Collection</li>
+        <li>Turn on Google Signals</li>
+        <li>Acknowledge policy requirements</li>
+      </ol>
+
+      <img src="https://framerusercontent.com/images/BNvkC6p8h3yJIYhln9sZV1j9JAw.png" alt="GA4 Audience Builder"
+          style="margin:10px 0; border-radius:8px; width:100%; height:auto;">
+
+      <h4>3. Validate Events in DebugView</h4>
+
+      <ol>
+        <li>Admin → DebugView</li>
+        <li>Trigger a product view</li>
+        <li>Confirm <code>view_item</code> contains <code>items</code> and <code>item_id</code></li>
+      </ol>
+
+      <h4>4. Confirm Data in Google Ads</h4>
+
+      <ol>
+        <li>Tools & Settings → Audience Manager</li>
+        <li>Open GA4 data source</li>
+        <li>Verify events and parameters are received</li>
+      </ol>
+
+      <h4>How Ads Are Actually Shown</h4>
+
+      <p>Once data flows correctly:</p>
+
+      <ul>
+        <li>Merchant Center feed supplies product assets</li>
+        <li>Responsive Display Ad provides layout</li>
+        <li>Google injects product image, title, and price dynamically</li>
+        <li>Ads appear on GDN, YouTube, and Gmail</li>
+      </ul>
+
+      <h4>Common Mistakes & Fixes</h4>
+
+      <ul>
+        <li><strong>ID mismatch:</strong> Standardize IDs via feed rules or data layer</li>
+        <li><strong>Missing value:</strong> Always send <code>value</code> and <code>currency</code></li>
+        <li><strong>Consent blocking:</strong> Check Consent Mode configuration</li>
+        <li><strong>Wrong vertical:</strong> Use vertical-specific parameters</li>
+      </ul>
+
+      <h4>How to Measure Success</h4>
+
+      <p><strong>GA4:</strong> Analyze conversion rate and revenue by remarketing traffic.</p>
+      <p><strong>Google Ads:</strong> Focus on ROAS, Conversion Value / Cost, and View-through Conversions.</p>
+
+      <h4>Final Checklist & Pro Tips</h4>
+
+      <ul>
+        <li>GA4 ↔ Google Ads linked with personalization ON</li>
+        <li>Google Signals enabled</li>
+        <li>Required events firing with items array</li>
+        <li>Feed IDs perfectly aligned</li>
+        <li>Responsive Display campaign connected to feed</li>
+      </ul>
+
+      <p><strong>Pro Tips:</strong></p>
+
+      <ul>
+        <li>Exclude recent purchasers (last 7 days)</li>
+        <li>Apply frequency caps (5–7 impressions/day)</li>
+        <li>Use sale price attributes for automatic “Price Drop” badges</li>
+      </ul>
+
+      <p><strong>Dynamic remarketing is not optional anymore.</strong> When implemented correctly with GA4, it becomes
+        one of the most profitable channels in your entire media mix.</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="panel">
+      <div class="panel-body footer-1-panel-body">
+        <div class="footer-3-top-row">
+          <div class="footer-3-left-column">
+            <div class="footer-contact-methods">
+              <div>
+                <h5>Contact</h5>
+                <div>
+                  <div>
+                    <a href="https://wa.me/447548003762">+44 7548003762</a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/919824723865">+91 9824723865</a>
+                  </div>
+                  <br><a href="mailto:starluxetech@gmail.com">starluxetech@gmail.com</a>
+                </div>
+              </div>
+              <div>
+                <h5>Visit</h5>
+                <div>
+                  <div> Dunmurry, Belfast,<br> United Kingdom,<br>BT129BB</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="w-layout-grid vertical-menu-grid"><a href="/ga4-migration" class="text-link">GA4 migration</a><a
+                href="/tracking" class="text-link">Tracking & Audit</a><a href="/service/conversion-rate-optimization"
+                class="text-link">CRO Service</a><a href="/gdpr" class="text-link">GDPR Consent Service</a>
+              <a href="/s2s-gtm" class="text-link">Server Side Tracking</a>
+            </div>
+
+            <div class="w-layout-grid vertical-menu-grid"><a href="/" class="text-link">Home</a><a href="/case-studies"
+                class="text-link">Case Study</a><a href="/blogs" class="text-link">Blogs</a><a href="/pricing/pricing-1"
+                class="text-link">Services</a><a href="/our-team" class="text-link">Team</a>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-body panel-body-small blog-small-panel-body">
+              <div class="badge blog-small-badge">
+                <div>News</div>
+              </div>
+              <div class="w-dyn-list">
+                <div role="list" class="w-dyn-items">
+                  <div role="listitem" class="w-dyn-item"><a
+                      href="/blog/transforming-e-commerce-marketing-with-ibqml-a-real-life-success-story"
+                      class="blog-small-link w-inline-block">
+                      <h5 class="blog-small-heading">How to Use Machine Learning and AI in Ecommerce</h5>
+                      <div>October 01, 2024</div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-1-bottom-row">
+          <div class="text-small">© Copyright • StarLuxe Analytics 2024 <a href="https://www.webflow.com/"
+              target="_blank"></a></div>
+          <div class="social-list"><a href="https://twitter.com/Starluxetech"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227acedfe6aa24072b4a0_twitter.svg"
+                alt="Twitter"></a><a href="https://www.instagram.com/starluxetech/"
+              class="social-link-item w-inline-block"><img
+                src="https://cdn.prod.website-files.com/5dcb2e333e05bec4ef2fee2f/5dd227ac1e22cb1f90b110b4_instagram.svg"
+                alt="Instagram"></a><a href="https://behance.net/starluxetech-"
+              class="social-link-item w-inline-block"><img src="/images/behance-svgrepo-com.svg" alt="Behance"></a><a
+              href="https://www.linkedin.com/company/starluxetech/" class="social-link-item w-inline-block"><img
+                src="/images/linkedin.svg" alt="LinkedIn"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightweight jQuery -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-3gJwYp2uQd64cc6Y8JaF4W3C4zod8tTZ8Zj1szK7wJ7Cq4OGt1tHhiEE0ajHc5JDHa4yI2zR+j4Uy/7r4CgeQw=="
+    crossorigin="anonymous"></script>
+
+  <!-- Typed.js (Lazy Load Only If Needed) -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!document.querySelector(".typed")) return;
+
+      const typedScript = document.createElement("script");
+      typedScript.src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js";
+      typedScript.defer = true;
+
+      typedScript.onload = () => {
+        new Typed(".typed", {
+          strings: ["Analytics Experts", "CRO Specialists", "Tracking Engineers"],
+          typeSpeed: 65,
+          backSpeed: 25,
+          loop: true
+        });
+      };
+
+      document.body.appendChild(typedScript);
+    });
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233022559905658"
+    crossorigin="anonymous"></script>
+
+  <!-- Webflow Core -->
+  <script defer src="/js/webflow.js"></script>
+
+  <!-- Project Scripts -->
+  <script defer src="/js/data.js"></script>
+  <script defer src="/js/dataexpert.js"></script>
+
+  <!-- Avoid duplicate logos -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoList = document.querySelector(".logo-list");
+      if (logoList && !logoList.dataset.cloned) {
+        logoList.insertAdjacentHTML("beforeend", logoList.innerHTML);
+        logoList.dataset.cloned = "true";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
